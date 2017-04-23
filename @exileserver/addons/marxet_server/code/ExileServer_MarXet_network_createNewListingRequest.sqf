@@ -63,7 +63,7 @@ try {
             fuel _vehicleObject,
             damage _vehicleObject,
             _vehicleHitpoints,
-            _vehicleObject getVariable ["ExileAccessCode",""]
+            "0000"
         ];
         deleteVehicle _vehicleObject;
         _vehicleObject call ExileServer_object_vehicle_database_delete;
@@ -78,13 +78,14 @@ try {
         _playerUID
     ];
     MarXetInventory pushBack _newListing;
-    MarXetInventory = [MarXetInventory, [], {(_x select 2) select 0}, "ASCEND"] call BIS_fnc_sortBy;
+    MarXetInventory = [MarXetInventory, [], {(_x select 2) select 0}, "DESCEND"] call BIS_fnc_sortBy;
     ["updateInventoryResponse",[MarXetInventory]] call ExileServer_system_network_send_broadcast;
     [_sessionID,"createNewListingResponse",[_vehicle,_itemClassname,str(_price),_location]] call ExileServer_system_network_send_to;
     format["createNewListing:%1:%2:%3:%4:%5",_listingID,1,_la,_price,_playerUID] call ExileServer_system_database_query_fireAndForget;
+    [format["Player: %1 just listed %2 for %3... New listing Array: %4",name _playerObject,_itemClassname, _price,_newListing],"createNewListingRequest"] call ExileServer_MarXet_util_log;
 }
 catch
 {
-    [_sessionID,"notificationRequest", ["Whoops", [_exception]]] call ExileServer_system_network_send_to;
+    [_sessionID, "toastRequest", ["ErrorTitleAndText", ["FAILED!", _exception]]] call ExileServer_system_network_send_to;
     [_exception,"createNewListingRequest"] call ExileServer_MarXet_util_log;
 };

@@ -1,17 +1,17 @@
 class buyNowRequest
 {
 	module = "MarXet";
-	parameters[] = {"STRING","SCALAR"};
+	parameters[] = {"STRING","STRING"};
 };
 class buyerBuyNowResponse
 {
 	module = "MarXet";
-	parameters[] = {"ARRAY","STRING","SCALAR","STRING"};
+	parameters[] = {"ARRAY","STRING","STRING","STRING"};
 };
 class sellerBuyNowResponse
 {
 	module = "MarXet";
-	parameters[] = {"ARRAY","STRING"};
+	parameters[] = {"ARRAY"};
 };
 class createNewListingRequest
 {

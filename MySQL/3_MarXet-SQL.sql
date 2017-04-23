@@ -4,6 +4,7 @@ CREATE TABLE `marxet` (
   `itemArray` text NOT NULL,
   `price` double NOT NULL,
   `sellerUID` varchar(64) NOT NULL,
+  `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`listingID`),
   KEY `listingID` (`listingID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

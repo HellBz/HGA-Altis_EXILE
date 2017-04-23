@@ -5,7 +5,7 @@ class RscMarXetDialog
 	onUnload = "[""UnLoad""] call ExileClient_MarXet_gui_load;uiNamespace setVariable ['RscMarXetDialog', displayNull];";
 	class controls
 	{
-        class MarXetCenterPanelBackground: RscMarXetText
+		class MarXetCenterPanelBackground: RscMarXetText
         {
         	idc = 21001;
         	x = 0.402031 * safezoneW + safezoneX;
@@ -62,17 +62,6 @@ class RscMarXetDialog
         	h = 0.022 * safezoneH;
         	colorBackground[] = {0.1,0.1,0.1,1};
         };
-		class CenterMarXetTitle: RscMarXetStructuredText
-		{
-			idc = 21007;
-
-			text = "<t color='#FFFFFF' font='OrbitronLight' size='2' valign='middle' align='center' shadow='0'>Mar<t color='#531517' font='OrbitronLight' size='2' valign='middle' align='center' shadow='0'>X</t>et</t>";
-			x = 0.427812 * safezoneW + safezoneX;
-			y = 0.258 * safezoneH + safezoneY;
-			w = 0.144375 * safezoneW;
-			h = 0.077 * safezoneH;
-			colorBackground[] = {-1,-1,-1,0};
-		};
 		class CenterDescription: RscMarXetStructuredText
 		{
 			idc = 21008;
@@ -196,10 +185,10 @@ class RscMarXetDialog
         class RightDropdown: RscMarXetCombo
         {
         	idc = 21016;
-        	x = 0.608281 * safezoneW + safezoneX;
-        	y = 0.258 * safezoneH + safezoneY;
-        	w = 0.113437 * safezoneW;
-        	h = 0.022 * safezoneH;
+			x = 0.608281 * safezoneW + safezoneX;
+			y = 0.258 * safezoneH + safezoneY;
+			w = 0.0896563 * safezoneW;
+			h = 0.022 * safezoneH;
         };
         class RightListbox: RscExileMarXetItemListBox
         {
@@ -232,6 +221,100 @@ class RscMarXetDialog
 			y = 0.2206 * safezoneH + safezoneY;
 			w = 0.0825 * safezoneW;
 			h = 0.022 * safezoneH;
+			colorBackground[] = {-1,-1,-1,0};
+		};
+		class VehiclePinCode: RscMarXetText
+		{
+			idc = 21031;
+			show = false;
+			text = "PIN CODE:"; //--- ToDo: Localize;
+			x = 0.427812 * safezoneW + safezoneX;
+			y = 0.643 * safezoneH + safezoneY;
+			w = 0.0464063 * safezoneW;
+			h = 0.022 * safezoneH;
+			colorBackground[] = {-1,-1,-1,0};
+		};
+		class VehiclePinCodeEditBox: RscMarXetEdit
+		{
+			idc = 21032;
+			show = false;
+			x = 0.482219 * safezoneW + safezoneX;
+			y = 0.6432 * safezoneH + safezoneY;
+			w = 0.0567187 * safezoneW;
+			h = 0.022 * safezoneH;
+			colorBackground[] = {-1,-1,-1,0};
+		};
+		class Sorting: RscMarXetCombo
+		{
+			idc = 21033;
+			x = 0.702094 * safezoneW + safezoneX;
+			y = 0.258 * safezoneH + safezoneY;
+			w = 0.0908125 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
+
+		class NotificationBackground: RscMarXetText
+		{
+			idc = 21029;
+			show = false;
+			x = 0.200937 * safezoneW + safezoneX;
+			y = 0.2206 * safezoneH + safezoneY;
+			w = 0.598125 * safezoneW;
+			h = 0.5544 * safezoneH;
+			colorBackground[] = {0.067,0.082,0.094,0.95};
+		};
+		class NotificationTitle: RscMarXetStructuredText
+		{
+			idc = 21030;
+			show = false;
+			x = 0.355625 * safezoneW + safezoneX;
+			y = 0.401 * safezoneH + safezoneY;
+			w = 0.185625 * safezoneW;
+			h = 0.044 * safezoneH;
+			colorBackground[] = {-1,-1,-1,0};
+		};
+		class NotificationText: RscMarXetStructuredText
+		{
+			idc = 21026;
+			show = false;
+			x = 0.355625 * safezoneW + safezoneX;
+			y = 0.456 * safezoneH + safezoneY;
+			w = 0.299062 * safezoneW;
+			h = 0.11 * safezoneH;
+			colorBackground[] = {-1,-1,-1,0};
+		};
+		class NotificationConfirm: RscMarXetButton
+		{
+			idc = 21027;
+			show = false;
+			text = "Purchase"; //--- ToDo: Localize;
+			x = 0.489687 * safezoneW + safezoneX;
+			y = 0.588 * safezoneH + safezoneY;
+			w = 0.0721875 * safezoneW;
+			h = 0.022 * safezoneH;
+			onButtonClick = "[""DisplayNotification"",1] call ExileClient_MarXet_gui_load;";
+		};
+		class NotificationCancel: RscMarXetButton
+		{
+			idc = 21028;
+			show = false;
+			text = "Cancel"; //--- ToDo: Localize;
+			x = 0.572187 * safezoneW + safezoneX;
+			y = 0.588 * safezoneH + safezoneY;
+			w = 0.0721875 * safezoneW;
+			h = 0.022 * safezoneH;
+			onButtonClick = "[""DisplayNotification"",2] call ExileClient_MarXet_gui_load;";
+		};
+
+		class CenterMarXetTitle: RscMarXetStructuredText
+		{
+			idc = 21007;
+
+			text = "<t color='#FFFFFF' font='OrbitronLight' size='2' valign='middle' align='center' shadow='0'>Mar<t color='#531517' font='OrbitronLight' size='2' valign='middle' align='center' shadow='0'>X</t>et</t>";
+			x = 0.427812 * safezoneW + safezoneX;
+			y = 0.2705 * safezoneH + safezoneY;
+			w = 0.144375 * safezoneW;
+			h = 0.077 * safezoneH;
 			colorBackground[] = {-1,-1,-1,0};
 		};
     };

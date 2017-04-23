@@ -11,11 +11,8 @@ _vehicleCheck = _this select 0;
 _itemClassname = _this select 1;
 _price = _this select 2;
 _location = _this select 3;
-MarXet_Hint_ItemName = "";
-MarXet_Hint_Poptabs = "";
 if !(_vehicleCheck) then
 {
-    // Thx to Exile for logic
     switch (_location) do
     {
         case 0:
@@ -44,12 +41,14 @@ if !(_vehicleCheck) then
 };
 _configName = _itemClassname call ExileClient_util_gear_getConfigNameByClassName;
 _name = getText(configFile >> _configName >> _itemClassname >> "displayName");
-MarXet_Hint_ItemName = _name;
-MarXet_Hint_Poptabs = _price;
-[["MarXet","NewListing"],20,"",20,"",true,true,false,true] call BIS_fnc_advHint;
+["SuccessTitleAndText", [
+    "It's been listed!",
+    format ["You have successfully listed your <t color='#ff0000'>%1</t> for <t color='#ff0000'>%2</t><img image='\exile_assets\texture\ui\poptab_inline_ca.paa' size='24'/> on Mar<t color='#531517'>X</t>et.<br/>Thank you for using Mar<t color='#531517'>X</t>et: Exile's leading marketplace!", _name, _price]
+]] call ExileClient_gui_toaster_addTemplateToast;
 _dialog = uiNameSpace getVariable ["RscMarXetDialog", displayNull];
 if !(_dialog isEqualTo displayNull) then
 {
+    ["Sort",MarXet_Sorting] call ExileClient_MarXet_gui_load;
     ["LoadLeft"] call ExileClient_MarXet_gui_load;
     ["LoadRight"] call ExileClient_MarXet_gui_load;
 };

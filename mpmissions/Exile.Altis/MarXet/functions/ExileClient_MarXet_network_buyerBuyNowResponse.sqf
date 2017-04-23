@@ -6,17 +6,13 @@
 *  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
 *  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
 */
-private["_stockArray","_newMoneyString","_location","_vehicleNetID","_itemClassName","_vehicleObject","_name","_containersBefore","_containersAfter","_dialog"];
+private["_stockArray","_location","_vehicleNetID","_price","_itemClassName","_sellersUID","_vehicleObject","_name","_containersBefore","_containersAfter","_dialog"];
 _stockArray = _this select 0;
-_newMoneyString = _this select 1;
-_location = _this select 2;
-_vehicleNetID = _this select 3;
+_location = parseNumber(_this select 1);
+_vehicleNetID = _this select 2;
+_price = parseNumber(_this select 3);
 _itemClassName = (_stockArray select 2) select 0;
 _sellersUID = _stockArray select 4;
-MarXet_Hint_ItemName = "";
-MarXet_Hint_Poptabs = "";
-MarXet_Hint_Pincode = "";
-ExileClientPlayerMoney = parseNumber(_newMoneyString);
 if !(_vehicleNetID isEqualTo "") then
 {
     _vehicleObject = objectFromNetId _vehicleNetID;
@@ -25,21 +21,21 @@ if !(_vehicleNetID isEqualTo "") then
     _name = getText(configFile >> "CfgVehicles" >> ((_stockArray select 2) select 0) >> "displayName");
     if (_sellersUID isEqualTo (getplayerUID player)) then
     {
-        MarXet_Hint_ItemName = _name;
-        MarXet_Hint_Pincode = ((_stockArray select 2) select 4);
-        [["MarXet","VehicleBoughtSeller"],15,"",15,"",true,true,false,true] call BIS_fnc_advHint;
+        ["SuccessTitleAndText", [
+            "Vehicle Bought!",
+            format ["Congratulations on your purchase of your old <t color='#ff0000'>%1</t>. Couldn't let go of it huh?<br/>Thank you for choosing Mar<t color='#531517'>X</t>et: Exile's leading marketplace!", _name]
+        ]] call ExileClient_gui_toaster_addTemplateToast;
     }
     else
     {
-        MarXet_Hint_ItemName = _name;
-        MarXet_Hint_Poptabs = (parseNumber(_stockArray select 3) * -1);
-        MarXet_Hint_Pincode = ((_stockArray select 2) select 4);
-        [["MarXet","VehicleBought"],15,"",15,"",true,true,false,true] call BIS_fnc_advHint;
+        ["SuccessTitleAndText", [
+            "Vehicle Bought!",
+            format ["Congratulations on your purchase of your new <t color='#ff0000'>%1</t><br/>Your total cost was <t color='#ff0000'>%2</t><img image='\exile_assets\texture\ui\poptab_inline_ca.paa' size='24'/>.<br/>Thank you for choosing Mar<t color='#531517'>X</t>et: Exile's leading marketplace!", _name, _price]
+        ]] call ExileClient_gui_toaster_addTemplateToast;
     };
 }
 else
 {
-    // Thx to Exile for code logic
     switch (_location) do
 	{
 		case 0:
@@ -67,15 +63,16 @@ else
 	};
     if (_sellersUID isEqualTo (getplayerUID player)) then
     {
-        ["Success", ["Couldn't let go of it, huh? I understand :)"]] call ExileClient_gui_notification_event_addNotification;
+        ["SuccessTitleAndText", ["Bought Back", "Couldn't let go of it, huh? I understand :)"]] call ExileClient_gui_toaster_addTemplateToast;
     }
     else
     {
-        ["ItemPurchasedInformation", [parseNumber(_stockArray select 3) * -1]] call ExileClient_gui_notification_event_addNotification;
+        ["SuccessTitleAndText", ["Successful Purchase", format["%1",_price]]] call ExileClient_gui_toaster_addTemplateToast;
     };
     _dialog = uiNameSpace getVariable ["RscMarXetDialog", displayNull];
     if !(_dialog isEqualTo displayNull) then
     {
+        ["Sort",MarXet_Sorting] call ExileClient_MarXet_gui_load;
         ["LoadLeft"] call ExileClient_MarXet_gui_load;
         ["LoadRight"] call ExileClient_MarXet_gui_load;
     };

@@ -6,7 +6,7 @@
 *  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
 *  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
 */
-private ['_code'];
+private["_code"];
 {
     _code = compileFinal (preprocessFileLineNumbers (_x select 1));
     missionNamespace setVariable [(_x select 0), _code];
@@ -14,6 +14,7 @@ private ['_code'];
 forEach
 [
     ['ExileServer_MarXet_inventory_checkListingID','MarXet_Server\code\ExileServer_MarXet_inventory_checkListingID.sqf'],
+    ['ExileServer_MarXet_inventory_cleanup','MarXet_Server\code\ExileServer_MarXet_inventory_cleanup.sqf'],
     ['ExileServer_MarXet_inventory_confirmStock','MarXet_Server\code\ExileServer_MarXet_inventory_confirmStock.sqf'],
     ['ExileServer_MarXet_inventory_createListingID','MarXet_Server\code\ExileServer_MarXet_inventory_createListingID.sqf'],
     ['ExileServer_MarXet_inventory_initalize','MarXet_Server\code\ExileServer_MarXet_inventory_initalize.sqf'],
