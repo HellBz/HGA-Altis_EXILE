@@ -77,6 +77,12 @@ class CfgRemoteExec
         {
             allowedTargets = 2;
         };
+		
+		/* Infistar Adminmenu */
+		class fnc_AdminReq 
+		{
+			allowedTargets=2; 
+		};
     };
 
     class Commands
@@ -85,3 +91,6 @@ class CfgRemoteExec
 		jip = 0;
     };
 };
+
+/* Infistar Adminmenu */
+#include "infiSTAR_AdminMenu.hpp"

@@ -1,3 +1,2 @@
-//new
-7 "" !="true" !="false" !="[0-9]{1,2}"
-1 ""
+//regex
+7 "" !(true|false|any) !="[0-9]{1,2}" !="\"\"" !="\"111thID\"" !="\"BI\"" !="\"ExileBrunswik\"" !="\"CTRG\"" !="\"CTRG14\"" !="\"CTRG15\"" !="\"Exile\"" !="\"GryffinRegiment\"" !="\"MANW\"" !="\"TFAegis\"" !="\"Curator\""
