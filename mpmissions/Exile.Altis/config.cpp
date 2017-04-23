@@ -2766,6 +2766,9 @@ class CfgExileCustomCode
 	ExileServer_util_time_addTime 												= "custom\extdb3_fix\ExileServer_util_time_addTime.sqf";
 	ExileServer_util_time_currentTime 											= "custom\extdb3_fix\ExileServer_util_time_currentTime.sqf";
 	ExileServer_util_time_uptime 												= "custom\extdb3_fix\ExileServer_util_time_uptime.sqf";
+	//MarXet
+	ExileServer_system_network_dispatchIncomingMessage 							= "custom\overrides\ExileServer_system_network_dispatchIncomingMessage.sqf";
+	
 
 };
 class CfgExileEnvironment
