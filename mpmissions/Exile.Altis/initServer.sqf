@@ -365,6 +365,7 @@ private _objects =
 	_object setVectorDirAndUp (_x select 2);
 	_object enableSimulationGlobal ((_x select 3) select 0);
 	_object allowDamage ((_x select 3) select 1);
+	if((_x select 0) == "Exile_Sign_TraderCity")then{_object setObjectTextureGlobal [0, "custom\textures\sign_trader.jpg"];};
 } forEach _objects;
 
 
