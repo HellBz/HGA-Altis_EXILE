@@ -1,6 +1,7 @@
 $ cat .gitignore
+*.pbo
+*.pbo.bak
 /mpmissions/*.pbo
-/mpmissions/*.pbo.bak
 /@exileserver/addons/a3_infistar_exile.pbo
 /@exileserver/addons/a3_infistar_exile.pbo.bak
 /@exileserver/addons/a3_infistar_exile/
