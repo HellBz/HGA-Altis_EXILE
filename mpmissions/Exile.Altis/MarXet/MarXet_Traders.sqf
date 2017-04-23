@@ -17,6 +17,7 @@ switch (toLower worldName) do {
         _trader =
         [
             "Exile_Cutscene_Prisoner01",
+			"",
             "GreekHead_A3_01",
             ["AidlPercMstpSnonWnonDnon_G01", "AidlPercMstpSnonWnonDnon_G02", "AidlPercMstpSnonWnonDnon_G03", "AidlPercMstpSnonWnonDnon_G04", "AidlPercMstpSnonWnonDnon_G05", "AidlPercMstpSnonWnonDnon_G06"],
             [14579.1,16755.5,0.126438],
@@ -32,6 +33,7 @@ switch (toLower worldName) do {
         _trader =
         [
             "Exile_Cutscene_Prisoner01",
+			"",
             "GreekHead_A3_01",
             ["AidlPercMstpSnonWnonDnon_G01", "AidlPercMstpSnonWnonDnon_G02", "AidlPercMstpSnonWnonDnon_G03", "AidlPercMstpSnonWnonDnon_G04", "AidlPercMstpSnonWnonDnon_G05", "AidlPercMstpSnonWnonDnon_G06"],
             [2988.63,18152.7,0.381263],
@@ -47,6 +49,7 @@ switch (toLower worldName) do {
         _trader =
         [
             "Exile_Cutscene_Prisoner01",
+			"",
             "GreekHead_A3_01",
             ["AidlPercMstpSnonWnonDnon_G01", "AidlPercMstpSnonWnonDnon_G02", "AidlPercMstpSnonWnonDnon_G03", "AidlPercMstpSnonWnonDnon_G04", "AidlPercMstpSnonWnonDnon_G05", "AidlPercMstpSnonWnonDnon_G06"],
             [23333.5,24202.9,0.00140905],
@@ -86,6 +89,7 @@ switch (toLower worldName) do {
         _trader =
         [
             "Exile_Cutscene_Prisoner01",
+			"",
             "GreekHead_A3_01",
             ["AidlPercMstpSnonWnonDnon_G01", "AidlPercMstpSnonWnonDnon_G02", "AidlPercMstpSnonWnonDnon_G03", "AidlPercMstpSnonWnonDnon_G04", "AidlPercMstpSnonWnonDnon_G05", "AidlPercMstpSnonWnonDnon_G06"],
             [5012.31,8011.31,4.12741],
@@ -101,6 +105,7 @@ switch (toLower worldName) do {
         _trader =
         [
             "Exile_Cutscene_Prisoner01",
+			"",
             "GreekHead_A3_01",
             ["AidlPercMstpSnonWnonDnon_G01", "AidlPercMstpSnonWnonDnon_G02", "AidlPercMstpSnonWnonDnon_G03", "AidlPercMstpSnonWnonDnon_G04", "AidlPercMstpSnonWnonDnon_G05", "AidlPercMstpSnonWnonDnon_G06"],
             [9131.12,10084.1,7.10316],
@@ -116,6 +121,7 @@ switch (toLower worldName) do {
         _trader =
         [
             "Exile_Cutscene_Prisoner01",
+			"",
             "GreekHead_A3_01",
             ["AidlPercMstpSnonWnonDnon_G01", "AidlPercMstpSnonWnonDnon_G02", "AidlPercMstpSnonWnonDnon_G03", "AidlPercMstpSnonWnonDnon_G04", "AidlPercMstpSnonWnonDnon_G05", "AidlPercMstpSnonWnonDnon_G06"],
             [4353.53,4743.87,0.00144696],
@@ -157,5 +163,5 @@ switch (toLower worldName) do {
 	_x addWeapon "srifle_DMR_04_F";
 	_x addPrimaryWeaponItem "optic_LRPS";
 	_x addWeapon "hgun_ACPC2_F";
-	_x addAction ["<img image='\a3\ui_f\data\IGUI\Cfg\Actions\reammo_ca.paa' size='1' shadow='false' />Access MarXet","createDialog 'RscMarXetDialog'","",1,false,true,"","((position player) distance _target) <= 4"];
+	_x addAction ["<img image='\a3\ui_f\data\IGUI\Cfg\Actions\reammo_ca.paa' size='1' shadow='false' />Blackmarket Store","createDialog 'RscMarXetDialog'","",1,false,true,"","((position player) distance _target) <= 4"];
 } forEach _traders;
