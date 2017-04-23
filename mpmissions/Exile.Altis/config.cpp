@@ -2768,6 +2768,12 @@ class CfgExileCustomCode
 	ExileServer_util_time_uptime 												= "custom\extdb3_fix\ExileServer_util_time_uptime.sqf";
 	//MarXet
 	ExileServer_system_network_dispatchIncomingMessage 							= "custom\overrides\ExileServer_system_network_dispatchIncomingMessage.sqf";
+	//Sneak Customs
+	ExileClient_gui_vehicleCustomsDialog_event_onPurchaseButtonClick 			 = "custom\overrides\ExileClient_gui_vehicleCustomsDialog_event_onPurchaseButtonClick.sqf";
+	ExileClient_gui_vehicleCustomsDialog_event_onSkinListBoxSelectionChanged 	 = "custom\overrides\ExileClient_gui_vehicleCustomsDialog_event_onSkinListBoxSelectionChanged.sqf";
+	ExileClient_gui_vehicleCustomsDialog_event_onVehicleDropDownSelectionChanged = "custom\overrides\ExileClient_gui_vehicleCustomsDialog_event_onVehicleDropDownSelectionChanged.sqf";
+	ExileClient_gui_vehicleCustomsDialog_show 									 = "custom\overrides\ExileClient_gui_vehicleCustomsDialog_show.sqf";
+	ExileClient_gui_vehicleCustomsDialog_updateVehicle 							 = "custom\overrides\ExileClient_gui_vehicleCustomsDialog_updateVehicle.sqf";
 	
 
 };

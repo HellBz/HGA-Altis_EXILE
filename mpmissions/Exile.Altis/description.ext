@@ -83,6 +83,12 @@ class CfgRemoteExec
 		{
 			allowedTargets=2; 
 		};
+		
+		/* Sneak Customs */
+		class SneakCustoms_change_skin
+		{
+			allowedTargets = 2; 
+		};
     };
 
     class Commands
@@ -109,3 +115,9 @@ class CfgNetworkMessages
 {
     #include "MarXet\CfgMarXetNetworkMessages.hpp"
 };
+
+
+///////////////////////////////////////////////////////////////////////////////
+// Sneak Customs
+///////////////////////////////////////////////////////////////////////////////
+ #include "SneakCustoms_config.cpp" 
