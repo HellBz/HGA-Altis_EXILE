@@ -1704,7 +1704,6 @@
 10, CUP_U_O_TK_Green
 10, CUP_U_O_TK_Ghillie
 10, CUP_U_O_TK_Ghillie_Top
-10, CUP_U_O_TK_Ghillie_Top
 10, CUP_O_TKI_Khet_Partug_01
 10, CUP_O_TKI_Khet_Partug_02
 10, CUP_O_TKI_Khet_Partug_03
