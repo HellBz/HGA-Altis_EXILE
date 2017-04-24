@@ -1,6 +1,10 @@
 //regex
-7 "" !="exilexm8isonline" !="bis_fnc_selectrespawntemplate_respawned" !="ExileCameraInUse" !="isrunning" !="bis_fnc_setunitinsignia_class" !="bis_accesscounter"
+4 "" !="SA_Cargo" !="SA_Tow_Ropes" !="SA_Tow_Ropes_Vehicle" !="SA_Tow_Ropes_Pick_Up_Helper" !="ASL_Ropes" !="ASL_Ropes_Vehicle" !="ASL_Ropes_Pick_Up_Helper" !="ASL_Cargo"
+5 "" !="SA_Cargo" !="SA_Tow_Ropes" !="SA_Tow_Ropes_Vehicle" !="SA_Tow_Ropes_Pick_Up_Helper" !="ASL_Ropes" !="ASL_Ropes_Vehicle" !="ASL_Ropes_Pick_Up_Helper" !="ASL_Cargo"
+6 "" !="SA_Cargo" !="SA_Tow_Ropes" !="SA_Tow_Ropes_Vehicle" !="SA_Tow_Ropes_Pick_Up_Helper" !="ASL_Ropes" !="ASL_Ropes_Vehicle" !="ASL_Ropes_Pick_Up_Helper" !="ASL_Cargo"
+7 "" !="exilexm8isonline" !="bis_fnc_selectrespawntemplate_respawned" !="ExileCameraInUse" !="isrunning" !="bis_fnc_setunitinsignia_class" !="bis_accesscounter" !="SA_Cargo" !="SA_Tow_Ropes" !="SA_Tow_Ropes_Vehicle" !="SA_Tow_Ropes_Pick_Up_Helper" !="ASL_Ropes" !="ASL_Ropes_Vehicle" !="ASL_Ropes_Pick_Up_Helper" !="ASL_Cargo" 
 7 "ExilePurse"
 7 "ExileBank"
 7 "ExileMoney"
 7 "ExileScore"
+
