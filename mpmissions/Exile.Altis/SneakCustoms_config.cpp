@@ -14,7 +14,8 @@ class CfgSneakCustoms{
 		skins[] = {
 			{"Exile_Car_Strider", 1750},
 			{"SneakCustoms_Car_Strider_Desert", 1750},
-			{"SneakCustoms_Car_Strider_Bangbus", 1750}
+			{"SneakCustoms_Car_Strider_Bangbus", 1750},
+			{"SneakCustoms_Ikarus_Exile", 1750}
 		};
 	};
 
@@ -35,5 +36,12 @@ class CfgSneakCustoms{
         hiddenSelectionsTextures[] = {"a3\soft_f_beta\mrap_03\data\mrap_03_ext_indp_co.paa", "a3\data_f\vehicles\turret_indp_co.paa"};
         availableFor = "All";
     };
+	class SneakCustoms_Ikarus_Exile : SneakCustoms{ //standard strider is listed here because there is no texture entry in the standard exile config
+        skinName = "EXILE";
+        hiddenSelectionsTextures[] = {"exile_psycho_ikarus\data\textures\bus_exterior_govn_co.paa", "exile_psycho_ikarus\data\bus_exterior_co.paa"};
+        availableFor = "All";
+		// exile_psycho_ikarus\data\bus_exterior_eciv_co.paa
+    };
+
 };
 
