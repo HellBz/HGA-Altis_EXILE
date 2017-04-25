@@ -2774,7 +2774,12 @@ class CfgExileCustomCode
 	ExileClient_gui_vehicleCustomsDialog_event_onVehicleDropDownSelectionChanged = "custom\overrides\ExileClient_gui_vehicleCustomsDialog_event_onVehicleDropDownSelectionChanged.sqf";
 	ExileClient_gui_vehicleCustomsDialog_show 									 = "custom\overrides\ExileClient_gui_vehicleCustomsDialog_show.sqf";
 	ExileClient_gui_vehicleCustomsDialog_updateVehicle 							 = "custom\overrides\ExileClient_gui_vehicleCustomsDialog_updateVehicle.sqf";
-	
+	// Trader Launcher FIX
+	ExileClient_util_playerEquipment_add										= "custom\overrides\ExileServer_world_spawnVehicles.sqf";
+	// Set Car Magazines to only 1
+	ExileServer_world_spawnVehicles												= "custom\overrides\ExileServer_world_spawnVehicles";
+	// Get Poptabs for Drinks
+	ExileClient_object_item_consume												= "custom\overrides\ExileClient_object_item_consume";
 
 };
 class CfgExileEnvironment
@@ -3123,6 +3128,14 @@ class CfgInteractionMenus
 				condition = "('Exile_Item_ThermalScannerPro' in (magazines player)) && !ExilePlayerInSafezone && ((locked ExileClientInteractionObject) != 1)";
 				action = "_this call ExileClient_object_lock_scan";
 			};
+			
+		    // Salvage Vehicle
+            class Salvage: ExileAbstractAction
+            {
+                title = "Salvage Vehicle";
+                condition = "(!(alive (ExileClientInteractionObject)))";
+                action = "_this call HGA_fnc_SalvageVehicle";
+            };
 
 			// Locks a vehicle
 			class Lock: ExileAbstractAction
@@ -3183,6 +3196,109 @@ class CfgInteractionMenus
 		};
 	};
 
+	class Tank
+	{
+		target = "Tank";
+		targetType = 2;
+
+		class Actions
+		{
+			class ScanLock: ExileAbstractAction
+			{
+				title = "Scan Lock";
+				condition = "('Exile_Item_ThermalScannerPro' in (magazines player)) && ((locked ExileClientInteractionObject) != 1) && !ExilePlayerInSafezone";
+				action = "_this call ExileClient_object_lock_scan";
+			};
+			
+		    // Salvage Vehicle
+            class Salvage: ExileAbstractAction
+            {
+                title = "Salvage Vehicle";
+                condition = "(!(alive (ExileClientInteractionObject)))";
+                action = "_this call HGA_fnc_SalvageVehicle";
+            };
+
+			// Locks a vehicle
+			class Lock: ExileAbstractAction
+			{
+				title = "Lock";
+				condition = "((locked ExileClientInteractionObject) isEqualTo 0) && ((locked ExileClientInteractionObject) != 1)";
+				action = "true spawn ExileClient_object_lock_toggle";
+			};
+
+			// Unlocks a vehicle
+			class Unlock: ExileAbstractAction
+			{
+				title = "Unlock";
+				condition = "((locked ExileClientInteractionObject) isEqualTo 2) && ((locked ExileClientInteractionObject) != 1)";
+				action = "false spawn ExileClient_object_lock_toggle";
+			};
+			
+			//Claim a Vehicle
+            class ClaimVehicle: ExileAbstractAction
+            {
+            title = "Claim Ownership";
+            condition = "true";
+            action = "call ExileClient_ClaimVehicles_network_claimRequestSend";
+            };
+
+			// Hot-wires a vehicle
+			class Hotwire: ExileAbstractAction
+			{
+				title = "Hotwire";
+				condition = "((locked ExileClientInteractionObject) isEqualTo 2) && ((locked ExileClientInteractionObject) != 1)";
+				action = "['HotwireVehicle', _this select 0] call ExileClient_action_execute";
+			};
+
+			// Repairs a vehicle to 100%. Requires Duckttape
+			class Repair: ExileAbstractAction
+			{
+				title = "Repair";
+				condition = "true";
+				action = "['RepairVehicle', _this select 0] call ExileClient_action_execute";
+			};
+
+			// Flips a vehicle so the player doesnt have to call an admin
+			// Check if vector up is fucked
+			class Flip: ExileAbstractAction
+			{
+				title = "Flip";
+				condition = "call ExileClient_object_vehicle_interaction_show";
+				action = "_this call ExileClient_object_vehicle_flip";
+			};
+
+			// Fills fuel from a can into a car
+			class Refuel: ExileAbstractAction
+			{
+				title = "Refuel";
+				condition = "call ExileClient_object_vehicle_interaction_show";
+				action = "_this call ExileClient_object_vehicle_refuel";
+			};
+
+			// Drains fuel from a car into an empty jerry can
+			class DrainFuel: ExileAbstractAction
+			{
+				title = "Drain Fuel";
+				condition = "call ExileClient_object_vehicle_interaction_show";
+				action = "_this call ExileClient_object_vehicle_drain";
+			};
+
+			class RotateLeft: ExileAbstractAction
+			{
+				title = "Rotate Left";	
+				condition = "call ExileClient_object_vehicle_interaction_show";
+				action = "[ExileClientInteractionObject,-15] call ExileClient_object_vehicle_rotate";
+			};
+
+			class RotateRight: ExileAbstractAction
+			{
+				title = "Rotate Right";
+				condition = "call ExileClient_object_vehicle_interaction_show";
+				action = "[ExileClientInteractionObject,15] call ExileClient_object_vehicle_rotate";
+			};
+		};
+	};
+	
 	class Air
 	{
 		target = "Air";
@@ -3197,6 +3313,14 @@ class CfgInteractionMenus
 				action = "_this call ExileClient_object_lock_scan";
 			};
 
+		    // Salvage Vehicle
+            class Salvage: ExileAbstractAction
+            {
+                title = "Salvage Vehicle";
+                condition = "(!(alive (ExileClientInteractionObject)))";
+                action = "_this call HGA_fnc_SalvageVehicle";
+            };
+			
 			// Locks a vehicle
 			class Lock: ExileAbstractAction
 			{

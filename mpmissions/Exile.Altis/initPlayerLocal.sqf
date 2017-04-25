@@ -506,3 +506,10 @@ call ExileClient_object_trader_create;
     187.428
 ]
 call ExileClient_object_trader_create;
+
+HGA_fnc_SalvageVehicle = compileFinal preprocessFileLineNumbers "custom\scripts\salvagevehicle.sqf";
+
+//Schow things, if Player see the Screen
+waitUntil {!isNull findDisplay 46 && !isNil 'ExileClientLoadedIn' && getPlayerUID player != ''};
+uiSleep 1;
+execVM "custom\scripts\playergotscreen.sqf";
