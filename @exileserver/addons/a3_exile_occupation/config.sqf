@@ -39,15 +39,16 @@ SC_useWaypoints					= true;                 	// When spawning AI create waypoint
 SC_processReporter				= true;                 	// log the a list of active server processes every 60 seconds (useful for debugging server problems)
 SC_fastNights               	= true;						// true if you want night time to go faster than daytime
 SC_occupyPlaces 				= true;						// true if you want villages,towns,cities patrolled by bandits
-SC_occupyTraders            	= true;						// true if you want to create trader camps at positions specified in SC_occupyTraderDetails
+SC_occupyTraders            	= false;						// true if you want to create trader camps at positions specified in SC_occupyTraderDetails
 SC_occupyStatic	 		    	= false;		    		// true if you want to add AI in specific locations
 SC_occupyTransport 	        	= true;						// true if you want pubic transport (travels between traders)
 SC_occupyLootCrates		    	= true;						// true if you want to have random loot crates with guards
-SC_occupyRandomSpawn        	= true;                		// (WORK IN PROGRESS) true if you want random spawning AI that hunt for nearby players
+SC_occupyRandomSpawn        	= false;                		// (WORK IN PROGRESS) true if you want random spawning AI that hunt for nearby players
+// Disable Random Police Raid
 SC_occupyMilitary 		    	= false;			    	// true if you want military buildings patrolled
 SC_occupyVehicle				= true;						// true if you want to have roaming AI land vehicles
 SC_occupySky					= true;						// true if you want to have roaming AI helis
-SC_occupySea					= false;					// true if you want to have roaming AI boats
+SC_occupySea					= true;					// true if you want to have roaming AI boats
 SC_occupyHeliCrashes			= true;						// true if you want to have Dayz style helicrashes
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
