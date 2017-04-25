@@ -53,6 +53,7 @@ private _objs = _export apply
 	_object setDir (_x select 2);
 	_object setPosATL (_center vectorAdd (_x select 1));
 	_object enableSimulationGlobal ((_x select 3) select 0);
+	
 	_object allowDamage ((_x select 3) select 1);
 	_object;
 };
