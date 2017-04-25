@@ -2777,10 +2777,12 @@ class CfgExileCustomCode
 	// Trader Launcher FIX
 	ExileClient_util_playerEquipment_add										= "custom\overrides\ExileServer_world_spawnVehicles.sqf";
 	// Set Car Magazines to only 1
-	ExileServer_world_spawnVehicles												= "custom\overrides\ExileServer_world_spawnVehicles";
+	ExileServer_world_spawnVehicles												= "custom\overrides\ExileServer_world_spawnVehicles.sqf";
 	// Get Poptabs for Drinks
-	ExileClient_object_item_consume												= "custom\overrides\ExileClient_object_item_consume";
-
+	ExileClient_object_item_consume												= "custom\overrides\ExileClient_object_item_consume.sqf";
+	//Claim non Persistent Vehicle
+	ExileServer_ClaimVehicles_network_saveVehicleRequest						= "custom\overrides\ExileServer_ClaimVehicles_network_saveVehicleRequest.sqf";
+	ExileClient_ClaimVehicles_network_claimRequestSend							= "custom\overrides\ExileClient_ClaimVehicles_network_claimRequestSend.sqf";
 };
 class CfgExileEnvironment
 {
@@ -3152,6 +3154,14 @@ class CfgInteractionMenus
 				condition = "((locked ExileClientInteractionObject) isEqualTo 2) && ((locked ExileClientInteractionObject) != 1)";
 				action = "false spawn ExileClient_object_lock_toggle";
 			};
+			
+			//Claim a Vehicle
+            class ClaimVehicle: ExileAbstractAction
+            {
+            title = "Claim Ownership";
+            condition = "true";
+            action = "call ExileClient_ClaimVehicles_network_claimRequestSend";
+            };
 
 			// Repairs a vehicle to 100%. Requires Duckttape
 			class Repair: ExileAbstractAction
@@ -3336,6 +3346,14 @@ class CfgInteractionMenus
 				condition = "((locked ExileClientInteractionObject) isEqualTo 2) && ((locked ExileClientInteractionObject) != 1)";
 				action = "false spawn ExileClient_object_lock_toggle";
 			};
+			
+			//Claim a Vehicle
+            class ClaimVehicle: ExileAbstractAction
+            {
+            title = "Claim Ownership";
+            condition = "true";
+            action = "call ExileClient_ClaimVehicles_network_claimRequestSend";
+            };
 
 			// Hot-wires a vehicle
 			class Hotwire: ExileAbstractAction

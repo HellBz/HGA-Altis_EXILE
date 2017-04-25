@@ -138,6 +138,12 @@ class CfgRemoteExec
 class CfgNetworkMessages
 {
     #include "MarXet\CfgMarXetNetworkMessages.hpp"
+	
+    class saveVehicleRequest
+    {
+        module = "ClaimVehicles";
+        parameters[] = {"STRING","STRING"};
+    };
 };
 
 
