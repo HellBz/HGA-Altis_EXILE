@@ -2780,9 +2780,6 @@ class CfgExileCustomCode
 	ExileServer_world_spawnVehicles												= "custom\overrides\ExileServer_world_spawnVehicles.sqf";
 	// Get Poptabs for Drinks
 	ExileClient_object_item_consume												= "custom\overrides\ExileClient_object_item_consume.sqf";
-	//Claim non Persistent Vehicle
-	ExileServer_ClaimVehicles_network_saveVehicleRequest						= "custom\overrides\ExileServer_ClaimVehicles_network_saveVehicleRequest.sqf";
-	ExileClient_ClaimVehicles_network_claimRequestSend							= "custom\overrides\ExileClient_ClaimVehicles_network_claimRequestSend.sqf";
 };
 class CfgExileEnvironment
 {
