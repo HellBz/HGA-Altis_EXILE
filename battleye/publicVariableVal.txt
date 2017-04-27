@@ -1,2 +1,11 @@
 //regex
 7 ""
+7 "call" !="r3f_log_remorque" !="r3f_log_est_transporte_par" !"r3f_log_objets_charges"
+7 "spawn" !="r3f_log_remorque" !="r3f_log_est_transporte_par"
+7 "compile" !="r3f_log_remorque" !="r3f_log_est_transporte_par"
+7 "exec"
+7 "config"
+7 "toString"
+7 "toArray"
+7 "loadFile"
+7 "preprocess"

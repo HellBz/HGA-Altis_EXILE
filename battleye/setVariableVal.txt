@@ -1,2 +1,2 @@
 //regex
-7 "" !(true|false|any) !="[0-9]{1,2}" !="\"\"" !="\"111thID\"" !="\"BI\"" !="\"ExileBrunswik\"" !="\"CTRG\"" !="\"CTRG14\"" !="\"CTRG15\"" !="\"Exile\"" !="\"GryffinRegiment\"" !="\"MANW\"" !="\"TFAegis\"" !="\"Curator\""
+7 "" !(true|false|any) !="[0-9]{1,2}" !="\"\"" !="\"111thID\"" !="\"BI\"" !="\"ExileBrunswik\"" !="\"CTRG\"" !="\"CTRG14\"" !="\"CTRG15\"" !="\"Exile\"" !="\"GryffinRegiment\"" !="\"MANW\"" !="\"TFAegis\"" !="\"Curator\"" !="r3f_log_remorque" !="r3f_log_est_transporte_par" !="Exile_"
