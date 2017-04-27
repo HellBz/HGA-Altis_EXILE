@@ -2775,7 +2775,7 @@ class CfgExileCustomCode
 	ExileClient_gui_vehicleCustomsDialog_show 									 = "custom\overrides\ExileClient_gui_vehicleCustomsDialog_show.sqf";
 	ExileClient_gui_vehicleCustomsDialog_updateVehicle 							 = "custom\overrides\ExileClient_gui_vehicleCustomsDialog_updateVehicle.sqf";
 	// Trader Launcher FIX
-	ExileClient_util_playerEquipment_add										= "custom\overrides\ExileServer_world_spawnVehicles.sqf";
+	//ExileClient_util_playerEquipment_add										= "custom\overrides\ExileServer_world_spawnVehicles.sqf";
 	// Set Car Magazines to only 1
 	ExileServer_world_spawnVehicles												= "custom\overrides\ExileServer_world_spawnVehicles.sqf";
 	// Get Poptabs for Drinks

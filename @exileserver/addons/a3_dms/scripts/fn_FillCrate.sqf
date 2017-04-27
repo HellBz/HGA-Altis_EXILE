@@ -305,7 +305,7 @@ if (_crate getVariable ["DMS_AllowSmoke", true]) then
 {
 	if (DMS_SpawnBoxSmoke && {sunOrMoon == 1}) then
 	{
-		private _marker = "SmokeShellPurple" createVehicle getPosATL _crate;
+		private _marker = "SmokeShellGreen" createVehicle getPosATL _crate;
 		_marker setPosATL (getPosATL _crate);
 		_marker attachTo [_crate,[0,0,0]];
 	};

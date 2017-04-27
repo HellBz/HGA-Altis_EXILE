@@ -164,7 +164,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_MinWaterDepth					= 20;						// Minimum depth of water that an underwater mission can spawn at.
 
 	/*Crate/Box settings*/
-	DMS_HideBox							= false;					// "Hide" the box from being visible by players until the mission is completed.
+	DMS_HideBox							= true;					// "Hide" the box from being visible by players until the mission is completed.
 	DMS_EnableBoxMoving					= true;						// Whether or not to allow the box to move and/or be lifted by choppers.
 	DMS_SpawnBoxSmoke					= true;						// Spawn a smoke grenade on mission box upon misson completion during daytime
 	DMS_SpawnBoxIRGrenade				= true;						// Spawn an IR grenade on mission box upon misson completion during nighttime
@@ -1034,8 +1034,8 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 										];
 	DMS_BoxWeapons =					[							// List of weapons that can spawn in a crate
 											#ifdef USE_MARKSMAN_DLC_WEAPONS_IN_CRATES
-											"srifle_DMR_02_F",
-											"srifle_DMR_03_woodland_F",
+											//"srifle_DMR_02_F",			//PLS NO Mar10
+											//"srifle_DMR_03_woodland_F",   //PLS NO Mar10
 											//"srifle_DMR_04_F",			// ASP-1 Kir
 											"srifle_DMR_05_blk_F",
 											"srifle_DMR_06_olive_F",
@@ -1071,7 +1071,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"Exile_Weapon_AK47",
 											"Exile_Weapon_AKS_Gold",
 											"LMG_Zafir_F",
-											"LMG_Mk200_F",
+											//"LMG_Mk200_F", To Hard Weapon  //No MK 200 pls
 											"arifle_MX_SW_Black_F",
 											"Exile_Weapon_RPK",
 											"Exile_Weapon_PK",
