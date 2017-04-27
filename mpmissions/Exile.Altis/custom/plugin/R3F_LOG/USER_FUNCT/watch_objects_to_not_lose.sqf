@@ -1,5 +1,5 @@
 /**
- * THIS SCRIPT HAS BEEN REMOVED. PLEASE USE "R3F_LOG\USER_FUNCT\do_not_lose_it.sqf".
+ * THIS SCRIPT HAS BEEN REMOVED. PLEASE USE "custom\plugin\R3F_LOG\USER_FUNCT\do_not_lose_it.sqf".
  */
 
 sleep 1;

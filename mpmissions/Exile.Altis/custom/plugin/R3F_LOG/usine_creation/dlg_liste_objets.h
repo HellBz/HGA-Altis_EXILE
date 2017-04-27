@@ -16,7 +16,7 @@ class R3F_LOG_dlg_liste_objets
 	name = "R3F_LOG_dlg_liste_objets";
 	movingEnable = false;
 	
-	onUnload = "call compile preprocessFile ""R3F_LOG\usine_creation\memoriser_dlg_liste_objets.sqf"";";
+	onUnload = "call compile preprocessFile ""custom\plugin\R3F_LOG\usine_creation\memoriser_dlg_liste_objets.sqf"";";
 	
 	controlsBackground[] = {R3F_LOG_dlg_LO_titre_fond};
 	objects[] = {};

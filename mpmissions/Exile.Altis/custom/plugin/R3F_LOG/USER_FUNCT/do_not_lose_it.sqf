@@ -17,10 +17,10 @@
  *              set to "cargo_pos" to unload the object around the destroyed cargo
  *              set to any marker name to teleport the object to the marker position
  * 
- * @usage nul = [my_object] execVM "R3F_LOG\USER_FUNCT\do_not_lose_it.sqf";
- * @usage nul = [my_object, "spawn_pos"] execVM "R3F_LOG\USER_FUNCT\do_not_lose_it.sqf";
- * @usage nul = [my_object, "cargo_pos"] execVM "R3F_LOG\USER_FUNCT\do_not_lose_it.sqf";
- * @usage nul = [my_object, "<marker name>"] execVM "R3F_LOG\USER_FUNCT\do_not_lose_it.sqf";
+ * @usage nul = [my_object] execVM "custom\plugin\R3F_LOG\USER_FUNCT\do_not_lose_it.sqf";
+ * @usage nul = [my_object, "spawn_pos"] execVM "custom\plugin\R3F_LOG\USER_FUNCT\do_not_lose_it.sqf";
+ * @usage nul = [my_object, "cargo_pos"] execVM "custom\plugin\R3F_LOG\USER_FUNCT\do_not_lose_it.sqf";
+ * @usage nul = [my_object, "<marker name>"] execVM "custom\plugin\R3F_LOG\USER_FUNCT\do_not_lose_it.sqf";
  * 
  * @usage You can replace "my_object" by "this" if you put the line in the initialization line in the mission editor.
  */

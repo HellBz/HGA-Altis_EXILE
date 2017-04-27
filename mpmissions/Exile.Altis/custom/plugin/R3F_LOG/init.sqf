@@ -41,7 +41,7 @@
 	#include "config_creation_factory.sqf"
 	
 	// Chargement du fichier de langage
-	call compile preprocessFile format ["R3F_LOG\%1_strings_lang.sqf", R3F_LOG_CFG_language];
+	call compile preprocessFile format ["custom\plugin\custom\plugin\R3F_LOG\%1_strings_lang.sqf", R3F_LOG_CFG_language];
 	
 	/*
 	 * On inverse l'ordre de toutes les listes de noms de classes pour donner
@@ -107,7 +107,7 @@
 		R3F_LOG_liste_objets_a_proteger = [];
 		
 		/* Protège les objets présents dans R3F_LOG_liste_objets_a_proteger */
-		execVM "R3F_LOG\surveiller_objets_a_proteger.sqf";
+		execVM "custom\plugin\custom\plugin\R3F_LOG\surveiller_objets_a_proteger.sqf";
 	};
 	
 	/**
@@ -170,7 +170,7 @@
 	/** Pseudo-mutex permettant de n'exécuter qu'un script de manipulation d'objet à la fois (true : vérouillé) */
 	R3F_LOG_mutex_local_verrou = false;
 	
-	call compile preprocessFile "R3F_LOG\fonctions_generales\lib_geometrie_3D.sqf";
+	call compile preprocessFile "custom\plugin\custom\plugin\R3F_LOG\fonctions_generales\lib_geometrie_3D.sqf";
 	
 	// Indices du tableau des fonctionnalités retourné par R3F_LOG_FNCT_determiner_fonctionnalites_logistique
 	R3F_LOG_IDX_can_be_depl_heli_remorq_transp = 0;
@@ -185,10 +185,10 @@
 	R3F_LOG_IDX_can_be_transported_cargo_cout = 9;
 	R3F_LOG_CST_zero_log = [false, false, false, false, false, false, false, 0, false, 0];
 	
-	R3F_LOG_FNCT_determiner_fonctionnalites_logistique = compile preprocessFile "R3F_LOG\fonctions_generales\determiner_fonctionnalites_logistique.sqf";
+	R3F_LOG_FNCT_determiner_fonctionnalites_logistique = compile preprocessFile "custom\plugin\R3F_LOG\fonctions_generales\determiner_fonctionnalites_logistique.sqf";
 	
-	R3F_LOG_FNCT_calculer_chargement_vehicule = compile preprocessFile "R3F_LOG\transporteur\calculer_chargement_vehicule.sqf";
-	R3F_LOG_FNCT_transporteur_charger_auto = compile preprocessFile "R3F_LOG\transporteur\charger_auto.sqf";
+	R3F_LOG_FNCT_calculer_chargement_vehicule = compile preprocessFile "custom\plugin\R3F_LOG\transporteur\calculer_chargement_vehicule.sqf";
+	R3F_LOG_FNCT_transporteur_charger_auto = compile preprocessFile "custom\plugin\R3F_LOG\transporteur\charger_auto.sqf";
 	
 	// Un serveur dédié n'en a pas besoin
 	if !(isDedicated) then
@@ -205,44 +205,44 @@
 		/** Tableau contenant toutes les usines créées */
 		R3F_LOG_CF_liste_usines = [];
 		
-		call compile preprocessFile "R3F_LOG\fonctions_generales\lib_visualisation_objet.sqf";
+		call compile preprocessFile "custom\plugin\R3F_LOG\fonctions_generales\lib_visualisation_objet.sqf";
 		
-		R3F_LOG_FNCT_objet_relacher = compile preprocessFile "R3F_LOG\objet_deplacable\relacher.sqf";
-		R3F_LOG_FNCT_objet_deplacer = compile preprocessFile "R3F_LOG\objet_deplacable\deplacer.sqf";
+		R3F_LOG_FNCT_objet_relacher = compile preprocessFile "custom\plugin\R3F_LOG\objet_deplacable\relacher.sqf";
+		R3F_LOG_FNCT_objet_deplacer = compile preprocessFile "custom\plugin\R3F_LOG\objet_deplacable\deplacer.sqf";
 		
-		R3F_LOG_FNCT_heliporteur_heliporter = compile preprocessFile "R3F_LOG\heliporteur\heliporter.sqf";
-		R3F_LOG_FNCT_heliporteur_larguer = compile preprocessFile "R3F_LOG\heliporteur\larguer.sqf";
-		R3F_LOG_FNCT_heliporteur_init = compile preprocessFile "R3F_LOG\heliporteur\heliporteur_init.sqf";
+		R3F_LOG_FNCT_heliporteur_heliporter = compile preprocessFile "custom\plugin\R3F_LOG\heliporteur\heliporter.sqf";
+		R3F_LOG_FNCT_heliporteur_larguer = compile preprocessFile "custom\plugin\R3F_LOG\heliporteur\larguer.sqf";
+		R3F_LOG_FNCT_heliporteur_init = compile preprocessFile "custom\plugin\R3F_LOG\heliporteur\heliporteur_init.sqf";
 		
-		R3F_LOG_FNCT_remorqueur_detacher = compile preprocessFile "R3F_LOG\remorqueur\detacher.sqf";
-		R3F_LOG_FNCT_remorqueur_remorquer_deplace = compile preprocessFile "R3F_LOG\remorqueur\remorquer_deplace.sqf";
-		R3F_LOG_FNCT_remorqueur_remorquer_direct = compile preprocessFile "R3F_LOG\remorqueur\remorquer_direct.sqf";
-		R3F_LOG_FNCT_remorqueur_init = compile preprocessFile "R3F_LOG\remorqueur\remorqueur_init.sqf";
+		R3F_LOG_FNCT_remorqueur_detacher = compile preprocessFile "custom\plugin\R3F_LOG\remorqueur\detacher.sqf";
+		R3F_LOG_FNCT_remorqueur_remorquer_deplace = compile preprocessFile "custom\plugin\R3F_LOG\remorqueur\remorquer_deplace.sqf";
+		R3F_LOG_FNCT_remorqueur_remorquer_direct = compile preprocessFile "custom\plugin\R3F_LOG\remorqueur\remorquer_direct.sqf";
+		R3F_LOG_FNCT_remorqueur_init = compile preprocessFile "custom\plugin\R3F_LOG\remorqueur\remorqueur_init.sqf";
 		
-		R3F_LOG_FNCT_transporteur_charger_deplace = compile preprocessFile "R3F_LOG\transporteur\charger_deplace.sqf";
-		R3F_LOG_FNCT_transporteur_charger_selection = compile preprocessFile "R3F_LOG\transporteur\charger_selection.sqf";
-		R3F_LOG_FNCT_transporteur_decharger = compile preprocessFile "R3F_LOG\transporteur\decharger.sqf";
-		R3F_LOG_FNCT_transporteur_selectionner_objet = compile preprocessFile "R3F_LOG\transporteur\selectionner_objet.sqf";
-		R3F_LOG_FNCT_transporteur_voir_contenu_vehicule = compile preprocessFile "R3F_LOG\transporteur\voir_contenu_vehicule.sqf";
-		R3F_LOG_FNCT_transporteur_init = compile preprocessFile "R3F_LOG\transporteur\transporteur_init.sqf";
+		R3F_LOG_FNCT_transporteur_charger_deplace = compile preprocessFile "custom\plugin\R3F_LOG\transporteur\charger_deplace.sqf";
+		R3F_LOG_FNCT_transporteur_charger_selection = compile preprocessFile "custom\plugin\R3F_LOG\transporteur\charger_selection.sqf";
+		R3F_LOG_FNCT_transporteur_decharger = compile preprocessFile "custom\plugin\R3F_LOG\transporteur\decharger.sqf";
+		R3F_LOG_FNCT_transporteur_selectionner_objet = compile preprocessFile "custom\plugin\R3F_LOG\transporteur\selectionner_objet.sqf";
+		R3F_LOG_FNCT_transporteur_voir_contenu_vehicule = compile preprocessFile "custom\plugin\R3F_LOG\transporteur\voir_contenu_vehicule.sqf";
+		R3F_LOG_FNCT_transporteur_init = compile preprocessFile "custom\plugin\R3F_LOG\transporteur\transporteur_init.sqf";
 		
-		R3F_LOG_FNCT_usine_remplir_liste_objets = compile preprocessFile "R3F_LOG\usine_creation\remplir_liste_objets.sqf";
-		R3F_LOG_FNCT_usine_creer_objet = compile preprocessFile "R3F_LOG\usine_creation\creer_objet.sqf";
-		R3F_LOG_FNCT_usine_ouvrir_usine = compile preprocessFile "R3F_LOG\usine_creation\ouvrir_usine.sqf";
-		R3F_LOG_FNCT_usine_init = compile preprocessFile "R3F_LOG\usine_creation\usine_init.sqf";
-		R3F_LOG_FNCT_usine_revendre_deplace = compile preprocessFile "R3F_LOG\usine_creation\revendre_deplace.sqf";
-		R3F_LOG_FNCT_usine_revendre_selection = compile preprocessFile "R3F_LOG\usine_creation\revendre_selection.sqf";
-		R3F_LOG_FNCT_usine_revendre_direct = compile preprocessFile "R3F_LOG\usine_creation\revendre_direct.sqf";
-		R3F_LOG_FNCT_recuperer_liste_cfgVehicles_par_categories = compile preprocessFile "R3F_LOG\usine_creation\recuperer_liste_cfgVehicles_par_categories.sqf";
-		R3F_LOG_FNCT_determiner_cout_creation = compile preprocessFile "R3F_LOG\usine_creation\determiner_cout_creation.sqf";
+		R3F_LOG_FNCT_usine_remplir_liste_objets = compile preprocessFile "custom\plugin\R3F_LOG\usine_creation\remplir_liste_objets.sqf";
+		R3F_LOG_FNCT_usine_creer_objet = compile preprocessFile "custom\plugin\R3F_LOG\usine_creation\creer_objet.sqf";
+		R3F_LOG_FNCT_usine_ouvrir_usine = compile preprocessFile "custom\plugin\R3F_LOG\usine_creation\ouvrir_usine.sqf";
+		R3F_LOG_FNCT_usine_init = compile preprocessFile "custom\plugin\R3F_LOG\usine_creation\usine_init.sqf";
+		R3F_LOG_FNCT_usine_revendre_deplace = compile preprocessFile "custom\plugin\R3F_LOG\usine_creation\revendre_deplace.sqf";
+		R3F_LOG_FNCT_usine_revendre_selection = compile preprocessFile "custom\plugin\R3F_LOG\usine_creation\revendre_selection.sqf";
+		R3F_LOG_FNCT_usine_revendre_direct = compile preprocessFile "custom\plugin\R3F_LOG\usine_creation\revendre_direct.sqf";
+		R3F_LOG_FNCT_recuperer_liste_cfgVehicles_par_categories = compile preprocessFile "custom\plugin\R3F_LOG\usine_creation\recuperer_liste_cfgVehicles_par_categories.sqf";
+		R3F_LOG_FNCT_determiner_cout_creation = compile preprocessFile "custom\plugin\R3F_LOG\usine_creation\determiner_cout_creation.sqf";
 		
-		R3F_LOG_FNCT_objet_init = compile preprocessFile "R3F_LOG\objet_commun\objet_init.sqf";
-		R3F_LOG_FNCT_objet_est_verrouille = compile preprocessFile "R3F_LOG\objet_commun\objet_est_verrouille.sqf";
-		R3F_LOG_FNCT_deverrouiller_objet = compile preprocessFile "R3F_LOG\objet_commun\deverrouiller_objet.sqf";
-		R3F_LOG_FNCT_definir_proprietaire_verrou = compile preprocessFile "R3F_LOG\objet_commun\definir_proprietaire_verrou.sqf";
+		R3F_LOG_FNCT_objet_init = compile preprocessFile "custom\plugin\R3F_LOG\objet_commun\objet_init.sqf";
+		R3F_LOG_FNCT_objet_est_verrouille = compile preprocessFile "custom\plugin\R3F_LOG\objet_commun\objet_est_verrouille.sqf";
+		R3F_LOG_FNCT_deverrouiller_objet = compile preprocessFile "custom\plugin\R3F_LOG\objet_commun\deverrouiller_objet.sqf";
+		R3F_LOG_FNCT_definir_proprietaire_verrou = compile preprocessFile "custom\plugin\R3F_LOG\objet_commun\definir_proprietaire_verrou.sqf";
 		
-		R3F_LOG_FNCT_formater_fonctionnalites_logistique = compile preprocessFile "R3F_LOG\fonctions_generales\formater_fonctionnalites_logistique.sqf";
-		R3F_LOG_FNCT_formater_nombre_entier_milliers = compile preprocessFile "R3F_LOG\fonctions_generales\formater_nombre_entier_milliers.sqf";
+		R3F_LOG_FNCT_formater_fonctionnalites_logistique = compile preprocessFile "custom\plugin\R3F_LOG\fonctions_generales\formater_fonctionnalites_logistique.sqf";
+		R3F_LOG_FNCT_formater_nombre_entier_milliers = compile preprocessFile "custom\plugin\R3F_LOG\fonctions_generales\formater_nombre_entier_milliers.sqf";
 		
 		// Liste des variables activant ou non les actions de menu
 		R3F_LOG_action_charger_deplace_valide = false;
@@ -321,10 +321,10 @@
 		R3F_LOG_PUBVAR_nouvel_objet_a_initialiser = false;
 		
 		/* Vérification permanente des conditions donnant accès aux addAction */
-		execVM "R3F_LOG\surveiller_conditions_actions_menu.sqf";
+		execVM "custom\plugin\R3F_LOG\surveiller_conditions_actions_menu.sqf";
 		
 		/* Auto-détection permanente des objets sur le jeu */
-		execVM "R3F_LOG\surveiller_nouveaux_objets.sqf";
+		execVM "custom\plugin\R3F_LOG\surveiller_nouveaux_objets.sqf";
 		
 		/*
 		 * Système assurant la protection contre les blessures lors du déplacement d'objets
@@ -332,7 +332,7 @@
 		 * Seuls les joueurs et les IA commandées par les joueurs (locales) seront protégés.
 		 * Les IA n'étant pas commandées par un joueur ne seront pas protégées, ce qui est un moindre mal.
 		 */
-		execVM "R3F_LOG\systeme_protection_blessures.sqf";
+		execVM "custom\plugin\R3F_LOG\systeme_protection_blessures.sqf";
 	};
 	
 	R3F_LOG_active = true;

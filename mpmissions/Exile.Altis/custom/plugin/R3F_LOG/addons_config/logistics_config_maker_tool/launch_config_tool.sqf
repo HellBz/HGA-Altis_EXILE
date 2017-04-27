@@ -5,7 +5,7 @@
  * READ THE PDF DOCUMENTATION TO KNOW HOW TO USE IT !
  * 
  * @usage Don't forget to fill the list of class names to configure in list_of_objects_to_config.sqf.
- * @usage execVM "R3F_LOG\addons_config\logistics_config_maker_tool\launch_config_tool.sqf";
+ * @usage execVM "custom\plugin\R3F_LOG\addons_config\logistics_config_maker_tool\launch_config_tool.sqf";
  * 
  * Copyright (C) 2014 Team ~R3F~
  * 
@@ -40,7 +40,7 @@ reverse R3F_LOG_classes_objets_transportables;
 
 R3F_LOG_spawn_position = player modelToWorld [0, 30, 0];
 
-player addAction ["Dump config to RPT", "R3F_LOG\addons_config\logistics_config_maker_tool\dump_config.sqf"];
+player addAction ["Dump config to RPT", "custom\plugin\R3F_LOG\addons_config\logistics_config_maker_tool\dump_config.sqf"];
 player addAction ["Set new spawn position", {R3F_LOG_spawn_position = player modelToWorld [0, 30, 0]; systemChat "New spawn position defined.";}];
 player addEventHandler ["HandleDamage", {0}];
 

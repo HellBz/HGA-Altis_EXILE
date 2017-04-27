@@ -8,13 +8,13 @@
  * @param 1 (optional) true to dump the empty categories (i.e. categories with no entry in CfgVehicles) (default : false)
  * 
  * @usage execute the following line in the BIS' debug console or the init line of the player
- * @usage nul = [] execVM "R3F_LOG\USER_FUNCT\dump_creation_factory_categories.sqf";
+ * @usage nul = [] execVM "custom\plugin\R3F_LOG\USER_FUNCT\dump_creation_factory_categories.sqf";
  * 
  * @usage to not dump the comments after the class names, set the optional param 0 to false
- * @usage nul = [false] execVM "R3F_LOG\USER_FUNCT\dump_creation_factory_categories.sqf";
+ * @usage nul = [false] execVM "custom\plugin\R3F_LOG\USER_FUNCT\dump_creation_factory_categories.sqf";
  * 
  * @usage to dump all categories, including empty ones, set param 1 to true
- * @usage nul = [true, true] execVM "R3F_LOG\USER_FUNCT\dump_creation_factory_categories.sqf";
+ * @usage nul = [true, true] execVM "custom\plugin\R3F_LOG\USER_FUNCT\dump_creation_factory_categories.sqf";
  */
 
 waitUntil {!isNil "R3F_LOG_active"};
