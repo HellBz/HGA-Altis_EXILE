@@ -41,7 +41,7 @@
 	#include "config_creation_factory.sqf"
 	
 	// Chargement du fichier de langage
-	call compile preprocessFile format ["custom\plugin\custom\plugin\R3F_LOG\%1_strings_lang.sqf", R3F_LOG_CFG_language];
+	call compile preprocessFile format ["custom\plugin\R3F_LOG\%1_strings_lang.sqf", R3F_LOG_CFG_language];
 	
 	/*
 	 * On inverse l'ordre de toutes les listes de noms de classes pour donner
@@ -107,7 +107,7 @@
 		R3F_LOG_liste_objets_a_proteger = [];
 		
 		/* Protège les objets présents dans R3F_LOG_liste_objets_a_proteger */
-		execVM "custom\plugin\custom\plugin\R3F_LOG\surveiller_objets_a_proteger.sqf";
+		execVM "custom\plugin\R3F_LOG\surveiller_objets_a_proteger.sqf";
 	};
 	
 	/**
@@ -170,7 +170,7 @@
 	/** Pseudo-mutex permettant de n'exécuter qu'un script de manipulation d'objet à la fois (true : vérouillé) */
 	R3F_LOG_mutex_local_verrou = false;
 	
-	call compile preprocessFile "custom\plugin\custom\plugin\R3F_LOG\fonctions_generales\lib_geometrie_3D.sqf";
+	call compile preprocessFile "custom\plugin\R3F_LOG\fonctions_generales\lib_geometrie_3D.sqf";
 	
 	// Indices du tableau des fonctionnalités retourné par R3F_LOG_FNCT_determiner_fonctionnalites_logistique
 	R3F_LOG_IDX_can_be_depl_heli_remorq_transp = 0;
