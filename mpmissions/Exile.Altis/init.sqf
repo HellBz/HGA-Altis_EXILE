@@ -14,3 +14,7 @@
 ExileClient_ClaimVehicles_network_claimRequestSend = compileFinal preprocessFileLineNumbers 'custom\scripts\ExileClient_ClaimVehicles_network_claimRequestSend.sqf';
 ExileServer_ClaimVehicles_network_saveVehicleRequest = compileFinal preprocessFileLineNumbers 'custom\scripts\ExileServer_ClaimVehicles_network_saveVehicleRequest.sqf';
 //------------------------- Claim Vehicle------------------------------------------------------------//
+
+//------------------------- Server Restart Warning --------------------------------------------------//
+"RM_DISPLAYTEXT_PUBVAR" addPublicVariableEventHandler {(_this select 1) spawn BIS_fnc_dynamicText;};
+//------------------------- Server Restart Warning --------------------------------------------------//
