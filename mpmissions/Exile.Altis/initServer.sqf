@@ -443,5 +443,4 @@ _concreteMixers =
 forEach _concreteMixers;
 
 //------------------------- Server Restart Warning --------------------------------------------------//
-[] execVM "custom\scripts\serverRestartMessages.sqf");
 //------------------------- Server Restart Warning --------------------------------------------------//

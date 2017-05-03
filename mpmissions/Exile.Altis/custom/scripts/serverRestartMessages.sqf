@@ -60,7 +60,7 @@
 */
 
 _hardResetTimes = ["04:00:00","08:00:00","12:00:00","16:00:00","20:00:00","00:00:00"]; // HARD RESET TIMES IN HH:MM:SS
-_realTimeOffset = 1; // Offset to Real Time
+_realTimeOffset = 2; // Offset to Real Time
 _lastMinuteCountDown = true; // COUNTS DOWN ON SCREEN FROM 60 SECONDS TO 0 SECONDS
 _lockServerAt5Minutes = true; // LOCK THE SERVER 5 MINUTES BEFORE RESTART?
 
@@ -90,14 +90,21 @@ _checkTimeRange = {
 	_isTime
 };
 
+_checkdb = "extDB3" callExtension "9:VERSION";
+if (_checkdb == "") then
+{
+	FN_CALL_ExtDB_TIME = {"extDB2" callExtension format["9:TIME:%1",_realTimeOffset] };
+} else {
+	FN_CALL_ExtDB_TIME = {"extDB3" callExtension format["9:UTC_TIME:%1",_realTimeOffset] };
+};
+
 _outputServerTime = "";
 _checkServerTime = {
-	_is32Bit = if(count productVersion isEqualTo 7)then{true}else{(productVersion select 7) isEqualTo "x86"};
-	if(_is32Bit)then{FN_CALL_ExtDB_TIME = {"extDB2" callExtension format["9:TIME:%1",_realTimeOffset] };}else{FN_CALL_ExtDB_TIME = {"extDB3" callExtension format["9:UTC_TIME:%1",_realTimeOffset] };};
-	_getlocaltime = "" call FN_CALL_ExtDB_TIME;
-	_currServerTimeHour = _getlocaltime select 3; 
-	_currServerTimeMin = _getlocaltime select 4; 
-	_currServerTimeSec = _getlocaltime select 5;
+	_currServerTime = call compile ("" call FN_CALL_ExtDB_TIME);
+	_currServerTimeArray = _currServerTime select 1;
+	_currServerTimeHour = _currServerTimeArray select 3; 
+	_currServerTimeMin  = _currServerTimeArray select 4; 
+	_currServerTimeSec  = _currServerTimeArray select 5;		
 	if (_this == "HHMMSS") then {
 		_outputServerTime = format ["%1:%2:%3", _currServerTimeHour call _doubleDigits, _currServerTimeMin call _doubleDigits, _currServerTimeSec call _doubleDigits];
 	}
@@ -119,9 +126,9 @@ while {checkServerTime} do
 	_ticksLoop = round(diag_TickTime);
 	{
 		_hardServerTime = _x splitString ":";
-		_hardServerTimeHour = parseNumber (_hardServerTime select 0);
-		_hardServerTimeMin = parseNumber (_hardServerTime select 1);
-		_hardServerTimeSec = parseNumber (_hardServerTime select 2);
+		_hardServerTimeHour = parseNumber (_hardServerTime select 3);
+		_hardServerTimeMin  = parseNumber (_hardServerTime select 4);
+		_hardServerTimeSec  = parseNumber (_hardServerTime select 5);
 		_hardSecondsTime = (_hardServerTimeHour * SECSPERHOUR);
 		_hardSecondsTime = (_hardSecondsTime + (_hardServerTimeMin * SECSPERMIN));
 		_hardSecondsTime = (_hardSecondsTime + _hardServerTimeSec);
