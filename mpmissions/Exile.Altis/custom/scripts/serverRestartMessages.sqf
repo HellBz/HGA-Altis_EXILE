@@ -2,7 +2,7 @@
 /*
 	----------------------------------------------------------------------------------------------
 	
-	Copyright © 2016 soulkobk (soulkobk.blogspot.com)
+	Copyright © 2016 soulkobk (http://www.soulkobk.blogspot.com)
 	--> Mod by H3llBz adapt to Linux with ExtDB 2/3 <--
 
 	This program is free software: you can redistribute it and/or modify

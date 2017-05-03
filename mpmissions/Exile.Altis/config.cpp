@@ -2780,6 +2780,8 @@ class CfgExileCustomCode
 	ExileServer_world_spawnVehicles												= "custom\overrides\ExileServer_world_spawnVehicles.sqf";
 	// Get Poptabs for Drinks
 	ExileClient_object_item_consume												= "custom\overrides\ExileClient_object_item_consume.sqf";
+	//Enigma Deploybike
+	ExileClient_gui_inventory_event_onSlotDoubleClick 							= "custom\plugin\EnigmaPersonalVehicle\ExileClient_gui_inventory_event_onSlotDoubleClick.sqf"; 
 };
 class CfgExileEnvironment
 {

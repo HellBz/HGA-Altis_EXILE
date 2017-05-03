@@ -18,3 +18,7 @@ ExileServer_ClaimVehicles_network_saveVehicleRequest = compileFinal preprocessFi
 //------------------------- Server Restart Warning --------------------------------------------------//
 "RM_DISPLAYTEXT_PUBVAR" addPublicVariableEventHandler {(_this select 1) spawn BIS_fnc_dynamicText;};
 //------------------------- Server Restart Warning --------------------------------------------------//
+
+//------------------------- Enigma_Exile_Deploybike -------------------------------------------------//
+[] execVM "custom\plugin\EnigmaPersonalVehicle\init.sqf";
+//------------------------- Enigma_Exile_Deploybike -------------------------------------------------//
