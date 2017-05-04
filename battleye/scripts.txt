@@ -29,3 +29,4 @@
 5 "     +             "
 5 "setDamage --"
 5 "setDamage ++"
+5 != "["StatusBarExile","PLAIN"];            \n};\n\n_players = count playableUnits;\n_unit = _this select 0;\n_damage = round ((1 - (damage player" 

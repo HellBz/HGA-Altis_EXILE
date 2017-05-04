@@ -26,3 +26,7 @@ ExileServer_ClaimVehicles_network_saveVehicleRequest = compileFinal preprocessFi
 //------------------------- Andre Convoy's ----------------------------------------------------------//
 [] execVM "custom\plugin\andre_convoy\andre_convoy.sqf";
 //------------------------- Andre Convoy's ----------------------------------------------------------//
+
+//------------------------- Status Bar ---------------------------------------------------------------//
+[] execVM "custom\plugin\statusBar\statusBar.sqf";
+//------------------------- Status Bar ---------------------------------------------------------------//
