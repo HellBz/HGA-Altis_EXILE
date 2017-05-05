@@ -1234,7 +1234,7 @@ class CfgExileCustomCode
 	ExileServer_system_trading_network_purchaseVehicleRequest 					= "custom\extdb3_fix\ExileServer_system_trading_network_purchaseVehicleRequest.sqf";
 	ExileServer_system_trading_network_purchaseVehicleSkinRequest 				= "custom\extdb3_fix\ExileServer_system_trading_network_purchaseVehicleSkinRequest.sqf";
 	ExileServer_system_trading_network_sellItemRequest 							= "custom\extdb3_fix\ExileServer_system_trading_network_sellItemRequest.sqf";
-	ExileServer_system_trading_network_wasteDumpRequest 						= "custom\extdb3_fix\ExileServer_system_trading_network_wasteDumpRequest.sqf";
+	//ExileServer_system_trading_network_wasteDumpRequest 						= "custom\extdb3_fix\ExileServer_system_trading_network_wasteDumpRequest.sqf";
 	ExileServer_util_time_addTime 												= "custom\extdb3_fix\ExileServer_util_time_addTime.sqf";
 	ExileServer_util_time_currentTime 											= "custom\extdb3_fix\ExileServer_util_time_currentTime.sqf";
 	ExileServer_util_time_uptime 												= "custom\extdb3_fix\ExileServer_util_time_uptime.sqf";

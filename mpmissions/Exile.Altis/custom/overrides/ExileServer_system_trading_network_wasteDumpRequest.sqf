@@ -216,7 +216,7 @@ try
 	if (_logging isEqualTo 1) then
 	{
 		_traderLog = format ["PLAYER: ( %1 ) %2 SOLD ITEM: %3 (ID# %4) with Cargo %5 FOR %6 POPTABS AND %7 RESPECT | PLAYER TOTAL MONEY: %8",getPlayerUID _playerObject,_playerObject,typeOf _vehicleObject,_vehicleDBID,_cargo,_revenue,_respectGain,_playerMoney];
-		"extDB2" callExtension format["1:TRADING:%1",_traderLog];
+		"extDB3" callExtension format["1:TRADING:%1",_traderLog];
 	};
 }
 catch
