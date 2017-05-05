@@ -155,8 +155,6 @@ disableSerialization;
 				<t shadow='1' shadowColor='#000000' color='%9'><img size='1.6'  shadowColor='#000000' image='custom\textures\sbicons\players.paa' color='%9'/> %2</t>
 				<t shadow='1' shadowColor='#000000' color='%14'><img size='1.0'  shadowColor='#000000' image='custom\textures\sbicons\health.paa' color='%9'/> %3%1</t>
 				<t shadow='1' shadowColor='#000000' color='%9'><img size='1.0'  shadowColor='#000000' image='custom\textures\sbicons\poptab_ca.paa' color='%9'/> %4</t>
-				<t shadow='1' shadowColor='#000000' color='%15'><img size='1.6'  shadowColor='#000000' image='custom\textures\sbicons\hunger.paa' color='%9'/> %5%1</t>
-				<t shadow='1' shadowColor='#000000' color='%16'><img size='1.6'  shadowColor='#000000' image='custom\textures\sbicons\thirst.paa' color='%9'/> %6%1</t>
 				<t shadow='1' shadowColor='#000000' color='%15'><img size='1.0'  shadowColor='#000000' image='custom\textures\sbicons\snowflake.paa' color='%9'/> %18%20</t>
 				<t shadow='1' shadowColor='#000000' color='%16'><img size='1.0'  shadowColor='#000000' image='custom\textures\sbicons\thermostat.paa' color='%9'/> %19%20</t>
 				<t shadow='1' shadowColor='#000000' color='%9'><img size='1.0'  shadowColor='#000000' image='custom\textures\sbicons\exile.paa' color='%9'/> %8</t>
