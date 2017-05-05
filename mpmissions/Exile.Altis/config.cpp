@@ -1256,8 +1256,10 @@ class CfgExileCustomCode
 	ExileClient_gui_inventory_event_onSlotDoubleClick 							= "custom\plugin\EnigmaPersonalVehicle\ExileClient_gui_inventory_event_onSlotDoubleClick.sqf"; 
 	//Sell Crates to Waste Dump 
 	ExileClient_gui_traderDialog_updateInventoryDropdown 						= "custom\overrides\ExileClient_gui_traderDialog_updateInventoryDropdown.sqf";
+	// R3F-WasteDump
 	ExileClient_gui_wasteDumpDialog_show 										= "custom\overrides\ExileClient_gui_wasteDumpDialog_show.sqf";
 	ExileServer_system_trading_network_wasteDumpRequest 						= "custom\overrides\ExileServer_system_trading_network_wasteDumpRequest.sqf";
+	ExileClient_gui_wasteDumpDialog_event_onModeDropDownSelectionChanged 		= "custom\overrides\ExileClient_gui_wasteDumpDialog_event_onModeDropDownSelectionChanged.sqf"; 
 	//EnigmaRevive
 	ExileClient_object_player_death_startBleedingOut 							= "custom\plugin\EnigmaRevive\ExileClient_object_player_death_startBleedingOut.sqf"; //Happys Revive
 	ExileClient_object_player_event_onInventoryOpened 							= "custom\plugin\EnigmaRevive\ExileClient_object_player_event_onInventoryOpened.sqf"; //Happys Revive AntiDupe ---NEW with v0.65
