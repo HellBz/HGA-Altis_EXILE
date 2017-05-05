@@ -1254,6 +1254,11 @@ class CfgExileCustomCode
 	ExileClient_object_item_consume												= "custom\overrides\ExileClient_object_item_consume.sqf";
 	//Enigma Deploybike
 	ExileClient_gui_inventory_event_onSlotDoubleClick 							= "custom\plugin\EnigmaPersonalVehicle\ExileClient_gui_inventory_event_onSlotDoubleClick.sqf"; 
+	//Sell Crates to Waste Dump 
+	ExileClient_gui_traderDialog_updateInventoryDropdown 						= "custom\overrides\ExileClient_gui_traderDialog_updateInventoryDropdown.sqf";
+	ExileClient_gui_wasteDumpDialog_show 										= "custom\overrides\ExileClient_gui_wasteDumpDialog_show.sqf";
+	ExileServer_system_trading_network_wasteDumpRequest 						= "custom\overrides\ExileServer_system_trading_network_wasteDumpRequest.sqf";
+
 };
 class CfgExileEnvironment
 {

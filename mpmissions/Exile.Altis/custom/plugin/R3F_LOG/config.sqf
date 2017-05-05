@@ -223,6 +223,8 @@ R3F_LOG_CFG_string_condition_allow_creation_factory_on_this_client = "false";
 
 /****** LIST OF ADDONS CONFIG TO INCLUDE / LISTE DES CONFIG D'ADDONS A INCLURE ******/
 //#include "addons_config\A3_vanilla.sqf" //Incuded in Super
+#include "addons_config\A3_vanilla.sqf"
+#include "addons_config\All_in_Arma.sqf"
 #include "addons_config\CUP.sqf"
 #include "addons_config\Exile.sqf"
 //#include "addons_config\YOUR_ADDITIONAL_ADDON.sqf"
