@@ -479,7 +479,7 @@ class FirstAid
 		"Exile_Item_Bandage",
 		"Exile_Item_Vishpirin",
 		"Exile_Item_Heatpack"
-        //"Exile_Item_Defibrillator"
+        "Exile_Item_Defibrillator"
 	};
 };
 
