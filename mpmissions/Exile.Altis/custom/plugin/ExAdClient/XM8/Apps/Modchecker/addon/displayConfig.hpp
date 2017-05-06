@@ -14,8 +14,8 @@
 
 _message = "";
 //_message = _message + "<t align='center' size='2' shadow='0'></t><br />";
-//_message = _message + "<t align='center' size='2' shadow='0'>Welcome to Mod modChecker</t><br />";
-//_message = _message + "<t align='center'>______________________________________________________________________________________<br /><br />";
+_message = _message + "<t align='center' size='2' shadow='0'>[HGA] Mod Checker</t><br />";
+_message = _message + "<t align='center'>______________________________________________________________________________________<br /><br />";
 _message = _message + warnMessage;
 _message = _message + "<t align='center'><br />";
 
@@ -41,7 +41,7 @@ _message = _message + modCheckCBA;
 
 _message = _message + "<br />";
 _message = _message + "If you get any error, please, read the following links<br /><br />";
-_message = _message + "Download the mods from <a href= 'https://steamcommunity.com/sharedfiles/filedetails/?id=912307631' color='#ff9900'>Download HGA-Exile Server Modpack</a> Only click on Subscribe!<br />";
+_message = _message + "Download the mods from <a href= 'https://steamcommunity.com/sharedfiles/filedetails/?id=912307631' color='#ff9900'>HGA-Exile Server Modpack</a> Only click on Subscribe!<br />";
 //_message = _message + "<a href= 'http://standarol.com/index.php/topic,674.0.html' color='#ff9900'>Guía de lanzamiento e instalación de mods [ESPAÑOL]</a> </t><br /><br />";
 // _message = message + "Easy add more lines like this";
 // _message = _message + "You can easy add <a href= 'http://www.example.com' color='#ff9900'>ANY LINK!</a> And unlimited number of lines.<br />";
