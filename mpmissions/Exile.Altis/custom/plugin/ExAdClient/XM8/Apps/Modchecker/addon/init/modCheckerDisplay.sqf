@@ -63,7 +63,7 @@ _text2 ctrlCommit 0;
 waitUntil {!dialog };
 if (errorLevel > 90) then // non requiered addons have level 1. Requiered addons have error level 99.
 	{
-	endMission "LOSER"
+	endMission "Some Mods Required"
 	}
 	else
 	{

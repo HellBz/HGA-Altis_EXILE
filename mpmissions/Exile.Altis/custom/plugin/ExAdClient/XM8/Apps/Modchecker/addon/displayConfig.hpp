@@ -13,9 +13,9 @@
 /////////////////////////////////////////////////////////////////////////////////////////////
 
 _message = "";
-_message = _message + "<t align='center' size='2' shadow='0'></t><br />";
-_message = _message + "<t align='center' size='2' shadow='0'>Welcome to Mod modChecker</t><br />";
-_message = _message + "<t align='center'>______________________________________________________________________________________<br /><br />";
+//_message = _message + "<t align='center' size='2' shadow='0'></t><br />";
+//_message = _message + "<t align='center' size='2' shadow='0'>Welcome to Mod modChecker</t><br />";
+//_message = _message + "<t align='center'>______________________________________________________________________________________<br /><br />";
 _message = _message + warnMessage;
 _message = _message + "<t align='center'><br />";
 

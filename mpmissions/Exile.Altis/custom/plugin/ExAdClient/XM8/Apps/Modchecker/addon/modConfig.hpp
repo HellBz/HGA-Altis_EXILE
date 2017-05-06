@@ -57,7 +57,7 @@ if (isClass(configFile >> "CfgPatches" >> "CUP_Weapons_WeaponsCore")) then
 		modCheckWeapons = "<t size='0.9' shadow='1' shadowColor='#000000' align='center'>CUP Weapons is</t><t color='#2fd402' size='0.9' shadow='1' shadowColor='#000000' align='center'> found!</t><br/>";
 	} else { 
 		modCheckWeapons = "<t size='0.9' shadow='1' shadowColor='#000000' align='center'>CUP Weapons is</t><t color='#ff0000' size='0.9' shadow='1' shadowColor='#000000' align='center'> NOT FOUND!</t><br/>";
-		errorLevel = errorLevel + 99
+		errorLevel = errorLevel + 1
 	};
 
 // CUP_Vehicles Example - DELETE OR MODIFY
@@ -66,7 +66,7 @@ if (isClass(configFile >> "CfgPatches" >> "CUP_Vehicles_Core")) then
 		modCheckVehicles = "<t size='0.9' shadow='1' shadowColor='#000000' align='center'>CUP Vehicles is</t><t color='#2fd402' size='0.9' shadow='1' shadowColor='#000000' align='center'> found!</t><br/>";
 	} else { 
 		modCheckVehicles = "<t size='0.9' shadow='1' shadowColor='#000000' align='center'>CUP Vehicles is</t><t color='#ff0000' size='0.9' shadow='1' shadowColor='#000000' align='center'> NOT FOUND!</t><br/>";
-		errorLevel = errorLevel + 99
+		errorLevel = errorLevel + 1
 	};
 
 // CUP_TerrainCore Example - DELETE OR MODIFY
@@ -86,7 +86,7 @@ if (isClass(configFile >> "CfgPatches" >> "CUP_Creatures_People_Core")) then
 		modCheckUnits = "<t size='0.9' shadow='1' shadowColor='#000000' align='center'>CUP Units is</t><t color='#2fd402' size='0.9' shadow='1' shadowColor='#000000' align='center'> found!</t><br/>";
 	} else { 
 		modCheckUnits = "<t size='0.9' shadow='1' shadowColor='#000000' align='center'>CUP Units is</t><t color='#ff0000' size='0.9' shadow='1' shadowColor='#000000' align='center'> NOT FOUND!</t><br/>";
-		errorLevel = errorLevel + 99
+		errorLevel = errorLevel + 1
 	};
 
 // Community Base Addon Example - DELETE OR MODIFY
