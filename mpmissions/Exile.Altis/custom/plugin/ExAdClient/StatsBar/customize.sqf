@@ -29,7 +29,8 @@ ExAd_SB_ICON_TEMP = 	"custom\plugin\ExAdClient\StatsBar\Icons\ExAd_Temp.paa";		/
 ExAd_SB_ICON_THIRST = 	"custom\plugin\ExAdClient\StatsBar\Icons\ExAd_Thirst.paa";	//STRING - Path to thirst icon
 ExAd_SB_ICON_TIMER = 	"custom\plugin\ExAdClient\StatsBar\Icons\ExAd_Restart.paa";	//STRING - Path to restart icon
 ExAd_SB_ICON_Wallet = 	"custom\plugin\ExAdClient\StatsBar\Icons\ExAd_Wallet.paa";	//STRING - Path to POP TABS icon
-ExAd_SB_ICON_LOGO = 	"custom\plugin\ExAdClient\Core\Img\ExAd_logo_128.paa";		//STRING - Path to logo
+//ExAd_SB_ICON_LOGO = 	"custom\plugin\ExAdClient\Core\Img\ExAd_logo_128.paa";		//STRING - Path to logo
+ExAd_SB_ICON_LOGO = 	"";		//STRING - Path to logo
 
 ExAd_SB_COMPONENTS_COLORS = ["#000000", "#440B00","#FE1106","#CA7400","#A9C700","#11BF03"]; //STRINGS - Array of color codes, from bad to good. 
 

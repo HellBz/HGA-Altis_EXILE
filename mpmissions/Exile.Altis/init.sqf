@@ -23,10 +23,6 @@ ExileServer_ClaimVehicles_network_saveVehicleRequest = compileFinal preprocessFi
 [] execVM "custom\plugin\EnigmaPersonalVehicle\init.sqf";
 //------------------------- Enigma_Exile_Deploybike -------------------------------------------------//
 
-//------------------------- Status Bar ---------------------------------------------------------------//
-//[] execVM "custom\plugin\statusBar\statusBar.sqf";
-//------------------------- Status Bar ---------------------------------------------------------------//
-
 //------------------------- EnigmaRevive -------------------------------------------------------------//
 [] execVM "custom\plugin\EnigmaRevive\init.sqf";
 //------------------------- EnigmaRevive -------------------------------------------------------------//
