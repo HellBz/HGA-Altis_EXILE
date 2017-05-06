@@ -1267,8 +1267,9 @@ class CfgExileCustomCode
 	ExileServer_system_territory_database_load 									= "custom\plugin\ExAdClient\VirtualGarage\CustomCode\ExileServer_system_territory_database_load.sqf";
 	ExileClient_gui_xm8_slide 													= "custom\plugin\ExAdClient\XM8\CustomCode\ExileClient_gui_xm8_slide.sqf";
 	ExileClient_gui_xm8_show 													= "custom\plugin\ExAdClient\XM8\CustomCode\ExileClient_gui_xm8_show.sqf";
+	//Lottery
+	ExileClient_gui_xm8_slide_apps_onOpen										= "custom\overrides\ExileClient_gui_xm8_slide_apps_onOpen.sqf";
 
-	
 };
 class CfgExileEnvironment
 {
@@ -3489,7 +3490,7 @@ class SpawnVehicleItems
 
 class CfgXM8
 {
-	extraApps[] = {"ExAd_VG","ExAd_Info","ExAd_CHVD","ExAd_Journal","ExAd_SB"};
+	extraApps[] = {"ExAd_VG","ExAd_Info","ExAd_CHVD","ExAd_Journal","ExAd_SB","ExAd_Selfie","ExAd_modChecker"};
 	
 	class ExAd_VG 
 	{
@@ -3535,5 +3536,22 @@ class CfgXM8
 		controlID = 50400;					//IDC:50400 -> 50475 || These need to be unique and out of range from each other
 		logo = "custom\plugin\ExAdClient\XM8\Apps\SB_Settings\Icon_SB.paa";
 		onLoad = "custom\plugin\ExAdClient\XM8\Apps\SB_Settings\onLoad.sqf";
+	};
+	
+    class ExAd_Selfie
+    {
+        controlID = 50800;
+        title = "Selfie";            
+        logo = "custom\plugin\ExAdClient\XM8\Apps\Selfie\selfie.paa";        
+        quickFunction = "ExileClientXM8CurrentSlide = 'apps';closeDialog 0;[] execVM 'custom\plugin\ExAdClient\XM8\Apps\Selfie\onOpen.sqf'";
+    }; 
+	class ExAd_modChecker 
+	{
+		title = "Mod Checker";
+		controlID = 50900;
+		logo = "custom\plugin\ExAdClient\XM8\Apps\ModChecker\modChecker.paa";
+		onLoad = "custom\plugin\ExAdClient\XM8\Apps\ModChecker\onLoad.sqf";
+		onOpen = "custom\plugin\ExAdClient\XM8\Apps\ModChecker\onOpen.sqf";
+		onClose = "custom\plugin\ExAdClient\XM8\Apps\ModChecker\onClose.sqf";
 	};
 };
