@@ -2002,20 +2002,6 @@ class CfgInteractionMenus
 		};
 	};
 
-	class Flag
-	{
-		targetType = 2;
-		target = "Exile_Construction_Flag_Static";
-		class Actions
-		{
-			class HackVG : ExileAbstractAction
-			{
-				title = "Hack Virtual Garage";
-				condition = "call ExAd_fnc_canHackVG";
-				action = "_this spawn ExAd_fnc_startHack";
-			};
-		};
-	};
 	class Construction
 	{
 		targetType = 2;
@@ -2157,6 +2143,14 @@ class CfgInteractionMenus
 				condition = "((ExileClientInteractionObject getvariable ['ExileFlagStolen',0]) isEqualTo 1)";
 				action = "['restoreFlagRequest', [netID ExileClientInteractionObject]] call ExileClient_system_network_send";
 			};
+			
+			class HackVG : ExileAbstractAction
+			{
+				title = "Hack Virtual Garage";
+				condition = "call ExAd_fnc_canHackVG";
+				action = "_this spawn ExAd_fnc_startHack";
+			};
+			
 		};
 	};
 
