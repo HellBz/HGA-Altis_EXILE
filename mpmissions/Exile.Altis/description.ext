@@ -89,6 +89,11 @@ class CfgRemoteExec
 		{
 			allowedTargets = 2; 
 		};
+		/* ExAd Pack */
+		class ExAdServer_fnc_clientRequest 
+		{ 
+			allowedTargets=2; 
+		};
 		/* Advanced Towing */
 		class SA_Simulate_Towing	{ allowedTargets=0; }; 
 		class SA_Attach_Tow_Ropes	{ allowedTargets=0; }; 
@@ -128,8 +133,13 @@ class CfgRemoteExec
 class RscTitles
 {
 	#include "custom\plugin\statusBar\statusBar.hpp"
+	#include "custom\plugin\ExAdClient\RscTitles.cpp"
 };
 
+class CfgHints
+{
+	#include "custom\plugin\ExAdClient\CfgHints.cpp"
+};
 
 ///////////////////////////////////////////////////////////////////////////////
 // Infistar Adminmenu
@@ -148,6 +158,7 @@ class RscTitles
 class CfgNetworkMessages
 {
     #include "custom\plugin\MarXet\CfgMarXetNetworkMessages.hpp"
+	#include "custom\plugin\ExAdClient\CfgNetworkMessages.cpp"
 	
     class saveVehicleRequest
     {
@@ -165,3 +176,14 @@ class CfgNetworkMessages
 // Sneak Customs
 ///////////////////////////////////////////////////////////////////////////////
  #include "custom\plugin\SneakCustoms_config.cpp" 
+ 
+ 
+///////////////////////////////////////////////////////////////////////////////
+// ExAd Pack
+///////////////////////////////////////////////////////////////////////////////
+#include "custom\plugin\ExAdClient\ExAd.cpp"
+
+ class CfgFunctions
+{
+	#include "custom\plugin\ExAdClient\CfgFunctions.cpp"
+};
