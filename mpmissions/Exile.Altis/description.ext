@@ -132,7 +132,7 @@ class CfgRemoteExec
 ///////////////////////////////////////////////////////////////////////////////
 class RscTitles
 {
-	#include "custom\plugin\statusBar\statusBar.hpp"
+	//#include "custom\plugin\statusBar\statusBar.hpp"
 	#include "custom\plugin\ExAdClient\RscTitles.cpp"
 };
 
