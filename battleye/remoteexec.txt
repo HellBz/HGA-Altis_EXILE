@@ -2,4 +2,4 @@
 7 "ExileClient_system_network_dispatchIncomingMessage"
 7 "FN_infiSTAR_C"
 7 "" !="exileserver_system_network_dispatchincomingmessage.*" !="fnc_adminreq \[.*\]" !="true" !=""
-7 "" !="exadserver_fnc_clientrequest.*"
+7 "" !="exadserver_fnc_clientrequest.*" !"ExileServer_lottery_network_request"

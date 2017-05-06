@@ -118,6 +118,12 @@ class CfgRemoteExec
 		class ASL_Hint			    { allowedTargets=1; }; 
 		class ASL_Hide_Object_Global{ allowedTargets=2; }; 
 		
+		//Lottery
+		class ExileServer_lottery_network_request 
+		{ 
+			allowedTargets=2;
+		};
+		
     };
 
     class Commands

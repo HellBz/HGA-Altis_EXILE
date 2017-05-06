@@ -110,7 +110,7 @@ call ExileClient_object_trader_create;
 ///////////////////////////////////////////////////////////////////////////
 // Office Trader
 ///////////////////////////////////////////////////////////////////////////
-_trader = 
+_officeTrader = 
 [
     "Exile_Trader_Office",
     "Exile_Trader_Office",
@@ -120,6 +120,8 @@ _trader =
     220
 ]
 call ExileClient_object_trader_create;
+_officeTrader addAction ["<t color='#FFFFFF'>Buy Scratchie(200,-)</t>", { ["buy",ExileClientSessionId, player, ""] remoteExecCall ["ExileServer_lottery_network_request", 2]; }];
+_officeTrader addAction ["<t color='#c72651'>Get Prize!</t>", { ["get",ExileClientSessionId, player, ""] remoteExecCall ["ExileServer_lottery_network_request", 2]; }];
 
 ///////////////////////////////////////////////////////////////////////////
 // Waste Dump Trader
@@ -513,3 +515,6 @@ HGA_fnc_SalvageVehicle = compileFinal preprocessFileLineNumbers "custom\scripts\
 waitUntil {!isNull findDisplay 46 && !isNil 'ExileClientLoadedIn' && getPlayerUID player != ''};
 uiSleep 1;
 execVM "custom\scripts\playergotscreen.sqf";
+uiSleep 3;
+firstCheck = 0; 
+execVM "custom\plugin\ExAdClient\XM8\Apps\ModChecker\addon\init\modCheckerInit.sqf";
