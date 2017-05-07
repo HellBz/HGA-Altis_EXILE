@@ -47,19 +47,18 @@ updateScratchieText = {
 		_this select 0 ctrlSetText (format ["%1 Scratchies", missionNamespace getVariable ["scratchieCount", 0]]);
 	};
 };
+_newControl = _display displayCtrl 5011;
+_newControl ctrlSetText " ";
+_newControl ctrlSetEventHandler ["ButtonClick", "['use',ExileClientSessionId, player, ''] remoteExecCall ['ExileServer_lottery_network_request', 2]; _this select 0 call updateScratchieText"]; 
 
-_newControl = _display displayCtrl 5007;
+_newControl = _display displayCtrl 5015;
 _newControl ctrlSetText "Buy Scratchie";
 _newControl ctrlSetEventHandler ["ButtonClick", "['buy',ExileClientSessionId, player, ''] remoteExecCall ['ExileServer_lottery_network_request', 2];"];
 
-_newControl = _display displayCtrl 5008;
+_newControl = _display displayCtrl 5013;
 _newControl ctrlSetText "Get Prize";
 _newControl ctrlSetEventHandler ["ButtonClick", "['get',ExileClientSessionId, player, ''] remoteExecCall ['ExileServer_lottery_network_request', 2];"];
 
-
-_newControl = _display displayCtrl 5006;
-_newControl ctrlSetText " ";
-_newControl ctrlSetEventHandler ["ButtonClick", "['use',ExileClientSessionId, player, ''] remoteExecCall ['ExileServer_lottery_network_request', 2]; _this select 0 call updateScratchieText"]; 
 
 ['',ExileClientSessionId, player, ''] remoteExecCall ['ExileServer_lottery_network_request', 2];
 _newControl call updateScratchieText;

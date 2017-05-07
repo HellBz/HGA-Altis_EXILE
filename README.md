@@ -11,6 +11,8 @@ Occupation | https://github.com/kuplion/a3_exile_occupation/
 ZCP | https://github.com/DevZupa/ZCP-A3-Exile
 Claim Vehicle | https://github.com/Mezo/Claim-Vehicles/
 Sneak Customs | https://github.com/SneakCustoms/SneakVehicleCustoms
+Advanced Towing | https://github.com/sethduda/AdvancedTowing
+Advanced Sling Loading | https://github.com/sethduda/AdvancedSlingLoading
 Enigma Deploybike | https://github.com/happydayz-enigma/Enigma_Exile_Deploybike
 Vehicle with inventory | https://github.com/Jenartor/exile-vehicle_spawn_with_inventory
 Trader-Mod  | https://github.com/redned70/Trader-Mod

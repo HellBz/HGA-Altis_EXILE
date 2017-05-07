@@ -3490,7 +3490,7 @@ class SpawnVehicleItems
 
 class CfgXM8
 {
-	extraApps[] = {"ExAd_VG","ExAd_Info","ExAd_CHVD","ExAd_Journal","ExAd_SB","ExAd_Selfie","ExAd_modChecker"};
+	extraApps[] = {"ExAd_VG","ExAd_Info","ExAd_CHVD","ExAd_Journal","ExAd_SB","ExAd_Selfie","ExAd_modChecker","ExAd_Scratchie","ExAd_ScratchieBuy","ExAd_ScratchiePrize"};
 	
 	class ExAd_VG 
 	{
@@ -3540,7 +3540,7 @@ class CfgXM8
 	
     class ExAd_Selfie
     {
-        controlID = 50800;
+        controlID = 50500;
         title = "Selfie";            
         logo = "custom\plugin\ExAdClient\XM8\Apps\Selfie\selfie.paa";        
         quickFunction = "ExileClientXM8CurrentSlide = 'apps';closeDialog 0;[] execVM 'custom\plugin\ExAdClient\XM8\Apps\Selfie\onOpen.sqf'";
@@ -3548,10 +3548,28 @@ class CfgXM8
 	class ExAd_modChecker 
 	{
 		title = "Mod Checker";
-		controlID = 50900;
+		controlID = 50600;
 		logo = "custom\plugin\ExAdClient\XM8\Apps\ModChecker\modChecker.paa";
 		onLoad = "custom\plugin\ExAdClient\XM8\Apps\ModChecker\onLoad.sqf";
 		onOpen = "custom\plugin\ExAdClient\XM8\Apps\ModChecker\onOpen.sqf";
 		onClose = "custom\plugin\ExAdClient\XM8\Apps\ModChecker\onClose.sqf";
+	};
+	class ExAd_Scratchie 
+	{
+		controlID = 50700;
+		logo = "custom\plugin\ExAdClient\XM8\Apps\Scratchie\scratchie.paa";	
+		onLoad = "custom\plugin\ExAdClient\XM8\Apps\Scratchie\onLoad.sqf";
+	};
+	class ExAd_ScratchieBuy 
+	{
+		controlID = 50800;
+		logo = "custom\plugin\ExAdClient\XM8\Apps\ScratchieBuy\scratchie-buy.paa";		
+		onLoad = "custom\plugin\ExAdClient\XM8\Apps\ScratchieBuy\onLoad.sqf";
+	};
+	class ExAd_ScratchiePrize 
+	{
+		controlID = 50900;
+		logo = "custom\plugin\ExAdClient\XM8\Apps\ScratchiePrize\scratchie-prize.paa";		
+		onLoad = "custom\plugin\ExAdClient\XM8\Apps\ScratchiePrize\onLoad.sqf";
 	};
 };
