@@ -1240,12 +1240,6 @@ class CfgExileCustomCode
 	ExileServer_util_time_uptime 												= "custom\extdb3_fix\ExileServer_util_time_uptime.sqf";
 	//MarXet
 	ExileServer_system_network_dispatchIncomingMessage 							= "custom\overrides\ExileServer_system_network_dispatchIncomingMessage.sqf";
-	//Sneak Customs
-	ExileClient_gui_vehicleCustomsDialog_event_onPurchaseButtonClick 			 = "custom\overrides\ExileClient_gui_vehicleCustomsDialog_event_onPurchaseButtonClick.sqf";
-	ExileClient_gui_vehicleCustomsDialog_event_onSkinListBoxSelectionChanged 	 = "custom\overrides\ExileClient_gui_vehicleCustomsDialog_event_onSkinListBoxSelectionChanged.sqf";
-	ExileClient_gui_vehicleCustomsDialog_event_onVehicleDropDownSelectionChanged = "custom\overrides\ExileClient_gui_vehicleCustomsDialog_event_onVehicleDropDownSelectionChanged.sqf";
-	ExileClient_gui_vehicleCustomsDialog_show 									 = "custom\overrides\ExileClient_gui_vehicleCustomsDialog_show.sqf";
-	ExileClient_gui_vehicleCustomsDialog_updateVehicle 							 = "custom\overrides\ExileClient_gui_vehicleCustomsDialog_updateVehicle.sqf";
 	// Trader Launcher FIX
 	ExileClient_util_playerEquipment_add										= "custom\overrides\ExileClient_util_playerEquipment_add.sqf";
 	// Set Car Magazines to only 1
@@ -2617,6 +2611,7 @@ class CfgTrading
 		Level6 = 25000;
 	};
 };
+
 class CfgVehicleCustoms
 {
 	///////////////////////////////////////////////////////////////////////////////
@@ -2627,16 +2622,19 @@ class CfgVehicleCustoms
 		skins[] = 
 		{
 			
-			{"Exile_Bike_QuadBike_Blue",		100, "Blue",		{"\A3\Soft_F_Beta\Quadbike_01\Data\Quadbike_01_CIV_BLUE_CO.paa","\A3\Soft_F_Beta\Quadbike_01\Data\Quadbike_01_wheel_CIVBLUE_CO.paa"};},
-			{"Exile_Bike_QuadBike_Red",			100, "Red",			{"\A3\Soft_F_Beta\Quadbike_01\Data\Quadbike_01_CIV_RED_CO.paa","\A3\Soft_F_Beta\Quadbike_01\Data\Quadbike_01_wheel_CIVRED_CO.paa"};},
-			{"Exile_Bike_QuadBike_White",		100, "White",		{"\A3\Soft_F_Beta\Quadbike_01\Data\Quadbike_01_CIV_WHITE_CO.paa","\A3\Soft_F_Beta\Quadbike_01\Data\Quadbike_01_wheel_CIVWHITE_CO.paa"};},
-			{"Exile_Bike_QuadBike_Nato",		150, "NATO",		{"\A3\Soft_F\Quadbike_01\Data\Quadbike_01_co.paa","\A3\Soft_F\Quadbike_01\Data\Quadbike_01_wheel_co.paa"};},
-			{"Exile_Bike_QuadBike_Csat",		150, "CSAT",		{"\A3\Soft_F\Quadbike_01\Data\Quadbike_01_OPFOR_CO.paa","\A3\Soft_F\Quadbike_01\Data\Quadbike_01_wheel_OPFOR_CO.paa"};},
-			{"Exile_Bike_QuadBike_Fia",			150, "FIA",			{"\A3\Soft_F_Beta\Quadbike_01\Data\Quadbike_01_INDP_CO.paa","\A3\Soft_F_Beta\Quadbike_01\Data\Quadbike_01_wheel_INDP_CO.paa"};},
-			{"Exile_Bike_QuadBike_Guerilla01",	150, "Guerilla 01",	{"\A3\Soft_F_Bootcamp\Quadbike_01\Data\Quadbike_01_IG_CO.paa","\A3\soft_f_gamma\Quadbike_01\Data\Quadbike_01_wheel_IG_CO.paa"};},
-			{"Exile_Bike_QuadBike_Guerilla02",	150, "Guerilla 02",	{"\A3\Soft_F_Bootcamp\Quadbike_01\Data\Quadbike_01_INDP_Hunter_CO.paa","\A3\soft_f_gamma\Quadbike_01\Data\Quadbike_01_wheel_INDP_Hunter_CO.paa"};},
-			{"Exile_Bike_QuadBike_Black",		100, "Black",		{"\A3\Soft_F_Beta\Quadbike_01\Data\Quadbike_01_CIV_BLACK_CO.paa","\A3\Soft_F_Beta\Quadbike_01\Data\Quadbike_01_wheel_CIVBLACK_CO.paa"};},
-			{"Exile_Bike_QuadBike_Black",		100, "Hex",		{"\A3\Soft_f_Exp\Quadbike_01\data\Quadbike_01_ghex_CO.paa","\A3\Soft_f_Exp\Quadbike_01\data\Quadbike_01_wheel_ghex_CO.paa"};}
+			{"Exile_Bike_QuadBike_Blue",		200, "Blue",		{"\A3\Soft_F_Beta\Quadbike_01\Data\Quadbike_01_CIV_BLUE_CO.paa","\A3\Soft_F_Beta\Quadbike_01\Data\Quadbike_01_wheel_CIVBLUE_CO.paa"};},
+			{"Exile_Bike_QuadBike_Pink", 	    200, "Pink",        {"#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"Exile_Bike_QuadBike_Green", 	    200, "Green",       {"#(argb,8,8,3)color(0,1,0,1)"};},	
+			{"Exile_Bike_QuadBike_Tan", 	    200, "Tan",         {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},				
+			{"Exile_Bike_QuadBike_Hex", 	    200, "Green Hex",   {"\A3\Soft_F_Exp\Quadbike_01\Data\Quadbike_01_ghex_CO.paa","\A3\Soft_F_Exp\Quadbike_01\Data\Quadbike_01_wheel_ghex_CO.paa"};},			
+			{"Exile_Bike_QuadBike_Red",			200, "Red",			{"\A3\Soft_F_Beta\Quadbike_01\Data\Quadbike_01_CIV_RED_CO.paa","\A3\Soft_F_Beta\Quadbike_01\Data\Quadbike_01_wheel_CIVRED_CO.paa"};},
+			{"Exile_Bike_QuadBike_White",		200, "White",		{"\A3\Soft_F_Beta\Quadbike_01\Data\Quadbike_01_CIV_WHITE_CO.paa","\A3\Soft_F_Beta\Quadbike_01\Data\Quadbike_01_wheel_CIVWHITE_CO.paa"};},
+			{"Exile_Bike_QuadBike_Nato",		300, "NATO",		{"\A3\Soft_F\Quadbike_01\Data\Quadbike_01_co.paa","\A3\Soft_F\Quadbike_01\Data\Quadbike_01_wheel_co.paa"};},
+			{"Exile_Bike_QuadBike_Csat",		300, "CSAT",		{"\A3\Soft_F\Quadbike_01\Data\Quadbike_01_OPFOR_CO.paa","\A3\Soft_F\Quadbike_01\Data\Quadbike_01_wheel_OPFOR_CO.paa"};},
+			{"Exile_Bike_QuadBike_Fia",			300, "FIA",			{"\A3\Soft_F_Beta\Quadbike_01\Data\Quadbike_01_INDP_CO.paa","\A3\Soft_F_Beta\Quadbike_01\Data\Quadbike_01_wheel_INDP_CO.paa"};},
+			{"Exile_Bike_QuadBike_Guerilla01",	300, "Guerilla 01",	{"\A3\Soft_F_Bootcamp\Quadbike_01\Data\Quadbike_01_IG_CO.paa","\A3\soft_f_gamma\Quadbike_01\Data\Quadbike_01_wheel_IG_CO.paa"};},
+			{"Exile_Bike_QuadBike_Guerilla02",	300, "Guerilla 02",	{"\A3\Soft_F_Bootcamp\Quadbike_01\Data\Quadbike_01_INDP_Hunter_CO.paa","\A3\soft_f_gamma\Quadbike_01\Data\Quadbike_01_wheel_INDP_Hunter_CO.paa"};},
+			{"Exile_Bike_QuadBike_Black",		200, "Black",		{"\A3\Soft_F_Beta\Quadbike_01\Data\Quadbike_01_CIV_BLACK_CO.paa","\A3\Soft_F_Beta\Quadbike_01\Data\Quadbike_01_wheel_CIVBLACK_CO.paa"};}
 		};
 	};
 
@@ -2647,12 +2645,19 @@ class CfgVehicleCustoms
 	{
 		skins[] = 
 		{
-			{"Exile_Boat_MotorBoat_Police",		350, "Police", {"\a3\boat_f_gamma\Boat_Civil_01\data\Boat_Civil_01_ext_police_co.paa","\a3\boat_f_gamma\Boat_Civil_01\data\Boat_Civil_01_int_police_co.paa"};},
-			{"Exile_Boat_MotorBoat_Orange",		300, "Orange", {"\a3\boat_f_gamma\Boat_Civil_01\data\Boat_Civil_01_ext_rescue_co.paa","\a3\boat_f_gamma\Boat_Civil_01\data\Boat_Civil_01_int_rescue_co.paa"};},
-			{"Exile_Boat_MotorBoat_White",		300, "White",  {"\a3\boat_f_gamma\Boat_Civil_01\data\Boat_Civil_01_ext_co.paa","\a3\boat_f_gamma\Boat_Civil_01\data\Boat_Civil_01_int_co.paa"};}
+			{"Exile_Boat_MotorBoat_Police",		1300, "Police", {"\a3\boat_f_gamma\Boat_Civil_01\data\Boat_Civil_01_ext_police_co.paa","\a3\boat_f_gamma\Boat_Civil_01\data\Boat_Civil_01_int_police_co.paa"};},			
+			{"Exile_Boat_MotorBoat_Orange",		1200, "Orange", {"\a3\boat_f_gamma\Boat_Civil_01\data\Boat_Civil_01_ext_rescue_co.paa","\a3\boat_f_gamma\Boat_Civil_01\data\Boat_Civil_01_int_rescue_co.paa"};},
+			{"Exile_Boat_MotorBoat_Red",		1300, "Red",    {"\a3\boat_f_gamma\Boat_Civil_04\data\boat_civil_04_1_co.paa","\a3\boat_f_gamma\Boat_Civil_04\data\boat_civil_04_2_co.paa"};},
+			{"Exile_Boat_MotorBoat_Pink", 	    1200, "Pink",   {"#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"Exile_Boat_MotorBoat_White", 	    1200, "White",  {"#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)"};},			
+			{"Exile_Boat_MotorBoat_Green", 	    1200, "Green",  {"#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)"};},	
+			{"Exile_Boat_MotorBoat_Blue", 	    1200, "Blue",   {"#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)"};},	
+			{"Exile_Boat_MotorBoat_Black", 	    1200, "Black",  {"#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)"};},
+			{"Exile_Boat_MotorBoat_Tan", 	    1200, "Tan",    {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},			
+			{"Exile_Boat_MotorBoat_White",		1200, "White",  {"\a3\boat_f_gamma\Boat_Civil_01\data\Boat_Civil_01_ext_co.paa","\a3\boat_f_gamma\Boat_Civil_01\data\Boat_Civil_01_int_co.paa"};}
 		};
-	};
-
+	};	
+	
 	///////////////////////////////////////////////////////////////////////////////
 	// RUBBER DUCKS
 	///////////////////////////////////////////////////////////////////////////////
@@ -2660,14 +2665,42 @@ class CfgVehicleCustoms
 	{
 		skins[] = 
 		{
-			{"Exile_Boat_RubberDuck_CSAT",		200, "CSAT", {"\A3\boat_F\Boat_Transport_01\data\Boat_Transport_01_OPFOR_CO.paa"};},
-			{"Exile_Boat_RubberDuck_Digital",	200, "Digital",{"\A3\boat_F\Boat_Transport_01\data\Boat_Transport_01_INDP_CO.paa"};},
-			{"Exile_Boat_RubberDuck_Orange",	150, "Orange", {"\A3\boat_F\Boat_Transport_01\data\Boat_Transport_01_rescue_CO.paa"};},
-			{"Exile_Boat_RubberDuck_Blue",		150, "Blue", {"\A3\boat_F\Boat_Transport_01\data\Boat_Transport_01_civilian_CO.paa"};},
-			{"Exile_Boat_RubberDuck_Black",		150, "Black", {"\A3\boat_F\Boat_Transport_01\data\boat_transport_01_co.paa"};}
+			{"Exile_Boat_RubberDuck_CSAT",		750, "CSAT",   {"\A3\boat_F\Boat_Transport_01\data\Boat_Transport_01_OPFOR_CO.paa"};},
+			{"Exile_Boat_RubberDuck_Digital",	750, "Digital",{"\A3\boat_F\Boat_Transport_01\data\Boat_Transport_01_INDP_CO.paa"};},
+			{"Exile_Boat_RubberDuck_Orange",	600, "Orange", {"\A3\boat_F\Boat_Transport_01\data\Boat_Transport_01_rescue_CO.paa"};},
+			{"Exile_Boat_RubberDuck_Blue",		600, "Blue",   {"\A3\boat_F\Boat_Transport_01\data\Boat_Transport_01_civilian_CO.paa"};},
+			{"Exile_Boat_RubberDuck_Pink", 	    600, "Pink",   {"#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"Exile_Boat_RubberDuck_White", 	600, "White",  {"#(argb,8,8,3)color(1,1,1,1)"};},			
+			{"Exile_Boat_RubberDuck_Red", 	    600, "Red",    {"#(argb,8,8,3)color(1,0,0,1)"};},	
+			{"Exile_Boat_RubberDuck_Green", 	600, "Green",  {"#(argb,8,8,3)color(0,1,0,1)"};},	
+			{"Exile_Boat_RubberDuck_Tan", 	    600, "Tan",    {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},					
+			{"Exile_Boat_RubberDuck_Black",		600, "Black",  {"\A3\boat_F\Boat_Transport_01\data\boat_transport_01_co.paa"};}
 		};
 	};
 
+	///////////////////////////////////////////////////////////////////////////////
+	// Jetski
+	///////////////////////////////////////////////////////////////////////////////
+	class Exile_Boat_WaterScooter_Abstract
+	{
+		skins[] = 
+		{
+			{"Exile_Boat_WaterScooter",		400, "Blue",   {"\A3\Boat_F_Exp\Scooter_Transport_01\Data\Scooter_Transport_01_Blue_co.paa","\A3\Boat_F_Exp\Scooter_Transport_01\Data\Scooter_Transport_01_VP_Blue_co.paa"};},
+			{"Exile_Boat_WaterScooter",     400, "Pink",   {"#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"Exile_Boat_WaterScooter", 	400, "White",  {"#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)"};},			
+			{"Exile_Boat_WaterScooter",     400, "Green",  {"#(rgb,8,8,3)color(1,0.08,0.57,1)","#(rgb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"Exile_Boat_WaterScooter",     400, "Blue",   {"#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)"};},
+			{"Exile_Boat_WaterScooter",     400, "Black",  {"#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)"};},
+			{"Exile_Boat_WaterScooter",     400, "Tan",    {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},
+			{"Exile_Boat_WaterScooter",     400, "Red",    {"#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)"};},			
+			{"Exile_Boat_WaterScooter",		400, "Grey",   {"\A3\Boat_F_Exp\Scooter_Transport_01\Data\Scooter_Transport_01_Grey_co.paa","\A3\Boat_F_Exp\Scooter_Transport_01\Data\Scooter_Transport_01_VP_Grey_co.paa"};},
+			{"Exile_Boat_WaterScooter",		400, "Lime",   {"\A3\Boat_F_Exp\Scooter_Transport_01\Data\Scooter_Transport_01_Lime_co.paa","\A3\Boat_F_Exp\Scooter_Transport_01\Data\Scooter_Transport_01_VP_Lime_co.paa"};},
+			{"Exile_Boat_WaterScooter",		400, "Red",    {"\A3\Boat_F_Exp\Scooter_Transport_01\Data\Scooter_Transport_01_Red_CO.paa","\A3\Boat_F_Exp\Scooter_Transport_01\Data\Scooter_Transport_01_VP_CO.paa"};},
+			{"Exile_Boat_WaterScooter",		400, "White",  {"\A3\Boat_F_Exp\Scooter_Transport_01\Data\Scooter_Transport_01_CO.paa","\A3\Boat_F_Exp\Scooter_Transport_01\Data\Scooter_Transport_01_VP_CO.paa"};},
+			{"Exile_Boat_WaterScooter",		400, "Yellow", {"\A3\Boat_F_Exp\Scooter_Transport_01\Data\Scooter_Transport_01_Yellow_CO.paa","\A3\Boat_F_Exp\Scooter_Transport_01\Data\Scooter_Transport_01_VP_Yellow_CO.paa"};}
+		};
+	};	
+	
 	///////////////////////////////////////////////////////////////////////////////
 	// SDV
 	///////////////////////////////////////////////////////////////////////////////
@@ -2675,12 +2708,39 @@ class CfgVehicleCustoms
 	{
 		skins[] = 
 		{
-			{"Exile_Boat_SDV_CSAT",		200, "CSAT", {"\A3\boat_f_beta\SDV_01\data\SDV_ext_opfor_CO.paa"};},
-			{"Exile_Boat_SDV_Digital",	200, "Digital", {"\A3\boat_f_beta\SDV_01\data\SDV_ext_INDP_CO.paa"};},
-			{"Exile_Boat_SDV_Grey",		100, "Grey", {"\A3\boat_f_beta\SDV_01\data\SDV_ext_CO.paa"};}
+			{"Exile_Boat_SDV_CSAT",		850, "CSAT",    {"\A3\boat_f_beta\SDV_01\data\SDV_ext_opfor_CO.paa"};},
+			{"Exile_Boat_SDV_Digital",	850, "Digital", {"\A3\boat_f_beta\SDV_01\data\SDV_ext_INDP_CO.paa"};},
+			{"Exile_Boat_SDV_Pink", 	800, "Pink",    {"#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"Exile_Boat_SDV_White", 	800, "White",   {"#(argb,8,8,3)color(1,1,1,1)"};},			
+			{"Exile_Boat_SDV_Red", 	    800, "Red",     {"#(argb,8,8,3)color(1,0,0,1)"};},	
+			{"Exile_Boat_SDV_Green", 	800, "Green",   {"#(argb,8,8,3)color(0,1,0,1)"};},	
+			{"Exile_Boat_SDV_Blue", 	800, "Blue",    {"#(argb,8,8,3)color(0,0,1,1)"};},	
+			{"Exile_Boat_SDV_Black", 	800, "Black",   {"#(argb,8,8,3)color(0,0,0,0.6)"};},	
+			{"Exile_Boat_SDV_Tan", 	    800, "Tan",     {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},				
+			{"Exile_Boat_SDV_Grey",		800, "Grey",    {"\A3\boat_f_beta\SDV_01\data\SDV_ext_CO.paa"};}
 		};
 	};
 
+	///////////////////////////////////////////////////////////////////////////////
+	// Schnell Boot MG
+	///////////////////////////////////////////////////////////////////////////////
+	class Boat_Armed_01_minigun_base_F
+	{
+		skins[] = 
+		{			
+			{"I_Boat_Armed_01_minigun_CSAT_F",		1800, "CSAT",    {"\A3\boat_f\Boat_Armed_01\data\Boat_Armed_01_ext_co.paa","\A3\boat_f\Boat_Armed_01\data\Boat_Armed_01_int_co.paa","\A3\boat_f\Boat_Armed_01\data\Boat_Armed_01_crows_blufor_co.paa"};},
+			{"I_Boat_Armed_01_minigun_FIA_F",	    1800, "FIA",     {"\A3\boat_f_beta\Boat_Armed_01\data\Boat_Armed_01_ext_INDP_co.paa","\A3\boat_f_beta\Boat_Armed_01\data\Boat_Armed_01_int_INDP_co.paa","\A3\boat_f_beta\Boat_Armed_01\data\Boat_Armed_01_crows_INDP_co.paa"};},
+			{"I_Boat_Armed_01_minigun_Pink_F", 	    1800, "Pink",    {"#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"I_Boat_Armed_01_minigun_White_F", 	1800, "White",   {"#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)"};},				
+			{"I_Boat_Armed_01_minigun_Red_F", 	    1800, "Red",     {"#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)"};},
+			{"I_Boat_Armed_01_minigun_Green_F", 	1800, "Green",   {"#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)"};},
+			{"I_Boat_Armed_01_minigun_Blue_F", 	    1800, "Blue",    {"#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)"};},
+			{"I_Boat_Armed_01_minigun_Black_F", 	1800, "Black",   {"#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)"};},
+			{"I_Boat_Armed_01_minigun_Tan_F", 	    1800, "Tan",     {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},			
+			{"I_Boat_Armed_01_minigun_OPFER_F",		1800, "OPFER",   {"\A3\boat_f\Boat_Armed_01\data\Boat_Armed_01_ext_opfor_co.paa","\A3\boat_f\Boat_Armed_01\data\Boat_Armed_01_int_opfor_co.paa","\A3\boat_f\Boat_Armed_01\data\Boat_Armed_01_crows_OPFOR_co.paa"};}
+		};
+	};	
+	
 	///////////////////////////////////////////////////////////////////////////////
 	// Hellcat
 	///////////////////////////////////////////////////////////////////////////////
@@ -2688,11 +2748,37 @@ class CfgVehicleCustoms
 	{
 		skins[] = 
 		{
-			{"Exile_Chopper_Hellcat_Green", 350, "Green", 	{"\A3\Air_F_EPB\Heli_Light_03\data\Heli_Light_03_base_CO.paa"};},
-			{"Exile_Chopper_Hellcat_FIA", 	500, "FIA", 	{"\A3\Air_F_EPB\Heli_Light_03\data\heli_light_03_base_indp_co.paa"};}
+			{"Exile_Chopper_Hellcat_Green", 1700, "Green",        {"\A3\Air_F_EPB\Heli_Light_03\data\Heli_Light_03_base_CO.paa"};},
+			{"Exile_Chopper_Hellcat_Pink", 	1700, "Pink",         {"#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"Exile_Chopper_Hellcat_White", 1700, "White",        {"#(argb,8,8,3)color(1,1,1,1)"};},			
+			{"Exile_Chopper_Hellcat_Red", 	1700, "Red",          {"#(argb,8,8,3)color(1,0,0,1)"};},	
+			{"Exile_Chopper_Hellcat_Green", 1700, "Green Custom", {"#(argb,8,8,3)color(0,1,0,1)"};},	
+			{"Exile_Chopper_Hellcat_Blue", 	1700, "Blue",         {"#(argb,8,8,3)color(0,0,1,1)"};},	
+			{"Exile_Chopper_Hellcat_Black", 1700, "Black",        {"#(argb,8,8,3)color(0,0,0,0.6)"};},	
+			{"Exile_Chopper_Hellcat_Tan", 	1700, "Tan",          {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},			
+			{"Exile_Chopper_Hellcat_FIA", 	1700, "FIA", 	      {"\A3\Air_F_EPB\Heli_Light_03\data\heli_light_03_base_indp_co.paa"};}
 		};
 	};
 
+	///////////////////////////////////////////////////////////////////////////////
+	// Hellcat armed
+	///////////////////////////////////////////////////////////////////////////////
+	class Heli_light_03_base_F
+	{
+		skins[] = 
+		{
+			{"I_Heli_light_03_F",           1700, "Green", 	      {"\A3\Air_F_EPB\Heli_Light_03\data\Heli_Light_03_base_CO.paa"};},
+			{"I_Heli_light_03_F", 	        1700, "Pink",         {"#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"I_Heli_light_03_F",           1700, "White",        {"#(argb,8,8,3)color(1,1,1,1)"};},			
+			{"I_Heli_light_03_F", 	        1700, "Red",          {"#(argb,8,8,3)color(1,0,0,1)"};},	
+			{"I_Heli_light_03_F", 	        1700, "Green Custom", {"#(argb,8,8,3)color(0,1,0,1)"};},	
+			{"I_Heli_light_03_F", 	        1700, "Blue",         {"#(argb,8,8,3)color(0,0,1,1)"};},	
+			{"I_Heli_light_03_F", 	        1700, "Black",        {"#(argb,8,8,3)color(0,0,0,0.6)"};},	
+			{"I_Heli_light_03_F", 	        1700, "Tan",          {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},			
+			{"I_Heli_light_03_F", 	        1700, "FIA", 	      {"\A3\Air_F_EPB\Heli_Light_03\data\Heli_Light_03_base_INDP_CO.paa"};}
+		};
+	};
+		
 	///////////////////////////////////////////////////////////////////////////////
 	// Karts
 	///////////////////////////////////////////////////////////////////////////////
@@ -2700,15 +2786,22 @@ class CfgVehicleCustoms
 	{
 		skins[] = 
 		{
-			{"Exile_Car_Kart_BluKing", 				100, "Bluking", 	{"\a3\Soft_F_Kart\Kart_01\Data\Kart_01_blu_CO.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_01_logos_blu_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_1_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_3_CA.paa"};},	
-			{"Exile_Car_Kart_RedStone", 			100, "RedStone", 	{"\a3\Soft_F_Kart\Kart_01\Data\Kart_01_black_CO.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_01_logos_black_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_1_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_3_CA.paa"};},
-			{"Exile_Car_Kart_Vrana", 				100, "Vrana", 		{"\a3\Soft_F_Kart\Kart_01\Data\Kart_01_vrana_CO.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_01_logos_vrana_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_1_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_3_CA.paa"};},	
-			{"Exile_Car_Kart_Green", 				100, "Green", 		{"\a3\Soft_F_Kart\Kart_01\Data\Kart_01_base_green_CO.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_01_logos_blu_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_1_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_3_CA.paa"};},	
-			{"Exile_Car_Kart_Blue", 				100, "Blue", 		{"\a3\Soft_F_Kart\Kart_01\Data\Kart_01_base_blue_CO.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_01_logos_blu_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_1_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_3_CA.paa"};},	
-			{"Exile_Car_Kart_Orange", 				100, "Orange",		{"\a3\Soft_F_Kart\Kart_01\Data\Kart_01_base_orange_CO.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_01_logos_blu_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_1_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_3_CA.paa"};},	
-			{"Exile_Car_Kart_White", 				100, "White", 		{"\a3\Soft_F_Kart\Kart_01\Data\Kart_01_base_white_CO.paa","","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_1_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_3_CA.paa"};},	
-			{"Exile_Car_Kart_Yellow", 				100, "Yellow", 		{"\a3\Soft_F_Kart\Kart_01\Data\Kart_01_base_yellow_CO.paa","","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_1_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_3_CA.paa"};},	
-			{"Exile_Car_Kart_Black", 				100, "Black", 		{"\a3\Soft_F_Kart\Kart_01\Data\Kart_01_base_black_CO.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_01_logos_black_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_1_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_3_CA.paa"};}	
+			{"Exile_Car_Kart_BluKing", 			200, "Bluking", 	 {"\a3\Soft_F_Kart\Kart_01\Data\Kart_01_blu_CO.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_01_logos_blu_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_1_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_3_CA.paa"};},	
+			{"Exile_Car_Kart_RedStone", 		200, "RedStone", 	 {"\a3\Soft_F_Kart\Kart_01\Data\Kart_01_black_CO.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_01_logos_black_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_1_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_3_CA.paa"};},
+			{"Exile_Car_Kart_Vrana", 			200, "Vrana", 		 {"\a3\Soft_F_Kart\Kart_01\Data\Kart_01_vrana_CO.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_01_logos_vrana_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_1_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_3_CA.paa"};},	
+			{"Exile_Car_Kart_Green", 			200, "Green", 		 {"\a3\Soft_F_Kart\Kart_01\Data\Kart_01_base_green_CO.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_01_logos_blu_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_1_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_3_CA.paa"};},	
+			{"Exile_Car_Kart_Pink", 	        200, "Pink",         {"#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"Exile_Car_Kart_Red", 	            200, "Red",          {"#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)"};},
+			{"Exile_Car_Kart_White",            200, "White",        {"#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)"};},			
+			{"Exile_Car_Kart_Greenn", 	        200, "Green Custom", {"#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)"};},
+			{"Exile_Car_Kart_Bluee", 	        200, "Blue Custom",  {"#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)"};},
+			{"Exile_Car_Kart_Blackk", 	        200, "Black Black",  {"#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)"};},
+			{"Exile_Car_Kart_Tan", 	            200, "Tan",          {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},			
+			{"Exile_Car_Kart_Blue", 			200, "Blue", 		 {"\a3\Soft_F_Kart\Kart_01\Data\Kart_01_base_blue_CO.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_01_logos_blu_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_1_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_3_CA.paa"};},	
+			{"Exile_Car_Kart_Orange", 			200, "Orange",		 {"\a3\Soft_F_Kart\Kart_01\Data\Kart_01_base_orange_CO.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_01_logos_blu_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_1_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_3_CA.paa"};},	
+			{"Exile_Car_Kart_White", 			200, "White", 		 {"\a3\Soft_F_Kart\Kart_01\Data\Kart_01_base_white_CO.paa","","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_1_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_3_CA.paa"};},	
+			{"Exile_Car_Kart_Yellow", 			200, "Yellow", 		 {"\a3\Soft_F_Kart\Kart_01\Data\Kart_01_base_yellow_CO.paa","","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_1_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_3_CA.paa"};},	
+			{"Exile_Car_Kart_Black", 			200, "Black", 		 {"\a3\Soft_F_Kart\Kart_01\Data\Kart_01_base_black_CO.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_01_logos_black_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_1_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_3_CA.paa"};}	
 		};
 	};
 
@@ -2719,26 +2812,71 @@ class CfgVehicleCustoms
 	{
 		skins[] = 
 		{
-			{"Exile_Chopper_Hummingbird_Civillian_Blue", 		350, "Blue", 		{"\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_blue_co.paa"};},
-			{"Exile_Chopper_Hummingbird_Civillian_Red", 		350, "Red", 		{"\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_co.paa"};},
-			{"Exile_Chopper_Hummingbird_Civillian_ION", 		350, "ION", 		{"\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_ion_co.paa"};},
-			{"Exile_Chopper_Hummingbird_Civillian_BlueLine", 	350, "BlueLine", 	{"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_blueLine_co.paa"};},
-			{"Exile_Chopper_Hummingbird_Civillian_Digital", 	350, "Digital", 	{"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_digital_co.paa"};},
-			{"Exile_Chopper_Hummingbird_Civillian_Elliptical", 	350, "Elliptical", 	{"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_elliptical_co.paa"};},
-			{"Exile_Chopper_Hummingbird_Civillian_Furious", 	350, "Furious", 	{"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_furious_co.paa"};},
-			{"Exile_Chopper_Hummingbird_Civillian_GrayWatcher", 350, "GrayWatcher",	{"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_graywatcher_co.paa"};},
-			{"Exile_Chopper_Hummingbird_Civillian_Jeans", 		350, "Jeans", 		{"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_jeans_co.paa"};},
-			{"Exile_Chopper_Hummingbird_Civillian_Light", 		350, "Light", 		{"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_light_co.paa"};},
-			{"Exile_Chopper_Hummingbird_Civillian_Shadow", 		350, "Shadow", 		{"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_shadow_co.paa"};},
-			{"Exile_Chopper_Hummingbird_Civillian_Sheriff", 	350, "Sheriff", 	{"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_sheriff_co.paa"};},
-			{"Exile_Chopper_Hummingbird_Civillian_Speedy", 		350, "Speedy", 		{"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_speedy_co.paa"};},
-			{"Exile_Chopper_Hummingbird_Civillian_Sunset", 		350, "Sunset", 		{"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_sunset_co.paa"};},
-			{"Exile_Chopper_Hummingbird_Civillian_Vrana", 		350, "Vrana", 		{"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_vrana_co.paa"};},
-			{"Exile_Chopper_Hummingbird_Civillian_Wasp", 		350, "Wasp", 		{"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_wasp_co.paa"};},
-			{"Exile_Chopper_Hummingbird_Civillian_Wave", 		350, "Wave", 		{"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_wave_co.paa"};}
+			{"Exile_Chopper_Hummingbird_Civillian_Blue", 		1200, "Blue", 		    {"\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_blue_co.paa"};},
+			{"Exile_Chopper_Hummingbird_Civillian_Red", 		1200, "Red", 		    {"\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_co.paa"};},
+			{"Exile_Chopper_Hummingbird_Civillian_ION", 		1200, "ION", 		    {"\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_ion_co.paa"};},
+			{"Exile_Chopper_Hummingbird_Civillian_BlueLine", 	1200, "BlueLine", 	    {"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_blueLine_co.paa"};},
+			{"Exile_Chopper_Hummingbird_Civillian_Digital", 	1200, "Digital", 	    {"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_digital_co.paa"};},
+			{"Exile_Chopper_Hummingbird_Civillian_Elliptical", 	1200, "Elliptical", 	{"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_elliptical_co.paa"};},
+			{"Exile_Chopper_Hummingbird_Civillian_Furious", 	1200, "Furious", 	    {"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_furious_co.paa"};},
+			{"Exile_Chopper_Hummingbird_Civillian_GrayWatcher", 1200, "GrayWatcher",	{"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_graywatcher_co.paa"};},
+			{"Exile_Chopper_Hummingbird_Civillian_Jeans", 		1200, "Jeans", 		    {"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_jeans_co.paa"};},
+			{"Exile_Chopper_Hummingbird_Civillian_Pink", 	    1200, "Pink",           {"#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"Exile_Chopper_Hummingbird_Civillian_White",       1200, "White",          {"#(argb,8,8,3)color(1,1,1,1)"};},			
+			{"Exile_Chopper_Hummingbird_Civillian_Blackk", 		1200, "Black Custom", 	{"A3\Air_F\Heli_Light_01\Data\Heli_Light_01_ext_UNI_MC.paa"};},			
+			{"Exile_Chopper_Hummingbird_Civillian_Red", 	    1200, "Red Red",        {"#(argb,8,8,3)color(1,0,0,1)"};},
+			{"Exile_Chopper_Hummingbird_Civillian_Greenn", 	    1200, "Green",          {"#(argb,8,8,3)color(0,1,0,1)"};},
+			{"Exile_Chopper_Hummingbird_Civillian_Bluee", 	    1200, "Blue Custom",    {"#(argb,8,8,3)color(0,0,1,1)"};},
+			{"Exile_Chopper_Hummingbird_Civillian_Black", 	    1200, "Black",          {"#(argb,8,8,3)color(0,0,0,0.6)"};},
+			{"Exile_Chopper_Hummingbird_Civillian_Tan", 	    1200, "Tan",            {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},			
+			{"Exile_Chopper_Hummingbird_Civillian_Light", 		1200, "Light", 		    {"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_light_co.paa"};},
+			{"Exile_Chopper_Hummingbird_Civillian_Shadow", 		1200, "Shadow", 		{"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_shadow_co.paa"};},
+			{"Exile_Chopper_Hummingbird_Civillian_Sheriff", 	1200, "Sheriff", 	    {"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_sheriff_co.paa"};},
+			{"Exile_Chopper_Hummingbird_Civillian_Speedy", 		1200, "Speedy", 		{"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_speedy_co.paa"};},
+			{"Exile_Chopper_Hummingbird_Civillian_Sunset", 		1200, "Sunset", 		{"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_sunset_co.paa"};},
+			{"Exile_Chopper_Hummingbird_Civillian_Vrana", 		1200, "Vrana", 		    {"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_vrana_co.paa"};},
+			{"Exile_Chopper_Hummingbird_Civillian_Wasp", 		1200, "Wasp", 		    {"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_wasp_co.paa"};},
+			{"Exile_Chopper_Hummingbird_Civillian_Wave", 		1200, "Wave", 		    {"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_wave_co.paa"};}
 		};
 	};
 
+	///////////////////////////////////////////////////////////////////////////////
+	// Hummingbird  
+	///////////////////////////////////////////////////////////////////////////////
+	class Exile_Chopper_Hummingbird_Abstract
+	{
+		skins[] = 
+		{
+			{"Exile_Chopper_Hummingbird_Blue", 		    1200, "Blue", 		    {"\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_blue_co.paa"};},
+			{"Exile_Chopper_Hummingbird_Red", 		    1200, "Red", 		    {"\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_co.paa"};},
+			{"Exile_Chopper_Hummingbird_ION", 		    1200, "ION", 		    {"\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_ion_co.paa"};},
+			{"Exile_Chopper_Hummingbird_BlueLine", 	    1200, "BlueLine", 	    {"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_blueLine_co.paa"};},
+			{"Exile_Chopper_Hummingbird_Digital", 	    1200, "Digital", 	    {"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_digital_co.paa"};},
+			{"Exile_Chopper_Hummingbird_Elliptical", 	1200, "Elliptical", 	{"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_elliptical_co.paa"};},
+			{"Exile_Chopper_Hummingbird_Furious", 	    1200, "Furious", 	    {"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_furious_co.paa"};},
+			{"Exile_Chopper_Hummingbird_GrayWatcher",   1200, "GrayWatcher",	{"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_graywatcher_co.paa"};},
+			{"Exile_Chopper_Hummingbird_Jeans", 		1200, "Jeans", 		    {"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_jeans_co.paa"};},
+			{"Exile_Chopper_Hummingbird_Green", 		1200, "Green", 		    {"A3\Air_F\Heli_Light_01\Data\Heli_Light_01_ext_Blufor_CO.paa"};},
+			{"Exile_Chopper_Hummingbird_fia", 		    1200, "FIA", 		    {"A3\Air_F\Heli_Light_01\Data\heli_light_01_ext_indp_CO.paa"};},
+			{"Exile_Chopper_Hummingbird_Blackk", 		1200, "Black Custom", 	{"A3\Air_F\Heli_Light_01\Data\Heli_Light_01_ext_UNI_MC.paa"};},			
+			{"Exile_Chopper_Hummingbird_Pink", 	        1200, "Pink",           {"#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"Exile_Chopper_Hummingbird_White",         1200, "White",          {"#(argb,8,8,3)color(1,1,1,1)"};},			
+			{"Exile_Chopper_Hummingbird_Red", 	        1200, "Red Red",        {"#(argb,8,8,3)color(1,0,0,1)"};},
+			{"Exile_Chopper_Hummingbird_Greenn", 	    1200, "Green Custom",   {"#(argb,8,8,3)color(0,1,0,1)"};},
+			{"Exile_Chopper_Hummingbird_Bluee", 	    1200, "Blue Blue",      {"#(argb,8,8,3)color(0,0,1,1)"};},
+			{"Exile_Chopper_Hummingbird_Black", 	    1200, "Black",          {"#(argb,8,8,3)color(0,0,0,0.6)"};},
+			{"Exile_Chopper_Hummingbird_Tan", 	        1200, "Tan",            {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},			
+			{"Exile_Chopper_Hummingbird_Light", 		1200, "Light", 		    {"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_light_co.paa"};},
+			{"Exile_Chopper_Hummingbird_Shadow", 		1200, "Shadow", 		{"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_shadow_co.paa"};},
+			{"Exile_Chopper_Hummingbird_Sheriff", 	    1200, "Sheriff", 	    {"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_sheriff_co.paa"};},
+			{"Exile_Chopper_Hummingbird_Speedy", 		1200, "Speedy", 		{"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_speedy_co.paa"};},
+			{"Exile_Chopper_Hummingbird_Sunset", 		1200, "Sunset", 		{"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_sunset_co.paa"};},
+			{"Exile_Chopper_Hummingbird_Vrana", 		1200, "Vrana", 		    {"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_vrana_co.paa"};},
+			{"Exile_Chopper_Hummingbird_Wasp", 		    1200, "Wasp", 		    {"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_wasp_co.paa"};},
+			{"Exile_Chopper_Hummingbird_Wave", 		    1200, "Wave", 		    {"\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_wave_co.paa"};}
+		};
+	};	
+	
 	///////////////////////////////////////////////////////////////////////////////
 	// Huron
 	///////////////////////////////////////////////////////////////////////////////
@@ -2746,11 +2884,134 @@ class CfgVehicleCustoms
 	{
 		skins[] = 
 		{
-			{"Exile_Chopper_Huron_Black", 	450, "Black", {"\A3\Air_F_Heli\Heli_Transport_03\Data\Heli_Transport_03_ext01_black_CO.paa","\a3\air_f_heli\heli_transport_03\data\heli_transport_03_ext02_black_co.paa"};},
-			{"Exile_Chopper_Huron_Green", 	450, "Green", {"\a3\air_f_heli\heli_transport_03\data\heli_transport_03_ext01_co.paa","\a3\air_f_heli\heli_transport_03\data\heli_transport_03_ext02_co.paa"};}
+			{"Exile_Chopper_Huron_Black", 	    3500, "Black",        {"\A3\Air_F_Heli\Heli_Transport_03\Data\Heli_Transport_03_ext01_black_CO.paa","\a3\air_f_heli\heli_transport_03\data\heli_transport_03_ext02_black_co.paa"};},
+			{"Exile_Chopper_Huron_Pink", 	    3500, "Pink",         {"#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"Exile_Chopper_Huron_White",       3500, "White",        {"#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)"};},			
+			{"Exile_Chopper_Huron_Red", 	    3500, "Red",          {"#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)"};},
+			{"Exile_Chopper_Huron_Green", 	    3500, "Green Custom", {"#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)"};},
+			{"Exile_Chopper_Huron_Blue", 	    3500, "Blue",         {"#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)"};},
+			{"Exile_Chopper_Huron_Blackk", 	    3500, "Black Custom", {"#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)"};},
+			{"Exile_Chopper_Huron_Tan", 	    3500, "Tan",          {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},			
+			{"Exile_Chopper_Huron_Green", 	    3500, "Green",        {"\a3\air_f_heli\heli_transport_03\data\heli_transport_03_ext01_co.paa","\a3\air_f_heli\heli_transport_03\data\heli_transport_03_ext02_co.paa"};}			
+		};
+	};	
+
+	///////////////////////////////////////////////////////////////////////////////
+	// Huron armed
+	///////////////////////////////////////////////////////////////////////////////
+	class B_Heli_Transport_03_black_F
+	{
+		skins[] = 
+		{
+			{"B_Heli_Transport_03_Black_F", 	3500, "Black",        {"\A3\Air_F_Heli\Heli_Transport_03\Data\Heli_Transport_03_ext01_black_CO.paa","\a3\air_f_heli\heli_transport_03\data\heli_transport_03_ext02_black_co.paa"};},			
+			{"B_Heli_Transport_03_Pink_F", 	    3500, "Pink",         {"#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"B_Heli_Transport_03_White_F",     3500, "White",        {"#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)"};},				
+			{"B_Heli_Transport_03_Red_F", 	    3500, "Red",          {"#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)"};},
+			{"B_Heli_Transport_03_Green_F", 	3500, "Green Custom", {"#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)"};},
+			{"B_Heli_Transport_03_Blue_F", 	    3500, "Blue",         {"#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)"};},
+			{"B_Heli_Transport_03_Blackk_F", 	3500, "Black Custom", {"#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)"};},
+			{"B_Heli_Transport_03_Tan_F", 	    3500, "Tan",          {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},			
+			{"B_Heli_Transport_03_Green_F", 	3500, "Green",        {"\a3\air_f_heli\heli_transport_03\data\heli_transport_03_ext01_co.paa","\a3\air_f_heli\heli_transport_03\data\heli_transport_03_ext02_co.paa"};}			
+		};
+	};	
+	
+	///////////////////////////////////////////////////////////////////////////////
+	// Huron armed
+	///////////////////////////////////////////////////////////////////////////////
+	class B_Heli_Transport_03_F
+	{
+		skins[] = 
+		{
+			{"B_Heli_Transport_03_Green_F", 	3500, "Green",        {"\a3\air_f_heli\heli_transport_03\data\heli_transport_03_ext01_co.paa","\a3\air_f_heli\heli_transport_03\data\heli_transport_03_ext02_co.paa"};},				
+			{"B_Heli_Transport_03_Pink_F", 	    3500, "Pink",         {"#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"B_Heli_Transport_03_White_F",     3500, "White",        {"#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)"};},			
+			{"B_Heli_Transport_03_Red_F", 	    3500, "Red",          {"#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)"};},
+			{"B_Heli_Transport_03_Greenn_F", 	3500, "Green Custom", {"#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)"};},
+			{"B_Heli_Transport_03_Blue_F", 	    3500, "Blue",         {"#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)"};},
+			{"B_Heli_Transport_03_Blackk_F", 	3500, "Black Custom", {"#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)"};},
+			{"B_Heli_Transport_03_Tan_F", 	    3500, "Tan",          {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},			
+			{"B_Heli_Transport_03_Black_F", 	3500, "Black",        {"\A3\Air_F_Heli\Heli_Transport_03\Data\Heli_Transport_03_ext01_black_CO.paa","\a3\air_f_heli\heli_transport_03\data\heli_transport_03_ext02_black_co.paa"};}			
+		};
+	};		
+	
+	///////////////////////////////////////////////////////////////////////////////
+	// UH-80 Ghost Hawk
+	///////////////////////////////////////////////////////////////////////////////
+	class Heli_Transport_01_base_F
+	{
+		skins[] = 
+		{
+			{"B_Heli_Transport_01_F", 	     3500, "Black",        {"\A3\Air_F_Beta\Heli_Transport_01\Data\Heli_Transport_01_ext01_CO.paa","\A3\Air_F_Beta\Heli_Transport_01\Data\Heli_Transport_01_ext02_CO.paa"};},			
+			{"B_Heli_Transport_01_Pink_F", 	 3500, "Pink",         {"#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"B_Heli_Transport_01_White_F",  3500, "White",        {"#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)"};},				
+			{"B_Heli_Transport_01_Red_F", 	 3500, "Red",          {"#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)"};},
+			{"B_Heli_Transport_01_Green_F",  3500, "Green Custom", {"#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)"};},
+			{"B_Heli_Transport_01_Blue_F", 	 3500, "Blue",         {"#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)"};},
+			{"B_Heli_Transport_01_Blackk_F", 3500, "Black Custom", {"#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)"};},
+			{"B_Heli_Transport_01_Tan_F", 	 3500, "Tan",          {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},			
+			{"B_Heli_Transport_01_Sand_F", 	 3500, "Sand",         {"\A3\Air_F_Exp\Heli_Transport_01\Data\Heli_Transport_01_ext01_sand_CO.paa","\A3\Air_F_Exp\Heli_Transport_01\Data\Heli_Transport_01_ext02_sand_CO.paa"};},
+			{"B_Heli_Transport_01_Tropic_F", 3500, "Tropic",       {"\A3\Air_F_Exp\Heli_Transport_01\Data\Heli_Transport_01_ext01_tropic_CO.paa","\A3\Air_F_Exp\Heli_Transport_01\Data\Heli_Transport_01_ext02_tropic_CO.paa"};},			
+			{"B_Heli_Transport_01_camo_F", 	 3500, "Green",        {"\A3\Air_F_Beta\Heli_Transport_01\Data\Heli_Transport_01_ext01_BLUFOR_CO.paa","\A3\Air_F_Beta\Heli_Transport_01\Data\Heli_Transport_01_ext02_BLUFOR_CO.paa"};}
+		};
+	};	
+	
+	///////////////////////////////////////////////////////////////////////////////
+	// MV-22 armed
+	///////////////////////////////////////////////////////////////////////////////
+	class VTOL_01_armed_base_F
+	{
+		skins[] = 
+		{
+			{"B_T_VTOL_01_armed_blue_F", 	3500, "Blue",        {"\A3\Air_F_Exp\VTOL_01\Data\VTOL_01_EXT01_blue_CO.paa","\A3\Air_F_Exp\VTOL_01\Data\VTOL_01_EXT02_blue_CO.paa","\A3\Air_F_Exp\VTOL_01\Data\VTOL_01_EXT03_blue_CO.paa","\A3\Air_F_Exp\VTOL_01\Data\VTOL_01_EXT04_blue_CO.paa"};},
+			{"B_T_VTOL_01_armed_Pink_F", 	3500, "Pink",        {"#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)"};},		
+			{"B_T_VTOL_01_armed_Red_F", 	3500, "Red",         {"#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)"};},
+			{"B_T_VTOL_01_armed_Red_F", 	3500, "White",       {"#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)"};},			
+			{"B_T_VTOL_01_armed_Green_F", 	3500, "Green",       {"#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)"};},
+			{"B_T_VTOL_01_armed_Bluee_F", 	3500, "Blue Custom", {"#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)"};},			
+			{"B_T_VTOL_01_armed_Black_F",   3500, "Black",       {"#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)"};},						
+			{"B_T_VTOL_01_armed_Tan_F",     3500, "Tan",	     {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},			
+			{"B_T_VTOL_01_armed_olive_F", 	3500, "Olive",       {"\A3\Air_F_Exp\VTOL_01\Data\VTOL_01_EXT01_olive_CO.paa","\A3\Air_F_Exp\VTOL_01\Data\VTOL_01_EXT02_olive_CO.paa","\A3\Air_F_Exp\VTOL_01\Data\VTOL_01_EXT03_olive_CO.paa","\A3\Air_F_Exp\VTOL_01\Data\VTOL_01_EXT04_olive_CO.paa"};}
+		};
+	};	
+
+	///////////////////////////////////////////////////////////////////////////////
+	// MV-22 vehicle
+	///////////////////////////////////////////////////////////////////////////////
+	class B_T_VTOL_01_vehicle_F
+	{
+		skins[] = 
+		{
+			{"Exile_Plane_BlackfishVehicle",   3500, "Blue",        {"\A3\Air_F_Exp\VTOL_01\Data\VTOL_01_EXT01_blue_CO.paa","\A3\Air_F_Exp\VTOL_01\Data\VTOL_01_EXT02_blue_CO.paa","\A3\Air_F_Exp\VTOL_01\Data\VTOL_01_EXT03_blue_CO.paa","\A3\Air_F_Exp\VTOL_01\Data\VTOL_01_EXT04_blue_CO.paa"};},
+			{"Exile_Plane_BlackfishVehicle",   3500, "Pink",        {"#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"Exile_Plane_BlackfishVehicle",   3500, "White",       {"#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)"};},			
+			{"Exile_Plane_BlackfishVehicle",   3500, "Red",         {"#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)"};},			
+			{"Exile_Plane_BlackfishVehicle",   3500, "Green",       {"#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)"};},
+			{"Exile_Plane_BlackfishVehicle",   3500, "Blue Custom", {"#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)"};},			
+			{"Exile_Plane_BlackfishVehicle",   3500, "Black",       {"#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)"};},						
+			{"Exile_Plane_BlackfishVehicle",   3500, "Tan",	        {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},			
+			{"Exile_Plane_BlackfishVehicle",   3500, "Olive",       {"\A3\Air_F_Exp\VTOL_01\Data\VTOL_01_EXT01_olive_CO.paa","\A3\Air_F_Exp\VTOL_01\Data\VTOL_01_EXT02_olive_CO.paa","\A3\Air_F_Exp\VTOL_01\Data\VTOL_01_EXT03_olive_CO.paa","\A3\Air_F_Exp\VTOL_01\Data\VTOL_01_EXT04_olive_CO.paa"};}
 		};
 	};
-
+	
+	///////////////////////////////////////////////////////////////////////////////
+	// MV-22 infantry
+	///////////////////////////////////////////////////////////////////////////////
+	class B_T_VTOL_01_infantry_F
+	{
+		skins[] = 
+		{
+			{"Exile_Plane_BlackfishInfantry", 	3500, "Blue",        {"\A3\Air_F_Exp\VTOL_01\Data\VTOL_01_EXT01_blue_CO.paa","\A3\Air_F_Exp\VTOL_01\Data\VTOL_01_EXT02_blue_CO.paa","\A3\Air_F_Exp\VTOL_01\Data\VTOL_01_EXT03_blue_CO.paa","\A3\Air_F_Exp\VTOL_01\Data\VTOL_01_EXT04_blue_CO.paa"};},
+			{"Exile_Plane_BlackfishInfantry",   3500, "Pink",        {"#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"Exile_Plane_BlackfishInfantry",   3500, "White",       {"#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)"};},			
+			{"Exile_Plane_BlackfishInfantry",   3500, "Red",         {"#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)"};},			
+			{"Exile_Plane_BlackfishInfantry",   3500, "Green",       {"#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)"};},
+			{"Exile_Plane_BlackfishInfantry",   3500, "Blue Custom", {"#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)"};},			
+			{"Exile_Plane_BlackfishInfantry",   3500, "Black",       {"#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)"};},						
+			{"Exile_Plane_BlackfishInfantry",   3500, "Tan",	     {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},					
+			{"Exile_Plane_BlackfishInfantry",   3500, "Olive",       {"\A3\Air_F_Exp\VTOL_01\Data\VTOL_01_EXT01_olive_CO.paa","\A3\Air_F_Exp\VTOL_01\Data\VTOL_01_EXT02_olive_CO.paa","\A3\Air_F_Exp\VTOL_01\Data\VTOL_01_EXT03_olive_CO.paa","\A3\Air_F_Exp\VTOL_01\Data\VTOL_01_EXT04_olive_CO.paa"};}
+		};
+	};
+	
 	///////////////////////////////////////////////////////////////////////////////
 	// Orca
 	///////////////////////////////////////////////////////////////////////////////
@@ -2758,12 +3019,20 @@ class CfgVehicleCustoms
 	{
 		skins[] = 
 		{
-			{"Exile_Chopper_Orca_CSAT", 		350, "CSAT", 			{"\A3\Air_F\Heli_Light_02\Data\Heli_Light_02_ext_OPFOR_CO.paa"};},
-			{"Exile_Chopper_Orca_Black", 		350, "Black", 			{"\A3\Air_F\Heli_Light_02\Data\Heli_Light_02_ext_CO.paa"};},
-			{"Exile_Chopper_Orca_BlackCustom", 	350, "Black Custom", 	{"\A3\Air_F_Heli\Heli_Light_02\Data\Heli_Light_02_ext_OPFOR_V2_CO.paa"};}
+			{"Exile_Chopper_Orca_CSAT", 		2700, "CSAT", 			{"\A3\Air_F\Heli_Light_02\Data\Heli_Light_02_ext_OPFOR_CO.paa"};},
+			{"Exile_Chopper_Orca_Black", 		2700, "Black", 			{"\A3\Air_F\Heli_Light_02\Data\Heli_Light_02_ext_CO.paa"};},
+			{"Exile_Chopper_Orca_Pink", 	    2700, "Pink",           {"#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"Exile_Chopper_Orca_White",        2700, "White",          {"#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)"};},			
+			{"Exile_Chopper_Orca_Red", 	        2700, "Red",            {"#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)"};},	
+			{"Exile_Chopper_Orca_Green", 	    2700, "Green",          {"#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)"};},	
+			{"Exile_Chopper_Orca_Bluee", 	    2700, "Blue Custom",    {"#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)"};},	
+			{"Exile_Chopper_Orca_Black", 	    2700, "Black Custom1",  {"#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)"};},	
+			{"Exile_Chopper_Orca_Tan", 	        2700, "Tan",            {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},				
+			{"Exile_Chopper_Orca_Blue", 		2700, "Blue", 			{"\A3\Air_F\Heli_Light_02\Data\heli_light_02_ext_civilian_CO.paa"};},		
+			{"Exile_Chopper_Orca_BlackCustom", 	2700, "Black Custom", 	{"\A3\Air_F_Heli\Heli_Light_02\Data\Heli_Light_02_ext_OPFOR_V2_CO.paa"};}
 		};
 	};
-
+	
 	///////////////////////////////////////////////////////////////////////////////
 	// Taru
 	///////////////////////////////////////////////////////////////////////////////
@@ -2771,8 +3040,15 @@ class CfgVehicleCustoms
 	{
 		skins[] = 
 		{
-			{"Exile_Chopper_Taru_CSAT",		500, "CSAT", 	{"A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_base_01_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_base_02_co.paa"};},
-			{"Exile_Chopper_Taru_Black",	500, "BLACK", 	{"A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_base_01_black_CO.paa","A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_base_02_black_CO.paa"};}
+			{"Exile_Chopper_Taru_CSAT",		3000, "CSAT", 	      {"A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_base_01_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_base_02_co.paa"};},
+			{"Exile_Chopper_Taru_Pink", 	3000, "Pink",         {"#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"Exile_Chopper_Taru_White",    3000, "White",        {"#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)"};},			
+			{"Exile_Chopper_Taru_Red", 	    3000, "Red",          {"#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)"};},	
+			{"Exile_Chopper_Taru_Green", 	3000, "Green",        {"#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)"};},	
+			{"Exile_Chopper_Taru_Blue", 	3000, "Blue",         {"#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)"};},	
+			{"Exile_Chopper_Taru_Blackk", 	3000, "Black Custom", {"#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)"};},	
+			{"Exile_Chopper_Taru_Tan", 	    3000, "Tan",          {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},			
+			{"Exile_Chopper_Taru_Black",	3000, "BLACK", 	      {"A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_base_01_black_CO.paa","A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_base_02_black_CO.paa"};}
 		};
 	};
 
@@ -2783,8 +3059,15 @@ class CfgVehicleCustoms
 	{
 		skins[] = 
 		{
-			{"Exile_Chopper_Taru_Transport_CSAT",	500, "CSAT", 	{"A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_base_01_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_base_02_co.paa"};},
-			{"Exile_Chopper_Taru_Transport_Black",	500, "Black", 	{"A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_base_01_black_CO.paa","A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_base_02_black_CO.paa"};}
+			{"Exile_Chopper_Taru_Transport_CSAT",	 3000, "CSAT", 	       {"A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_base_01_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_base_02_co.paa"};},
+			{"Exile_Chopper_Taru_Transport_Pink", 	 3000, "Pink",         {"#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"Exile_Chopper_Taru_Transport_White",   3000, "White",        {"#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)"};},			
+			{"Exile_Chopper_Taru_Transport_Red", 	 3000, "Red",          {"#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)"};},	
+			{"Exile_Chopper_Taru_Transport_Green", 	 3000, "Green",        {"#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)"};},	
+			{"Exile_Chopper_Taru_Transport_Blue", 	 3000, "Blue",         {"#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)"};},	
+			{"Exile_Chopper_Taru_Transport_Blackk",  3000, "Black Custom", {"#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)"};},	
+			{"Exile_Chopper_Taru_Transport_Tan", 	 3000, "Tan",          {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},		
+			{"Exile_Chopper_Taru_Transport_Black",	 3000, "Black", 	   {"A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_base_01_black_CO.paa","A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_base_02_black_CO.paa"};}
 		};
 	};
 
@@ -2795,8 +3078,15 @@ class CfgVehicleCustoms
 	{
 		skins[] = 
 		{
-			{"Exile_Chopper_Taru_Covered_CSAT",		500, "CSAT",	{"A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_base_01_CO.paa","A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_base_02_CO.paa","A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_Pod_Ext01_CO.paa","A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_Pod_Ext02_CO.paa"};},
-			{"Exile_Chopper_Taru_Covered_Black",	500, "Black",	{"A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_01_black_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_02_black_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_pod_ext01_black_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_pod_ext02_black_co.paa"};}
+			{"Exile_Chopper_Taru_Covered_CSAT",		3000, "CSAT",	      {"A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_base_01_CO.paa","A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_base_02_CO.paa","A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_Pod_Ext01_CO.paa","A3\Air_F_Heli\Heli_Transport_04\Data\Heli_Transport_04_Pod_Ext02_CO.paa"};},
+			{"Exile_Chopper_Taru_Covered_Pink", 	3000, "Pink",         {"#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"Exile_Chopper_Taru_Covered_White",    3000, "White",        {"#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)"};},				
+			{"Exile_Chopper_Taru_Covered_Red", 	    3000, "Red",          {"#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)"};},	
+			{"Exile_Chopper_Taru_Covered_Green", 	3000, "Green",        {"#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)"};},	
+			{"Exile_Chopper_Taru_Covered_Blue", 	3000, "Blue",         {"#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)"};},	
+			{"Exile_Chopper_Taru_Covered_Blackk",   3000, "Black Custom", {"#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)"};},	
+			{"Exile_Chopper_Taru_Covered_Tan", 	    3000, "Tan",          {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},				
+			{"Exile_Chopper_Taru_Covered_Black",	3000, "Black",	      {"A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_01_black_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_base_02_black_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_pod_ext01_black_co.paa","A3\Air_F_Heli\Heli_Transport_04\Data\heli_transport_04_pod_ext02_black_co.paa"};}
 		};
 	};
 
@@ -2806,35 +3096,272 @@ class CfgVehicleCustoms
 	class Exile_Car_Hatchback_Abstract
 	{	
 		skins[] = 
-		{
-			{"Exile_Car_Hatchback_Rusty1", 			50, "Rusty White",		{"\exile_assets\model\RTV\Exile_Car_Hatchback_01_co.paa"};},
-			{"Exile_Car_Hatchback_Rusty2", 			50, "Rusty Red",		{"\exile_assets\model\RTV\Exile_Car_Hatchback_02_co.paa"};},
-			{"Exile_Car_Hatchback_Rusty3", 			50, "Rusty Yellow",		{"\exile_assets\model\RTV\Exile_Car_Hatchback_03_co.paa"};},
-			{"Exile_Car_Hatchback_Beige", 			100, "Beige",			{"\A3\Soft_F_Gamma\Hatchback_01\data\Hatchback_01_ext_BASE01_CO.paa"};},
-			{"Exile_Car_Hatchback_Green", 			100, "Green",			{"\A3\Soft_F_Gamma\Hatchback_01\data\Hatchback_01_ext_BASE02_CO.paa"};},
-			{"Exile_Car_Hatchback_Blue", 			100, "Blue",			{"\A3\Soft_F_Gamma\Hatchback_01\data\Hatchback_01_ext_BASE03_CO.paa"};},
-			{"Exile_Car_Hatchback_BlueCustom", 		100, "Blue Custom",		{"\A3\Soft_F_Gamma\Hatchback_01\data\Hatchback_01_ext_BASE04_CO.paa"};},
-			{"Exile_Car_Hatchback_BeigeCustom", 	100, "Beige Custom",	{"\A3\Soft_F_Gamma\Hatchback_01\data\Hatchback_01_ext_BASE05_CO.paa"};},
-			{"Exile_Car_Hatchback_Yellow", 			100, "Yellow",			{"\A3\Soft_F_Gamma\Hatchback_01\data\Hatchback_01_ext_BASE06_CO.paa"};},
-			{"Exile_Car_Hatchback_Grey", 			100, "Grey",			{"\A3\Soft_F_Gamma\Hatchback_01\data\Hatchback_01_ext_BASE07_CO.paa"};},
-			{"Exile_Car_Hatchback_Black", 			100, "Black",			{"\A3\Soft_F_Gamma\Hatchback_01\data\Hatchback_01_ext_BASE08_CO.paa"};},
-			{"Exile_Car_Hatchback_Dark", 			100, "Dark",			{"\A3\Soft_F_Gamma\Hatchback_01\data\Hatchback_01_ext_BASE09_CO.paa"};}
+		{			
+			{"Exile_Car_Hatchback_Rusty1", 			200, "Rusty White",		{"\exile_assets\model\RTV\Exile_Car_Hatchback_01_co.paa"};},
+			{"Exile_Car_Hatchback_Rusty2", 			200, "Rusty Red",		{"\exile_assets\model\RTV\Exile_Car_Hatchback_02_co.paa"};},
+			{"Exile_Car_Hatchback_Rusty3", 			200, "Rusty Yellow",	{"\exile_assets\model\RTV\Exile_Car_Hatchback_03_co.paa"};},			
+			{"Exile_Car_Hatchback_Beige", 			200, "Beige",			{"\A3\Soft_F_Gamma\Hatchback_01\data\Hatchback_01_ext_BASE01_CO.paa"};},
+			{"Exile_Car_Hatchback_Green", 			200, "Green",			{"\A3\Soft_F_Gamma\Hatchback_01\data\Hatchback_01_ext_BASE02_CO.paa"};},
+			{"Exile_Car_Hatchback_Blue", 			200, "Blue",			{"\A3\Soft_F_Gamma\Hatchback_01\data\Hatchback_01_ext_BASE03_CO.paa"};},
+			{"Exile_Car_Hatchback_BlueCustom", 		200, "Blue Custom",		{"\A3\Soft_F_Gamma\Hatchback_01\data\Hatchback_01_ext_BASE04_CO.paa"};},
+			{"Exile_Car_Hatchback_BeigeCustom", 	200, "Beige Custom",	{"\A3\Soft_F_Gamma\Hatchback_01\data\Hatchback_01_ext_BASE05_CO.paa"};},
+			{"Exile_Car_Hatchback_Yellow", 			200, "Yellow",			{"\A3\Soft_F_Gamma\Hatchback_01\data\Hatchback_01_ext_BASE06_CO.paa"};},
+			{"Exile_Car_Hatchback_White", 			200, "White",			{"\A3\Soft_F_Gamma\Hatchback_01\data\Hatchback_01_ext_CO.paa"};},			
+			{"Exile_Car_Hatchback_Grey", 			200, "Grey",			{"\A3\Soft_F_Gamma\Hatchback_01\data\Hatchback_01_ext_BASE07_CO.paa"};},
+			{"Exile_Car_Hatchback_Black", 			200, "Black",			{"\A3\Soft_F_Gamma\Hatchback_01\data\Hatchback_01_ext_BASE08_CO.paa"};},
+			{"Exile_Car_Hatchback_Dark", 			200, "Dark",			{"\A3\Soft_F_Gamma\Hatchback_01\data\Hatchback_01_ext_BASE09_CO.paa"};}
 		};
 	};
 
+	///////////////////////////////////////////////////////////////////////////////
+	// HEMMT transport
+	///////////////////////////////////////////////////////////////////////////////
+	class Exile_Car_HEMMT_Abstract
+	{
+		skins[] = 
+		{
+			{"Exile_Car_HEMMT", 				1800, "NATO", 		 {"\a3\soft_f_beta\truck_01\data\truck_01_ext_01_co.paa","\a3\soft_f_beta\truck_01\data\truck_01_ext_02_co.paa"};}		
+		};
+	};		
+
+	///////////////////////////////////////////////////////////////////////////////
+	// HEMMT covered
+	///////////////////////////////////////////////////////////////////////////////
+	class B_Truck_01_covered_F
+	{
+		skins[] = 
+		{			
+			{"B_Truck_01_covered_NATO_F", 				1800, "NATO", 	     {"\a3\soft_f_beta\truck_01\data\truck_01_ext_01_co.paa","\a3\soft_f_beta\truck_01\data\truck_01_ext_02_co.paa"};}		
+		};
+	};
+	
+	///////////////////////////////////////////////////////////////////////////////
+	// HEMMT box
+	///////////////////////////////////////////////////////////////////////////////
+	class B_Truck_01_box_F
+	{
+		skins[] = 
+		{
+			{"B_Truck_01_box_NATO_F", 			    1800, "NATO", 	     {"\a3\soft_f_beta\truck_01\data\truck_01_ext_01_co.paa","\a3\soft_f_beta\truck_01\data\truck_01_ext_02_co.paa","\A3\Soft_F_Gamma\Truck_01\Data\truck_01_ammo_CO.paa"};}				
+		};
+	};	
+
+	///////////////////////////////////////////////////////////////////////////////
+	// HEMMT medical
+	///////////////////////////////////////////////////////////////////////////////
+	class B_Truck_01_medical_F
+	{
+		skins[] = 
+		{
+			{"B_Truck_01_medical_NATO_F", 				1800, "NATO", 		 {"\a3\soft_f_beta\truck_01\data\truck_01_ext_01_co.paa","\a3\soft_f_beta\truck_01\data\truck_01_ext_02_co.paa"};}			
+		};
+	};
+	
+	///////////////////////////////////////////////////////////////////////////////
+	// HEMMT fuel
+	///////////////////////////////////////////////////////////////////////////////
+	class B_Truck_01_fuel_F
+	{
+		skins[] = 
+		{	
+			{"B_Truck_01_fuel_NATO_F", 				1800, "NATO", 		 {"\a3\soft_f_beta\truck_01\data\truck_01_ext_01_co.paa","\a3\soft_f_beta\truck_01\data\truck_01_ext_02_co.paa","\A3\Soft_F_Gamma\Truck_01\Data\truck_01_Fuel_CO.paa"};}				
+		};
+	};	
+
+	///////////////////////////////////////////////////////////////////////////////
+	// HEMMT Repair
+	///////////////////////////////////////////////////////////////////////////////
+	class B_Truck_01_Repair_F
+	{
+		skins[] = 
+		{
+			{"B_Truck_01_Repair_NATO_F", 				1800, "NATO", 		 {"\a3\soft_f_beta\truck_01\data\truck_01_ext_01_co.paa","\a3\soft_f_beta\truck_01\data\truck_01_ext_02_co.paa","\A3\Soft_F_Gamma\Truck_01\Data\truck_01_ammo_CO.paa"};}			
+		};
+	};	
+	
+	///////////////////////////////////////////////////////////////////////////////
+	// HEMMT Move
+	///////////////////////////////////////////////////////////////////////////////
+	class B_Truck_01_mover_F
+	{
+		skins[] = 
+		{	
+			{"B_Truck_01_mover_NATO_F", 				1800, "NATO", 		 {"\a3\soft_f_beta\truck_01\data\truck_01_ext_01_co.paa","\a3\soft_f_beta\truck_01\data\truck_01_ext_02_co.paa","\A3\Soft_F_Gamma\Truck_01\Data\truck_01_mprimer_CO.paa"};}
+		};
+	};	
+	
+	///////////////////////////////////////////////////////////////////////////////
+	// HUNTER
+	///////////////////////////////////////////////////////////////////////////////
+	class Exile_Car_Hunter_Abstract
+	{
+		skins[] = 
+		{			
+			{"Exile_Car_Hunter",		2000, "Exile White Edition",	{"exile_assets\texture\vehicle\Exile_Hunter_Snow_co.paa","exile_assets\texture\vehicle\Exile_Hunter_Snow_Back_co.paa"};},
+			{"Exile_Car_Hunter",		2000, "Exile Hex",				{"exile_assets\texture\vehicle\Exile_Hunter_Hex_co.paa","exile_assets\texture\vehicle\Exile_Hunter_Black_Back_co.paa"};},
+			{"Exile_Car_Hunter",		2000, "NATO",				    {"\A3\soft_F\MRAP_01\data\MRAP_01_base_CO.paa","\A3\soft_F\MRAP_01\data\MRAP_01_adds_CO.paa"};},						
+			{"Exile_Car_Hunter", 		2000, "Pink",	                {"#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"Exile_Car_Hunter",        2000, "White",                  {"#(argb,8,8,3)color(1,1,1,1)"};},			
+			{"Exile_Car_Hunter", 	    2000, "Black",                  {"#(argb,8,8,3)color(0,0,0,0.6)"};},			
+			{"Exile_Car_Hunter", 	    2000, "Red",	                {"#(argb,8,8,3)color(1,0,0,1)"};},
+			{"Exile_Car_Hunter", 	    2000, "Green",	                {"#(argb,8,8,3)color(0,1,0,1)"};},
+			{"Exile_Car_Hunter", 	    2000, "Blue",	                {"#(argb,8,8,3)color(0,0,1,1)"};},			
+			{"Exile_Car_Hunter", 	    2000, "Tan",	                {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},			
+			{"Exile_Car_Hunter",		2000, "Exile Black",			{"exile_assets\texture\vehicle\Exile_Hunter_Black_co.paa","exile_assets\texture\vehicle\Exile_Hunter_Black_Back_co.paa"};}
+		};
+	};	
+	
+	///////////////////////////////////////////////////////////////////////////////
+	// Strider
+	///////////////////////////////////////////////////////////////////////////////
+	class Exile_Car_Strider_Abstract
+	{	
+		skins[] = 
+		{
+			{"I_MRAP_03_FIA_F", 	2200, "FIA",	     {"\a3\soft_f_beta\mrap_03\data\mrap_03_ext_indp_co.paa","\a3\data_f\vehicles\turret_indp_co.paa"};},
+			{"I_MRAP_03_NATO_F", 	2200, "NATO",	     {"\a3\soft_f_beta\mrap_03\data\mrap_03_ext_co.paa","\a3\data_f\vehicles\turret_opfor_co.paa"};},
+			{"I_MRAP_03_NATO_F", 	2200, "Desert",	     {"\a3\soft_f_beta\mrap_03\data\mrap_03_ext_co.paa","\a3\data_f\vehicles\turret_co.paa"};},			
+			{"I_MRAP_03_Black_F", 	2200, "Black",	     {"#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)"};},
+			{"I_MRAP_03_White_F",   2200, "White",       {"#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)"};},			
+			{"I_MRAP_03_Pink_F", 	2200, "Pink",	     {"#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"I_MRAP_03_Red_F", 	2200, "Red",	     {"#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)"};},
+			{"I_MRAP_03_Green_F", 	2200, "Green",	     {"#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)"};},
+			{"I_MRAP_03_Blue_F", 	2200, "Blue",	     {"#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)"};},			
+			{"I_MRAP_03_Tan_F", 	2200, "Tan",	     {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};}	
+		};
+	};	
+
+	///////////////////////////////////////////////////////////////////////////////
+	// Zamak transport
+	///////////////////////////////////////////////////////////////////////////////
+	class Truck_02_transport_base_F
+	{
+		skins[] = 
+		{
+			{"O_Truck_02_transport_F", 				1600, "CSAT", 		{"\A3\soft_f_beta\Truck_02\Data\Truck_02_kab_OPFOR_co.paa","\A3\soft_f_beta\Truck_02\Data\Truck_02_kuz_OPFOR_co.paa"};},				
+			{"I_Truck_02_transport_F", 				1600, "FIA",		{"\A3\soft_f_beta\Truck_02\Data\Truck_02_kab_INDP_co.paa","\A3\soft_f_beta\Truck_02\Data\Truck_02_kuz_INDP_co.paa"};},
+			{"C_Truck_02_transport_B_F", 			1600, "Blue", 		{"\A3\soft_f_beta\Truck_02\Data\truck_02_kab_blue_co.paa","\A3\soft_f_beta\Truck_02\Data\truck_02_kuz_co.paa"};},							
+			{"C_Truck_02_transport_F", 				1600, "Orange", 	{"\a3\soft_f_beta\Truck_02\data\truck_02_kab_co.paa","\a3\soft_f_beta\Truck_02\data\truck_02_kuz_co.paa"};}		
+		};
+	};
+	
+	///////////////////////////////////////////////////////////////////////////////
+	// Zamak covered
+	///////////////////////////////////////////////////////////////////////////////
+	class Truck_02_base_F
+	{
+		skins[] = 
+		{			
+			{"O_Truck_02_covered_F", 				1600, "CSAT", 	      {"\A3\soft_f_beta\Truck_02\Data\Truck_02_kab_OPFOR_co.paa","\A3\soft_f_beta\Truck_02\Data\Truck_02_kuz_OPFOR_co.paa"};},		
+			{"I_Truck_02_covered_F", 				1600, "FIA", 		  {"\A3\soft_f_beta\Truck_02\Data\Truck_02_kab_INDP_co.paa","\A3\soft_f_beta\Truck_02\Data\Truck_02_kuz_INDP_co.paa"};},
+			{"C_Truck_02_covered_B_F", 				1600, "Blue", 	      {"\A3\soft_f_beta\Truck_02\Data\truck_02_kab_blue_co.paa","\A3\soft_f_beta\Truck_02\Data\truck_02_kuz_co.paa"};},		
+			{"C_Truck_02_covered_BO_F", 			1600, "Blue Olive",   {"\A3\soft_f_beta\Truck_02\Data\truck_02_kab_blue_co.paa","\A3\soft_f_beta\Truck_02\Data\truck_02_kuz_olive_co.paa"};},
+			{"C_Truck_02_covered_BI_F", 			1600, "Blue Pink",    {"\a3\soft_f_beta\Truck_02\data\truck_02_kab_blue_co.paa","\a3\soft_f_beta\Truck_02\data\truck_02_kuz_smdi.paa"};},			
+			{"C_Truck_02_covered_OO_F", 			1600, "Orange Olive", {"\A3\soft_f_beta\Truck_02\Data\truck_02_kab_co.paa","\A3\soft_f_beta\Truck_02\Data\truck_02_kuz_olive_co.paa"};},
+			{"C_Truck_02_covered_OB_F", 			1600, "Orange Blue",  {"\a3\soft_f_beta\Truck_02\data\truck_02_kab_co.paa","\a3\soft_f_beta\Truck_02\data\truck_02_kuz_blue_co.paa"};},
+			{"C_Truck_02_covered_OI_F", 			1600, "Orange Pink",  {"\a3\soft_f_beta\Truck_02\data\truck_02_kab_co.paa","\a3\soft_f_beta\Truck_02\data\truck_02_kuz_smdi.paa"};}					
+		};
+	};
+	
+	///////////////////////////////////////////////////////////////////////////////
+	// Zamak box
+	///////////////////////////////////////////////////////////////////////////////
+	class Truck_02_box_base_F
+	{
+		skins[] = 
+		{
+			{"O_Truck_02_box_F", 			        1600, "CSAT", 	      {"\A3\soft_f_beta\Truck_02\Data\Truck_02_kab_OPFOR_co.paa","\A3\soft_f_beta\Truck_02\Data\Truck_02_repair_OPFOR_co.paa"};},
+			{"I_Truck_02_box_F", 				    1600, "FIA", 		  {"\A3\soft_f_beta\Truck_02\Data\Truck_02_kab_INDP_co.paa","\A3\soft_f_beta\Truck_02\Data\Truck_02_repair_INDP_co.paa"};},
+			{"C_Truck_02_box_BG_F", 			    1600, "Blue Green",   {"\A3\soft_f_beta\Truck_02\Data\truck_02_kab_blue_co.paa","\A3\soft_f_beta\Truck_02\Data\truck_02_repair_green_co.paa"};},
+			{"C_Truck_02_box_BO_F", 				1600, "Blue Orange",  {"\A3\soft_f_beta\Truck_02\Data\truck_02_kab_blue_co.paa","\A3\soft_f_beta\Truck_02\Data\truck_02_repair_orange_co.paa"};},
+			{"C_Truck_02_box_OG_F", 			    1600, "Orange Green", {"\A3\soft_f_beta\Truck_02\Data\truck_02_kab_co.paa","\A3\soft_f_beta\Truck_02\Data\truck_02_repair_green_co.paa"};},			
+			{"C_Truck_02_box_F", 				    1600, "Orange", 	  {"\a3\soft_f_beta\Truck_02\data\truck_02_kab_co.paa","\a3\soft_f_beta\Truck_02\data\truck_02_repair_co.paa"};}	
+		};
+	};	
+
+	///////////////////////////////////////////////////////////////////////////////
+	// Zamak medical
+	///////////////////////////////////////////////////////////////////////////////
+	class Truck_02_medical_base_F
+	{
+		skins[] = 
+		{
+			{"O_Truck_02_medical_F", 				1600, "CSAT", 		  {"\A3\soft_f_beta\Truck_02\Data\Truck_02_kab_OPFOR_co.paa","\A3\soft_f_beta\Truck_02\Data\Truck_02_kuz_OPFOR_co.paa"};},	
+			{"I_Truck_02_medical_F", 				1600, "FIA", 		  {"\A3\soft_f_beta\Truck_02\Data\Truck_02_kab_INDP_co.paa","\A3\soft_f_beta\Truck_02\Data\Truck_02_kuz_INDP_co.paa"};},
+			{"C_Truck_02_medical_B_F", 			    1600, "Blue",         {"\A3\soft_f_beta\Truck_02\Data\truck_02_kab_blue_co.paa","\A3\soft_f_beta\Truck_02\Data\truck_02_kuz_co.paa"};},			
+			{"C_Truck_02_medical_BP_F", 			1600, "Blue Pink", 	  {"\A3\soft_f_beta\Truck_02\Data\truck_02_kab_blue_co.paa","\A3\soft_f_beta\Truck_02\Data\truck_02_kuz_smdi.paa"};},		
+			{"C_Truck_02_medical_BO_F", 			1600, "Blue Olive",   {"\A3\soft_f_beta\Truck_02\Data\truck_02_kab_blue_co.paa","\A3\soft_f_beta\Truck_02\Data\truck_02_kuz_olive_co.paa"};},
+			{"C_Truck_02_medical_OO_F", 			1600, "Orange Olive", {"\A3\soft_f_beta\Truck_02\Data\truck_02_kab_co.paa","\A3\soft_f_beta\Truck_02\Data\truck_02_kuz_olive_co.paa"};},
+			{"C_Truck_02_medical_OB_F", 			1600, "Orange Blue",  {"\a3\soft_f_beta\Truck_02\data\truck_02_kab_co.paa","\a3\soft_f_beta\Truck_02\data\truck_02_kuz_blue_co.paa"};},
+			{"C_Truck_02_medical_OI_F", 			1600, "Orange Pink",  {"\a3\soft_f_beta\Truck_02\data\truck_02_kab_co.paa","\a3\soft_f_beta\Truck_02\data\truck_02_kuz_smdi.paa"};}			
+		};
+	};
+	
+	///////////////////////////////////////////////////////////////////////////////
+	// Zamak fuel
+	///////////////////////////////////////////////////////////////////////////////
+	class Truck_02_fuel_base_F
+	{
+		skins[] = 
+		{	
+			{"O_Truck_02_fuel_F", 				    1600, "CSAT", 		 {"\A3\soft_f_beta\Truck_02\Data\Truck_02_kab_OPFOR_co.paa","\A3\soft_f_beta\Truck_02\Data\Truck_02_fuel_OPFOR_co.paa"};},			
+			{"I_Truck_02_fuel_F", 				    1600, "FIA",		 {"\A3\soft_f_beta\Truck_02\Data\Truck_02_kab_INDP_co.paa","\A3\soft_f_beta\Truck_02\Data\Truck_02_fuel_INDP_co.paa"};},
+			{"C_Truck_02_fuel_B_F", 				1600, "Blue",        {"\A3\soft_f_beta\Truck_02\Data\truck_02_kab_blue_co.paa","\A3\soft_f_beta\Truck_02\Data\truck_02_fuel_co.paa"};},
+			{"C_Truck_02_fuel_BP_F", 				1600, "Blue Pink",   {"\A3\soft_f_beta\Truck_02\Data\truck_02_kab_blue_co.paa","\A3\soft_f_beta\Truck_02\Data\truck_02_fuel_smdi.paa"};},
+			{"C_Truck_02_fuel_OP_F", 				1600, "Orange Pink", {"\A3\soft_f_beta\Truck_02\Data\truck_02_kab_co.paa","\A3\soft_f_beta\Truck_02\Data\truck_02_fuel_smdi.paa"};},			
+			{"C_Truck_02_fuel_F", 				    1600, "Orange",	     {"\a3\soft_f_beta\Truck_02\data\truck_02_kab_co.paa","\a3\soft_f_beta\Truck_02\data\truck_02_fuel_co.paa"};}		
+		};
+	};	
+
+	///////////////////////////////////////////////////////////////////////////////
+	// Tempest transport
+	///////////////////////////////////////////////////////////////////////////////
+	class Exile_Car_Tempest_Abstract
+	{
+		skins[] = 
+		{			
+			{"Exile_Car_Tempest", 				1800, "CSAT", 	    {"\A3\Soft_F_EPC\Truck_03\Data\Truck_03_ext01_CO.paa","\A3\Soft_F_EPC\Truck_03\Data\Truck_03_ext02_CO.paa","\A3\Soft_F_EPC\Truck_03\Data\Truck_03_cargo_CO.paa"};},		
+			{"Exile_Car_Tempest", 				1800, "Green Hex",  {"\A3\Soft_F_Exp\Truck_03\Data\Truck_03_ext01_ghex_CO.paa","\A3\Soft_F_Exp\Truck_03\Data\Truck_03_ext02_ghex_CO.paa","\A3\Soft_F_Exp\Truck_03\Data\Truck_03_cargo_ghex_CO.paa"};}
+		};
+	};
+	
+	///////////////////////////////////////////////////////////////////////////////
+	// Tempest abgedeckt
+	///////////////////////////////////////////////////////////////////////////////
+	class Truck_03_base_F
+	{
+		skins[] = 
+		{
+			{"O_Truck_03_covered_F", 			    1800, "CSAT", 	    {"\A3\Soft_F_EPC\Truck_03\Data\Truck_03_ext01_CO.paa","\A3\Soft_F_EPC\Truck_03\Data\Truck_03_ext02_CO.paa","\A3\Soft_F_EPC\Truck_03\Data\Truck_03_cargo_CO.paa","\A3\Soft_F_EPC\Truck_03\Data\Truck_03_cover_CO.paa"};},
+			{"O_T_Truck_03_covered_ghex_F", 	    1800, "Green Hex",  {"\A3\Soft_F_Exp\Truck_03\Data\Truck_03_ext01_ghex_CO.paa","\A3\Soft_F_Exp\Truck_03\Data\Truck_03_ext02_ghex_CO.paa","\A3\Soft_F_Exp\Truck_03\Data\Truck_03_cargo_ghex_CO.paa","\A3\Soft_F_Exp\Truck_03\Data\Truck_03_cover_ghex_CO.paa"};}
+		};
+	};	
+
+	///////////////////////////////////////////////////////////////////////////////
+	// Tempest medical
+	///////////////////////////////////////////////////////////////////////////////
+	class Truck_03_medical_base_F
+	{
+		skins[] = 
+		{
+			{"B_Truck_01_medical_F", 				1800, "CSAT", 		    {"\A3\Soft_F_EPC\Truck_03\Data\Truck_03_ext01_CO.paa","\A3\Soft_F_EPC\Truck_03\Data\Truck_03_ext02_CO.paa","\A3\Soft_F_EPC\Truck_03\Data\Truck_03_cargo_CO.paa","\A3\Soft_F_EPC\Truck_03\Data\Truck_03_cover_CO.paa"};},	
+			{"O_T_Truck_03_medical_ghex_F", 		1800, "Green Hex", 		{"\A3\Soft_F_Exp\Truck_03\Data\Truck_03_ext01_ghex_CO.paa","\A3\Soft_F_Exp\Truck_03\Data\Truck_03_ext02_ghex_CO.paa","\A3\Soft_F_Exp\Truck_03\Data\Truck_03_cargo_ghex_CO.paa","\A3\Soft_F_Exp\Truck_03\Data\Truck_03_cover_ghex_CO.paa"};}		
+		};
+	};
+		
 	///////////////////////////////////////////////////////////////////////////////
 	// Hatchback (Sport)
 	///////////////////////////////////////////////////////////////////////////////
 	class Exile_Car_Hatchback_Sport_Abstract
 	{
 		skins[] = 
-		{
-			{"Exile_Car_Hatchback_Sport_Red", 		100, "Red",		{"\A3\soft_f_gamma\Hatchback_01\data\Hatchback_01_ext_SPORT01_CO.paa"};},
-			{"Exile_Car_Hatchback_Sport_Blue", 		100, "Blue",	{"\A3\soft_f_gamma\Hatchback_01\data\Hatchback_01_ext_SPORT02_CO.paa"};},
-			{"Exile_Car_Hatchback_Sport_Orange", 	100, "Orange",	{"\A3\soft_f_gamma\Hatchback_01\data\Hatchback_01_ext_SPORT03_CO.paa"};},
-			{"Exile_Car_Hatchback_Sport_White", 	100, "White",	{"\A3\soft_f_gamma\Hatchback_01\data\Hatchback_01_ext_SPORT04_CO.paa"};},
-			{"Exile_Car_Hatchback_Sport_Beige", 	100, "Beige",	{"\A3\soft_f_gamma\Hatchback_01\data\Hatchback_01_ext_SPORT05_CO.paa"};},
-			{"Exile_Car_Hatchback_Sport_Green", 	100, "Green",	{"\A3\soft_f_gamma\Hatchback_01\data\Hatchback_01_ext_SPORT06_CO.paa"};}
+		{			
+			{"Exile_Car_Hatchback_Sport_Red", 		200, "Red",		{"\A3\soft_f_gamma\Hatchback_01\data\Hatchback_01_ext_SPORT01_CO.paa"};},
+			{"Exile_Car_Hatchback_Sport_Blue", 		200, "Blue",	{"\A3\soft_f_gamma\Hatchback_01\data\Hatchback_01_ext_SPORT02_CO.paa"};},
+			{"Exile_Car_Hatchback_Sport_Orange", 	200, "Orange",	{"\A3\soft_f_gamma\Hatchback_01\data\Hatchback_01_ext_SPORT03_CO.paa"};},
+			{"Exile_Car_Hatchback_Sport_White", 	200, "White",	{"\A3\soft_f_gamma\Hatchback_01\data\Hatchback_01_ext_SPORT04_CO.paa"};},
+			{"Exile_Car_Hatchback_Sport_Beige", 	200, "Beige",	{"\A3\soft_f_gamma\Hatchback_01\data\Hatchback_01_ext_SPORT05_CO.paa"};},
+			{"Exile_Car_Hatchback_Sport_Green", 	200, "Green",	{"\A3\soft_f_gamma\Hatchback_01\data\Hatchback_01_ext_SPORT06_CO.paa"};}
 		};
 	};
 
@@ -2844,34 +3371,40 @@ class CfgVehicleCustoms
 	class Exile_Car_Offroad_Abstract
 	{
 		skins[] = 
-		{
-			{"Exile_Car_Offroad_Rusty1", 		50, "Rusty White",	{"\exile_assets\model\RTV\Exile_offroad_03_co.paa","\exile_assets\model\RTV\Exile_offroad_03_co.paa"};},
-			{"Exile_Car_Offroad_Rusty2", 		50, "Rusty Red",	{"\exile_assets\model\RTV\Exile_offroad_01_co.paa","\exile_assets\model\RTV\Exile_offroad_01_co.paa"};},
-			{"Exile_Car_Offroad_Rusty3", 		50, "Rusty Blue",	{"\exile_assets\model\RTV\Exile_offroad_02_co.paa","\exile_assets\model\RTV\Exile_offroad_02_co.paa"};},
-			{"Exile_Car_Offroad_Red", 			500, "Red",			{"\a3\Soft_F\Offroad_01\data\Offroad_01_ext_CO.paa","\a3\Soft_F\Offroad_01\data\Offroad_01_ext_CO.paa"};},
-			{"Exile_Car_Offroad_Beige", 		500, "Beige",		{"\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE01_CO.paa","\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE01_CO.paa"};},
-			{"Exile_Car_Offroad_White", 		500, "White",		{"\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE02_CO.paa","\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE02_CO.paa"};},
-			{"Exile_Car_Offroad_Blue", 			500, "Blue",		{"\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE03_CO.paa","\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE03_CO.paa"};},
-			{"Exile_Car_Offroad_DarkRed", 		500, "Dark Red",	{"\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE04_CO.paa","\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE04_CO.paa"};},
-			{"Exile_Car_Offroad_BlueCustom", 	500, "Blue Custom",	{"\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE05_CO.paa","\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE05_CO.paa"};},
-			{"Exile_Car_Offroad_Guerilla01", 	700, "Guerilla 01",	{"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_01_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_01_CO.paa"};},
-			{"Exile_Car_Offroad_Guerilla02", 	700, "Guerilla 02",	{"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_02_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_02_CO.paa"};},
-			{"Exile_Car_Offroad_Guerilla03", 	700, "Guerilla 03",	{"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_03_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_03_CO.paa"};},
-			{"Exile_Car_Offroad_Guerilla04", 	700, "Guerilla 04",	{"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_04_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_04_CO.paa"};},
-			{"Exile_Car_Offroad_Guerilla05", 	700, "Guerilla 05",	{"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_05_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_05_CO.paa"};},
-			{"Exile_Car_Offroad_Guerilla06", 	700, "Guerilla 06",	{"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_06_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_06_CO.paa"};},
-			{"Exile_Car_Offroad_Guerilla07", 	700, "Guerilla 07",	{"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_07_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_07_CO.paa"};},
-			{"Exile_Car_Offroad_Guerilla08", 	700, "Guerilla 08",	{"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_08_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_08_CO.paa"};},
-			{"Exile_Car_Offroad_Guerilla09", 	700, "Guerilla 09",	{"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_09_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_09_CO.paa"};},
-			{"Exile_Car_Offroad_Guerilla10", 	700, "Guerilla 10",	{"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_10_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_10_CO.paa"};},
-			{"Exile_Car_Offroad_Guerilla11", 	700, "Guerilla 11",	{"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_11_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_11_CO.paa"};},
-			{"Exile_Car_Offroad_Guerilla12", 	700, "Guerilla 12",	{"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_12_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_12_CO.paa"};},
-			{"Exile_Car_Offroad_DarkRed",		700, "Exile Black", {"exile_assets\texture\vehicle\Exile_Offroad_Black_co.paa"};},
-			{"Exile_Car_Offroad_DarkRed",		700, "Exile Light Blue", {"exile_assets\texture\vehicle\Exile_Offroad_LightBlue_co.paa"};},
-			{"Exile_Car_Offroad_DarkRed",		700, "Exile Orange",{"exile_assets\texture\vehicle\Exile_Offroad_Orange_co.paa"};},
-			{"Exile_Car_Offroad_DarkRed",		700, "Exile Pink",	{"exile_assets\texture\vehicle\Exile_Offroad_Pink_co.paa"};},
-			{"Exile_Car_Offroad_DarkRed",		700, "Exile White",	{"exile_assets\texture\vehicle\Exile_Offroad_White_co.paa"};},
-			{"Exile_Car_Offroad_DarkRed",		700, "Exile Yellow",{"exile_assets\texture\vehicle\Exile_Offroad_Yellow_co.paa"};}
+		{		
+			{"Exile_Car_Offroad_Rusty1", 		1000, "Rusty White",	  {"\exile_assets\model\RTV\Exile_offroad_03_co.paa","\exile_assets\model\RTV\Exile_offroad_03_co.paa"};},
+			{"Exile_Car_Offroad_Rusty2", 		1000, "Rusty Red",	      {"\exile_assets\model\RTV\Exile_offroad_01_co.paa","\exile_assets\model\RTV\Exile_offroad_01_co.paa"};},
+			{"Exile_Car_Offroad_Rusty3", 		1000, "Rusty Blue",	      {"\exile_assets\model\RTV\Exile_offroad_02_co.paa","\exile_assets\model\RTV\Exile_offroad_02_co.paa"};},			
+			{"Exile_Car_Offroad_Red", 			1000, "Red",		      {"\a3\Soft_F\Offroad_01\data\Offroad_01_ext_CO.paa","\a3\Soft_F\Offroad_01\data\Offroad_01_ext_CO.paa"};},
+			{"Exile_Car_Offroad_Beige", 		1000, "Beige",		      {"\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE01_CO.paa","\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE01_CO.paa"};},
+			{"Exile_Car_Offroad_White", 		1000, "White",		      {"\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE02_CO.paa","\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE02_CO.paa"};},
+			{"Exile_Car_Offroad_Blue", 			1000, "Blue",		      {"\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE03_CO.paa","\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE03_CO.paa"};},
+			{"Exile_Car_Offroad_DarkRed", 		1000, "Dark Red",	      {"\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE04_CO.paa","\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE04_CO.paa"};},			
+			{"Exile_Car_Offroad_Pink", 	        1000, "Pink",             {"#(argb,8,8,3)color(1,0.08,0.57,1)"};},		
+			{"Exile_Car_Offroad_Black", 	    1000, "Black Custom",	  {"#(argb,8,8,3)color(0,0,0,0.6)"};},			
+			{"Exile_Car_Offroad_Red", 	        1000, "Red Custom",	      {"#(argb,8,8,3)color(1,0,0,1)"};},
+			{"Exile_Car_Offroad_Green", 	    1000, "Green",	          {"#(argb,8,8,3)color(0,1,0,1)"};},
+			{"Exile_Car_Offroad_Blue", 	        1000, "Blue Custom1",	  {"#(argb,8,8,3)color(0,0,1,1)"};},			
+			{"Exile_Car_Offroad_Tan", 	        1000, "Tan",	          {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},				
+			{"Exile_Car_Offroad_BlueCustom", 	1000, "Blue Custom",	  {"\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE05_CO.paa","\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE05_CO.paa"};},
+			{"Exile_Car_Offroad_Guerilla01", 	1400, "Guerilla 01",	  {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_01_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_01_CO.paa"};},
+			{"Exile_Car_Offroad_Guerilla02", 	1400, "Guerilla 02",	  {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_02_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_02_CO.paa"};},
+			{"Exile_Car_Offroad_Guerilla03", 	1400, "Guerilla 03",	  {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_03_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_03_CO.paa"};},
+			{"Exile_Car_Offroad_Guerilla04", 	1400, "Guerilla 04",	  {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_04_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_04_CO.paa"};},
+			{"Exile_Car_Offroad_Guerilla05", 	1400, "Guerilla 05",	  {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_05_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_05_CO.paa"};},
+			{"Exile_Car_Offroad_Guerilla06", 	1400, "Guerilla 06",	  {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_06_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_06_CO.paa"};},
+			{"Exile_Car_Offroad_Guerilla07", 	1400, "Guerilla 07",	  {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_07_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_07_CO.paa"};},
+			{"Exile_Car_Offroad_Guerilla08", 	1400, "Guerilla 08",	  {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_08_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_08_CO.paa"};},
+			{"Exile_Car_Offroad_Guerilla09", 	1400, "Guerilla 09",	  {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_09_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_09_CO.paa"};},
+			{"Exile_Car_Offroad_Guerilla10", 	1400, "Guerilla 10",	  {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_10_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_10_CO.paa"};},
+			{"Exile_Car_Offroad_Guerilla11", 	1400, "Guerilla 11",	  {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_11_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_11_CO.paa"};},
+			{"Exile_Car_Offroad_Guerilla12", 	1400, "Guerilla 12",	  {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_12_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_12_CO.paa"};},
+			{"Exile_Car_Offroad_DarkRed",		1400, "Exile Black",      {"exile_assets\texture\vehicle\Exile_Offroad_Black_co.paa"};},
+			{"Exile_Car_Offroad_DarkRed",		1400, "Exile Light Blue", {"exile_assets\texture\vehicle\Exile_Offroad_LightBlue_co.paa"};},
+			{"Exile_Car_Offroad_DarkRed",		1400, "Exile Orange",     {"exile_assets\texture\vehicle\Exile_Offroad_Orange_co.paa"};},
+			{"Exile_Car_Offroad_DarkRed",		1400, "Exile Pink",	      {"exile_assets\texture\vehicle\Exile_Offroad_Pink_co.paa"};},
+			{"Exile_Car_Offroad_DarkRed",		1400, "Exile White",	  {"exile_assets\texture\vehicle\Exile_Offroad_White_co.paa"};},
+			{"Exile_Car_Offroad_DarkRed",		1400, "Exile Yellow",     {"exile_assets\texture\vehicle\Exile_Offroad_Yellow_co.paa"};}
 		};
 	};
 
@@ -2882,11 +3415,11 @@ class CfgVehicleCustoms
 	{
 		skins[] = 
 		{
-			{"Exile_Car_LandRover_Red", 250, "Red", {"Exile_psycho_LRC\data\r_lr_base_co.paa","Exile_psycho_LRC\data\r_lr_special_co.paa"};},
-			{"Exile_Car_LandRover_Urban", 250, "Urban", {"Exile_psycho_LRC\data\textures\lr_base_urbancamo_co.paa","Exile_psycho_LRC\data\textures\lr_special_urbancamo_co.paa"};},
-			{"Exile_Car_LandRover_Green", 250, "Green", {"Exile_psycho_LRC\data\lr_acr_base_co.paa","Exile_psycho_LRC\data\lr_acr_spec_co.paa"};},
-			{"Exile_Car_LandRover_Sand", 250, "Sand", {"Exile_psycho_LRC\data\lr_acr_sand_base_co.paa","Exile_psycho_LRC\data\lr_special_acr_co.paa"};},
-			{"Exile_Car_LandRover_Desert", 250, "Desert", {"Exile_psycho_LRC\data\lr_acrs_base_co.paa","Exile_psycho_LRC\data\lr_special_acr_co.paa"};}
+			{"Exile_Car_LandRover_Red", 700, "Red",       {"Exile_psycho_LRC\data\r_lr_base_co.paa","Exile_psycho_LRC\data\r_lr_special_co.paa"};},
+			{"Exile_Car_LandRover_Urban", 700, "Urban",   {"Exile_psycho_LRC\data\textures\lr_base_urbancamo_co.paa","Exile_psycho_LRC\data\textures\lr_special_urbancamo_co.paa"};},
+			{"Exile_Car_LandRover_Green", 700, "Green",   {"Exile_psycho_LRC\data\lr_acr_base_co.paa","Exile_psycho_LRC\data\lr_acr_spec_co.paa"};},
+			{"Exile_Car_LandRover_Sand", 700, "Sand",     {"Exile_psycho_LRC\data\lr_acr_sand_base_co.paa","Exile_psycho_LRC\data\lr_special_acr_co.paa"};},
+			{"Exile_Car_LandRover_Desert", 700, "Desert", {"Exile_psycho_LRC\data\lr_acrs_base_co.paa","Exile_psycho_LRC\data\lr_special_acr_co.paa"};}
 		};
 	};
 
@@ -2897,9 +3430,9 @@ class CfgVehicleCustoms
 	{
 		skins[] = 
 		{
-			{"Exile_Car_LandRover_Ambulance_Green", 250, "Green", {"Exile_psycho_LRC\data\lr_acr_base_co.paa","Exile_psycho_LRC\data\lr_amb_ext_co.paa","Exile_psycho_LRC\data\lr_acr_spec_co.paa"};},
-			{"Exile_Car_LandRover_Ambulance_Desert", 250, "Desert", {"Exile_psycho_LRC\data\lr_acrs_base_co.paa","Exile_psycho_LRC\data\lr_amb_ext_co.paa","Exile_psycho_LRC\data\lr_special_acr_co.paa"};},
-			{"Exile_Car_LandRover_Ambulance_Sand", 250, "Sand", {"Exile_psycho_LRC\data\lr_acr_sand_base_co.paa","Exile_psycho_LRC\data\lr_amb_ext_co.paa","Exile_psycho_LRC\data\lr_special_acr_co.paa"};}
+			{"Exile_Car_LandRover_Ambulance_Green", 700, "Green",   {"Exile_psycho_LRC\data\lr_acr_base_co.paa","Exile_psycho_LRC\data\lr_amb_ext_co.paa","Exile_psycho_LRC\data\lr_acr_spec_co.paa"};},
+			{"Exile_Car_LandRover_Ambulance_Desert", 700, "Desert", {"Exile_psycho_LRC\data\lr_acrs_base_co.paa","Exile_psycho_LRC\data\lr_amb_ext_co.paa","Exile_psycho_LRC\data\lr_special_acr_co.paa"};},
+			{"Exile_Car_LandRover_Ambulance_Sand", 700, "Sand",     {"Exile_psycho_LRC\data\lr_acr_sand_base_co.paa","Exile_psycho_LRC\data\lr_amb_ext_co.paa","Exile_psycho_LRC\data\lr_special_acr_co.paa"};}
 		};
 	};
 
@@ -2910,11 +3443,31 @@ class CfgVehicleCustoms
 	{
 		skins[] = 
 		{
-			{"Exile_Car_Octavius_White", 250, "White", {"exile_psycho_Octavia\Data\car_body_co.paa"};},
-			{"Exile_Car_Octavius_Black", 250, "Black", {"exile_psycho_Octavia\Data\car_body_bl_co.paa"};}
+			{"Exile_Car_Octavius_White", 500, "White", {"exile_psycho_Octavia\Data\car_body_co.paa"};},
+			{"Exile_Car_Octavius_Black", 500, "Black", {"exile_psycho_Octavia\Data\car_body_bl_co.paa"};}
 		};
 	};
 
+	///////////////////////////////////////////////////////////////////////////////
+	// Mohawk
+	///////////////////////////////////////////////////////////////////////////////
+	class Exile_Chopper_Mohawk_Abstract
+	{
+		skins[] = 
+		{
+			{"Exile_Chopper_Mohawk_FIA",   3500, "FIA",         {"A3\Air_F_Beta\Heli_Transport_02\Data\Heli_Transport_02_1_INDP_CO.paa","A3\Air_F_Beta\Heli_Transport_02\Data\Heli_Transport_02_2_INDP_CO.paa","A3\Air_F_Beta\Heli_Transport_02\Data\Heli_Transport_02_3_INDP_CO.paa"};},
+			{"Exile_Chopper_Mohawk_Pink",  3500, "Pink",        {"#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"Exile_Chopper_Mohawk_Black", 3500, "Black",       {"#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)"};},
+			{"Exile_Chopper_Mohawk_Red",   3500, "Red",         {"#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)"};},
+			{"Exile_Chopper_Mohawk_Green", 3500, "Green",       {"#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)"};},
+			{"Exile_Chopper_Mohawk_Blue",  3500, "Blue",        {"#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)"};},
+			{"Exile_Chopper_Mohawk_White", 3500, "White",       {"#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)"};},				
+			{"Exile_Chopper_Mohawk_Tan",   3500, "Tan",         {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},			
+			{"Exile_Chopper_Mohawk_homan", 3500, "Homan",       {"A3\Air_F_Beta\Heli_Transport_02\Data\skins\heli_transport_02_1_dahoman_co.paa","A3\Air_F_Beta\Heli_Transport_02\Data\skins\heli_transport_02_2_dahoman_co.paa","A3\Air_F_Beta\Heli_Transport_02\Data\skins\heli_transport_02_3_dahoman_co.paa"};},
+			{"Exile_Chopper_Mohawk_ION",   3500, "ION",         {"A3\Air_F_Beta\Heli_Transport_02\Data\skins\heli_transport_02_1_ion_co.paa","A3\Air_F_Beta\Heli_Transport_02\Data\skins\heli_transport_02_2_ion_co.paa","A3\Air_F_Beta\Heli_Transport_02\Data\skins\heli_transport_02_3_ion_co.paa"};}			
+		};
+	};	
+	
 	///////////////////////////////////////////////////////////////////////////////
 	// UH-1H Huey
 	///////////////////////////////////////////////////////////////////////////////
@@ -2922,8 +3475,15 @@ class CfgVehicleCustoms
 	{
 		skins[] = 
 		{
-			{"Exile_Chopper_Huey_Green", 700, "Green", {"Exile_psycho_UH1H\data\uh1h_co.paa","Exile_psycho_UH1H\data\uh1h_in_co.paa","Exile_psycho_UH1H\data\default_co.paa","Exile_psycho_UH1H\data\alpha_ca.paa"};},
-			{"Exile_Chopper_Huey_Desert", 700, "Desert", {"Exile_psycho_UH1H\data\uh1d_tka_co.paa","Exile_psycho_UH1H\data\uh1d_in_tka_co.paa","Exile_psycho_UH1H\data\default_co.paa","Exile_psycho_UH1H\data\alpha_ca.paa"};}
+			{"Exile_Chopper_Huey_Green",  1400, "Green",   {"Exile_psycho_UH1H\data\uh1h_co.paa","Exile_psycho_UH1H\data\uh1h_in_co.paa","Exile_psycho_UH1H\data\default_co.paa","Exile_psycho_UH1H\data\alpha_ca.paa"};},
+			{"Exile_Chopper_Huey_Pink",   1400, "Pink",    {"#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"Exile_Chopper_Huey_White",  1400, "White",   {"#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)"};},			
+			{"Exile_Chopper_Huey_Black",  1400, "Black",   {"#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)"};},	
+			{"Exile_Chopper_Huey_Red",    1400, "Red",     {"#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)"};},	
+			{"Exile_Chopper_Huey_Green",  1400, "Green",   {"#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)"};},	
+			{"Exile_Chopper_Huey_Blue",   1400, "Blue",    {"#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)"};},	
+			{"Exile_Chopper_Huey_Tan",    1400, "Tan",     {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},				
+			{"Exile_Chopper_Huey_Desert", 1400, "Desert",  {"Exile_psycho_UH1H\data\uh1d_tka_co.paa","Exile_psycho_UH1H\data\uh1d_in_tka_co.paa","Exile_psycho_UH1H\data\default_co.paa","Exile_psycho_UH1H\data\alpha_ca.paa"};}
 		};
 	};
 
@@ -2934,11 +3494,35 @@ class CfgVehicleCustoms
 	{
 		skins[] = 
 		{
-			{"Exile_Chopper_Huey_Armed_Green", 700, "Green", {"Exile_psycho_UH1H\data\uh1h_co.paa","Exile_psycho_UH1H\data\uh1h_in_co.paa","Exile_psycho_UH1H\data\default_co.paa","Exile_psycho_UH1H\data\alpha_ca.paa"};},
-			{"Exile_Chopper_Huey_Armed_Desert", 700, "Desert", {"Exile_psycho_UH1H\data\uh1d_tka_co.paa","Exile_psycho_UH1H\data\uh1d_in_tka_co.paa","Exile_psycho_UH1H\data\default_co.paa","Exile_psycho_UH1H\data\alpha_ca.paa"};}
+			{"Exile_Chopper_Huey_Armed_Green",  1400, "Green",   {"Exile_psycho_UH1H\data\uh1h_co.paa","Exile_psycho_UH1H\data\uh1h_in_co.paa","Exile_psycho_UH1H\data\default_co.paa","Exile_psycho_UH1H\data\alpha_ca.paa"};},
+			{"Exile_Chopper_Huey_Armed_Pink",   1400, "Pink",    {"#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"Exile_Chopper_Huey_Armed_White",  1400, "White",   {"#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)"};},			
+			{"Exile_Chopper_Huey_Armed_Black",  1400, "Black",   {"#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)"};},	
+			{"Exile_Chopper_Huey_Armed_Red",    1400, "Red",     {"#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)"};},	
+			{"Exile_Chopper_Huey_Armed_Green",  1400, "Green",   {"#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)"};},	
+			{"Exile_Chopper_Huey_Armed_Blue",   1400, "Blue",    {"#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)"};},	
+			{"Exile_Chopper_Huey_Armed_Tan",    1400, "Tan",     {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},			
+			{"Exile_Chopper_Huey_Armed_Desert", 1400, "Desert",  {"Exile_psycho_UH1H\data\uh1d_tka_co.paa","Exile_psycho_UH1H\data\uh1d_in_tka_co.paa","Exile_psycho_UH1H\data\default_co.paa","Exile_psycho_UH1H\data\alpha_ca.paa"};}
+		};
+	};	
+
+	///////////////////////////////////////////////////////////////////////////////
+	// Ceasar BTT
+	///////////////////////////////////////////////////////////////////////////////
+	class C_Plane_Civil_01_F
+	{
+		skins[] = 
+		{
+			{"Exile_Plane_Ceasar",		750, "Racing (Tan Interior)",    {"A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_01_Racer_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_02_Racer_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_01_tan_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_02_tan_co.paa"};},
+			{"Exile_Plane_Ceasar",		750, "Racing",                   {"A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_01_Racer_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_02_Racer_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_01_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_02_co.paa"};},
+			{"Exile_Plane_Ceasar",		750, "Red Line (Tan Interior)",  {"A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_01_RedLine_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_02_RedLine_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_01_tan_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_02_tan_co.paa"};},
+			{"Exile_Plane_Ceasar",		750, "Tribal (Tan Interior)",    {"A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_01_Tribal_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_02_Tribal_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_01_tan_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_02_tan_co.paa"};},
+			{"Exile_Plane_Ceasar",		750, "Tribal",                   {"A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_01_Tribal_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_02_Tribal_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_01_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_02_co.paa"};},
+			{"Exile_Plane_Ceasar",		750, "Blue Wave (Tan Interior)", {"A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_01_Wave_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_02_Wave_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_01_tan_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_02_tan_co.paa"};},
+			{"Exile_Plane_Ceasar",		750, "Blue Wave",                {"A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_01_Wave_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_02_Wave_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_01_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_02_co.paa"};}
 		};
 	};
-
+	
 	///////////////////////////////////////////////////////////////////////////////
 	// Offroad (Armed)
 	///////////////////////////////////////////////////////////////////////////////
@@ -2946,21 +3530,102 @@ class CfgVehicleCustoms
 	{
 		skins[] = 
 		{
-			{"Exile_Car_Offroad_Armed_Guerilla01",	250, "Guerilla 01", {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_01_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_01_CO.paa"};},
-			{"Exile_Car_Offroad_Armed_Guerilla02",	250, "Guerilla 02", {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_02_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_02_CO.paa"};},
-			{"Exile_Car_Offroad_Armed_Guerilla03",	250, "Guerilla 03", {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_03_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_03_CO.paa"};},
-			{"Exile_Car_Offroad_Armed_Guerilla04",	250, "Guerilla 04", {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_04_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_04_CO.paa"};},
-			{"Exile_Car_Offroad_Armed_Guerilla05",	250, "Guerilla 05", {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_05_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_05_CO.paa"};},
-			{"Exile_Car_Offroad_Armed_Guerilla06",	250, "Guerilla 06", {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_06_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_06_CO.paa"};},
-			{"Exile_Car_Offroad_Armed_Guerilla07",	250, "Guerilla 07", {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_07_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_07_CO.paa"};},
-			{"Exile_Car_Offroad_Armed_Guerilla08",	250, "Guerilla 08", {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_08_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_08_CO.paa"};},
-			{"Exile_Car_Offroad_Armed_Guerilla09",	250, "Guerilla 09", {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_09_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_09_CO.paa"};},
-			{"Exile_Car_Offroad_Armed_Guerilla10",	250, "Guerilla 10", {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_10_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_10_CO.paa"};},
-			{"Exile_Car_Offroad_Armed_Guerilla11",	250, "Guerilla 11", {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_11_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_11_CO.paa"};},
-			{"Exile_Car_Offroad_Armed_Guerilla12",	250, "Guerilla 12", {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_12_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_12_CO.paa"};}
+			{"Exile_Car_Offroad_Armed_Rusty1", 		1000, "Rusty White",   	  {"\exile_assets\model\RTV\Exile_offroad_03_co.paa","\exile_assets\model\RTV\Exile_offroad_03_co.paa"};},
+			{"Exile_Car_Offroad_Armed_Rusty2", 		1000, "Rusty Red",	      {"\exile_assets\model\RTV\Exile_offroad_01_co.paa","\exile_assets\model\RTV\Exile_offroad_01_co.paa"};},
+			{"Exile_Car_Offroad_Armed_Rusty3", 		1000, "Rusty Blue",	      {"\exile_assets\model\RTV\Exile_offroad_02_co.paa","\exile_assets\model\RTV\Exile_offroad_02_co.paa"};},			
+			{"Exile_Car_Offroad_Armed_Pink", 	    1000, "Pink",             {"#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"Exile_Car_Offroad_Armed_Black", 	    1000, "Black",	          {"#(argb,8,8,3)color(0,0,0,0.6)"};},			
+			{"Exile_Car_Offroad_Armed_Red", 	    1000, "Red",	          {"#(argb,8,8,3)color(1,0,0,1)"};},
+			{"Exile_Car_Offroad_Armed_Green", 	    1000, "Green",	          {"#(argb,8,8,3)color(0,1,0,1)"};},
+			{"Exile_Car_Offroad_Armed_Blue", 	    1000, "Blue",	          {"#(argb,8,8,3)color(0,0,1,1)"};},			
+			{"Exile_Car_Offroad_Armed_Tan", 	    1000, "Tan",	          {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},		
+			{"Exile_Car_Offroad_Armed_Black",		1000, "Exile Black",	  {"exile_assets\texture\vehicle\Exile_Offroad_Black_co.paa"};},
+			{"Exile_Car_Offroad_Armed_LightBlue",	1000, "Exile Light Blue", {"exile_assets\texture\vehicle\Exile_Offroad_LightBlue_co.paa"};},
+			{"Exile_Car_Offroad_Armed_Orange",		1000, "Exile Orange",	  {"exile_assets\texture\vehicle\Exile_Offroad_Orange_co.paa"};},
+			{"Exile_Car_Offroad_Armed_Pink",		1000, "Exile Pink",		  {"exile_assets\texture\vehicle\Exile_Offroad_Pink_co.paa"};},
+			{"Exile_Car_Offroad_Armed_White",		1000, "Exile White",	  {"exile_assets\texture\vehicle\Exile_Offroad_White_co.paa"};},
+			{"Exile_Car_Offroad_Armed_Yellow",		1000, "Exile Yellow",     {"exile_assets\texture\vehicle\Exile_Offroad_Yellow_co.paa"};},			
+			{"Exile_Car_Offroad_Armed_Guerilla01",	1000, "Guerilla 01",      {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_01_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_01_CO.paa"};},
+			{"Exile_Car_Offroad_Armed_Guerilla02",	1000, "Guerilla 02",      {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_02_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_02_CO.paa"};},
+			{"Exile_Car_Offroad_Armed_Guerilla03",	1000, "Guerilla 03",      {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_03_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_03_CO.paa"};},
+			{"Exile_Car_Offroad_Armed_Guerilla04",	1000, "Guerilla 04",      {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_04_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_04_CO.paa"};},
+			{"Exile_Car_Offroad_Armed_Guerilla05",	1000, "Guerilla 05",      {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_05_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_05_CO.paa"};},
+			{"Exile_Car_Offroad_Armed_Guerilla06",	1000, "Guerilla 06",      {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_06_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_06_CO.paa"};},
+			{"Exile_Car_Offroad_Armed_Guerilla07",	1000, "Guerilla 07",      {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_07_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_07_CO.paa"};},
+			{"Exile_Car_Offroad_Armed_Guerilla08",	1000, "Guerilla 08",      {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_08_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_08_CO.paa"};},
+			{"Exile_Car_Offroad_Armed_Guerilla09",	1000, "Guerilla 09",      {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_09_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_09_CO.paa"};},
+			{"Exile_Car_Offroad_Armed_Guerilla10",	1000, "Guerilla 10",      {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_10_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_10_CO.paa"};},
+			{"Exile_Car_Offroad_Armed_Guerilla11",	1000, "Guerilla 11",      {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_11_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_11_CO.paa"};},
+			{"Exile_Car_Offroad_Armed_Guerilla12",	1000, "Guerilla 12",      {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_12_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_12_CO.paa"};}
 		};
 	};
 
+	///////////////////////////////////////////////////////////////////////////////
+	// MB 4WD
+	///////////////////////////////////////////////////////////////////////////////
+	class C_Offroad_02_unarmed_orange_F
+	{
+		skins[] = 
+		{
+			{"Exile_Car_MB4WD",		900, "Black",        {"\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_black_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_black_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_black_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_black_co.paa"};},
+			{"Exile_Car_MB4WD",		900, "Blue",         {"\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_blue_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_blue_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_blue_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_blue_co.paa"};},
+			{"Exile_Car_MB4WD",		900, "Brown",        {"\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_brown_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_brown_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_brown_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_brown_co.paa"};},
+			{"Exile_Car_MB4WD",		900, "Green",        {"\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_green_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_green_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_green_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_green_co.paa"};},
+			{"Exile_Car_MB4WD",		900, "Olive",        {"\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_olive_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_olive_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_olive_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_olive_co.paa"};},
+			{"Exile_Car_MB4WD",		900, "Red",          {"\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_red_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_red_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_red_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_red_co.paa"};},
+			{"Exile_Car_MB4WD", 	900, "Pink",         {"#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"Exile_Car_MB4WD", 	900, "Black Custom", {"#(argb,8,8,3)color(0,0,0,0.6)"};},			
+			{"Exile_Car_MB4WD", 	900, "Red Custom",	 {"#(argb,8,8,3)color(1,0,0,1)"};},
+			{"Exile_Car_MB4WD", 	900, "Green Custom", {"#(argb,8,8,3)color(0,1,0,1)"};},
+			{"Exile_Car_MB4WD", 	900, "Blue Custom",	 {"#(argb,8,8,3)color(0,0,1,1)"};},			
+			{"Exile_Car_MB4WD", 	900, "Tan",	         {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},				
+			{"Exile_Car_MB4WD",		900, "White",        {"\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_white_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_white_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_white_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_white_co.paa"};}
+		};
+	};
+
+	///////////////////////////////////////////////////////////////////////////////
+	// MB 4WD open
+	///////////////////////////////////////////////////////////////////////////////	
+	class I_C_Offroad_02_unarmed_F
+	{
+		skins[] = 
+		{
+			{"Exile_Car_MB4WDOpen",		900, "Black",        {"\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_black_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_black_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_black_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_black_co.paa"};},
+			{"Exile_Car_MB4WDOpen",		900, "Blue",         {"\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_blue_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_blue_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_blue_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_blue_co.paa"};},
+			{"Exile_Car_MB4WDOpen",		900, "Brown",        {"\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_brown_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_brown_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_brown_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_brown_co.paa"};},
+			{"Exile_Car_MB4WDOpen",		900, "Green",        {"\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_green_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_green_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_green_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_green_co.paa"};},
+			{"Exile_Car_MB4WDOpen",		900, "Orange",       {"\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_orange_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_orange_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_orange_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_orange_co.paa"};},
+			{"Exile_Car_MB4WDOpen",		900, "Red",          {"\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_red_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_red_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_red_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_red_co.paa"};},
+			{"Exile_Car_MB4WDOpen", 	900, "Pink",         {"#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"Exile_Car_MB4WDOpen", 	900, "Black Custom", {"#(argb,8,8,3)color(0,0,0,0.6)"};},			
+			{"Exile_Car_MB4WDOpen", 	900, "Red Custom",	 {"#(argb,8,8,3)color(1,0,0,1)"};},
+			{"Exile_Car_MB4WDOpen", 	900, "Green Custom", {"#(argb,8,8,3)color(0,1,0,1)"};},
+			{"Exile_Car_MB4WDOpen", 	900, "Blue Custom",	 {"#(argb,8,8,3)color(0,0,1,1)"};},			
+			{"Exile_Car_MB4WDOpen", 	900, "Tan",	         {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},				
+			{"Exile_Car_MB4WDOpen",		900, "White",        {"\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_white_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_white_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_white_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_white_co.paa"};},
+			{"Exile_Car_MB4WDOpen",		900, "Olive",        {"\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_olive_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_olive_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_olive_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_olive_co.paa"};}
+		};
+	};	
+	
+	///////////////////////////////////////////////////////////////////////////////
+	// Boat Transport
+	///////////////////////////////////////////////////////////////////////////////
+	class Boat_Transport_02_base_F
+	{
+		skins[] = 
+		{
+			{"C_Boat_Transport_02_F", 		    1100, "Blue",	      {"\A3\Boat_F_Exp\Boat_Transport_02\Data\Boat_Transport_02_exterior_civilian_CO.paa","\A3\Boat_F_Exp\Boat_Transport_02\Data\Boat_Transport_02_interior_2_civilian_CO.paa"};},
+			{"O_G_Boat_Transport_02_F", 		1100, "Black",	      {"\A3\Boat_F_Exp\Boat_Transport_02\Data\Boat_Transport_02_exterior_CO.paa","\A3\Boat_F_Exp\Boat_Transport_02\Data\Boat_Transport_02_interior_2_CO.paa" };},
+			{"B_G_Boat_Transport_02_pink_F", 	1100, "Pink",         {"#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"B_G_Boat_Transport_02_White_F",   1100, "White",        {"#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)"};},			
+			{"B_G_Boat_Transport_02_black_F", 	1100, "Black Custom", {"#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)"};},			
+			{"B_G_Boat_Transport_02_red_F", 	1100, "Red",	      {"#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)"};},
+			{"B_G_Boat_Transport_02_green_F", 	1100, "Green",        {"#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)"};},
+			{"B_G_Boat_Transport_02_blue_F", 	1100, "Blue Custom",  {"#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)"};},			
+			{"B_G_Boat_Transport_02_tan_F", 	1100, "Tan",	      {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};}			
+		};
+	};	
+	
 	///////////////////////////////////////////////////////////////////////////////
 	// Offroad (Repair)
 	///////////////////////////////////////////////////////////////////////////////
@@ -2968,28 +3633,87 @@ class CfgVehicleCustoms
 	{
 		skins[] = 
 		{
-			{"Exile_Car_Offroad_Repair_Civillian",		150, "Civillian",	{"\A3\Soft_F_Bootcamp\Offroad_01\Data\Offroad_01_ext_repair_CIV_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\Offroad_01_ext_repair_CIV_CO.paa"};},
-			{"Exile_Car_Offroad_Repair_Red",			150, "Red",			{"\a3\Soft_F\Offroad_01\data\Offroad_01_ext_CO.paa","\a3\Soft_F\Offroad_01\data\Offroad_01_ext_CO.paa"};},
-			{"Exile_Car_Offroad_Repair_Beige",			150, "Beige",		{"\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE01_CO.paa","\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE01_CO.paa"};},
-			{"Exile_Car_Offroad_Repair_White",			150, "White",		{"\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE02_CO.paa","\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE02_CO.paa"};},
-			{"Exile_Car_Offroad_Repair_Blue",			150, "Blue",		{"\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE03_CO.paa","\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE03_CO.paa"};},
-			{"Exile_Car_Offroad_Repair_DarkRed",		150, "DarkRed",		{"\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE04_CO.paa","\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE04_CO.paa"};},
-			{"Exile_Car_Offroad_Repair_BlueCustom",		150, "BlueCustom",	{"\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE05_CO.paa","\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE05_CO.paa"};},
-			{"Exile_Car_Offroad_Repair_Guerilla01",		250, "Guerilla 01",	{"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_01_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_01_CO.paa"};},
-			{"Exile_Car_Offroad_Repair_Guerilla02",		250, "Guerilla 02",	{"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_02_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_02_CO.paa"};},
-			{"Exile_Car_Offroad_Repair_Guerilla03",		250, "Guerilla 03",	{"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_03_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_03_CO.paa"};},
-			{"Exile_Car_Offroad_Repair_Guerilla04",		250, "Guerilla 04",	{"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_04_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_04_CO.paa"};},
-			{"Exile_Car_Offroad_Repair_Guerilla05",		250, "Guerilla 05",	{"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_05_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_05_CO.paa"};},
-			{"Exile_Car_Offroad_Repair_Guerilla06",		250, "Guerilla 06",	{"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_06_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_06_CO.paa"};},
-			{"Exile_Car_Offroad_Repair_Guerilla07",		250, "Guerilla 07",	{"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_07_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_07_CO.paa"};},
-			{"Exile_Car_Offroad_Repair_Guerilla08",		250, "Guerilla 08",	{"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_08_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_08_CO.paa"};},
-			{"Exile_Car_Offroad_Repair_Guerilla09",		250, "Guerilla 09",	{"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_09_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_09_CO.paa"};},
-			{"Exile_Car_Offroad_Repair_Guerilla10",		250, "Guerilla 10",	{"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_10_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_10_CO.paa"};},
-			{"Exile_Car_Offroad_Repair_Guerilla11",		250, "Guerilla 11",	{"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_11_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_11_CO.paa"};},
-			{"Exile_Car_Offroad_Repair_Guerilla12",		250, "Guerilla 12",	{"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_12_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_12_CO.paa"};}
+			{"Exile_Car_Offroad_Repair_Rusty1", 		700, "Rusty White",	      {"\exile_assets\model\RTV\Exile_offroad_03_co.paa","\exile_assets\model\RTV\Exile_offroad_03_co.paa"};},
+			{"Exile_Car_Offroad_Repair_Rusty2", 		700, "Rusty Red",	      {"\exile_assets\model\RTV\Exile_offroad_01_co.paa","\exile_assets\model\RTV\Exile_offroad_01_co.paa"};},
+			{"Exile_Car_Offroad_Repair_Rusty3", 		700, "Rusty Blue",	      {"\exile_assets\model\RTV\Exile_offroad_02_co.paa","\exile_assets\model\RTV\Exile_offroad_02_co.paa"};},			
+			{"Exile_Car_Offroad_Repair_Civillian",		700, "Civillian",	      {"\A3\Soft_F_Bootcamp\Offroad_01\Data\Offroad_01_ext_repair_CIV_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\Offroad_01_ext_repair_CIV_CO.paa"};},
+			{"Exile_Car_Offroad_Repair_Red",			700, "Red",			      {"\a3\Soft_F\Offroad_01\data\Offroad_01_ext_CO.paa","\a3\Soft_F\Offroad_01\data\Offroad_01_ext_CO.paa"};},
+			{"Exile_Car_Offroad_Repair_Beige",			700, "Beige",		      {"\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE01_CO.paa","\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE01_CO.paa"};},
+			{"Exile_Car_Offroad_Repair_White",			700, "White",		      {"\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE02_CO.paa","\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE02_CO.paa"};},
+			{"Exile_Car_Offroad_Repair_Blue",			700, "Blue",		      {"\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE03_CO.paa","\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE03_CO.paa"};},
+			{"Exile_Car_Offroad_Repair_DarkRed",		700, "DarkRed",		      {"\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE04_CO.paa","\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE04_CO.paa"};},
+			{"Exile_Car_Offroad_Repair_Pink", 	        700, "Pink",              {"#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"Exile_Car_Offroad_Repair_Black", 	        700, "Black",	          {"#(argb,8,8,3)color(0,0,0,0.6)"};},			
+			{"Exile_Car_Offroad_Repair_Red", 	        700, "Red Custom",	      {"#(argb,8,8,3)color(1,0,0,1)"};},		
+			{"Exile_Car_Offroad_Repair_Green", 	        700, "Green",	          {"#(argb,8,8,3)color(0,1,0,1)"};},
+			{"Exile_Car_Offroad_Repair_Blue", 	        700, "Blue Custom",	      {"#(argb,8,8,3)color(0,0,1,1)"};},			
+			{"Exile_Car_Offroad_Repair_Tan", 	        700, "Tan",	              {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},			
+			{"Exile_Car_Offroad_Repair_Black",		    700, "Exile Black",	      {"exile_assets\texture\vehicle\Exile_Offroad_Black_co.paa"};},
+			{"Exile_Car_Offroad_Repair_LightBlue",	    700, "Exile Light Blue",  {"exile_assets\texture\vehicle\Exile_Offroad_LightBlue_co.paa"};},
+			{"Exile_Car_Offroad_Repair_Orange",		    700, "Exile Orange",	  {"exile_assets\texture\vehicle\Exile_Offroad_Orange_co.paa"};},
+			{"Exile_Car_Offroad_Repair_Pink",		    700, "Exile Pink",		  {"exile_assets\texture\vehicle\Exile_Offroad_Pink_co.paa"};},
+			{"Exile_Car_Offroad_Repair_White",		    700, "Exile White",	      {"exile_assets\texture\vehicle\Exile_Offroad_White_co.paa"};},
+			{"Exile_Car_Offroad_Repair_Yellow",		    700, "Exile Yellow",      {"exile_assets\texture\vehicle\Exile_Offroad_Yellow_co.paa"};},			
+			{"Exile_Car_Offroad_Repair_BlueCustom",		700, "BlueCustom",	      {"\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE05_CO.paa","\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE05_CO.paa"};},
+			{"Exile_Car_Offroad_Repair_Guerilla01",		900, "Guerilla 01",	      {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_01_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_01_CO.paa"};},
+			{"Exile_Car_Offroad_Repair_Guerilla02",		900, "Guerilla 02",	      {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_02_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_02_CO.paa"};},
+			{"Exile_Car_Offroad_Repair_Guerilla03",		900, "Guerilla 03",	      {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_03_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_03_CO.paa"};},
+			{"Exile_Car_Offroad_Repair_Guerilla04",		900, "Guerilla 04",	      {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_04_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_04_CO.paa"};},
+			{"Exile_Car_Offroad_Repair_Guerilla05",		900, "Guerilla 05",	      {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_05_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_05_CO.paa"};},
+			{"Exile_Car_Offroad_Repair_Guerilla06",		900, "Guerilla 06",	      {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_06_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_06_CO.paa"};},
+			{"Exile_Car_Offroad_Repair_Guerilla07",		900, "Guerilla 07",	      {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_07_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_07_CO.paa"};},
+			{"Exile_Car_Offroad_Repair_Guerilla08",		900, "Guerilla 08",	      {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_08_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_08_CO.paa"};},
+			{"Exile_Car_Offroad_Repair_Guerilla09",		900, "Guerilla 09",	      {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_09_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_09_CO.paa"};},
+			{"Exile_Car_Offroad_Repair_Guerilla10",		900, "Guerilla 10",	      {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_10_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_10_CO.paa"};},
+			{"Exile_Car_Offroad_Repair_Guerilla11",		900, "Guerilla 11",	      {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_11_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_11_CO.paa"};},
+			{"Exile_Car_Offroad_Repair_Guerilla12",		900, "Guerilla 12",	      {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_12_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_12_CO.paa"};}
 		};
 	};
 
+	///////////////////////////////////////////////////////////////////////////////
+	// Offroad Poli
+	///////////////////////////////////////////////////////////////////////////////
+	class Offroad_01_civil_base_F
+	{
+		skins[] = 
+		{		
+			{"B_GEN_Offroad_01_gen_Rusty1_F", 		1000, "Rusty White",	  {"\exile_assets\model\RTV\Exile_offroad_03_co.paa","\exile_assets\model\RTV\Exile_offroad_03_co.paa"};},
+			{"B_GEN_Offroad_01_gen_Rusty2_F", 		1000, "Rusty Red",	      {"\exile_assets\model\RTV\Exile_offroad_01_co.paa","\exile_assets\model\RTV\Exile_offroad_01_co.paa"};},
+			{"B_GEN_Offroad_01_gen_Rusty3_F", 		1000, "Rusty Blue",	      {"\exile_assets\model\RTV\Exile_offroad_02_co.paa","\exile_assets\model\RTV\Exile_offroad_02_co.paa"};},
+			{"B_GEN_Offroad_01_gen_GEN_F", 			1000, "GEN",			  {"\A3\Soft_F_Exp\Offroad_01\Data\Offroad_01_ext_gen_CO.paa","\A3\Soft_F_Exp\Offroad_01\Data\Offroad_01_ext_gen_CO.paa"};},			
+			{"B_GEN_Offroad_01_gen_Red_F", 			1000, "Red",		      {"\a3\Soft_F\Offroad_01\data\Offroad_01_ext_CO.paa","\a3\Soft_F\Offroad_01\data\Offroad_01_ext_CO.paa"};},
+			{"B_GEN_Offroad_01_gen_Beige_F", 		1000, "Beige",		      {"\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE01_CO.paa","\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE01_CO.paa"};},
+			{"B_GEN_Offroad_01_gen_White_F", 		1000, "White",		      {"\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE02_CO.paa","\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE02_CO.paa"};},
+			{"B_GEN_Offroad_01_gen_Blue_F", 		1000, "Blue",		      {"\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE03_CO.paa","\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE03_CO.paa"};},
+			{"B_GEN_Offroad_01_gen_DarkRed_F", 		1000, "Dark Red",	      {"\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE04_CO.paa","\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE04_CO.paa"};},
+			{"B_GEN_Offroad_01_gen_Pink_F", 	    1000, "Pink",             {"#(argb,8,8,3)color(1,0.08,0.57,1)"};},			
+			{"B_GEN_Offroad_01_gen_Black_F", 	    1000, "Black",	          {"#(argb,8,8,3)color(0,0,0,0.6)"};},			
+			{"B_GEN_Offroad_01_gen_Red_F", 	        1000, "Red Custom",	      {"#(argb,8,8,3)color(1,0,0,1)"};},
+			{"B_GEN_Offroad_01_gen_Green_F", 	    1000, "Green",	          {"#(argb,8,8,3)color(0,1,0,1)"};},
+			{"B_GEN_Offroad_01_gen_Blue_F", 	    1000, "Blue Custom1",	  {"#(argb,8,8,3)color(0,0,1,1)"};},			
+			{"B_GEN_Offroad_01_gen_Tan_F", 	        1000, "Tan",	          {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},			
+			{"B_GEN_Offroad_01_gen_BlueCustom_F", 	1000, "Blue Custom",	  {"\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE05_CO.paa","\a3\Soft_F\Offroad_01\data\Offroad_01_ext_BASE05_CO.paa"};},
+			{"B_GEN_Offroad_01_gen_Guerilla01_F", 	1400, "Guerilla 01",	  {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_01_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_01_CO.paa"};},
+			{"B_GEN_Offroad_01_gen_Guerilla02_F", 	1400, "Guerilla 02",	  {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_02_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_02_CO.paa"};},
+			{"B_GEN_Offroad_01_gen_Guerilla03_F", 	1400, "Guerilla 03",	  {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_03_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_03_CO.paa"};},
+			{"B_GEN_Offroad_01_gen_Guerilla04_F", 	1400, "Guerilla 04",	  {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_04_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_04_CO.paa"};},
+			{"B_GEN_Offroad_01_gen_Guerilla05_F", 	1400, "Guerilla 05",	  {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_05_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_05_CO.paa"};},
+			{"B_GEN_Offroad_01_gen_Guerilla06_F", 	1400, "Guerilla 06",	  {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_06_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_06_CO.paa"};},
+			{"B_GEN_Offroad_01_gen_Guerilla07_F", 	1400, "Guerilla 07",	  {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_07_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_07_CO.paa"};},
+			{"B_GEN_Offroad_01_gen_Guerilla08_F", 	1400, "Guerilla 08",	  {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_08_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_08_CO.paa"};},
+			{"B_GEN_Offroad_01_gen_Guerilla09_F", 	1400, "Guerilla 09",	  {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_09_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_09_CO.paa"};},
+			{"B_GEN_Offroad_01_gen_Guerilla10_F", 	1400, "Guerilla 10",	  {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_10_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_10_CO.paa"};},
+			{"B_GEN_Offroad_01_gen_Guerilla11_F", 	1400, "Guerilla 11",	  {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_11_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_11_CO.paa"};},
+			{"B_GEN_Offroad_01_gen_Guerilla12_F", 	1400, "Guerilla 12",	  {"\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_12_CO.paa","\A3\Soft_F_Bootcamp\Offroad_01\Data\offroad_01_ext_IG_12_CO.paa"};},
+			{"B_GEN_Offroad_01_gen_Blacks_F",		1400, "Exile Black",      {"exile_assets\texture\vehicle\Exile_Offroad_Black_co.paa"};},
+			{"B_GEN_Offroad_01_gen_Light_F",		1400, "Exile Light Blue", {"exile_assets\texture\vehicle\Exile_Offroad_LightBlue_co.paa"};},
+			{"B_GEN_Offroad_01_gen_Pink_F",		    1400, "Exile Orange",     {"exile_assets\texture\vehicle\Exile_Offroad_Orange_co.paa"};},
+			{"B_GEN_Offroad_01_gen_F_DarkRed",		1400, "Exile Pink",	      {"exile_assets\texture\vehicle\Exile_Offroad_Pink_co.paa"};},
+			{"B_GEN_Offroad_01_gen_Whitee_F",		1400, "Exile White",	  {"exile_assets\texture\vehicle\Exile_Offroad_White_co.paa"};},
+			{"B_GEN_Offroad_01_gen_Yellow_F",		1400, "Exile Yellow",     {"exile_assets\texture\vehicle\Exile_Offroad_Yellow_co.paa"};}			
+		};
+	};	
+	
 	///////////////////////////////////////////////////////////////////////////////
 	// SUV
 	///////////////////////////////////////////////////////////////////////////////
@@ -2997,13 +3721,16 @@ class CfgVehicleCustoms
 	{
 		skins[] = 
 		{
-			{"Exile_Car_SUV_Red", 		100, "Red",					{"\A3\Soft_F_Gamma\SUV_01\Data\SUV_01_ext_CO.paa"};},
-			{"Exile_Car_SUV_Black", 	150, "Black",				{"\A3\Soft_F_Gamma\SUV_01\Data\SUV_01_ext_02_CO.paa"};},
-			{"Exile_Car_SUV_Grey", 		100, "Grey",				{"\A3\Soft_F_Gamma\SUV_01\Data\SUV_01_ext_03_CO.paa"};},
-			{"Exile_Car_SUV_Orange", 	100, "Orange",				{"\A3\Soft_F_Gamma\SUV_01\Data\SUV_01_ext_04_CO.paa"};},
-			{"Exile_Car_SUV_Black", 	150, "Snow Camo",			{"exile_assets\texture\vehicle\Exile_SUV_Snow_co.paa"};},
-			{"Exile_Car_SUV_Black", 	150, "Leaf Camo",			{"exile_assets\texture\vehicle\Exile_SUV_Leaf_Light_co.paa"};},
-			{"Exile_Car_SUV_Black", 	150, "Leaf Camo (Dark)",	{"exile_assets\texture\vehicle\Exile_SUV_Leaf_Dark_co.paa"};}
+			{"Exile_Car_SUV_Red", 		500, "Red",					{"\A3\Soft_F_Gamma\SUV_01\Data\SUV_01_ext_CO.paa"};},
+			{"Exile_Car_SUV_Black", 	600, "Black",				{"\A3\Soft_F_Gamma\SUV_01\Data\SUV_01_ext_02_CO.paa"};},
+			{"Exile_Car_SUV_Grey", 		500, "Grey",				{"\A3\Soft_F_Gamma\SUV_01\Data\SUV_01_ext_03_CO.paa"};},
+			{"Exile_Car_SUV_Orange", 	500, "Orange",				{"\A3\Soft_F_Gamma\SUV_01\Data\SUV_01_ext_04_CO.paa"};},
+			{"Exile_Car_SUV_Rusty1", 	550, "Rusty White",	        {"\exile_assets\model\RTV\Exile_Car_Suv_03_co.paa"};},
+			{"Exile_Car_SUV_Rusty2", 	550, "Rusty Red",	        {"\exile_assets\model\RTV\Exile_Car_Suv_02_co.paa"};},
+			{"Exile_Car_SUV_Rusty3", 	550, "Rusty Black",	        {"\exile_assets\model\RTV\Exile_Car_Suv_01_co.paa"};},						
+			{"Exile_Car_SUV_Black", 	600, "Snow Camo",			{"exile_assets\texture\vehicle\Exile_SUV_Snow_co.paa"};},
+			{"Exile_Car_SUV_Black", 	600, "Leaf Camo",			{"exile_assets\texture\vehicle\Exile_SUV_Leaf_Light_co.paa"};},
+			{"Exile_Car_SUV_Black", 	600, "Leaf Camo (Dark)",	{"exile_assets\texture\vehicle\Exile_SUV_Leaf_Dark_co.paa"};}
 		};
 	};
 
@@ -3014,10 +3741,24 @@ class CfgVehicleCustoms
 	{
 		skins[] = 
 		{
-			{"Exile_Car_SUVXL_Black", 100, "Black", {""};}
+			{"Exile_Car_SUVXL_Black", 700,  "Black",  {"Exile_psycho_SUV_a3\Data\suv_body_co.paa"};},
+			{"Exile_Car_SUVXL_White", 700,  "White",  {"Exile_psycho_SUV_a3\Data\textures\suv_body_white_co.paa"};},
+			{"Exile_Car_SUVXL_Silver", 700, "Silver", {"Exile_psycho_SUV_a3\Data\textures\suv_body_silver_co.paa"};},			
+			{"Exile_Car_SUVXL_Blue", 700,   "Blue",   {"Exile_psycho_SUV_a3\Data\textures\suv_body_bluewhite.paa"};}			
 		};
 	};
 
+	///////////////////////////////////////////////////////////////////////////////
+	// SUV Armed
+	///////////////////////////////////////////////////////////////////////////////
+	class Exile_Car_SUV_Armed_Abstract
+	{
+		skins[] = 
+		{
+			//{"Exile_Car_SUV_Armed_Black", 750, "Black", {"\Exile_psycho_SuvArm_a3\data\armoredsuv_body_co.paa"};}			
+		};
+	};	
+	
 	///////////////////////////////////////////////////////////////////////////////
 	// Van 
 	///////////////////////////////////////////////////////////////////////////////
@@ -3025,19 +3766,19 @@ class CfgVehicleCustoms
 	{
 		skins[] = 
 		{
-			{"Exile_Car_Van_Black",			100, "Black",		{"\A3\soft_f_gamma\van_01\Data\Van_01_ext_black_CO.paa","\A3\soft_f_gamma\van_01\Data\van_01_adds_CO.paa"};},
-			{"Exile_Car_Van_White",			100, "White",		{"\A3\soft_f_gamma\van_01\Data\van_01_ext_CO.paa","\A3\soft_f_gamma\van_01\Data\van_01_adds_CO.paa"};},
-			{"Exile_Car_Van_Red",			100, "Red",			{"\A3\soft_f_gamma\van_01\Data\Van_01_ext_red_CO.paa","\A3\soft_f_gamma\van_01\Data\van_01_adds_CO.paa"};},
-			{"Exile_Car_Van_Guerilla01",	150, "Guerilla 01",	{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_01_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_adds_IG_01_CO.paa"};},
-			{"Exile_Car_Van_Guerilla02",	150, "Guerilla 02",	{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_02_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_adds_IG_02_CO.paa"};},
-			{"Exile_Car_Van_Guerilla03",	150, "Guerilla 03",	{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_03_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_adds_IG_03_CO.paa"};},
-			{"Exile_Car_Van_Guerilla04",	150, "Guerilla 04",	{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_04_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_adds_IG_04_CO.paa"};},
-			{"Exile_Car_Van_Guerilla05",	150, "Guerilla 05",	{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_05_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_adds_IG_05_CO.paa"};},
-			{"Exile_Car_Van_Guerilla06",	150, "Guerilla 06",	{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_06_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_adds_IG_06_CO.paa"};},
-			{"Exile_Car_Van_Guerilla07",	150, "Guerilla 07",	{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_07_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_adds_IG_07_CO.paa"};},
-			{"Exile_Car_Van_Guerilla08",	150, "Guerilla 08",	{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_08_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_adds_IG_08_CO.paa"};},
-			{"Exile_Car_Van_Black",	150, "Brown",	{"\A3\Soft_F_Exp\Van_01\Data\Van_01_ext_brn_co.paa","\A3\soft_f_gamma\van_01\Data\van_01_adds_CO.paa","\A3\Soft_F_Exp\Van_01\Data\Van_01_int_base_2_CO.paa"};},
-			{"Exile_Car_Van_Black",	150, "Olive",	{"\A3\Soft_F_Exp\Van_01\Data\Van_01_ext_oli_co.paa","\A3\soft_f_gamma\van_01\Data\van_01_adds_CO.paa","\A3\Soft_F_Exp\Van_01\Data\Van_01_int_base_3_CO.paa"};}
+			{"Exile_Car_Van_Black",			750, "Black",		{"\A3\soft_f_gamma\van_01\Data\Van_01_ext_black_CO.paa","\A3\soft_f_gamma\van_01\Data\van_01_adds_CO.paa"};},
+			{"Exile_Car_Van_White",			750, "White",		{"\A3\soft_f_gamma\van_01\Data\van_01_ext_CO.paa","\A3\soft_f_gamma\van_01\Data\van_01_adds_CO.paa"};},
+			{"Exile_Car_Van_Red",			750, "Red",			{"\A3\soft_f_gamma\van_01\Data\Van_01_ext_red_CO.paa","\A3\soft_f_gamma\van_01\Data\van_01_adds_CO.paa"};},
+			{"Exile_Car_Van_Olive",			750, "Olive",		{"\A3\Soft_F_Exp\Van_01\Data\Van_01_ext_oli_co.paa","\A3\soft_f_gamma\van_01\Data\van_01_adds_CO.paa","\A3\Soft_F_Exp\Van_01\Data\Van_01_int_base_3_CO.paa"};},
+			{"Exile_Car_Van_Brown",			750, "Brown",		{"\A3\Soft_F_Exp\Van_01\Data\Van_01_ext_brn_co.paa","\A3\soft_f_gamma\van_01\Data\van_01_adds_CO.paa","\A3\Soft_F_Exp\Van_01\Data\Van_01_int_base_2_CO.paa"};},			
+			{"Exile_Car_Van_Guerilla01",	900, "Guerilla 01",	{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_01_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_adds_IG_01_CO.paa"};},
+			{"Exile_Car_Van_Guerilla02",	900, "Guerilla 02",	{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_02_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_adds_IG_02_CO.paa"};},
+			{"Exile_Car_Van_Guerilla03",	900, "Guerilla 03",	{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_03_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_adds_IG_03_CO.paa"};},
+			{"Exile_Car_Van_Guerilla04",	900, "Guerilla 04",	{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_04_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_adds_IG_04_CO.paa"};},
+			{"Exile_Car_Van_Guerilla05",	900, "Guerilla 05",	{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_05_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_adds_IG_05_CO.paa"};},
+			{"Exile_Car_Van_Guerilla06",	900, "Guerilla 06",	{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_06_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_adds_IG_06_CO.paa"};},
+			{"Exile_Car_Van_Guerilla07",	900, "Guerilla 07",	{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_07_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_adds_IG_07_CO.paa"};},
+			{"Exile_Car_Van_Guerilla08",	900, "Guerilla 08",	{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_08_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_adds_IG_08_CO.paa"};}
 		};
 	};
 
@@ -3048,17 +3789,19 @@ class CfgVehicleCustoms
 	{
 		skins[] = 
 		{
-			{"Exile_Car_Van_Box_Black",				100, "Black",		{"\A3\soft_f_gamma\van_01\Data\Van_01_ext_black_CO.paa","\A3\soft_f_gamma\van_01\Data\van_01_adds_CO.paa"};},
-			{"Exile_Car_Van_Box_White",				100, "White",		{"\A3\soft_f_gamma\van_01\Data\van_01_ext_CO.paa","\A3\soft_f_gamma\van_01\Data\van_01_adds_CO.paa"};},
-			{"Exile_Car_Van_Box_Red",				100, "Red",			{"\A3\soft_f_gamma\van_01\Data\Van_01_ext_red_CO.paa","\A3\soft_f_gamma\van_01\Data\van_01_adds_CO.paa"};},
-			{"Exile_Car_Van_Box_Guerilla01",		150, "Guerilla 01",	{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_01_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_adds_IG_01_CO.paa"};},
-			{"Exile_Car_Van_Box_Guerilla02",		150, "Guerilla 02",	{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_02_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_adds_IG_02_CO.paa"};},
-			{"Exile_Car_Van_Box_Guerilla03",		150, "Guerilla 03",	{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_03_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_adds_IG_03_CO.paa"};},
-			{"Exile_Car_Van_Box_Guerilla04",		150, "Guerilla 04",	{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_04_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_adds_IG_04_CO.paa"};},
-			{"Exile_Car_Van_Box_Guerilla05",		150, "Guerilla 05",	{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_05_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_adds_IG_05_CO.paa"};},
-			{"Exile_Car_Van_Box_Guerilla06",		150, "Guerilla 06",	{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_06_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_adds_IG_06_CO.paa"};},
-			{"Exile_Car_Van_Box_Guerilla07",		150, "Guerilla 07",	{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_07_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_adds_IG_07_CO.paa"};},
-			{"Exile_Car_Van_Box_Guerilla08",		150, "Guerilla 08",	{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_08_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_adds_IG_08_CO.paa"};}
+			{"Exile_Car_Van_Box_Black",				750, "Black",		{"\A3\soft_f_gamma\van_01\Data\Van_01_ext_black_CO.paa","\A3\soft_f_gamma\van_01\Data\van_01_adds_CO.paa"};},
+			{"Exile_Car_Van_Box_White",				750, "White",		{"\A3\soft_f_gamma\van_01\Data\van_01_ext_CO.paa","\A3\soft_f_gamma\van_01\Data\van_01_adds_CO.paa"};},
+			{"Exile_Car_Van_Box_Red",				750, "Red",			{"\A3\soft_f_gamma\van_01\Data\Van_01_ext_red_CO.paa","\A3\soft_f_gamma\van_01\Data\van_01_adds_CO.paa"};},
+			{"Exile_Car_Van_Box_Olive",			    750, "Olive",		{"\A3\Soft_F_Exp\Van_01\Data\Van_01_ext_oli_co.paa","\A3\soft_f_gamma\van_01\Data\van_01_adds_CO.paa","\A3\Soft_F_Exp\Van_01\Data\Van_01_int_base_3_CO.paa"};},
+			{"Exile_Car_Van_Box_Brown",			    750, "Brown",		{"\A3\Soft_F_Exp\Van_01\Data\Van_01_ext_brn_co.paa","\A3\soft_f_gamma\van_01\Data\van_01_adds_CO.paa","\A3\Soft_F_Exp\Van_01\Data\Van_01_int_base_2_CO.paa"};},			
+			{"Exile_Car_Van_Box_Guerilla01",		900, "Guerilla 01",	{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_01_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_adds_IG_01_CO.paa"};},
+			{"Exile_Car_Van_Box_Guerilla02",		900, "Guerilla 02",	{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_02_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_adds_IG_02_CO.paa"};},
+			{"Exile_Car_Van_Box_Guerilla03",		900, "Guerilla 03",	{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_03_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_adds_IG_03_CO.paa"};},
+			{"Exile_Car_Van_Box_Guerilla04",		900, "Guerilla 04",	{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_04_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_adds_IG_04_CO.paa"};},
+			{"Exile_Car_Van_Box_Guerilla05",		900, "Guerilla 05",	{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_05_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_adds_IG_05_CO.paa"};},
+			{"Exile_Car_Van_Box_Guerilla06",		900, "Guerilla 06",	{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_06_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_adds_IG_06_CO.paa"};},
+			{"Exile_Car_Van_Box_Guerilla07",		900, "Guerilla 07",	{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_07_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_adds_IG_07_CO.paa"};},
+			{"Exile_Car_Van_Box_Guerilla08",		900, "Guerilla 08",	{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_08_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_adds_IG_08_CO.paa"};}
 		};
 	};
 
@@ -3069,23 +3812,12 @@ class CfgVehicleCustoms
 	{
 		skins[] = 
 		{
-			{"Exile_Car_Van_Fuel_Black",			100, "Black",		{"\A3\soft_f_gamma\van_01\Data\Van_01_ext_black_CO.paa","\A3\soft_f_gamma\Van_01\Data\Van_01_tank_CO.paa"};},
-			{"Exile_Car_Van_Fuel_White",			100, "White",		{"\A3\soft_f_gamma\van_01\Data\van_01_ext_CO.paa","\A3\soft_f_gamma\Van_01\Data\Van_01_tank_CO.paa"};},
-			{"Exile_Car_Van_Fuel_Red",				100, "Red",			{"\A3\soft_f_gamma\van_01\Data\Van_01_ext_red_CO.paa","\A3\soft_f_gamma\Van_01\Data\Van_01_tank_CO.paa"};},
-			{"Exile_Car_Van_Fuel_Guerilla01",		150, "Guerilla 01",	{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_01_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_tank_IG_01_CO.paa"};},
-			{"Exile_Car_Van_Fuel_Guerilla02",		150, "Guerilla 02",	{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_02_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_tank_IG_02_CO.paa"};},
-			{"Exile_Car_Van_Fuel_Guerilla03",		150, "Guerilla 03",	{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_03_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_tank_IG_03_CO.paa"};}
-		};
-	};
-	
-	///////////////////////////////////////////////////////////////////////////////
-	// Tempest
-	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Car_Tempest_Abstract
-	{	
-		skins[] = 
-		{
-			{"Exile_Car_Tempest", 		200, "Green Hex",	{"\A3\Soft_F_Exp\Truck_03\Data\Truck_03_ext01_ghex_CO.paa","\A3\Soft_F_Exp\Truck_03\Data\Truck_03_ext02_ghex_CO.paa","\A3\Soft_F_Exp\Truck_03\Data\Truck_03_cargo_ghex_CO.paa"};}
+			{"Exile_Car_Van_Fuel_Black",			750, "Black",		{"\A3\soft_f_gamma\van_01\Data\Van_01_ext_black_CO.paa","\A3\soft_f_gamma\Van_01\Data\Van_01_tank_CO.paa"};},
+			{"Exile_Car_Van_Fuel_White",			750, "White",		{"\A3\soft_f_gamma\van_01\Data\van_01_ext_CO.paa","\A3\soft_f_gamma\Van_01\Data\Van_01_tank_CO.paa"};},
+			{"Exile_Car_Van_Fuel_Red",				750, "Red",			{"\A3\soft_f_gamma\van_01\Data\Van_01_ext_red_CO.paa","\A3\soft_f_gamma\Van_01\Data\Van_01_tank_CO.paa"};},
+			{"Exile_Car_Van_Fuel_Guerilla01",		900, "Guerilla 01",	{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_01_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_tank_IG_01_CO.paa"};},
+			{"Exile_Car_Van_Fuel_Guerilla02",		900, "Guerilla 02",	{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_02_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_tank_IG_02_CO.paa"};},
+			{"Exile_Car_Van_Fuel_Guerilla03",		900, "Guerilla 03",	{"\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_ext_IG_03_CO.paa","\A3\Soft_F_Bootcamp\Van_01\Data\Van_01_tank_IG_03_CO.paa"};}
 		};
 	};
 
@@ -3096,9 +3828,10 @@ class CfgVehicleCustoms
 	{	
 		skins[] = 
 		{
-			{"Exile_Car_Ikarus_Blue", 		200, "Blue",	{"Exile_psycho_Ikarus\Data\bus_exterior_co.paa"};},
-			{"Exile_Car_Ikarus_Red", 		200, "Red",		{"Exile_psycho_Ikarus\Data\bus_exterior_eciv_co.paa"};},
-			{"Exile_Car_Ikarus_Party", 		500, "Party",	{"Exile_psycho_Ikarus\Data\bus_exterior_eciv_co.paa"};}
+			{"Exile_Car_Ikarus_Blue", 		1000, "Blue",	{"Exile_psycho_Ikarus\Data\bus_exterior_co.paa"};},
+			{"Exile_Car_Ikarus_Red", 		1000, "Red",	{"Exile_psycho_Ikarus\Data\bus_exterior_eciv_co.paa"};},
+			{"Exile_Car_Ikarus_Party", 		1500, "Party",	{"Exile_psycho_Ikarus\Data\bus_exterior_eciv_co.paa"};},
+			{"Exile_Car_Ikarus_Party", 		1500, "EXILE",	{"Exile_psycho_Ikarus\data\textures\bus_exterior_govn_co.paa", "\exile_psycho_ikarus\data\bus_exterior_co.paa"};}
 		};
 	};
 
@@ -3109,10 +3842,10 @@ class CfgVehicleCustoms
 	{	
 		skins[] = 
 		{
-			{"Exile_Car_Ural_Open_Blue",			300, "Blue",		{"Exile_psycho_Ural\data\Ural_kabina_civil_co.paa","Exile_psycho_Ural\data\ural_plachta_civil_co.paa"};},
-			{"Exile_Car_Ural_Open_Yellow",			300, "Yellow",		{"Exile_psycho_Ural\data\ural_kabina_civ1_co.paa","Exile_psycho_Ural\data\ural_plachta_civ1_co.paa"};},
-			{"Exile_Car_Ural_Open_Worker",			300, "Worker",		{"Exile_psycho_Ural\data\ural_kabina_civ2_co.paa","Exile_psycho_Ural\data\Ural_plachta_civil_co.paa"};},
-			{"Exile_Car_Ural_Open_Military",		300, "Military",	{"Exile_psycho_Ural\data\ural_kabina_khk_co.paa","Exile_psycho_Ural\data\ural_plachta_co.paa"};}
+			{"Exile_Car_Ural_Open_Blue",			1200, "Blue",		{"Exile_psycho_Ural\data\Ural_kabina_civil_co.paa","Exile_psycho_Ural\data\ural_plachta_civil_co.paa"};},
+			{"Exile_Car_Ural_Open_Yellow",			1200, "Yellow",		{"Exile_psycho_Ural\data\ural_kabina_civ1_co.paa","Exile_psycho_Ural\data\ural_plachta_civ1_co.paa"};},
+			{"Exile_Car_Ural_Open_Worker",			1200, "Worker",		{"Exile_psycho_Ural\data\ural_kabina_civ2_co.paa","Exile_psycho_Ural\data\Ural_plachta_civil_co.paa"};},
+			{"Exile_Car_Ural_Open_Military",		1200, "Military",	{"Exile_psycho_Ural\data\ural_kabina_khk_co.paa","Exile_psycho_Ural\data\ural_plachta_co.paa"};}
 		};
 	};
 
@@ -3123,10 +3856,10 @@ class CfgVehicleCustoms
 	{	
 		skins[] = 
 		{
-			{"Exile_Car_Ural_Covered_Blue",			300, "Blue",		{"Exile_psycho_Ural\data\ural_kabina_civil_co.paa","Exile_psycho_Ural\data\ural_plachta_civil_co.paa"};},
-			{"Exile_Car_Ural_Covered_Yellow",		300, "Yellow",		{"Exile_psycho_Ural\data\ural_kabina_civ1_co.paa","Exile_psycho_Ural\data\ural_plachta_civ1_co.paa"};},
-			{"Exile_Car_Ural_Covered_Worker",		300, "Worker",		{"Exile_psycho_Ural\data\ural_kabina_civ2_co.paa","Exile_psycho_Ural\data\Ural_plachta_civil_co.paa"};},
-			{"Exile_Car_Ural_Covered_Military",		300, "Military",	{"Exile_psycho_Ural\data\ural_kabina_khk_co.paa","Exile_psycho_Ural\data\ural_plachta_co.paa"};}
+			{"Exile_Car_Ural_Covered_Blue",			1200, "Blue",		{"Exile_psycho_Ural\data\ural_kabina_civil_co.paa","Exile_psycho_Ural\data\ural_plachta_civil_co.paa"};},
+			{"Exile_Car_Ural_Covered_Yellow",		1200, "Yellow",		{"Exile_psycho_Ural\data\ural_kabina_civ1_co.paa","Exile_psycho_Ural\data\ural_plachta_civ1_co.paa"};},
+			{"Exile_Car_Ural_Covered_Worker",		1200, "Worker",		{"Exile_psycho_Ural\data\ural_kabina_civ2_co.paa","Exile_psycho_Ural\data\Ural_plachta_civil_co.paa"};},
+			{"Exile_Car_Ural_Covered_Military",		1200, "Military",	{"Exile_psycho_Ural\data\ural_kabina_khk_co.paa","Exile_psycho_Ural\data\ural_plachta_co.paa"};}
 		};
 	};
 
@@ -3137,10 +3870,10 @@ class CfgVehicleCustoms
 	{	
 		skins[] = 
 		{
-			{"Exile_Car_Lada_Green", 		100, "Green",	{"exile_psycho_lada\data\lada_eciv1_co.paa","exile_psycho_lada\data\Lada_glass_ECIV1_CA.paa"};},
-			{"Exile_Car_Lada_Taxi", 		100, "Taxi",	{"exile_psycho_lada\data\Lada_red_CO.paa"};},
-			{"Exile_Car_Lada_Red", 			100, "Red",		{"exile_psycho_lada\data\Lada_red_CO.paa"};},
-			{"Exile_Car_Lada_Hipster", 		100, "Hipster",	{"exile_psycho_lada\data\lada_eciv2_co.paa","exile_psycho_lada\data\Lada_glass_ECIV2_CA.paa"};}
+			{"Exile_Car_Lada_Green", 		200, "Green",	{"exile_psycho_lada\data\lada_eciv1_co.paa","exile_psycho_lada\data\Lada_glass_ECIV1_CA.paa"};},
+			{"Exile_Car_Lada_Taxi", 		200, "Taxi",	{"exile_psycho_lada\data\Lada_red_CO.paa"};},
+			{"Exile_Car_Lada_Red", 			200, "Red",		{"exile_psycho_lada\data\Lada_red_CO.paa"};},
+			{"Exile_Car_Lada_Hipster", 		200, "Hipster",	{"exile_psycho_lada\data\lada_eciv2_co.paa","exile_psycho_lada\data\Lada_glass_ECIV2_CA.paa"};}
 		};
 	};
 
@@ -3151,37 +3884,219 @@ class CfgVehicleCustoms
 	{	
 		skins[] = 
 		{
-			{"Exile_Car_Volha_Blue", 		100, "Blue",	{"Exile_psycho_Gaz_volha\data\Volha_ECIV_CO.paa"};},
-			{"Exile_Car_Volha_White", 		100, "White",	{"Exile_psycho_Gaz_volha\data\Volha_Gray_ECIV_CO.paa"};},
-			{"Exile_Car_Volha_Black",		100, "Black",	{"Exile_psycho_Gaz_volha\data\Volha_Black_ECIV_CO.paa"};}
+			{"Exile_Car_Volha_Blue", 		200, "Blue",	{"Exile_psycho_Gaz_volha\data\Volha_ECIV_CO.paa"};},
+			{"Exile_Car_Volha_White", 		200, "White",	{"Exile_psycho_Gaz_volha\data\Volha_Gray_ECIV_CO.paa"};},
+			{"Exile_Car_Volha_Black",		200, "Black",	{"Exile_psycho_Gaz_volha\data\Volha_Black_ECIV_CO.paa"};}
 		};
 	};
-	
+
 	///////////////////////////////////////////////////////////////////////////////
-	// HUNTER
-	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Car_Hunter_Abstract
-	{
-		skins[] = 
-		{
-			
-			{"Exile_Car_Hunter",		1000, "Exile White Edition",	{"exile_assets\texture\vehicle\Exile_Hunter_Snow_co.paa","exile_assets\texture\vehicle\Exile_Hunter_Snow_Back_co.paa"};},
-			{"Exile_Car_Hunter",		1000, "Exile Hex",				{"exile_assets\texture\vehicle\Exile_Hunter_Hex_co.paa","exile_assets\texture\vehicle\Exile_Hunter_Black_Back_co.paa"};},
-			{"Exile_Car_Hunter",		1000, "Exile Black",			{"exile_assets\texture\vehicle\Exile_Hunter_Black_co.paa","exile_assets\texture\vehicle\Exile_Hunter_Black_Back_co.paa"};}
-		};
-	};
-	
-	///////////////////////////////////////////////////////////////////////////////
-	// IFRIT
+	// Ifrit
 	///////////////////////////////////////////////////////////////////////////////
 	class Exile_Car_Ifrit_Abstract
+	{	
+		skins[] = 
+		{
+			{"Exile_Car_Ifrit", 	2000, "CSAT",	     {"\A3\soft_F\MRAP_02\data\MRAP_02_ext_01_CO.paa","\A3\soft_F\MRAP_02\data\MRAP_02_ext_02_CO.paa"};},			
+			{"Exile_Car_Ifrit", 	2000, "Green Hex",	 {"\A3\Soft_F_Exp\MRAP_02\data\MRAP_02_ext_01_ghex_CO.paa","\A3\Soft_F_Exp\MRAP_02\data\MRAP_02_ext_02_ghex_CO.paa","\A3\Data_F_Exp\Vehicles\Turret_ghex_CO.paa"};}
+		};
+	};
+
+	///////////////////////////////////////////////////////////////////////////////
+	// Prowler (Unarmed)
+	///////////////////////////////////////////////////////////////////////////////
+	class B_T_LSV_01_unarmed_black_F
 	{
 		skins[] = 
 		{
-			
-			{"Exile_Car_Ifrit",		1000, "Green Hex",	{"\A3\Soft_F_Exp\MRAP_02\data\MRAP_02_ext_01_ghex_CO.paa","\A3\Soft_F_Exp\MRAP_02\data\MRAP_02_ext_02_ghex_CO.paa","\A3\Data_F_Exp\Vehicles\Turret_ghex_CO.paa"};}
+			{"Exile_Car_ProwlerUnarmed",		1600, "Olive",        {"\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_01_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_02_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_03_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_Adds_olive_CO.paa"};},
+			{"Exile_Car_ProwlerUnarmed",		1600, "Dazzle",       {"\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_01_dazzle_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_02_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_03_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_Adds_olive_CO.paa"};},
+			{"Exile_Car_ProwlerUnarmed",		1600, "Sand",         {"\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_01_sand_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_02_sand_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_03_sand_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_Adds_sand_CO.paa"};},
+			{"Exile_Car_ProwlerUnarmed",        1600, "Pink",         {"#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"Exile_Car_ProwlerUnarmed",        1600, "White",        {"#(argb,8,8,3)color(1,1,1,1)"};},			
+			{"Exile_Car_ProwlerUnarmed", 	    1600, "Black Custom", {"#(argb,8,8,3)color(0,0,0,0.6)"};},			
+			{"Exile_Car_ProwlerUnarmed", 	    1600, "Red",	      {"#(argb,8,8,3)color(1,0,0,1)"};},
+			{"Exile_Car_ProwlerUnarmed", 	    1600, "Green",	      {"#(argb,8,8,3)color(0,1,0,1)"};},
+			{"Exile_Car_ProwlerUnarmed", 	    1600, "Blue",	      {"#(argb,8,8,3)color(0,0,1,1)"};},			
+			{"Exile_Car_ProwlerUnarmed", 	    1600, "Tan",	      {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},			
+			{"Exile_Car_ProwlerUnarmed", 	    1600, "Black",	      {"\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_01_black_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_02_black_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_03_black_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_Adds_black_CO.paa"};}			
 		};
 	};
+	
+	///////////////////////////////////////////////////////////////////////////////
+	// Prowler (Light)
+	///////////////////////////////////////////////////////////////////////////////
+	class B_CTRG_LSV_01_light_F
+	{
+		skins[] = 
+		{
+			{"Exile_Car_ProwlerLight",		1500, "Black",        {"\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_01_black_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_02_black_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_03_black_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_Adds_black_CO.paa"};},
+			{"Exile_Car_ProwlerLight",		1500, "Dazzle",       {"\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_01_dazzle_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_02_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_03_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_Adds_olive_CO.paa"};},
+			{"Exile_Car_ProwlerLight",		1500, "Sand",         {"\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_01_sand_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_02_sand_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_03_sand_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_Adds_sand_CO.paa"};},
+			{"Exile_Car_ProwlerLight",      1500, "Pink",         {"#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"Exile_Car_ProwlerLight",      1500, "White",        {"#(argb,8,8,3)color(1,1,1,1)"};},			
+			{"Exile_Car_ProwlerLight", 	    1500, "Black Custom", {"#(argb,8,8,3)color(0,0,0,0.6)"};},			
+			{"Exile_Car_ProwlerLight", 	    1500, "Red",	      {"#(argb,8,8,3)color(1,0,0,1)"};},
+			{"Exile_Car_ProwlerLight", 	    1500, "Green",	      {"#(argb,8,8,3)color(0,1,0,1)"};},
+			{"Exile_Car_ProwlerLight", 	    1500, "Blue",	      {"#(argb,8,8,3)color(0,0,1,1)"};},			
+			{"Exile_Car_ProwlerLight", 	    1500, "Tan",	      {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},			
+			{"Exile_Car_ProwlerLight", 	    1500, "Olive",	      {"\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_01_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_02_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_03_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_Adds_olive_CO.paa"};}			
+		};
+	};	
+	
+	///////////////////////////////////////////////////////////////////////////////
+	// Prowler armed
+	///////////////////////////////////////////////////////////////////////////////
+	class LSV_01_armed_base_F
+	{	
+		skins[] = 
+		{
+			{"B_LSV_01_armed_olive_F", 	1600, "Olive",	      {"\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_01_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_02_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_03_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_Adds_olive_CO.paa"};},
+			{"B_LSV_01_armed_sand_F", 	1600, "Sand",	      {"\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_01_sand_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_02_sand_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_03_sand_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_Adds_sand_CO.paa"};},
+			{"B_LSV_01_armed_dazzle_F", 1600, "Dazzle",	      {"\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_01_dazzle_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_02_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_03_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_Adds_olive_CO.paa"};},
+			{"B_LSV_01_armed_pink_F",   1600, "Pink",         {"#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"B_LSV_01_armed_White_F",  1600, "White",        {"#(argb,8,8,3)color(1,1,1,1)"};},			
+			{"B_LSV_01_armed_black_F", 	1600, "Black Custom", {"#(argb,8,8,3)color(0,0,0,0.6)"};},			
+			{"B_LSV_01_armed_red_F", 	1600, "Red",	      {"#(argb,8,8,3)color(1,0,0,1)"};},
+			{"B_LSV_01_armed_green_F", 	1600, "Green",	      {"#(argb,8,8,3)color(0,1,0,1)"};},
+			{"B_LSV_01_armed_blue_F", 	1600, "Blue",	      {"#(argb,8,8,3)color(0,0,1,1)"};},			
+			{"B_LSV_01_armed_tan_F", 	1600, "Tan",	      {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},			
+			{"B_LSV_01_armed_black_F", 	1600, "Black",	      {"\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_01_black_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_02_black_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_03_black_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_Adds_black_CO.paa"};}			
+		};
+	};	
+
+	///////////////////////////////////////////////////////////////////////////////
+	// Qilin armed
+	///////////////////////////////////////////////////////////////////////////////
+	class LSV_02_armed_base_F
+	{	
+		skins[] = 
+		{
+			{"O_T_LSV_02_armed_F",		1500, "Arid",           {"\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_01_arid_CO.paa","\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_02_arid_CO.paa","\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_03_arid_CO.paa"};},
+			{"O_T_LSV_02_armed_F",      1500, "Black",          {"\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_01_black_CO.paa","\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_02_black_CO.paa","\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_03_black_CO.paa"};},
+			{"O_T_LSV_02_armed_F",      1500, "Pink",           {"#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"O_T_LSV_02_armed_F",      1500, "White",          {"#(argb,8,8,3)color(1,1,1,1)"};},			
+			{"O_T_LSV_02_armed_F", 	    1500, "Black Custom",   {"#(argb,8,8,3)color(0,0,0,0.6)"};},			
+			{"O_T_LSV_02_armed_F", 	    1500, "Red",	        {"#(argb,8,8,3)color(1,0,0,1)"};},
+			{"O_T_LSV_02_armed_F", 	    1500, "Green",	        {"#(argb,8,8,3)color(0,1,0,1)"};},
+			{"O_T_LSV_02_armed_F", 	    1500, "Blue",	        {"#(argb,8,8,3)color(0,0,1,1)"};},			
+			{"O_T_LSV_02_armed_F", 	    1500, "Tan",	        {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},			
+			{"O_T_LSV_02_armed_F", 	    1500, "Green Hex",	    {"\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_01_ghex_CO.paa","\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_02_ghex_CO.paa","\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_03_ghex_CO.paa"};}
+		};
+	};	
+
+	///////////////////////////////////////////////////////////////////////////////
+	//  Y-32 XI infantry
+	///////////////////////////////////////////////////////////////////////////////
+	class VTOL_02_infantry_base_F
+	{
+		skins[] = 
+		{
+			{"O_T_VTOL_02_vehicle_F", 	   3500, "Grey",        {"\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT01_CO.paa","\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT02_CO.paa","\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_L_CO.paa","\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_R_CO.paa"};},
+			{"O_T_VTOL_02_infantry_F",     3500, "HEX",         {"\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT01_bhex_CO.paa","\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT02_bhex_CO.paa","\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_L_bhex_CO.paa","\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_R_bhex_CO.paa"};},
+			{"O_T_VTOL_02_infantry_F", 	   3500, "Pink",        {"#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"O_T_VTOL_02_infantry_F",     3500, "White",       {"#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)"};},			
+			{"O_T_VTOL_02_infantry_F", 	   3500, "Black", 		{"#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)"};},			
+			{"O_T_VTOL_02_infantry_F", 	   3500, "Red",	        {"#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)"};},
+			{"O_T_VTOL_02_infantry_F", 	   3500, "Green",	    {"#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)"};},
+			{"O_T_VTOL_02_infantry_F", 	   3500, "Blue",	    {"#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)"};},			
+			{"O_T_VTOL_02_infantry_F", 	   3500, "Tan",	        {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},			
+			{"O_T_VTOL_02_infantry_F",     3500, "Green Hex",   {"\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT01_ghex_CO.paa","\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT02_ghex_CO.paa","\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_L_ghex_CO.paa","\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_R_ghex_CO.paa"};}
+		};
+	};
+
+	///////////////////////////////////////////////////////////////////////////////
+	//  Y-32 XI vehicle
+	///////////////////////////////////////////////////////////////////////////////
+	class VTOL_02_vehicle_base_F
+	{
+		skins[] = 
+		{
+			{"O_T_VTOL_02_vehicle_F", 	3500, "Grey",        {"\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT01_CO.paa","\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT02_CO.paa","\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_L_CO.paa","\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_R_CO.paa"};},
+			{"O_T_VTOL_02_vehicle_F",   3500, "HEX",         {"\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT01_bhex_CO.paa","\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT02_bhex_CO.paa","\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_L_bhex_CO.paa","\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_R_bhex_CO.paa"};},
+			{"O_T_VTOL_02_vehicle_F", 	3500, "Pink",        {"#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"O_T_VTOL_02_vehicle_F",   3500, "White",       {"#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)"};},				
+			{"O_T_VTOL_02_vehicle_F", 	3500, "Black", 		 {"#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)"};},			
+			{"O_T_VTOL_02_vehicle_F", 	3500, "Red",	     {"#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)"};},
+			{"O_T_VTOL_02_vehicle_F", 	3500, "Green",	     {"#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)"};},
+			{"O_T_VTOL_02_vehicle_F", 	3500, "Blue",	     {"#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)"};},			
+			{"O_T_VTOL_02_vehicle_F", 	3500, "Tan",	     {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},			
+			{"O_T_VTOL_02_vehicle_F",   3500, "Green Hex",   {"\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT01_ghex_CO.paa","\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT02_ghex_CO.paa","\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_L_ghex_CO.paa","\A3\Air_F_Exp\VTOL_02\Data\VTOL_02_EXT03_R_ghex_CO.paa"};}
+		};
+	};
+	
+	///////////////////////////////////////////////////////////////////////////////
+	// Qilin (Unarmed)
+	///////////////////////////////////////////////////////////////////////////////
+	class O_T_LSV_02_unarmed_black_F
+	{
+		skins[] = 
+		{
+			{"Exile_Car_QilinUnarmed",		1450, "Arid",         {"\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_01_arid_CO.paa","\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_02_arid_CO.paa","\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_03_arid_CO.paa"};},
+			{"Exile_Car_QilinUnarmed",		1450, "Black",        {"\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_01_black_CO.paa","\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_02_black_CO.paa","\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_03_black_CO.paa"};},
+			{"Exile_Car_QilinUnarmed", 		1450, "Pink",         {"#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"Exile_Car_QilinUnarmed",      1450, "White",        {"#(argb,8,8,3)color(1,1,1,1)"};},			
+			{"Exile_Car_QilinUnarmed", 	    1450, "Black Custom", {"#(argb,8,8,3)color(0,0,0,0.6)"};},			
+			{"Exile_Car_QilinUnarmed", 	    1450, "Red",	      {"#(argb,8,8,3)color(1,0,0,1)"};},
+			{"Exile_Car_QilinUnarmed", 	    1450, "Green",	      {"#(argb,8,8,3)color(0,1,0,1)"};},
+			{"Exile_Car_QilinUnarmed", 	    1450, "Blue",	      {"#(argb,8,8,3)color(0,0,1,1)"};},			
+			{"Exile_Car_QilinUnarmed", 	    1450, "Tan",	      {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};},				
+			{"Exile_Car_QilinUnarmed",		1450, "Green Hex",    {"\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_01_ghex_CO.paa","\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_02_ghex_CO.paa","\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_03_ghex_CO.paa"};}
+		};
+	};
+		
+	///////////////////////////////////////////////////////////////////////////////
+	// IFV-6c Panther
+	///////////////////////////////////////////////////////////////////////////////
+	class B_APC_Tracked_01_base_F
+	{	
+		skins[] = 
+		{
+			{"B_APC_Tracked_01_rcws_NATO_F", 	3200, "NATO",	    {"A3\Armor_F_Beta\APC_Tracked_01\Data\apc_tracked_01_body_crv_co.paa","A3\Armor_F_Beta\APC_Tracked_01\Data\mbt_01_body_co.paa","a3\data_f\vehicles\turret_co.paa"};},			{"B_APC_Tracked_01_rcws_Black_F", 	3200, "Black",	    {"#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)"};},
+			{"B_APC_Tracked_01_rcws_White_F", 	3200, "White",      {"#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)"};},		
+			{"B_APC_Tracked_01_rcws_Pink_F", 	3200, "Pink",	    {"#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"B_APC_Tracked_01_rcws_Red_F", 	3200, "Red",	    {"#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)"};},
+			{"B_APC_Tracked_01_rcws_Green_F", 	3200, "Green",	    {"#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)"};},
+			{"B_APC_Tracked_01_rcws_Blue_F", 	3200, "Blue",	    {"#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)"};},			
+			{"B_APC_Tracked_01_rcws_Tan_F", 	3200, "Tan",	    {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};}	
+		};
+	};	
+
+    ///////////////////////////////////////////////////////////////////////////////
+	// CRV-6e Bobcat
+	///////////////////////////////////////////////////////////////////////////////
+	class B_APC_Tracked_01_CRV_F
+	{	
+		skins[] = 
+		{
+			{"B_APC_Tracked_01_CRV_NATO_F", 	3200, "NATO",	    {"A3\Armor_F_Beta\APC_Tracked_01\Data\apc_tracked_01_body_crv_co.paa","A3\Armor_F_Beta\APC_Tracked_01\Data\mbt_01_body_co.paa","a3\data_f\vehicles\turret_co.paa","A3\Armor_F_Beta\APC_Tracked_01\Data\apc_tracked_01_crv_co.paa"};},			
+			{"B_APC_Tracked_01_CRV_Black_F", 	3200, "Black",	    {"#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)"};},
+			{"B_APC_Tracked_01_CRV_White_F", 	3200, "White",      {"#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)"};},			
+			{"B_APC_Tracked_01_CRV_Pink_F", 	3200, "Pink",	    {"#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"B_APC_Tracked_01_CRV_Red_F", 	    3200, "Red",	    {"#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)"};},
+			{"B_APC_Tracked_01_CRV_Green_F", 	3200, "Green",	    {"#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)"};},
+			{"B_APC_Tracked_01_CRV_Blue_F", 	3200, "Blue",	    {"#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)"};},			
+			{"B_APC_Tracked_01_CRV_Tan_F", 	    3200, "Tan",	    {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};}	
+		};
+	};	
+	
+	///////////////////////////////////////////////////////////////////////////////
+	// M2A1 Slammer
+	///////////////////////////////////////////////////////////////////////////////
+	class B_MBT_01_base_F
+	{	
+		skins[] = 
+		{
+			{"B_MBT_01_cannon_NATO_F", 	3200, "NATO",	    {"A3\armor_f_gamma\MBT_01\Data\MBT_01_body_CO.paa","A3\armor_f_gamma\MBT_01\Data\MBT_01_tow_CO.paa"};},			
+			{"B_MBT_01_cannon_Black_F", 3200, "Black",	    {"#(argb,8,8,3)color(0,0,0,0.6)","#(argb,8,8,3)color(0,0,0,0.6)"};},
+			{"B_MBT_01_cannon_Black_F", 3200, "White",      {"#(argb,8,8,3)color(1,1,1,1)","#(argb,8,8,3)color(1,1,1,1)"};},			
+			{"B_MBT_01_cannon_Pink_F", 	3200, "Pink",	    {"#(argb,8,8,3)color(1,0.08,0.57,1)","#(argb,8,8,3)color(1,0.08,0.57,1)"};},
+			{"B_MBT_01_cannon_Red_F", 	3200, "Red",	    {"#(argb,8,8,3)color(1,0,0,1)","#(argb,8,8,3)color(1,0,0,1)"};},
+			{"B_MBT_01_cannon_Green_F", 3200, "Green",	    {"#(argb,8,8,3)color(0,1,0,1)","#(argb,8,8,3)color(0,1,0,1)"};},
+			{"B_MBT_01_cannon_Blue_F", 	3200, "Blue",	    {"#(argb,8,8,3)color(0,0,1,1)","#(argb,8,8,3)color(0,0,1,1)"};},			
+			{"B_MBT_01_cannon_Tan_F", 	3200, "Tan",	    {"#(argb,8,8,3)color(0.8,0.7,0.5,0.2)","#(argb,8,8,3)color(0.8,0.7,0.5,0.2)"};}	
+		};
+	};		
 	
 	///////////////////////////////////////////////////////////////////////////////
 	// HMMWV
@@ -3269,149 +4184,13 @@ class CfgVehicleCustoms
 	{
 		skins[] = 
 		{
-			{"Exile_Plane_AN2_Green", 700, "Green", {"Exile_psycho_An2\data\an2_1_co.paa","Exile_psycho_An2\data\an2_2_co.paa","Exile_psycho_An2\data\an2_wings_co.paa"};},
-			{"Exile_Plane_AN2_White", 700, "Red, White & Blue", {"Exile_psycho_An2\data\an2_1_a_co.paa",
-		"Exile_psycho_An2\data\an2_2_a_co.paa","Exile_psycho_An2\data\an2_wings_a_co.paa"};},
-			{"Exile_Plane_AN2_Stripe", 700, "Green Stripe", {"Exile_psycho_An2\data\an2_1_b_co.paa","Exile_psycho_An2\data\an2_2_b_co.paa","Exile_psycho_An2\data\an2_wings_b_co.paa"};}
+			{"Exile_Plane_AN2_Green", 700, "Green",             {"Exile_psycho_An2\data\an2_1_co.paa","Exile_psycho_An2\data\an2_2_co.paa","Exile_psycho_An2\data\an2_wings_co.paa"};},
+			{"Exile_Plane_AN2_White", 700, "Red, White & Blue", {"Exile_psycho_An2\data\an2_1_a_co.paa","Exile_psycho_An2\data\an2_2_a_co.paa","Exile_psycho_An2\data\an2_wings_a_co.paa"};},
+			{"Exile_Plane_AN2_Stripe", 700, "Green Stripe",     {"Exile_psycho_An2\data\an2_1_b_co.paa","Exile_psycho_An2\data\an2_2_b_co.paa","Exile_psycho_An2\data\an2_wings_b_co.paa"};}
 		};
-	};
-	
-	///////////////////////////////////////////////////////////////////////////////
-	// RHIB
-	///////////////////////////////////////////////////////////////////////////////
-	class B_G_Boat_Transport_02_F
-	{
-		skins[] = 
-		{
-			{"Exile_Boat_RHIB",		150, "Blue", {"\A3\Boat_F_Exp\Boat_Transport_02\Data\Boat_Transport_02_exterior_civilian_CO.paa","\A3\Boat_F_Exp\Boat_Transport_02\Data\Boat_Transport_02_interior_2_civilian_CO.paa"};}
-		};
-	};
-	
-	///////////////////////////////////////////////////////////////////////////////
-	// Water Scooter
-	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Boat_WaterScooter_Abstract
-	{
-		skins[] = 
-		{
-			{"Exile_Boat_WaterScooter",		150, "Blue", {"\A3\Boat_F_Exp\Scooter_Transport_01\Data\Scooter_Transport_01_Blue_co.paa","\A3\Boat_F_Exp\Scooter_Transport_01\Data\Scooter_Transport_01_VP_Blue_co.paa"};},
-			{"Exile_Boat_WaterScooter",		150, "Grey", {"\A3\Boat_F_Exp\Scooter_Transport_01\Data\Scooter_Transport_01_Grey_co.paa","\A3\Boat_F_Exp\Scooter_Transport_01\Data\Scooter_Transport_01_VP_Grey_co.paa"};},
-			{"Exile_Boat_WaterScooter",		150, "Lime", {"\A3\Boat_F_Exp\Scooter_Transport_01\Data\Scooter_Transport_01_Lime_co.paa","\A3\Boat_F_Exp\Scooter_Transport_01\Data\Scooter_Transport_01_VP_Lime_co.paa"};},
-			{"Exile_Boat_WaterScooter",		150, "Red", {"\A3\Boat_F_Exp\Scooter_Transport_01\Data\Scooter_Transport_01_Red_CO.paa","\A3\Boat_F_Exp\Scooter_Transport_01\Data\Scooter_Transport_01_VP_CO.paa"};},
-			{"Exile_Boat_WaterScooter",		150, "White", {"\A3\Boat_F_Exp\Scooter_Transport_01\Data\Scooter_Transport_01_CO.paa","\A3\Boat_F_Exp\Scooter_Transport_01\Data\Scooter_Transport_01_VP_CO.paa"};},
-			{"Exile_Boat_WaterScooter",		150, "Yellow", {"\A3\Boat_F_Exp\Scooter_Transport_01\Data\Scooter_Transport_01_Yellow_CO.paa","\A3\Boat_F_Exp\Scooter_Transport_01\Data\Scooter_Transport_01_VP_Yellow_CO.paa"};}
-		};
-	};
-	
-	///////////////////////////////////////////////////////////////////////////////
-	// Ceasar BTT
-	///////////////////////////////////////////////////////////////////////////////
-	class C_Plane_Civil_01_F
-	{
-		skins[] = 
-		{
-			{"Exile_Plane_Ceasar",		150, "Racing (Tan Interior)", {"A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_01_Racer_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_02_Racer_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_01_tan_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_02_tan_co.paa"};},
-			{"Exile_Plane_Ceasar",		150, "Racing", {"A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_01_Racer_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_02_Racer_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_01_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_02_co.paa"};},
-			{"Exile_Plane_Ceasar",		150, "Red Line (Tan Interior)", {"A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_01_RedLine_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_02_RedLine_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_01_tan_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_02_tan_co.paa"};},
-			{"Exile_Plane_Ceasar",		150, "Tribal (Tan Interior)", {"A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_01_Tribal_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_02_Tribal_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_01_tan_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_02_tan_co.paa"};},
-			{"Exile_Plane_Ceasar",		150, "Tribal", {"A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_01_Tribal_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_02_Tribal_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_01_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_02_co.paa"};},
-			{"Exile_Plane_Ceasar",		150, "Blue Wave (Tan Interior)", {"A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_01_Wave_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_02_Wave_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_01_tan_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_02_tan_co.paa"};},
-			{"Exile_Plane_Ceasar",		150, "Blue Wave", {"A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_01_Wave_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_ext_02_Wave_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_01_co.paa","A3\Air_F_Exp\Plane_Civil_01\Data\btt_int_02_co.paa"};}
-		};
-	};
-	
-	///////////////////////////////////////////////////////////////////////////////
-	// V-44 X Blackfish (Infantry Transport)
-	///////////////////////////////////////////////////////////////////////////////
-	class B_T_VTOL_01_infantry_F
-	{
-		skins[] = 
-		{
-			{"Exile_Plane_BlackfishInfantry",		150, "Blue", {"\A3\Air_F_Exp\VTOL_01\Data\VTOL_01_EXT01_blue_CO.paa","\A3\Air_F_Exp\VTOL_01\Data\VTOL_01_EXT02_blue_CO.paa","\A3\Air_F_Exp\VTOL_01\Data\VTOL_01_EXT03_blue_CO.paa","\A3\Air_F_Exp\VTOL_01\Data\VTOL_01_EXT04_blue_CO.paa"};}
-		};
-	};
-	
-	///////////////////////////////////////////////////////////////////////////////
-	// V-44 X Blackfish (Vehicle Transport)
-	///////////////////////////////////////////////////////////////////////////////
-	class B_T_VTOL_01_vehicle_F
-	{
-		skins[] = 
-		{
-			{"Exile_Plane_BlackfishVehicle",		150, "Blue", {"\A3\Air_F_Exp\VTOL_01\Data\VTOL_01_EXT01_blue_CO.paa","\A3\Air_F_Exp\VTOL_01\Data\VTOL_01_EXT02_blue_CO.paa","\A3\Air_F_Exp\VTOL_01\Data\VTOL_01_EXT03_blue_CO.paa","\A3\Air_F_Exp\VTOL_01\Data\VTOL_01_EXT04_blue_CO.paa"};}
-		};
-	};
-	
-	///////////////////////////////////////////////////////////////////////////////
-	// Prowler (Light)
-	///////////////////////////////////////////////////////////////////////////////
-	class B_CTRG_LSV_01_light_F
-	{
-		skins[] = 
-		{
-			{"Exile_Car_ProwlerLight",		150, "Black", {"\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_01_black_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_02_black_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_03_black_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_Adds_black_CO.paa"};},
-			{"Exile_Car_ProwlerLight",		150, "Dazzle", {"\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_01_dazzle_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_02_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_03_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_Adds_olive_CO.paa"};},
-			{"Exile_Car_ProwlerLight",		150, "Sand", {"\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_01_sand_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_02_sand_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_03_sand_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_Adds_sand_CO.paa"};}
-		};
-	};
-	
-	///////////////////////////////////////////////////////////////////////////////
-	// Prowler (Unarmed)
-	///////////////////////////////////////////////////////////////////////////////
-	class B_T_LSV_01_unarmed_black_F
-	{
-		skins[] = 
-		{
-			{"Exile_Car_ProwlerUnarmed",		150, "Olive", {"\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_01_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_02_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_03_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_Adds_olive_CO.paa"};},
-			{"Exile_Car_ProwlerUnarmed",		150, "Dazzle", {"\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_01_dazzle_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_02_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_03_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_Adds_olive_CO.paa"};},
-			{"Exile_Car_ProwlerUnarmed",		150, "Sand", {"\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_01_sand_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_02_sand_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_03_sand_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_Adds_sand_CO.paa"};}
-		};
-	};
-	
-	///////////////////////////////////////////////////////////////////////////////
-	// Qilin (Unarmed)
-	///////////////////////////////////////////////////////////////////////////////
-	class O_T_LSV_02_unarmed_black_F
-	{
-		skins[] = 
-		{
-			{"Exile_Car_QilinUnarmed",		150, "Arid", {"\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_01_arid_CO.paa","\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_02_arid_CO.paa","\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_03_arid_CO.paa"};},
-			{"Exile_Car_QilinUnarmed",		150, "Green Hex", {"\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_01_ghex_CO.paa","\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_02_ghex_CO.paa","\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_03_ghex_CO.paa"};}
-		};
-	};
-	
-	///////////////////////////////////////////////////////////////////////////////
-	// MB 4WD
-	///////////////////////////////////////////////////////////////////////////////
-	class C_Offroad_02_unarmed_orange_F
-	{
-		skins[] = 
-		{
-			{"Exile_Car_MB4WD",		150, "Black", {"\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_black_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_black_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_black_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_black_co.paa"};},
-			{"Exile_Car_MB4WD",		150, "Blue", {"\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_blue_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_blue_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_blue_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_blue_co.paa"};},
-			{"Exile_Car_MB4WD",		150, "Brown", {"\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_brown_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_brown_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_brown_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_brown_co.paa"};},
-			{"Exile_Car_MB4WD",		150, "Green", {"\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_green_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_green_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_green_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_green_co.paa"};},
-			{"Exile_Car_MB4WD",		150, "Olive", {"\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_olive_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_olive_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_olive_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_olive_co.paa"};},
-			{"Exile_Car_MB4WD",		150, "Red", {"\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_red_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_red_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_red_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_red_co.paa"};},
-			{"Exile_Car_MB4WD",		150, "White", {"\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_white_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_white_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_white_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_white_co.paa"};}
-		};
-	};
-	
-	class I_C_Offroad_02_unarmed_F
-	{
-		skins[] = 
-		{
-			{"Exile_Car_MB4WDOpen",		150, "Black", {"\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_black_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_black_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_black_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_black_co.paa"};},
-			{"Exile_Car_MB4WDOpen",		150, "Blue", {"\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_blue_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_blue_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_blue_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_blue_co.paa"};},
-			{"Exile_Car_MB4WDOpen",		150, "Brown", {"\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_brown_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_brown_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_brown_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_brown_co.paa"};},
-			{"Exile_Car_MB4WDOpen",		150, "Green", {"\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_green_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_green_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_green_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_green_co.paa"};},
-			{"Exile_Car_MB4WDOpen",		150, "Orange", {"\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_orange_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_orange_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_orange_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_orange_co.paa"};},
-			{"Exile_Car_MB4WDOpen",		150, "Red", {"\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_red_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_red_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_red_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_red_co.paa"};},
-			{"Exile_Car_MB4WDOpen",		150, "White", {"\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_white_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_white_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_white_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_white_co.paa"};},
-			{"Exile_Car_MB4WDOpen",		150, "Olive", {"\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_olive_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_ext_olive_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_olive_co.paa","\A3\Soft_F_Exp\Offroad_02\Data\offroad_02_int_olive_co.paa"};}
-		};
-	};
+	};	
 };
+
 class CfgVehicleTransport 
 {
 	class Exile_Container_SupplyBox
@@ -3558,21 +4337,21 @@ class CfgXM8
 	{
 		controlID = 50700;
 		title = "(counting) Scratchies...";
-		logo = "custom\plugin\ExAdClient\XM8\Apps\Scratchie\scratchie.paa";	
-		quickFunction = " ExileClientXM8CurrentSlide = 'apps'; closeDialog 0; ";
+		logo = "custom\textures\scratchie.paa";	
+		quickFunction = "ExileClientXM8CurrentSlide = 'apps'; closeDialog 0; ['use',ExileClientSessionId, player, ''] remoteExecCall ['ExileServer_lottery_network_request', 2];";
 	};
 	class ExAd_ScratchieBuy 
 	{
 		controlID = 50800;
 		title = "Buy Scratchie";		
-		logo = "custom\plugin\ExAdClient\XM8\Apps\ScratchieBuy\scratchie-buy.paa";	
+		logo = "custom\textures\scratchie-buy.paa";	
         quickFunction = "ExileClientXM8CurrentSlide = 'apps'; closeDialog 0; ['buy',ExileClientSessionId, player, ''] remoteExecCall ['ExileServer_lottery_network_request', 2];";
 	};
 	class ExAd_ScratchiePrize 
 	{
 		controlID = 50900;
 		title = "Get Prize";		
-		logo = "custom\plugin\ExAdClient\XM8\Apps\ScratchiePrize\scratchie-prize.paa";		
+		logo = "custom\textures\scratchie-prize.paa";		
         quickFunction = "ExileClientXM8CurrentSlide = 'apps'; closeDialog 0; ['get',ExileClientSessionId, player, ''] remoteExecCall ['ExileServer_lottery_network_request', 2];";
 	};
 };

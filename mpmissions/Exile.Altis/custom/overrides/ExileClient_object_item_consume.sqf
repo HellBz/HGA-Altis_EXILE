@@ -170,8 +170,8 @@ if( isClass(configFile >> "CfgMagazines" >> _itemClassName >> "Interactions" >> 
 		["SuccessTitleAndText", ["Consumed item!", _feedbackString]] call ExileClient_gui_toaster_addTemplateToast;
 	};
 	
-	//Lay down Can on Eat
-	_array = ["Exile_Item_Catfood","Exile_Item_Catfood_Cooked","Exile_Item_BBQSandwich","Exile_Item_BBQSandwich_Cooked","Exile_Item_ChristmasTinner","Exile_Item_ChristmasTinner_Cooked","Exile_Item_GloriousKnakworst","Exile_Item_GloriousKnakworst_Cooked","Exile_Item_Surstromming","Exile_Item_Surstromming_Cooked","Exile_Item_SausageGravy","Exile_Item_SausageGravy_Cooked","Exile_Item_MacasCheese","Exile_Item_MacasCheese_Cooked","Exile_Item_Dogfood","Exile_Item_Dogfood_Cooked"];
+	//Lay down Can on Eat																																																													
+	_array = ["Exile_Item_CatFood","Exile_Item_CatFood_Cooked","Exile_Item_BBQSandwich","Exile_Item_BBQSandwich_Cooked","Exile_Item_ChristmasTinner","Exile_Item_ChristmasTinner_Cooked","Exile_Item_GloriousKnakworst","Exile_Item_GloriousKnakworst_Cooked","Exile_Item_Surstromming","Exile_Item_Surstromming_Cooked","Exile_Item_SausageGravy","Exile_Item_SausageGravy_Cooked","Exile_Item_MacasCheese","Exile_Item_MacasCheese_Cooked","Exile_Item_DogFood","Exile_Item_DogFood_Cooked"];
 	_pos = getPosATL player;
 	if (_itemClassName in _array) then 
 	{

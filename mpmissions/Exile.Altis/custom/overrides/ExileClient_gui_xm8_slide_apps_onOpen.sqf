@@ -43,13 +43,10 @@ _respect ctrlSetStructuredText parseText (format ["<t color='#00b2cd' font='Orbi
 updateScratchieText = {
 	_this ctrlSetText "(counting) Scratchies...";
 	[_this] spawn {
-		sleep 1;
+		sleep 5;
 		_this select 0 ctrlSetText (format ["%1 Scratchies", missionNamespace getVariable ["scratchieCount", 0]]);
 	};
 };
-_scratchie = _display displayCtrl 5011;
-_scratchie ctrlSetText " ";															   
+_scratchie = _display displayCtrl 5011;															   
 ['',ExileClientSessionId, player, ''] remoteExecCall ['ExileServer_lottery_network_request', 2];
 _scratchie call updateScratchieText;
-
-
