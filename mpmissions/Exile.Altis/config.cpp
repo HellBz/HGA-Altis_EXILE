@@ -3557,19 +3557,22 @@ class CfgXM8
 	class ExAd_Scratchie 
 	{
 		controlID = 50700;
+		title = "(counting) Scratchies...";
 		logo = "custom\plugin\ExAdClient\XM8\Apps\Scratchie\scratchie.paa";	
-		onLoad = "custom\plugin\ExAdClient\XM8\Apps\Scratchie\onLoad.sqf";
+		quickFunction = " ExileClientXM8CurrentSlide = 'apps'; closeDialog 0; ";
 	};
 	class ExAd_ScratchieBuy 
 	{
 		controlID = 50800;
-		logo = "custom\plugin\ExAdClient\XM8\Apps\ScratchieBuy\scratchie-buy.paa";		
-		onLoad = "custom\plugin\ExAdClient\XM8\Apps\ScratchieBuy\onLoad.sqf";
+		title = "Buy Scratchie";		
+		logo = "custom\plugin\ExAdClient\XM8\Apps\ScratchieBuy\scratchie-buy.paa";	
+        quickFunction = "ExileClientXM8CurrentSlide = 'apps'; closeDialog 0; ['buy',ExileClientSessionId, player, ''] remoteExecCall ['ExileServer_lottery_network_request', 2];";
 	};
 	class ExAd_ScratchiePrize 
 	{
 		controlID = 50900;
+		title = "Get Prize";		
 		logo = "custom\plugin\ExAdClient\XM8\Apps\ScratchiePrize\scratchie-prize.paa";		
-		onLoad = "custom\plugin\ExAdClient\XM8\Apps\ScratchiePrize\onLoad.sqf";
+        quickFunction = "ExileClientXM8CurrentSlide = 'apps'; closeDialog 0; ['get',ExileClientSessionId, player, ''] remoteExecCall ['ExileServer_lottery_network_request', 2];";
 	};
 };

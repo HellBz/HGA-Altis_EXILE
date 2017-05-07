@@ -43,22 +43,13 @@ _respect ctrlSetStructuredText parseText (format ["<t color='#00b2cd' font='Orbi
 updateScratchieText = {
 	_this ctrlSetText "(counting) Scratchies...";
 	[_this] spawn {
-		sleep 5;
+		sleep 1;
 		_this select 0 ctrlSetText (format ["%1 Scratchies", missionNamespace getVariable ["scratchieCount", 0]]);
 	};
 };
-_newControl = _display displayCtrl 5011;
-_newControl ctrlSetText " ";
-_newControl ctrlSetEventHandler ["ButtonClick", "['use',ExileClientSessionId, player, ''] remoteExecCall ['ExileServer_lottery_network_request', 2]; _this select 0 call updateScratchieText"]; 
-
-_newControl = _display displayCtrl 5015;
-_newControl ctrlSetText "Buy Scratchie";
-_newControl ctrlSetEventHandler ["ButtonClick", "['buy',ExileClientSessionId, player, ''] remoteExecCall ['ExileServer_lottery_network_request', 2];"];
-
-_newControl = _display displayCtrl 5013;
-_newControl ctrlSetText "Get Prize";
-_newControl ctrlSetEventHandler ["ButtonClick", "['get',ExileClientSessionId, player, ''] remoteExecCall ['ExileServer_lottery_network_request', 2];"];
-
-
+_scratchie = _display displayCtrl 5011;
+_scratchie ctrlSetText " ";															   
 ['',ExileClientSessionId, player, ''] remoteExecCall ['ExileServer_lottery_network_request', 2];
-_newControl call updateScratchieText;
+_scratchie call updateScratchieText;
+
+
