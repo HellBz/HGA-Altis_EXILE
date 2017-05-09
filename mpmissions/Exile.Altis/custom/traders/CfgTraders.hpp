@@ -8,36 +8,16 @@
 		categories[] = 
 		{
 			"PointerAttachments",
-			"CUPPointerAttachments",
 			"BipodAttachments",
-			"APEXBipodAttachments",		//not used
 			"MuzzleAttachments",
-			"APEXMuzzleAttachments",
-			"CUPMuzzleAttachments",
 			"OpticAttachments",
-			"APEXOpticAttachments",
-			"CUPOpticAttachments",
-			"NIAAttachments",
 			"Ammunition",
-			"APEXAmmunition",
-			"GREFAmmunition",
-			"CUPAmmunition",
 			"Pistols",
-			"APEXPistols",
-			"CUPPistols",
 			"Shotguns",
 			"SubMachineGuns",
-			"APEXSubMachineGuns",
-			"CUPSubMachineGuns",
 			"LightMachineGuns",
-			"APEXLightMachineGuns",
-			"CUPLightMachineGuns",
 			"AssaultRifles",
-			"APEXAssaultRifles",
-			"CUPAssaultRifles",
-			"SniperRifles",
-			"APEXSniperRifles",
-			"CUPSniperRifles"
+			"SniperRifles"
 		};
 	};
 
@@ -54,16 +34,8 @@
 			"Smokes",
 			"UAVs",
 			"StaticMGs",
-			"Navigation",
-			"ExplosiveWeapons",
 			"Explosives",
-			"A3Launchers",
-			"ApexLaunchers",
-			"CUPLaunchers",
-			"CUPLauncherAmmo",
-			"A3LauncherAmmo",
-			"APEXLauncherAmmo",
-			"CUPExplosive"
+			"Navigation"
 		};
 	};
 
@@ -77,21 +49,10 @@
 		categories[] = 
 		{
 			"Headgear",
-			"APEXHeadgear",
-			"CUPHeadgear",
+			"Glasses",
 			"Uniforms",
-			"APEXUniforms",
-			"CUPUniforms",
 			"Vests",
-			"APEXVests",
-			"CUPVests",
 			"Backpacks",
-			"APEXBackpacks",
-			"A3Backpacks",
-			"CUPBackpacks",
-			"Tools",
-			//"APEXTools",		//not used
-			"MASTools",
 			"FirstAid"
 		};
 	};
@@ -120,9 +81,7 @@
 		categories[] = 
 		{
 			"Hardware",
-			//"R3FTools",
-			"ExtendedBaseMod",
-			"CBuilding"
+			"Tools"
 		};
 	};
 
@@ -135,23 +94,8 @@
 		showWeaponFilter = 0;
 		categories[] = 
 		{
-			"Bikes",
 			"Cars",
-			"A3Cars",
-			"ApexCars",
-			"CUPUnarmed",
-			"ApexTrucks",
-			"CUPArmed",
-			"A3Armed",
-			"CTrucks",
-			"Trucks",
-			"A3Trucks",
-			"CUGVs",
-			//"MASTanks"
-			//"A3Tanks"	
-			//"UGV"	
-			//"A3UGVs"	
-			//"ApexUAVs"
+			"Trucks"
 		};
 	};
 
@@ -164,19 +108,8 @@
 		showWeaponFilter = 0;
 		categories[] = 
 		{
-			"Choppers",
-			"ApexChoppers",
-			"CChoppers",			
-			"CUPChoppers",
-			"A3unarmedChoppers",
-			"A3armedChoppers",
-			"Planes",
-			"A3Planes",
-			"ApexPlanes",
-			"CPlanes",
-			//"CUAVs",
-			//"A3UAVs",
-			"Pods"		
+			"Choppers", 
+			"Planes"
 		};
 	};
 
@@ -189,9 +122,7 @@
 		showWeaponFilter = 0;
 		categories[] = 
 		{
-			"Boats",
-			"A3Boats",
-			"ApexBoats"
+			"Boats"
 		};
 	};
 
@@ -203,8 +134,8 @@
 		{
 			"Diving"
 		};
-	};	
-	
+	};
+
 	/**
 	 * Sells Community Items
 	 */ 
@@ -217,6 +148,7 @@
 			"Community"
 		};
 	};
+
 	class Exile_Trader_CommunityCustoms2
 	{
 		name = "COMMUNITY";

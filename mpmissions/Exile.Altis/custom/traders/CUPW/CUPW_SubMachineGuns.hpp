@@ -1,0 +1,5 @@
+"CUP_smg_bizon",
+"CUP_smg_EVO",
+"CUP_smg_MP5A5",
+"CUP_smg_MP5SD6",
+"CUP_smg_SA61",

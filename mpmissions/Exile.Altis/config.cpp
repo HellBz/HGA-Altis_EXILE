@@ -1181,14 +1181,7 @@ class UpgradeToWoodWindow: Exile_AbstractCraftingRecipe
 
 class CfgExileArsenal
 {
-	#include "custom\traders\APEX\ItemListAPEX.hpp"
-	#include "custom\traders\ARMA3V\ItemListARMA3V.hpp"
-	#include "custom\traders\ARMA3W\ItemListARMA3W.hpp"
-	#include "custom\traders\CUNITS\ItemListCUNITS.hpp"
-	#include "custom\traders\CUPW\ItemListCUPW.hpp"
-	#include "custom\traders\CUPV\ItemListCUPV.hpp"
-	#include "custom\traders\CUSTOM\ItemListCUSTOM.hpp"
-	#include "custom\traders\Exile\ItemListExile.hpp"
+	#include "custom\traders\CfgExileArsenal.hhp"
 };
 
 
@@ -2575,14 +2568,7 @@ class CfgTerritories
 
 class CfgTraderCategories
 {
-	#include "custom\traders\APEX\TraderCategoriesAPEX.hpp"
-	#include "custom\traders\ARMA3V\TraderCategoriesARMA3V.hpp"
-	#include "custom\traders\ARMA3W\TraderCategoriesARMA3W.hpp"
-	#include "custom\traders\CUNITS\TraderCategoriesCUNITS.hpp"
-	#include "custom\traders\CUPW\TraderCategoriesCUPW.hpp"
-	#include "custom\traders\CUPV\TraderCategoriesCUPV.hpp"
-	#include "custom\traders\CUSTOM\TraderCategoriesCUSTOM.hpp"
-	#include "custom\traders\Exile\TraderCategoriesExile.hpp"
+	#include "custom\traders\CfgTraderCategories.hpp"
 };
 
 class CfgTraders
@@ -4345,7 +4331,7 @@ class CfgXM8
 		controlID = 50800;
 		title = "Buy Scratchie";		
 		logo = "custom\textures\scratchie-buy.paa";	
-        quickFunction = "ExileClientXM8CurrentSlide = 'apps'; closeDialog 0; ['buy',ExileClientSessionId, player, ''] remoteExecCall ['ExileServer_lottery_network_request', 2];";
+        quickFunction = "['buy',ExileClientSessionId, player, ''] remoteExecCall ['ExileServer_lottery_network_request', 2]; '' call ExileClient_gui_xm8_slide_apps_onOpen;";
 	};
 	class ExAd_ScratchiePrize 
 	{
