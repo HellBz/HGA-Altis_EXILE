@@ -71,6 +71,17 @@ for "_xSize" from 0 to _mapsizeX step _gridSize do
           };
           _itemsAdded = _itemsAdded + 1;
         };
+		if ( _itemsPerVehicle > 0 ) then {
+			_addmoney = 'CUP_item_Money';
+		    _cargoType = _addmoney call ExileClient_util_cargo_getType;
+			switch (_cargoType) do {
+				case 1: { _vehicle addMagazineAmmoCargo [_addmoney, 1, 1]; };
+				case 2: { _vehicle addWeaponCargoGlobal [_addmoney, 1]; };
+				case 3: { _vehicle addBackpackCargoGlobal [_addmoney, 1]; };
+				default { _vehicle addItemCargoGlobal [_addmoney, 1, 1]; };
+          };
+			_vehicle setVariable ["ExileMoney", ( round(random 400 ) +100 ) ,true];
+		};
       };
 			_spawned = _spawned + 1;
 			_vehicleCount = _vehicleCount + 1;

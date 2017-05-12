@@ -44,6 +44,16 @@ try
 	{
 		throw 5;
 	};
+	
+	//* Patched in RESPECT check from _purchaseVechicleRequest  Prevents PIN number exploit, but returns an error.
+    _playerRespect = _playerObject getVariable ["ExileScore", 0];
+    _quality = getNumber(missionConfigFile >> "CfgExileArsenal" >> _vehicleClass >> "quality");
+    _requiredRespect = getNumber(missionConfigFile >> "CfgTrading" >> "requiredRespect" >> format["Level%1",_quality]);
+    if (_playerRespect < _requiredRespect) then
+    {
+        throw 14;
+    };
+	
 	if !((count _pinCode) isEqualTo 4) then
 	{
 		throw 11;
@@ -55,7 +65,7 @@ try
 	}
 	else 
 	{
-		_position = (getPos _playerObject) findEmptyPosition [10, 250, _vehicleClass];
+		_position = (getPos _playerObject) findEmptyPosition [20, 250, _vehicleClass];
 		if (_position isEqualTo []) then 
 		{
 			throw 13;

@@ -1,10 +1,10 @@
 ///////////////////////////////////////////////////////////////////////////////
 // Server Settings - Modify at will
 ///////////////////////////////////////////////////////////////////////////////
-author = "Exile Mod Team";
-onLoadName = "Exile Mod";
+author = "www.twitch.tv/H3llBz";
+onLoadName = "Willkommen HGA-Networks EXILE Server";
 onLoadMission= "www.exilemod.com";
-loadScreen = "exile_assets\texture\mod\logo.paa"; 
+loadScreen = "exile_assets\texture\flag\flag_country_de_co.paa"; 
 disableChannels[] = {0, 2};
 OnLoadIntro = "";
 OnLoadIntroTime = false;
@@ -84,11 +84,6 @@ class CfgRemoteExec
 			allowedTargets=2; 
 		};
 		
-		/* Sneak Customs */
-		class SneakCustoms_change_skin
-		{
-			allowedTargets = 2; 
-		};
 		/* ExAd Pack */
 		class ExAdServer_fnc_clientRequest 
 		{ 

@@ -26,3 +26,7 @@ ExileServer_ClaimVehicles_network_saveVehicleRequest = compileFinal preprocessFi
 //------------------------- EnigmaRevive -------------------------------------------------------------//
 [] execVM "custom\plugin\EnigmaRevive\init.sqf";
 //------------------------- EnigmaRevive -------------------------------------------------------------//
+
+//------------------------- A3XAI -------------------------------------------------------------------//
+#include "custom\plugin\A3XAI_Client\A3XAI_initclient.sqf";
+//------------------------- A3XAI -------------------------------------------------------------------//

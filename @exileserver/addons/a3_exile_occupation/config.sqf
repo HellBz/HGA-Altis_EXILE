@@ -21,7 +21,7 @@ SC_useApexClasses           	= true;                 	// true if you want to use
 SC_useMapOverrides          	= true;                 	// set to true to enable over riding options per map (see the bottom of this file for examples)
 
 SC_maxAIcount					= 100;						// the maximum amount of AI, if the AI count is above this then additional AI won't spawn
-SC_mapMarkers					= false;                	// Place map markers at the occupied areas (occupyPlaces and occupyMilitary only) true/false
+SC_mapMarkers					= true;                	// Place map markers at the occupied areas (occupyPlaces and occupyMilitary only) true/false
 SC_minFPS						= 5;				    	// any lower than minFPS on the server and additional AI won't spawn
 SC_scaleAI						= 10;						// any more than _scaleAI players on the server and _maxAIcount is reduced for each extra player
 
@@ -29,26 +29,26 @@ SC_minDistanceToSpawnZones  	= 750;                  	// Minimum distance in met
 SC_minDistanceToTraders     	= 750;                  	// Minimum distance in metres to the nearest trader zone
 SC_minDistanceToTerritory   	= 350;                  	// Minimum distance in metres to the nearest player territory
 SC_minDistanceToPlayer      	= 250;                  	// Minimum distance in metres to the nearest player
-SC_useWaypoints					= true;                 	// When spawning AI create waypoints to make them enter buildings (can affect performance when the AI is spawned and the waypoints are calculated)
+SC_useWaypoints				= true;                 	// When spawning AI create waypoints to make them enter buildings (can affect performance when the AI is spawned and the waypoints are calculated)
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //	Turn Modules On or Off (can be overridden in the map overrides section)
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-SC_processReporter				= true;                 	// log the a list of active server processes every 60 seconds (useful for debugging server problems)
+SC_processReporter			= false;                 	// log the a list of active server processes every 60 seconds (useful for debugging server problems)
 SC_fastNights               	= true;						// true if you want night time to go faster than daytime
 SC_occupyPlaces 				= true;						// true if you want villages,towns,cities patrolled by bandits
-SC_occupyTraders            	= false;						// true if you want to create trader camps at positions specified in SC_occupyTraderDetails
-SC_occupyStatic	 		    	= false;		    		// true if you want to add AI in specific locations
-SC_occupyTransport 	        	= true;						// true if you want pubic transport (travels between traders)
-SC_occupyLootCrates		    	= true;						// true if you want to have random loot crates with guards
+SC_occupyTraders            	= true;						// true if you want to create trader camps at positions specified in SC_occupyTraderDetails
+SC_occupyStatic	 		    = false;		    		// true if you want to add AI in specific locations
+SC_occupyTransport 	        = true;						// true if you want pubic transport (travels between traders)
+SC_occupyLootCrates		    = true;						// true if you want to have random loot crates with guards
 SC_occupyRandomSpawn        	= false;                		// (WORK IN PROGRESS) true if you want random spawning AI that hunt for nearby players
 // Disable Random Police Raid
-SC_occupyMilitary 		    	= false;			    	// true if you want military buildings patrolled
+SC_occupyMilitary 		    = false;			    	// true if you want military buildings patrolled
 SC_occupyVehicle				= true;						// true if you want to have roaming AI land vehicles
-SC_occupySky					= true;						// true if you want to have roaming AI helis
-SC_occupySea					= true;					// true if you want to have roaming AI boats
+SC_occupySky					= false;						// true if you want to have roaming AI helis
+SC_occupySea					= false;					// true if you want to have roaming AI boats
 SC_occupyHeliCrashes			= true;						// true if you want to have Dayz style helicrashes
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -65,9 +65,9 @@ SC_fastNightsMultiplierDay  	= 4;                    	// the time multiplier to 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 SC_randomSpawnMinPlayers    	= 1;                    	// Minimum number of players to be online before random spawning AI can spawn
-SC_randomSpawnMaxGroups        	= 4;                    	// Maximum amount of random AI groups allowed at any time
-SC_randomSpawnMinGroupSize      = 3;                    	// Minimum amount of random AI groups allowed per group
-SC_randomSpawnMaxGroupSize      = 5;                    	// Maximum amount of random AI groups allowed per group
+SC_randomSpawnMaxGroups        = 4;                    	// Maximum amount of random AI groups allowed at any time
+SC_randomSpawnMinGroupSize     = 3;                    	// Minimum amount of random AI groups allowed per group
+SC_randomSpawnMaxGroupSize     = 5;                    	// Maximum amount of random AI groups allowed per group
 SC_randomSpawnChance			= 12;						// Percentage chance of spawning if suitable player found
 SC_randomSpawnIgnoreCount		= true;						// true if you want spawn random AI groups regardless of overall AI count (they still count towards the total though)
 SC_randomSpawnFrequency			= 3600;						// time in seconds between the possibility of random AI hunting the same player (1800 for 30 minutes)
@@ -81,7 +81,7 @@ SC_randomSpawnNameTarget		= false;					// true if you want to name the targeted 
 //	Occupy Places Setup
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-SC_occupyPlacesSurvivors		= true;						// true if you want a chance to spawn survivor AI as well as bandits (SC_occupyPlaces must be true to use this option)
+SC_occupyPlacesSurvivors		= false;						// true if you want a chance to spawn survivor AI as well as bandits (SC_occupyPlaces must be true to use this option)
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //	Trader Base Setup
@@ -112,7 +112,7 @@ SC_staticSurvivors          	= [		//[[pos],ai count,radius,search buildings]
 							  
 SC_colourTransport          	= false;                 // true if you want the public transport coloured
 SC_secureTransport          	= true;                	// true if you want the public transport and pilot to be indestructible
-SC_occupyTransportClass 		= ["Exile_Car_Ikarus_Blue","Exile_Chopper_Orca_Black"]; // to always use the same vehicle, specify one option only
+SC_occupyTransportClass 		= ["Exile_Chopper_Orca_Black"]; // to always use the same vehicle, specify one option only "Exile_Car_Ikarus_Blue",
 
 SC_occupyTransportStartPos  	= [ 14740.688, 17142.523 ];                   // if empty defaults to map centre
 
@@ -143,13 +143,13 @@ SC_occupyLootCratesLocations	= [
                                     [3000,3000,0],
                                     [4000,4000,0]
                                 ];
-SC_SpawnLootCrateGuards			= true;						// true if you want to enable AI guards
+SC_SpawnLootCrateGuards		= true;						// true if you want to enable AI guards
 SC_numberofLootCrates       	= 6;                    	// if SC_occupyLootCrates = true spawn this many loot crates (overrided below for Namalsk)
-SC_LootCrateGuards          	= 2;                    	// number of AI to spawn at each crate
+SC_LootCrateGuards          	= 6;                    	// number of AI to spawn at each crate
 SC_LootCrateGuardsRandomize 	= true;                 	// Use a random number of guards up to a maximum = SC_LootCrateGuards (so between 1 and SC_LootCrateGuards)
 SC_occupyLootCratesMarkers		= true;						// true if you want to have markers on the loot crate spawns
 
-SC_ropeAttach               	= false;                	// Allow lootcrates to be airlifted (for SC_occupyLootCrates and SC_occupyHeliCrashes)
+SC_ropeAttach               	= true;                	// Allow lootcrates to be airlifted (for SC_occupyLootCrates and SC_occupyHeliCrashes)
 
 // Array of possible common items to go in loot crates ["classname",fixed amount,random amount]
 // ["Exile_Item_Matches",1,2] this example would add between 1 and 3 Exile_Item_Matches to the crate (1 + 0 to 2 more)
@@ -207,7 +207,7 @@ SC_occupyHeliCrashesLocations	= [
                                     [4000,4000,0]
                                 ];
 SC_HeliCrashesOnFire			= true;                 	// true if you want the crash on fire, false if you just want smoke
-SC_SpawnHeliCrashGuards			= true;						// true if you want to enable AI guards
+SC_SpawnHeliCrashGuards		= false;						// true if you want to enable AI guards
 SC_numberofHeliCrashes      	= 5;						// if SC_occupyHeliCrashes = true spawn this many Heli Crashes
 SC_HeliCrashGuards          	= 6;                    	// number of AI to spawn at each crate
 SC_HeliCrashGuardsRandomize 	= true;                 	// Use a random number of guards up to a maximum = SC_HeliCrashGuards (so between 1 and SC_HeliCrashGuards)
@@ -254,7 +254,7 @@ SC_maximumCrewAmount        	= 5;     	// Maximum amount of AI allowed in a vehi
 //	Roaming Land Vehicle Setup
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-SC_maxNumberofVehicles 	    	= 3;		// How many roaming vehicles to spawn	
+SC_maxNumberofVehicles 	    	= 2;		// How many roaming vehicles to spawn	
 SC_occupyLandVehicleIgnoreCount		= false;	// true if you want spawn vehicles regardless of overall AI count
 SC_occupyVehiclesLocked			= false;	// true if AI vehicles to stay locked until all the linked AI are dead		
 SC_occupyVehicleSurvivors		= false;	// true if you want a chance to spawn survivor AI as well as bandits (SC_occupyVehicle must be true to use this option)

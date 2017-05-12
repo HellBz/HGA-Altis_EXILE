@@ -1181,7 +1181,7 @@ class UpgradeToWoodWindow: Exile_AbstractCraftingRecipe
 
 class CfgExileArsenal
 {
-	#include "custom\traders\CfgExileArsenal.hhp"
+	#include "custom\traders\CfgExileArsenal.hpp"
 };
 
 
@@ -1481,7 +1481,7 @@ class CfgExileLootSettings
 	 * Interval in seconds when the client searches for
 	 * new buildings to spawn loot in
 	 */
-	spawnInterval = 30;
+	spawnInterval = 5;
 
 	/**
 	 * This is a percentage value to determine how many loot
