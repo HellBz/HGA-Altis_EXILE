@@ -70,7 +70,7 @@ _building = createVehicle ["Land_HBarrierTower_F",[_pos,10+(random 5),_rndDir+90
 
 
 _vehClass1 = "Exile_Car_Offroad_Repair_Civillian";
-_vehClass2 = "I_mas_cars_UAZ_M2";
+_vehClass2 = "CUP_O_UAZ_AGS30_SLA";
 
 if !(_extraParams isEqualTo []) then
 {

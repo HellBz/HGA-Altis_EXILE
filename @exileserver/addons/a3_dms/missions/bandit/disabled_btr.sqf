@@ -71,7 +71,7 @@ _building = createVehicle ["Land_Cargo_HQ_V1_F",[_pos,10+(random 5),_rndDir+90] 
 
 
 _vehClass1 = "Exile_Car_Offroad_Repair_Civillian";
-_vehClass2 = "O_mas_BTR60";
+_vehClass2 = "Exile_Car_BTR40_Camo";
 
 if !(_extraParams isEqualTo []) then
 {

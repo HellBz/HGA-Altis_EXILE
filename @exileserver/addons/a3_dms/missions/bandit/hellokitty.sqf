@@ -61,31 +61,24 @@ _group =
 _crate = ["Box_NATO_Wps_F",_pos] call DMS_fnc_SpawnCrate;
 
 // Check to see if a special vehicle class is defined in "_extraParams", and make sure it's valid, otherwise use the default (Offroad Armed)
-_vehClass =
-	if (_extraParams isEqualTo []) then
+_vehClass1 = "CUP_C_Golf4_kitty_Civ";
+
+if !(_extraParams isEqualTo []) then
+{
+	if ((typeName _extraParams)=="STRING") then
 	{
-		selectRandom DMS_ArmedVehicles
+		_vehClass1 = _extraParams;
 	}
 	else
 	{
-		if ((typeName _extraParams)=="STRING") then
+		if (((typeName _extraParams)=="ARRAY") && {(typeName (_extraParams select 0))=="STRING"}) then
 		{
-			_extraParams
-		}
-		else
-		{
-			if (((typeName _extraParams)=="ARRAY") && {(typeName (_extraParams select 0))=="STRING"}) then
-			{
-				_extraParams select 0
-			}
-			else
-			{
-				selectRandom DMS_ArmedVehicles
-			};
+			_vehClass1 = _extraParams select 0;
 		};
 	};
+};
 
-_vehicle = [_vehClass,[_pos,3+(random 5),random 360] call DMS_fnc_SelectOffsetPos] call DMS_fnc_SpawnNonPersistentVehicle;
+_vehicle = [_vehClass1,[_pos,3+(random 5),random 360] call DMS_fnc_SelectOffsetPos] call DMS_fnc_SpawnNonPersistentVehicle;
 
 // Set crate loot values
 _crate_loot_values =

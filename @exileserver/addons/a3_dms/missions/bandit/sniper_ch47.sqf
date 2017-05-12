@@ -71,7 +71,7 @@ _building = createVehicle ["Land_Cargo_House_V1_F",[_pos,10+(random 5),_rndDir+9
 
 
 _vehClass1 = "B_Truck_01_transport_F";
-_vehClass2 = "B_mas_CH_47F";
+_vehClass2 = "CUP_I_CH47F_RACS";
 
 if !(_extraParams isEqualTo []) then
 {
