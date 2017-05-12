@@ -15,7 +15,7 @@
 
 SC_debug						= false;					// set to true to turn on debug features (not recommended for live servers)
 SC_extendedLogging          	= false;                	// set to true for additional 
-SC_infiSTAR_log					= true;						// true Use infiSTAR logging, false logs to server rpt
+SC_infiSTAR_log				= false;						// true Use infiSTAR logging, false logs to server rpt
 
 SC_useApexClasses           	= true;                 	// true if you want to use the Apex class list over rides, false to use vanilla Arma gear
 SC_useMapOverrides          	= true;                 	// set to true to enable over riding options per map (see the bottom of this file for examples)

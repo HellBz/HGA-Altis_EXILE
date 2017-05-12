@@ -42,6 +42,7 @@ try
 	//Custom Logs
 	"extDB3" callExtension "9:ADD_PROTOCOL:LOG:OCCUPATION:Exile_OccupationLog";
 	"extDB3" callExtension "9:ADD_PROTOCOL:LOG:BIGFOOT:Exile_BigfootLog";
+	//"extDB3" callExtension "9:ADD_PROTOCOL:LOG:INFISTAR:Exile_InfistarLog";
 	"extDB3" callExtension "9:LOCK";
 	_isConnected = true;
 }
