@@ -11,5 +11,6 @@ if(SC_infiSTAR_log && !(isNil "INFISTARVERSION")) then
 }
 else
 {
-    diag_log _logDetail;
+    //diag_log _logDetail;
+	"extDB3" callExtension format["1:OCCUPATION:%1", _logDetail];
 };

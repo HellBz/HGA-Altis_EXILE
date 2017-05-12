@@ -39,6 +39,9 @@ try
 	"extDB3" callExtension "9:ADD_PROTOCOL:LOG:TRADING:Exile_TradingLog";
 	"extDB3" callExtension "9:ADD_PROTOCOL:LOG:DEATH:Exile_DeathLog";
 	"extDB3" callExtension "9:ADD_PROTOCOL:LOG:TERRITORY:Exile_TerritoryLog";
+	//Custom Logs
+	"extDB3" callExtension "9:ADD_PROTOCOL:LOG:OCCUPATION:Exile_OccupationLog";
+	"extDB3" callExtension "9:ADD_PROTOCOL:LOG:BIGFOOT:Exile_BigfootLog";
 	"extDB3" callExtension "9:LOCK";
 	_isConnected = true;
 }

@@ -6,4 +6,5 @@
 private["_msg"];
 
 _msg = format["Bigfoot'S SHIPWRECKS (SERVER): %1",_this];
-diag_log _msg;
+//diag_log _msg;
+"extDB3" callExtension format["1:BIGFOOT:%1", _msg];
