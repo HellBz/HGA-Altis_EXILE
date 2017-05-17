@@ -41,12 +41,12 @@ for "_i" from 1 to SC_numberofLootCrates do
 	if (SC_occupyLootCratesMarkers) then 
 	{		
 		_event_marker = createMarker [ format ["SC_loot_marker_%1", _i], _position];
-		_event_marker setMarkerColor "ColorGreen";
+		_event_marker setMarkerColor "ColorGUER";
 		_event_marker setMarkerAlpha 1;
-		_event_marker setMarkerText "Gear Crate";
-		_event_marker setMarkerType "loc_Tree";
+		_event_marker setMarkerText "Airdrop-Loot";
+		_event_marker setMarkerType "hd_pickup";
 		_event_marker setMarkerBrush "Vertical";
-		_event_marker setMarkerSize [(3), (3)];
+		_event_marker setMarkerSize [(1), (1)];
 	};	
 
 	if (SC_SpawnLootCrateGuards) then

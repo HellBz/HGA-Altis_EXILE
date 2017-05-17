@@ -38,7 +38,7 @@ SC_useWaypoints				= true;                 	// When spawning AI create waypoints
 
 SC_processReporter			= false;                 	// log the a list of active server processes every 60 seconds (useful for debugging server problems)
 SC_fastNights               	= true;						// true if you want night time to go faster than daytime
-SC_occupyPlaces 				= false;						// true if you want villages,towns,cities patrolled by bandits
+SC_occupyPlaces 				= true;						// true if you want villages,towns,cities patrolled by bandits
 SC_occupyTraders            	= true;						// true if you want to create trader camps at positions specified in SC_occupyTraderDetails
 SC_occupyStatic	 		    = false;		    		// true if you want to add AI in specific locations
 SC_occupyTransport 	        = true;						// true if you want pubic transport (travels between traders)
@@ -81,7 +81,7 @@ SC_randomSpawnNameTarget		= false;					// true if you want to name the targeted 
 //	Occupy Places Setup
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-SC_occupyPlacesSurvivors		= false;						// true if you want a chance to spawn survivor AI as well as bandits (SC_occupyPlaces must be true to use this option)
+SC_occupyPlacesSurvivors		= true;						// true if you want a chance to spawn survivor AI as well as bandits (SC_occupyPlaces must be true to use this option)
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //	Trader Base Setup
@@ -395,7 +395,7 @@ SC_SurvivorsFriendly        	= true;                 	// true if you want surviv
 
 // Possible equipment for survivor AI to spawn with 
 // spawning survivors without vests or backpacks will result in them having no ammunition                                                   
-SC_SurvivorUniforms         	= ["Exile_Uniform_BambiOverall"]; 
+SC_SurvivorUniforms         	= ["CUP_U_C_Citizen_01","CUP_U_C_Citizen_02","CUP_U_C_Citizen_03","CUP_U_C_Citizen_04","CUP_U_C_Worker_01","CUP_U_C_Worker_02","CUP_U_C_Worker_03","CUP_U_C_Worker_04","CUP_U_C_Villager_01","CUP_U_C_Villager_02","CUP_U_C_Villager_03","CUP_U_C_Villager_04","CUP_U_C_Rocker_01","CUP_U_C_Rocker_02","CUP_U_C_Rocker_03","CUP_U_C_Rocker_04","CUP_U_O_Villager_03","CUP_U_O_Villager_03"];  // Exile_Uniform_BambiOverall
 SC_SurvivorVests            	= ["V_BandollierB_blk","V_BandollierB_cbr","V_BandollierB_khk","V_BandollierB_oli"];  
 SC_SurvivorHeadgear         	= []; 
 SC_SurvivorWeapon           	= ["arifle_MXC_F","arifle_TRG20_F"];

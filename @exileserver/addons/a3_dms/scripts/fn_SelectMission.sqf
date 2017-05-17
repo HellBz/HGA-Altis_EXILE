@@ -41,7 +41,7 @@ if (diag_fps >= DMS_MinServerFPS && {_playerCount >= DMS_MinPlayerCount}) then
 	};
 
 
-	if (DMS_StaticMission && {_time - DMS_StaticMissionLastStart > DMS_StaticMissionDelay}) then
+	if (DMS_StaticMission && {_time - DMS_StaticMissionLastStart > DMS_StaticMissionDelay} && {_playerCount >= DMS_MinPlayerCountStatic}) then
 	{
 		private _availableMissions = (DMS_StaticMissionTypesArray - DMS_RunningStaticMissions);
 

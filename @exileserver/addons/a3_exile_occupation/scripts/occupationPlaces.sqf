@@ -306,6 +306,7 @@ _locations = (nearestLocations [_spawnCenter, ["NameVillage","NameCity", "NameCi
 
 			_markerName = "Occupation Area";
 			_markerColour = "ColorOrange";
+			_markerType = "mil_dot";
 			
 			if(SC_mapMarkers) then 
 			{
@@ -315,29 +316,33 @@ _locations = (nearestLocations [_spawnCenter, ["NameVillage","NameCity", "NameCi
 				
 				if(_nearBanditAI > 0 && _nearSurvivorAI > 0) then
 				{
-					_markerName = "Survivors and Bandits"; 
+					_markerName = "Survivors or Bandits"; 
 					_markerColour = "ColorOrange";   
+					_markerType = "hd_unknown",
 				};  
 				if(_nearBanditAI == 0 && _nearSurvivorAI > 0) then
 				{
 					_markerName = "Survivors"; 
-					_markerColour = "ColorGreen";   
+					_markerColour = "ColorGreen";
+					_markerType = "hd_objective",
+					
 				}; 
 				if(_nearBanditAI > 0 && _nearSurvivorAI == 0) then
 				{
 					_markerName = "Bandits"; 
-					_markerColour = "ColorRed";   
+					_markerColour = "ColorRed";  
+					_markerType = "hd_warning",					
 				};                                          
 				
 				_marker = createMarker [format ["%1", _locationName],_spawnPosition];
 				_marker setMarkerShape "Icon";
-				_marker setMarkerSize [3,3];
+				_marker setMarkerSize [1,1];
 				//_marker setMarkerType "mil_dot";
-				_marker setMarkerType "hd_warning";
+				_marker setMarkerType _markerType;
 				_marker setMarkerBrush "Solid";
 				_marker setMarkerText _markerName;
 				_marker setMarkerColor _markerColour;
-				_marker setMarkerAlpha 0.5;
+				_marker setMarkerAlpha 0.8;
 					
 				
 				if(_side == "survivor") then 

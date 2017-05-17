@@ -165,6 +165,10 @@ class CfgNetworkMessages
         module = "ClaimVehicles";
         parameters[] = {"STRING","STRING"};
     };
+	class timeToRestart
+	{
+		module = "Restart";
+	};
 };
 
 ///////////////////////////////////////////////////////////////////////////////

@@ -30,3 +30,8 @@ ExileServer_ClaimVehicles_network_saveVehicleRequest = compileFinal preprocessFi
 //------------------------- A3XAI -------------------------------------------------------------------//
 #include "custom\plugin\A3XAI_Client\A3XAI_initclient.sqf";
 //------------------------- A3XAI -------------------------------------------------------------------//
+
+//------------------------- Get Time to Restart -----------------------------------------------------//
+ExileServer_Restart_network_timeToRestart = compileFinal preprocessFileLineNumbers "custom\scripts\ExileServer_Restart_network_timeToRestart.sqf"; 
+//------------------------- Get Time to Restart -----------------------------------------------------//
+

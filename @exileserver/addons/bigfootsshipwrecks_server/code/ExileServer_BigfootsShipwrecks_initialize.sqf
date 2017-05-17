@@ -37,6 +37,6 @@ uiSleep 15; // TODO: is this needed?
 
 "Finished initialization." call ExileServer_BigfootsShipwrecks_util_logCommand;
 
-["systemChatRequest", ["Bigfoot's Shipwrecks Initialized"]] call ExileServer_system_network_send_broadcast;
+//["systemChatRequest", ["Bigfoot's Shipwrecks Initialized"]] call ExileServer_system_network_send_broadcast;
 
 true;
