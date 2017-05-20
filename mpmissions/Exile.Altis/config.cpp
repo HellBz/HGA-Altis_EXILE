@@ -1256,6 +1256,10 @@ class CfgExileCustomCode
 	ExileClient_gui_xm8_show 													= "custom\plugin\ExAdClient\XM8\CustomCode\ExileClient_gui_xm8_show.sqf";
 	//Lottery
 	ExileClient_gui_xm8_slide_apps_onOpen										= "custom\overrides\ExileClient_gui_xm8_slide_apps_onOpen.sqf";
+	//1.0.3 Lootsystem
+	ExileServer_system_process_postInit											= "custom\overrides\ExileServer_system_process_postInit.sqf";
+	ExileServer_system_lootManager_initialize									= "custom\overrides\ExileServer_system_lootManager_initialize.sqf";
+	ExileServer_system_lootManager_dropItem										= "custom\overrides\ExileServer_system_lootManager_dropItem.sqf";
 
 };
 class CfgExileEnvironment

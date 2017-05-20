@@ -1,3 +1,8 @@
+/**
+ * Created with Exile Mod 3DEN Plugin
+ * www.exilemod.com
+ */
+
 if (!hasInterface || isServer) exitWith {};
 
 // 11 NPCs
@@ -333,6 +338,7 @@ call ExileClient_object_trader_create;
 ///////////////////////////////////////////////////////////////////////////
 // Russian Roulette
 ///////////////////////////////////////////////////////////////////////////
+/*
 [
     "Exile_Trader_RussianRoulette",
     "",
@@ -342,6 +348,7 @@ call ExileClient_object_trader_create;
     187.428
 ]
 call ExileClient_object_trader_create;
+*/
 
 HGA_fnc_SalvageVehicle = compileFinal preprocessFileLineNumbers "custom\scripts\salvagevehicle.sqf";
 
