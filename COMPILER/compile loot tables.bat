@@ -1,0 +1,1 @@
+"com.exilemod.lootcompiler.exe" "LootItemGroups.h" "LootTables.h" "CfgExileLoot.hpp"
