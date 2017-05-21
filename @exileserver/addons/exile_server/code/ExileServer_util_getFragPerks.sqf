@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_victim","_killer","_killingPlayer","_perks","_lastKillAt","_killStack","_lastVictims","_victimUID","_flagNextToKiller","_flagNextToVictim","_vehicle","_vehicleRole","_distance","_distanceBonus"];
+private["_victim", "_killer", "_killingPlayer", "_perks", "_lastKillAt", "_killStack", "_lastVictims", "_victimUID", "_flagNextToKiller", "_flagNextToVictim", "_vehicle", "_vehicleRole", "_distance", "_distanceBonus"];
 _victim = _this select 0;
 _killer = _this select 1;
 _killingPlayer = _this select 2;

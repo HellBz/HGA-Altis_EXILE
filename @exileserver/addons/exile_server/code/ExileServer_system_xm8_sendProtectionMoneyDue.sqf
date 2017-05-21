@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_flags","_maintenancePeriod","_territoryIDs","_id","_flag","_recipients","_territoryName"];
+private["_flags", "_maintenancePeriod", "_territoryIDs", "_id", "_flag", "_recipients", "_territoryName"];
 _flags = allMissionObjects "Exile_Construction_Flag_Static";
 _maintenancePeriod = getNumber(configFile >> "CfgSettings" >> "GarbageCollector" >> "Database" >> "territoryLifeTime");
 _territoryIDs = format ["getAllNotifTerritory:%1",_maintenancePeriod] call ExileServer_system_database_query_selectFull;

@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_parameters","_netId","_player","_existingSessionID","_sessionId"];
+private["_parameters", "_netId", "_player", "_existingSessionID", "_sessionId"];
 _parameters = _this select 1;
 _netId = _parameters select 0;
 try 

@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_parameters","_objectNetID","_amount","_newContainerNetID","_player","_playerMoney","_container","_containerMoney","_nearbyPopTabs","_maximumLoad","_maximumPoptabsLoad","_maximumAmmountToAdd","_containerID"];
+private["_sessionID", "_parameters", "_objectNetID", "_amount", "_newContainerNetID", "_player", "_playerMoney", "_container", "_containerMoney", "_nearbyPopTabs", "_maximumLoad", "_maximumPoptabsLoad", "_maximumAmmountToAdd", "_containerID"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _objectNetID = _parameters select 0;

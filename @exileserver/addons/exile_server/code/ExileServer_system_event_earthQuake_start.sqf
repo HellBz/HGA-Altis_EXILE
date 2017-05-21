@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_i","_magnitude","_maxPlayers","_n","_player","_buildings","_building"];
+private["_i", "_magnitude", "_maxPlayers", "_n", "_player", "_buildings", "_building"];
 for "_i" from 1 to 4 do
 {
 	format ["Earth Quake - Rumble %1...", _i] call ExileServer_util_log;
@@ -41,6 +41,6 @@ for "_i" from 1 to 4 do
 	};
 	if (_i < 4) then
 	{
-		uiSleep 25 + (random (_i * 30));
+		uiSleep (25 + (random (_i * 30)));
 	};
 };

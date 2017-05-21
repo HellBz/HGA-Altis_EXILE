@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_messageName","_messageParameters","_publicMessage"];
+private["_messageName", "_messageParameters", "_publicMessage"];
 params ["_messageName", "_messageParameters"];
 _publicMessage = [_messageName, _messageParameters];
 _publicMessage remoteExecCall ["ExileClient_system_network_dispatchIncomingMessage", -2];

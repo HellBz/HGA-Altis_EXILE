@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_flagObject","_territoryName","_flagTexture","_territorySize","_owner","_currentTimestamp"];
+private["_flagObject", "_territoryName", "_flagTexture", "_territorySize", "_owner", "_currentTimestamp"];
 _flagObject = _this select 0;
 _territoryName = _this select 1;
 _flagTexture = _this select 2;

@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_playerObject","_currentShot","_probabilities","_nextShotIsFatal"];
+private["_playerObject", "_currentShot", "_probabilities", "_nextShotIsFatal"];
 _playerObject = ExileServerRussianRouletteAlivePlayers select 0;
 ExileServerRussianRouletteAlivePlayers deleteAt 0;
 ExileServerRussianRouletteAlivePlayers pushBack _playerObject;

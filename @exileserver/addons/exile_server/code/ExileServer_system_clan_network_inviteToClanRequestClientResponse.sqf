@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_accepted","_player","_clanID","_invitedClanID","_inviteOwner","_clanHash","_members"];
+private["_sessionID", "_accepted", "_player", "_clanID", "_invitedClanID", "_inviteOwner", "_clanHash", "_members"];
 _sessionID = _this select 0;
 _accepted = (_this select 1) select 0;
 try

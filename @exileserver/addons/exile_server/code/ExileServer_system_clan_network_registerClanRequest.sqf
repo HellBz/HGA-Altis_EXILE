@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_parameters","_clanName","_player","_alphabet","_forbiddenCharacter","_registrationFee","_playerMoney","_playerUid","_clanID","_hashValue"];
+private["_sessionID", "_parameters", "_clanName", "_player", "_alphabet", "_forbiddenCharacter", "_registrationFee", "_playerMoney", "_playerUid", "_clanID", "_hashValue"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _clanName = _parameters select 0;

@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_constructionObject","_constructionID"];
+private["_constructionObject", "_constructionID"];
 _constructionObject = _this;
 _constructionID = _constructionObject getVariable ["ExileDatabaseID", -1];
 if (_constructionID > -1) then

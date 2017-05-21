@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_territoryID","_data","_id","_owner","_position","_radius","_level","_flagTexture","_flagStolen","_flagStolenBy","_lastPayed","_buildRights","_moderators","_flagObject"];
+private["_territoryID", "_data", "_id", "_owner", "_position", "_radius", "_level", "_flagTexture", "_flagStolen", "_flagStolenBy", "_lastPayed", "_buildRights", "_moderators", "_flagObject"];
 _territoryID = _this;
 _data = format ["loadTerritory:%1", _territoryID] call ExileServer_system_database_query_selectSingle;
 _id = _data select 0;

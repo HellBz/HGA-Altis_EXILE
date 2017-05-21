@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_parameters","_netId","_object"];
+private["_parameters", "_netId", "_object"];
 _parameters = _this select 1;
 _netId = _parameters select 0;
 _object = objectFromNetId _netId;

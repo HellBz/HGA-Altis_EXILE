@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_useAutoLock","_passwordCorrect"];
+private["_useAutoLock", "_passwordCorrect"];
 _useAutoLock = getNumber(configFile >> "CfgSettings" >> "RCON" >> "useAutoLock");
 if (_useAutoLock isEqualTo 1) then
 {

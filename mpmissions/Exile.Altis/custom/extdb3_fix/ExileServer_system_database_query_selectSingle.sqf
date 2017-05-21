@@ -9,9 +9,9 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_parameters","_query","_result"];
+private["_parameters", "_query", "_result"];
 _parameters = _this;
-_query = [0, "SQL",_parameters] joinString ":";
+_query = [0, ExileServerDatabaseSessionId, _parameters] joinString ":";
 _result = call compile ("extDB3" callExtension _query);
 switch (_result select 0) do
 {

@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_permanentlyDeleteTime","_territoryLifeTime","_containerLifeTime","_constructionLifeTime","_vehicleLifeTime","_abandonedSafeTime","_stolenFlagLifeTime","_unlockLifeTime"];
+private["_permanentlyDeleteTime", "_territoryLifeTime", "_containerLifeTime", "_constructionLifeTime", "_vehicleLifeTime", "_abandonedSafeTime", "_stolenFlagLifeTime", "_unlockLifeTime"];
 _permanentlyDeleteTime	= getNumber (configFile >> "CfgSettings" >> "GarbageCollector" >> "Database" >> "permanentlyDeleteTime");
 _territoryLifeTime    	= getNumber (configFile >> "CfgSettings" >> "GarbageCollector" >> "Database" >> "territoryLifeTime");
 _containerLifeTime    	= getNumber (configFile >> "CfgSettings" >> "GarbageCollector" >> "Database" >> "containerLifeTime");

@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionId","_parameters","_shippingContainer","_player","_shippingContainerVolume","_damagePerHit","_newDamage","_shippingContainerPosition","_numberOfItems","_weaponHolder"];
+private["_sessionId", "_parameters", "_shippingContainer", "_player", "_shippingContainerVolume", "_damagePerHit", "_damageContainer", "_index", "_newDamage", "_shippingContainerPosition", "_numberOfItems", "_weaponHolder"];
 _sessionId = _this select 0;
 _parameters = _this select 1;
 _shippingContainer = _parameters select 0;
@@ -46,12 +46,23 @@ try
 		_shippingContainerVolume = 1;
 	};
 	_damagePerHit = (1 / (_shippingContainerVolume * 0.5)) min 0.2; 
-	_newDamage = ((damage _shippingContainer) + _damagePerHit) min 1;
-	if (_newDamage isEqualTo 1) then 
+	_damageContainer = 0;
+	_index = -1;
+	{
+		if (netid _shippingContainer == _x select 0) exitWith
+		{
+			_damageContainer = _x select 1;
+			_index = _forEachIndex;
+		};
+	}
+	forEach ExileShippingContainers;
+	_newDamage = (_damageContainer + _damagePerHit) min 1;
+	if (_newDamage >= 1) then
 	{
 		_shippingContainerPosition = getPosATL _shippingContainer;
 		_shippingContainerPosition set [2, 0];
-		_shippingContainer setDamage 999; 
+		hideObjectGlobal _shippingContainer;
+		ExileShippingContainers deleteAt _index;
 		_numberOfItems = (ceil (_shippingContainerVolume / 10)) max 1;
 		format ["Spawning %1 junk metal at %2", _numberOfItems, _shippingContainerPosition] call ExileServer_util_log;
 		_weaponHolder = createVehicle ["GroundWeaponHolder", _shippingContainerPosition, [], 0, "CAN_COLLIDE"];
@@ -60,7 +71,14 @@ try
 	}
 	else 
 	{
-		_shippingContainer setDamage _newDamage; 
+		if (_index isEqualTo -1) then
+		{
+			ExileShippingContainers pushBack [netid _shippingContainer,_newDamage];
+		}
+		else
+		{
+			ExileShippingContainers set [_index, [netid _shippingContainer,_newDamage]];
+		};
 	};
 }
 catch 

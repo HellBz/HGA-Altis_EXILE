@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_clanID","_clanInfo","_clanMembers","_allMarkers","_markers","_polys","_markerID","_markerType","_position","_color","_icon","_iconSize","_text","_textSize","_marker","_poly","_hashValue"];
+private["_clanID", "_clanInfo", "_clanMembers", "_allMarkers", "_markers", "_polys", "_markerID", "_markerType", "_position", "_color", "_icon", "_iconSize", "_text", "_textSize", "_marker", "_poly", "_hashValue"];
 _clanID = _this;
 _clanInfo = format ["getClanInfo:%1",_clanID] call ExileServer_system_database_query_selectSingle;
 _clanMembers = format ["getClanMembers:%1",_clanID] call ExileServer_system_database_query_selectFull;

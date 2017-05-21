@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_vehicle","_simulationShouldBeEnabled","_position"];
+private["_vehicle", "_simulationShouldBeEnabled", "_position"];
 {
 	_vehicle = _x;
 	_simulationShouldBeEnabled = false;

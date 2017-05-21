@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_constructionObject","_position","_vectorDirection","_vectorUp","_territoryFlag","_territoryID","_data","_extDB2Message","_constructionID"];
+private["_constructionObject", "_position", "_vectorDirection", "_vectorUp", "_territoryFlag", "_territoryID", "_data", "_extDB2Message", "_constructionID"];
 _constructionObject = _this;
 _position = getPosATL _constructionObject;
 _vectorDirection = vectorDir _constructionObject;

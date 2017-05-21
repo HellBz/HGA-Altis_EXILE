@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_playerObject"];
+private["_sessionID", "_playerObject"];
 _sessionID = _this select 0;
 _playerObject = _sessionID call ExileServer_system_session_getPlayerObject;
 _playerObject setVariable["ExileIsBambi", false];

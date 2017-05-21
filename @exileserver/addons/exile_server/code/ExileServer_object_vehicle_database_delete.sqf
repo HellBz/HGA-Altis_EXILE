@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_vehicleObject","_vehicleID"];
+private["_vehicleObject", "_vehicleID"];
 _vehicleObject = _this;
 _vehicleID = _vehicleObject getVariable ["ExileDatabaseID", -1];
 if (_vehicleID > -1) then

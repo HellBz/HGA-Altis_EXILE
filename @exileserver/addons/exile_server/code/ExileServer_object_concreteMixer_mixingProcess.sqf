@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_concreteMixer","_recipeClassName","_weaponHolderPosition","_weaponHolder"];
+private["_concreteMixer", "_recipeClassName", "_weaponHolderPosition", "_weaponHolder"];
 _concreteMixer = _this select 0;
 _recipeClassName = _this select 1;
 playSound3D ["exile_assets\sound\Exile_ConcreteMixer01.wss", _concreteMixer, false, getPosASL _concreteMixer, 4, 1, 50];

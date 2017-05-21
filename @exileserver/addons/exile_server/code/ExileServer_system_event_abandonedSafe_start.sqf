@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_config","_markerTime","_abandonedSafes","_randomNumber","_safe","_position","_marker"];
+private["_config", "_markerTime", "_abandonedSafes", "_randomNumber", "_safe", "_position", "_marker"];
 _config = configFile >> "CfgSettings" >> "Events" >> "AbandonedSafe";
 _markerTime = getNumber (_config >> "markerTime");
 _abandonedSafes = ExileAbandondedSafes;

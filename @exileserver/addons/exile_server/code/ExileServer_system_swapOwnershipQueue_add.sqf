@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_object","_entity","_localityChanged"];
+private["_object", "_entity", "_localityChanged"];
 _object = _this select 0;
 _entity = _this select 1;
 _localityChanged = false;

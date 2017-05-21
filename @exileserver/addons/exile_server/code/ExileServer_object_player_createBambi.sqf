@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_requestingPlayer","_spawnLocationMarkerName","_bambiPlayer","_accountData","_direction","_position","_spawnAreaPosition","_spawnAreaRadius","_clanID","_clanData","_clanGroup","_player","_devFriendlyMode","_devs","_parachuteNetID","_spawnType","_parachuteObject"];
+private["_sessionID", "_requestingPlayer", "_spawnLocationMarkerName", "_bambiPlayer", "_accountData", "_direction", "_position", "_spawnAreaPosition", "_spawnAreaRadius", "_clanID", "_clanData", "_clanGroup", "_player", "_devFriendlyMode", "_devs", "_parachuteNetID", "_spawnType", "_parachuteObject"];
 _sessionID = _this select 0;
 _requestingPlayer = _this select 1;
 _spawnLocationMarkerName = _this select 2;
@@ -91,7 +91,7 @@ if (_devFriendlyMode isEqualTo 1) then
 	{
 		if ((getPlayerUID _requestingPlayer) isEqualTo (_x select 0))exitWith 
 		{
-			if((name _requestingPlayer) isEqualTo (_x select 1))then
+			if ((name _requestingPlayer) isEqualTo (_x select 1))then
 			{
 				_bambiPlayer setVariable ["ExileMoney", 500000, true];
 				_bambiPlayer setVariable ["ExileScore", 100000];

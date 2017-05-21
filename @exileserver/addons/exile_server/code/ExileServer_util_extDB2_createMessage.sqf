@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_messageName","_fields","_numberOfFields","_i","_field","_message"];
+private["_messageName", "_fields", "_numberOfFields", "_i", "_field", "_message"];
 _messageName = _this select 0;
 _fields = _this select 1;
 _numberOfFields = count _fields;

@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_flag","_moderatedPlayerUID","_newUserLevel","_buildRights","_moderatorRights","_owner","_databaseID"];
+private["_flag", "_moderatedPlayerUID", "_newUserLevel", "_buildRights", "_moderatorRights", "_owner", "_databaseID"];
 _flag = _this select 0;
 _moderatedPlayerUID = _this select 1;
 _newUserLevel = _this select 2;

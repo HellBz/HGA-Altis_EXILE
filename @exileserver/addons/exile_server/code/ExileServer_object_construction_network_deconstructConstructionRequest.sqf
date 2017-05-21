@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_parameters","_objectNetID","_object","_playerObject","_playerUID","_objectID","_ownerUID","_canDeconstruct","_flag","_buildRights","_message","_constructionConfig","_holderPosition","_holder"];
+private["_sessionID", "_parameters", "_objectNetID", "_object", "_playerObject", "_playerUID", "_objectID", "_ownerUID", "_canDeconstruct", "_flag", "_buildRights", "_message", "_constructionConfig", "_holderPosition", "_holder"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _objectNetID = _parameters select 0;

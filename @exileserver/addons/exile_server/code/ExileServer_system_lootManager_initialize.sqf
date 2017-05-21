@@ -9,5 +9,18 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
+private["_lootTableName", "_lootTable", "_itemGroupName", "_items"];
 ExileServerBuildingNetIdsWithLoot = [];
+{
+	_lootTableName = configName _x;
+	_lootTable = getArray (configFile >> "CfgExileLoot" >> "LootTables" >> _lootTableName);
+	missionNamespace setVariable ["ExileCachedLootTable" + _lootTableName, _lootTable];
+}
+forEach (configProperties [configFile >> "CfgExileLoot" >> "LootTables"]);
+{
+	_itemGroupName = configName _x;
+	_items = getArray (configFile >> "CfgExileLoot" >> "ItemGroups" >> _itemGroupName);
+	missionNamespace setVariable ["ExileCachedLootItemGroup" + _itemGroupName, _items];
+}
+forEach (configProperties [configFile >> "CfgExileLoot" >> "ItemGroups"]);
 true

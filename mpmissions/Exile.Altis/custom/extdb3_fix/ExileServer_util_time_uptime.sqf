@@ -9,4 +9,4 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-(parseNumber ("extDB3" callExtension "9:UPTIME:MINUTES"))
+(call compile ("extDB3" callExtension "9:UPTIME:MINUTES")) select 1

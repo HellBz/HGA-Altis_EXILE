@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_vehicleObject","_vehicleNetId","_index"];
+private["_vehicleObject", "_vehicleNetId", "_index"];
 _vehicleObject = _this;
 _vehicleNetId = netID _vehicleObject;
 _index = ExileServerVehicleSaveQueue find _vehicleNetId;

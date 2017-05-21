@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_unit","_id","_pos","_newUnitDeaths","_constructionObject","_sessionID"];
+private["_unit", "_id", "_pos", "_newUnitDeaths", "_constructionObject", "_animal", "_sessionID"];
 _unit = _this select 0;
 _id = _this select 1;
 _uid = _this select 2;
@@ -27,6 +27,12 @@ if !(_uid in ["", "__SERVER__", "__HEADLESS__"]) then
 	{
 		_unit call ExileServer_system_russianRoulette_event_onPlayerDisconnected;
 		_unit setVariable ["ExileIsDead", false];
+	};
+	_animal = missionNamespace getVariable [format ["ExileAnimal%1", _uid], objNull];
+	if !(isNull _animal) then
+	{
+		deleteVehicle _animal;
+		missionNamespace setVariable [format ["ExileAnimal%1", _uid], nil];
 	};
 	format["endAccountSession:%1", _uid] call ExileServer_system_database_query_fireAndForget;
 	_sessionID = _unit getVariable ["ExileSessionID", ""];

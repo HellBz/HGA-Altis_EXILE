@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_parameters","_withdraw","_player","_lockerAmount","_withdrawAmount","_newLockerAmount","_playerMoney","_newPlayerMoney"];
+private["_sessionID", "_parameters", "_withdraw", "_player", "_lockerAmount", "_withdrawAmount", "_newLockerAmount", "_playerMoney", "_newPlayerMoney"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _withdraw = _parameters select 0;

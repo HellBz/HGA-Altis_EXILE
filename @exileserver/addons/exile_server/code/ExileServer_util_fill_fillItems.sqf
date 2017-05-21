@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_object","_items"];
+private["_object", "_items"];
 _object = _this select 0;
 _items = _this select 1;
 if ((typeName _items) isEqualTo "ARRAY") then 

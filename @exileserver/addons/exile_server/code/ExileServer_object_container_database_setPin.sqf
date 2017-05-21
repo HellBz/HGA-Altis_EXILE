@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_object","_newPin","_databaseID"];
+private["_object", "_newPin", "_databaseID"];
 _object = _this select 0;
 _newPin = _this select 1;
 _databaseID = _object getVariable ["ExileDatabaseID",-1];

@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_deleteGroup","_units","_unit"];
+private["_deleteGroup", "_units", "_unit"];
 {
 	if !(_x isEqualTo ExileServerGraveyardGroup) then 
 	{

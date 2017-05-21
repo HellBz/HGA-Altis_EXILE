@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_building","_buildingConfig","_lootTableName","_localPositions","_lootConfig","_maximumNumberOfLootPositions","_maximumPositionCoverage","_maximumNumberOfItemsPerLootSpot","_numberOfPositionsToUse","_lootPositions","_spawnedItemClassNames","_lootWeaponHolderNetIDs","_lootPosition","_lootHolder","_numberOfItemsToSpawn","_n","_itemClassName","_cargoType","_magazineClassNames","_magazineClassName","_numberOfMagazines"];
+private["_building", "_buildingConfig", "_lootTableName", "_localPositions", "_lootConfig", "_maximumNumberOfLootPositions", "_maximumPositionCoverage", "_maximumNumberOfItemsPerLootSpot", "_numberOfPositionsToUse", "_lootPositions", "_spawnedItemClassNames", "_lootWeaponHolderNetIDs", "_lootPosition", "_lootHolder", "_numberOfItemsToSpawn", "_n", "_itemClassName", "_cargoType", "_magazineClassNames", "_magazineClassName", "_numberOfMagazines"];
 _building = _this;
 _building setVariable ["ExileLootSpawnedAt", time];
 _building setVariable ["ExileHasLoot", true];

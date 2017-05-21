@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_removeEntryFromQueue","_entity","_player","_newOwner","_currentOwner","_localityChanged"];
+private["_removeEntryFromQueue", "_entity", "_player", "_newOwner", "_currentOwner", "_localityChanged"];
 if !(ExileServerOwnershipSwapQueue isEqualTo []) then
 {
 	{

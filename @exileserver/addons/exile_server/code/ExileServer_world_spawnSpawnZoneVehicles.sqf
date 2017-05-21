@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_spawnRadius","_vehiclesToSpawn","_markerName","_markerCenterPosition","_numberOfVehiclesToSpawn","_vehicleClassName","_i","_vehiclePosition","_vehicleDirection"];
+private["_spawnRadius", "_vehiclesToSpawn", "_markerName", "_markerCenterPosition", "_numberOfVehiclesToSpawn", "_vehicleClassName", "_i", "_vehiclePosition", "_vehicleDirection"];
 "Creating spawn zone vehicles..." call ExileServer_util_log;
 _spawnRadius = getNumber(configFile >> "CfgSettings" >> "BambiSettings" >> "spawnZoneRadius");
 _vehiclesToSpawn = getArray(configFile >> "CfgSettings" >> "BambiSettings" >> "spawnZoneVehicles");

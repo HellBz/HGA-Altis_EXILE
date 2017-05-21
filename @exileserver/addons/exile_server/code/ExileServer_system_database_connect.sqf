@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_isConnected","_error","_result"];
+private["_isConnected", "_error", "_result"];
 _isConnected = false;
 _error_locked = false;
 ExileServerDatabaseSessionId = "";

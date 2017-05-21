@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_continueLoading","_page","_pageSize","_vehicleIDs","_numberOfVehicles","_i"];
+private["_continueLoading", "_page", "_pageSize", "_vehicleIDs", "_numberOfVehicles", "_i"];
 "Loading vehicles from database..." call ExileServer_util_log;
 _continueLoading = true;
 _page = 0;

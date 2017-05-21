@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_restartTime","_useRestartMessages"];
+private["_restartTime", "_useRestartMessages"];
 _restartTime = getArray (configFile >> "CfgSettings" >> "RCON" >> "restartTimer");
 ExileServerRestartTime = ((_restartTime select 0) * 60) + (_restartTime select 1);
 ExileServerKickTime = getNumber (configFile >> "CfgSettings" >> "RCON" >> "kickTime");

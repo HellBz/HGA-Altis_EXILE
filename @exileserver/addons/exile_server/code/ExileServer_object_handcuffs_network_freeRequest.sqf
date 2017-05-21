@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_parameters","_victimNetID","_player","_victim","_respect","_newScore"];
+private["_sessionID", "_parameters", "_victimNetID", "_player", "_victim", "_respect", "_newScore"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _victimNetID = _parameters select 0;

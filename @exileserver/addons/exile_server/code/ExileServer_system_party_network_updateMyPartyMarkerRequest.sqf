@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_parameters","_update","_position","_sendingPlayer"];
+private["_sessionID", "_parameters", "_update", "_position", "_sendingPlayer"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _update = _parameters select 0;
@@ -39,5 +39,5 @@ try
 }
 catch 
 {
-	_x call ExileServer_util_log;
+	_exception call ExileServer_util_log;
 };

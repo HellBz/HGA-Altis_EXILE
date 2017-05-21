@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_clanID","_hash","_markers","_members"];
+private["_clanID", "_hash", "_markers", "_members"];
 _clanID = _this;
 _hash = missionNameSpace getVariable [format["ExileServer_clan_%1",_clanID],[]];
 _markers = _hash select 3;

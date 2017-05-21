@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_player","_playerID"];
+private["_player", "_playerID"];
 _player = _this;
 
 _uid = _player getVariable ["ExileOwnerUID", "SomethingWentWrong"];

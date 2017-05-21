@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_player","_clanID","_clanHash","_playerUID","_isLeader","_leaderUID","_clanMembers","_clanMembersCount","_index","_message"];
+private["_sessionID", "_player", "_clanID", "_clanHash", "_playerUID", "_isLeader", "_leaderUID", "_clanMembers", "_clanMembersCount", "_index", "_message"];
 _sessionID = _this select 0;
 try
 {

@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_object","_weapons","_i","_thing"];
+private["_object", "_weapons", "_i", "_thing"];
 _object = _this select 0;
 _weapons = _this select 1;
 if ((typeName _weapons) isEqualTo "ARRAY") then 

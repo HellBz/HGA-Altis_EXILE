@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_playerNetID","_invitedPlayer","_player","_clanID","_clanHash"];
+private["_sessionID", "_playerNetID", "_invitedPlayer", "_player", "_clanID", "_clanHash"];
 _sessionID = _this select 0;
 _playerNetID = (_this select 1) select 0;
 _invitedPlayer = objectFromNetId _playerNetID;

@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_parameters","_flagNetID","_playerToBeKickedUID","_playerObject","_flagObject","_territoryID","_ownerUID","_moderators","_buildRights"];
+private["_sessionID", "_parameters", "_flagNetID", "_playerToBeKickedUID", "_playerObject", "_flagObject", "_territoryID", "_ownerUID", "_moderators", "_buildRights"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _flagNetID = _parameters select 0;
@@ -50,6 +50,7 @@ try
 	};
 	_moderators = _moderators - [_playerToBeKickedUID];
 	_buildRights = _buildRights - [_playerToBeKickedUID];
+	_flagObject setVariable ["ExileTerritoryModerators", _moderators, true];
 	_flagObject setVariable ["ExileTerritoryBuildRights", _buildRights, true];
 	format["updateTerritoryBuildRights:%1:%2", _buildRights, _territoryID] call ExileServer_system_database_query_fireAndForget;
 	format["updateTerritoryModerators:%1:%2", _moderators, _territoryID] call ExileServer_system_database_query_fireAndForget;

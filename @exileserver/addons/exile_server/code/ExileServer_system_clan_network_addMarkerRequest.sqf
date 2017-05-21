@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_parameters","_player","_clanID","_clanHash","_icon","_color","_position","_iconSize","_text","_textSize","_maxChars","_alphabet","_forbiddenCharacter","_maxAmountOfMarkers","_data","_extDB2Message","_markerID","_markers"];
+private["_sessionID", "_parameters", "_player", "_clanID", "_clanHash", "_icon", "_color", "_position", "_iconSize", "_text", "_textSize", "_maxChars", "_alphabet", "_forbiddenCharacter", "_maxAmountOfMarkers", "_data", "_extDB2Message", "_markerID", "_markers"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 try

@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_object","_items","_realContainers","_containers","_i"];
+private["_object", "_items", "_realContainers", "_containers", "_i"];
 _object = _this;
 _items = getItemCargo _object;
 _realContainers = [] ;

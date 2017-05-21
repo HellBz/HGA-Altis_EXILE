@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_continueLoading","_page","_pageSize","_containerIDs","_numberOfContainers","_i"];
+private["_continueLoading", "_page", "_pageSize", "_containerIDs", "_numberOfContainers", "_i"];
 "Loading containers from database..." call ExileServer_util_log;
 _continueLoading = true;
 _page = 0;

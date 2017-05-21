@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_parameters","_object","_playerObject","_maxRange","_flags","_buildRights","_objectConfig","_objectClass","_position","_vectorUp","_vectorDir","_objectDatabaseID","_objectOwner","_accessCode","_newObject"];
+private["_sessionID", "_parameters", "_object", "_playerObject", "_maxRange", "_flags", "_buildRights", "_objectConfig", "_objectClass", "_position", "_vectorUp", "_vectorDir", "_objectDatabaseID", "_objectOwner", "_accessCode", "_newObject"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _object = _parameters select 0;

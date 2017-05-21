@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_vehicleClassName","_position","_direction","_usePositionATL","_temporaryPositionInOuterSpace","_vehicleObject"];
+private["_vehicleClassName", "_position", "_direction", "_usePositionATL", "_temporaryPositionInOuterSpace", "_vehicleObject"];
 _vehicleClassName = _this select 0;
 _position = _this select 1;
 _direction = _this select 2;

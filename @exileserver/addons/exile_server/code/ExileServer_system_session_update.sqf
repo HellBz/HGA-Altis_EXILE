@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionId","_player"];
+private["_sessionId", "_player"];
 _sessionId = _this select 0;
 _player = _this select 1;
 _player setVariable ["ExileSessionID", _sessionId];

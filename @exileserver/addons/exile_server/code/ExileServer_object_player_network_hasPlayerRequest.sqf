@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_player","_hasAlivePlayer"];
+private["_sessionID", "_player", "_hasAlivePlayer"];
 _sessionID = _this select 0;
 _player = _sessionID call ExileServer_system_session_getPlayerObject;
 try 

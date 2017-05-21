@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_constructionObject","_damage"];
+private["_constructionObject", "_damage"];
 _constructionObject = _this;
 _damage = _constructionObject getVariable ["ExileConstructionDamage",0];
 if(_damage isEqualTo 0)then

@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_playerObject","_buyInAmount","_playerMoney","_chairIndex","_chairInfo","_chair","_probabilities"];
+private["_playerObject", "_buyInAmount", "_playerMoney", "_chairIndex", "_chairInfo", "_chair", "_probabilities"];
 _playerObject = _this;
 _buyInAmount = getNumber (missionConfigFile >> "CfgExileRussianRoulette" >> "buyInAmount");
 _playerMoney = _playerObject getVariable ["ExileMoney", 0];

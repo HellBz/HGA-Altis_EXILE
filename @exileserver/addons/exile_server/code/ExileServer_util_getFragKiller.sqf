@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_killer","_player"];
+private["_killer", "_player", "_sessionID"];
 _killer = _this;
 _player = objNull;
 if (isPlayer _killer) then 
@@ -20,21 +20,18 @@ if (isPlayer _killer) then
 	}
 	else 
 	{
-		_uid = getPlayerUID _killer;
+		_sessionID = _killer getVariable ["ExileSessionID", -1];
+		if !(_sessionID isEqualTo -1) then
 		{
-			if ((getPlayerUID _x) isEqualTo _uid) exitWith 
-			{
-				_player = _x;
-			};
-		}
-		forEach allPlayers;
+			_player = _sessionID call ExileServer_system_session_getPlayerObject;
+		};
 	};
 }
 else 
 {
 	if (isUAVConnected _killer) then 
 	{
-		_player = (UAVControl _killer) select 0;
+		_player = (UAVControl _killer) select 0; 
 	};
 };
 _player

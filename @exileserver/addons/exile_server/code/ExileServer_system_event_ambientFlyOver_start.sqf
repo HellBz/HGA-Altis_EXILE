@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_targetPlayer","_flyHeight","_speed","_direction","_targetPosition","_distance","_endPosition","_planeClass","_i","_startPosition","_pilot","_plane","_waypoint"];
+private["_targetPlayer", "_flyHeight", "_speed", "_direction", "_targetPosition", "_distance", "_endPosition", "_planeClass", "_i", "_startPosition", "_pilot", "_plane", "_waypoint"];
 _group = createGroup independent;
 _targetPlayer = selectRandom allPlayers;
 format ["Ambient Fly Over - Heading to %1...", _targetPlayer] call ExileServer_util_log;

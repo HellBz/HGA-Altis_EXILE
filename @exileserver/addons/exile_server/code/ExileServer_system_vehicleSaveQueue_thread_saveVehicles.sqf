@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_vehicleObject","_removeFromQueue"];
+private["_vehicleObject", "_removeFromQueue"];
 {
 	_vehicleObject = _x;
 	_removeFromQueue = false;

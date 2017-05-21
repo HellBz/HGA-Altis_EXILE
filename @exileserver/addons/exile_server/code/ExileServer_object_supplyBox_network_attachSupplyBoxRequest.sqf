@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionId","_parameters","_boxNetId","_box","_boxConfig","_vehicleTypes","_vehicles","_vehicle","_attachedObjects","_vehicleConfig","_cargoIndizes","_crew"];
+private["_sessionId", "_parameters", "_boxNetId", "_box", "_boxConfig", "_vehicleTypes", "_vehicles", "_vehicle", "_attachedObjects", "_vehicleConfig", "_cargoIndizes", "_crew"];
 _sessionId = _this select 0;
 _parameters = _this select 1;
 _boxNetId = _parameters select 0;

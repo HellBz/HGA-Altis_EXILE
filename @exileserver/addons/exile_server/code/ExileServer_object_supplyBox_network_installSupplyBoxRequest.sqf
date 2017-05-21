@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionId","_parameters","_boxNetId","_box","_territory","_playerObject","_sessionID","_access","_containerID"];
+private["_sessionId", "_parameters", "_boxNetId", "_box", "_territory", "_playerObject", "_sessionID", "_access", "_containerID"];
 _sessionId = _this select 0;
 _parameters = _this select 1;
 _boxNetId = _parameters select 0;

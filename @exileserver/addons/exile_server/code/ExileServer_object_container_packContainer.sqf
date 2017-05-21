@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_object","_objectpos","_items","_magazines","_weapons","_containers","_popTabs","_typeof","_groundHolder","_popTabsObject","_filter","_kitMagazine"];
+private["_object", "_objectpos", "_items", "_magazines", "_weapons", "_containers", "_popTabs", "_typeof", "_groundHolder", "_popTabsObject", "_filter", "_kitMagazine"];
 _object = _this;
 _objectpos = getPosATL _object;
 _items = _object call ExileServer_util_getItemCargo;

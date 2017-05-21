@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_arsenal","_weaponClassNames","_className","_linkedItems","_i"];
+private["_arsenal", "_weaponClassNames", "_className", "_linkedItems", "_i"];
 _arsenal = "true" configClasses (missionConfigFile >> "CfgExileArsenal");
 _weaponClassNames = [];
 {

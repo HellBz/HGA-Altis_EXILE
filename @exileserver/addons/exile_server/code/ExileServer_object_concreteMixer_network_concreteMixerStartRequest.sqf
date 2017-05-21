@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_parameters","_concreteMixerNetID","_recipeClassName","_player","_concreteMixer","_recipeConfig","_components","_equippedMagazines","_hasAllComponents","_componentQuantity","_componentItemClassName","_equippedComponentQuantity","_i"];
+private["_sessionID", "_parameters", "_concreteMixerNetID", "_recipeClassName", "_player", "_concreteMixer", "_recipeConfig", "_components", "_equippedMagazines", "_hasAllComponents", "_componentQuantity", "_componentItemClassName", "_equippedComponentQuantity", "_i"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _concreteMixerNetID = _parameters select 0;

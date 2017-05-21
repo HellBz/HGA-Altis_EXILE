@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_playerObject","_playerMoney","_positionBefore","_directionBefore"];
+private["_playerObject", "_playerMoney", "_positionBefore", "_directionBefore"];
 _playerObject = _this;
 ["Russian Roulette: %1 has won the game and %2 pop tabs!", name _playerObject, ExileServerRussianRoulettePotValue] call ExileServer_util_log;
 ["systemChatRequest", [format ["%1 has won a round of Russian Roulette!", name _playerObject]]] call ExileServer_system_network_send_broadcast;

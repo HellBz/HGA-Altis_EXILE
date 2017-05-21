@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_parameters","_vehicle","_pincode","_newPinCode","_alphabet","_forbiddenCharacter","_vehiclePinCode"];
+private["_sessionID", "_parameters", "_vehicle", "_pincode", "_newPinCode", "_alphabet", "_forbiddenCharacter", "_vehiclePinCode"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 try

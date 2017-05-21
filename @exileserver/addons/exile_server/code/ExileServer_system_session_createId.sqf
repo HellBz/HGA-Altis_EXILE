@@ -9,8 +9,8 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_alphabet","_generateNewSessionId","_sessionId","_i"];
-_alphabet = "zyxwvutsrqponmlkjihgfedcbaABCDEFGHIJKLMNOPQRSTUVWXYZ";
+private["_alphabet", "_generateNewSessionId", "_sessionId", "_i"];
+_alphabet = "zyxwvutsrqponmlkjihgfedcba";
 _generateNewSessionId = true;
 _sessionId = "";
 while {_generateNewSessionId} do
@@ -18,7 +18,7 @@ while {_generateNewSessionId} do
 	_sessionId = "";
 	for "_i" from 1 to 8 do 
 	{
-		_sessionId = _sessionId + (_alphabet select [floor (random 51), 1]);
+		_sessionId = _sessionId + (_alphabet select [floor (random 25), 1]);
 	};
 	if !(_sessionId call ExileServer_system_session_isRegisteredId) then
 	{

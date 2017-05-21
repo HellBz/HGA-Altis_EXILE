@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_requestedKickPlayerUID","_player","_clanID","_clanHash","_clanMembers","_index","_memberName","_kickPlayer"];
+private["_sessionID", "_requestedKickPlayerUID", "_player", "_clanID", "_clanHash", "_clanMembers", "_index", "_memberName", "_kickPlayer"];
 _sessionID = _this select 0;
 _requestedKickPlayerUID = (_this select 1) select 0;
 try

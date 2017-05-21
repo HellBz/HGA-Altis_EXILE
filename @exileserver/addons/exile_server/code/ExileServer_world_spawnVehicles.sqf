@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_mapsizeX","_mapsizeY","_gridSize","_gridVehicles","_gridSizeOffset","_vehicleCount","_debugMarkers","_vehicleClassNames","_maximumDamage","_damageChance","_randomizeFuel","_fuel","_randomizeAmmo","_ammo","_xSize","_workingXSize","_ySize","_workingYSize","_position","_spawned","_spawnedPositions","_positionReal","_spawnControl","_vehicleClassName","_vehicle","_hitpointsData","_hitpoints","_debugMarker"];
+private["_mapsizeX", "_mapsizeY", "_gridSize", "_gridVehicles", "_gridSizeOffset", "_vehicleCount", "_debugMarkers", "_vehicleClassNames", "_maximumDamage", "_damageChance", "_randomizeFuel", "_fuel", "_randomizeAmmo", "_ammo", "_xSize", "_workingXSize", "_ySize", "_workingYSize", "_position", "_spawned", "_spawnedPositions", "_positionReal", "_spawnControl", "_vehicleClassName", "_vehicle", "_hitpointsData", "_hitpoints", "_debugMarker"];
 _mapsizeX = worldSize; 
 _mapsizeY = worldSize; 
 _gridSize = getNumber(configFile >> "CfgSettings" >> "VehicleSpawn" >> "vehiclesGridSize");

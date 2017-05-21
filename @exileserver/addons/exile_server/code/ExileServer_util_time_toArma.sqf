@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_minutes","_year","_leftOverMinutes","_month","_day","_hour"];
+private["_minutes", "_year", "_leftOverMinutes", "_month", "_day", "_hour"];
 _minutes = _this;
 _year = floor (_minutes / 525600);
 _leftOverMinutes = _minutes - (_year * 525600);

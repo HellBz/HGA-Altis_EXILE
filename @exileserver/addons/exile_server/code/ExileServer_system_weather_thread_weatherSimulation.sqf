@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_interval","_keyframes","_keyframeName","_keyframeConfig"];
+private["_interval", "_keyframes", "_keyframeName", "_keyframeConfig"];
 _interval = round(getNumber (configFile >> "CfgSettings" >> "Weather" >> "interval") * 60);
 _keyframes = getArray (configFile >> "CfgSettings" >> "Weather" >> "keyframes");
 _keyframeName = selectRandom _keyframes;

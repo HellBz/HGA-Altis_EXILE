@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_delay","_function","_params","_persistance","_pushBackThreadID","_threadId"];
+private["_delay", "_function", "_params", "_persistance", "_pushBackThreadID", "_threadId"];
 _delay = _this select 0;
 _function = _this select 1;
 _params =  _this select 2;

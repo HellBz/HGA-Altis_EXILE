@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_victim","_hostageTakerNetID","_hostageTaker","_respect","_newScore"];
+private["_sessionID", "_victim", "_hostageTakerNetID", "_hostageTaker", "_respect", "_newScore"];
 _sessionID = _this select 0;
 try 
 {

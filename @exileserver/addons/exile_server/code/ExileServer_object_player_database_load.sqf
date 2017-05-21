@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_data","_oldPlayerObject","_playerUID","_sessionID","_position","_direction","_player","_clanID","_clanName","_clanData","_clanGroup","_devFriendlyMode","_devs","_requestingPlayer","_bambiPlayer","_headgear","_goggles","_binocular","_primaryWeapon","_handgunWeapon","_secondaryWeapon","_currentWeapon","_uniform","_vest","_backpack","_uniformContainer","_vestContainer","_backpackContainer","_assignedItems"];
+private["_data", "_oldPlayerObject", "_playerUID", "_sessionID", "_position", "_direction", "_player", "_clanID", "_clanName", "_clanData", "_clanGroup", "_devFriendlyMode", "_devs", "_headgear", "_goggles", "_binocular", "_primaryWeapon", "_handgunWeapon", "_secondaryWeapon", "_currentWeapon", "_uniform", "_vest", "_backpack", "_uniformContainer", "_vestContainer", "_backpackContainer", "_assignedItems"];
 _data = _this select 0;
 _oldPlayerObject = _this select 1;
 _playerUID = _this select 2;
@@ -75,12 +75,12 @@ if (_devFriendlyMode isEqualTo 1) then
 {
 	_devs = getArray (configFile >> "CfgSettings" >> "ServerSettings" >> "devs");
 	{
-		if ((getPlayerUID _requestingPlayer) isEqualTo (_x select 0))exitWith 
+		if (_playerUID isEqualTo (_x select 0)) exitWith 
 		{
-			if((name _requestingPlayer) isEqualTo (_x select 1))then
+			if (_name isEqualTo (_x select 1)) then
 			{
-				_bambiPlayer setVariable ["ExileMoney", 500000, true];
-				_bambiPlayer setVariable ["ExileScore", 100000];
+				_player setVariable ["ExileMoney", 500000, true];
+				_player setVariable ["ExileScore", 100000];
 			};
 		};
 	}

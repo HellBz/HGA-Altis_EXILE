@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_paramaters","_door","_pincode","_playerObject","_databaseID"];
+private["_sessionID", "_paramaters", "_door", "_pincode", "_playerObject", "_databaseID"];
 _sessionID = _this select 0;
 _paramaters = _this select 1;
 _door = _paramaters select 0;

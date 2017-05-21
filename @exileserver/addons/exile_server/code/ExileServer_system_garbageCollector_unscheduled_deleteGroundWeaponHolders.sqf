@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_lifeTime","_diedAt"];
+private["_lifeTime", "_diedAt"];
 _lifeTime = 60 * getNumber (configFile >> "CfgSettings" >> "GarbageCollector" >> "Ingame" >> "GroundWeaponHolder" >> "lifeTime");
 {
 	_diedAt = _x getVariable ["ExileDiedAt", -1];

@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_command","_password","_return"];
+private["_command", "_password", "_return"];
 _command = _this;
 _password = getText(configFile >> "CfgSettings" >> "RCON" >> "serverPassword");
 if(_password isEqualTo "")then{_password = "empty";}; 

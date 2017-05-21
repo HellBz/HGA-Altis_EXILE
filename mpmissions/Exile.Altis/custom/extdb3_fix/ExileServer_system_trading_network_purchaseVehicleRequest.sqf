@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_parameters","_vehicleClass","_pinCode","_playerObject","_salesPrice","_playerMoney","_position","_vehicleObject","_logging","_traderLog","_responseCode"];
+private["_sessionID", "_parameters", "_vehicleClass", "_pinCode", "_playerObject", "_salesPrice", "_playerMoney", "_position", "_vehicleObject", "_logging", "_traderLog", "_responseCode"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _vehicleClass = _parameters select 0;
@@ -44,16 +44,6 @@ try
 	{
 		throw 5;
 	};
-	
-	//* Patched in RESPECT check from _purchaseVechicleRequest  Prevents PIN number exploit, but returns an error.
-    _playerRespect = _playerObject getVariable ["ExileScore", 0];
-    _quality = getNumber(missionConfigFile >> "CfgExileArsenal" >> _vehicleClass >> "quality");
-    _requiredRespect = getNumber(missionConfigFile >> "CfgTrading" >> "requiredRespect" >> format["Level%1",_quality]);
-    if (_playerRespect < _requiredRespect) then
-    {
-        throw 14;
-    };
-	
 	if !((count _pinCode) isEqualTo 4) then
 	{
 		throw 11;
@@ -65,7 +55,7 @@ try
 	}
 	else 
 	{
-		_position = (getPos _playerObject) findEmptyPosition [20, 250, _vehicleClass];
+		_position = (getPos _playerObject) findEmptyPosition [10, 250, _vehicleClass];
 		if (_position isEqualTo []) then 
 		{
 			throw 13;

@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionId","_parameters","_bushNetId","_bush","_isBush","_bushModelNames","_newDamage","_weaponHolderPosition","_weaponHolder"];
+private["_sessionId", "_parameters", "_bushNetId", "_bush", "_isBush", "_bushModelNames", "_newDamage", "_weaponHolderPosition", "_weaponHolder"];
 _sessionId = _this select 0;
 _parameters = _this select 1;
 _bushNetId = _parameters select 0;

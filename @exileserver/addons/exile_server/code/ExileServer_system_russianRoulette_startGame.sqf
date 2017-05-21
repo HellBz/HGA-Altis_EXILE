@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_chair","_deadBodies"];
+private["_chair", "_deadBodies"];
 ExileServerRussianRouletteStatus = 1;
 _chair = ExileRouletteChairs select 0;
 _deadBodies = _chair nearObjects ["Exile_Unit_Player", 20];

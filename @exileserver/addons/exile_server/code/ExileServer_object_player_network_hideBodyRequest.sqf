@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionId","_parameters","_corpse","_player","_sessionID"];
+private["_sessionId", "_parameters", "_corpse", "_player", "_sessionID"];
 _sessionId = _this select 0;
 _parameters = _this select 1;
 _corpse = _parameters select 0;

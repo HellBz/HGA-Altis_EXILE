@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_key","_result","_pipe"];
+private["_key", "_result", "_pipe"];
 _key = _this;
 _result = "";
 while{true} do

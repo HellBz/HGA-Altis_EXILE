@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_useRealTime","_useStaticTime","_staticTime","_changetime"];
+private["_useRealTime", "_useStaticTime", "_staticTime", "_changetime"];
 call ExileServer_system_weather_thread_weatherSimulation;
 _useRealTime = getNumber (configFile >> "CfgSettings" >> "Time" >> "useRealTime");
 _useStaticTime = getNumber (configFile >> "CfgSettings" >> "Time" >> "useStaticTime");

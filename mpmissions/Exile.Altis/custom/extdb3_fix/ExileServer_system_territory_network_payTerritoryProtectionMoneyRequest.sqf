@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_parameters","_flagNetID","_playerObject","_flagObject","_flagStolen","_territoryDatabaseID","_radius","_level","_objectsInTerritory","_popTabAmountPerObject","_totalPopTabAmount","_playerPopTabs","_currentTimestamp","_logging","_territoryLog"];
+private["_sessionID", "_parameters", "_flagNetID", "_playerObject", "_flagObject", "_flagStolen", "_territoryDatabaseID", "_radius", "_level", "_objectsInTerritory", "_popTabAmountPerObject", "_totalPopTabAmount", "_playerPopTabs", "_currentTimestamp", "_logging", "_territoryLog"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _flagNetID = _parameters select 0;

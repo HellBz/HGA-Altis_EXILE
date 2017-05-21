@@ -281,7 +281,15 @@
 			"V_BandollierB_ghex_F",
 			"V_TacVest_gen_F",
 			"V_PlateCarrier1_rgr_noflag_F",
-			"V_PlateCarrier2_rgr_noflag_F"
+			"V_PlateCarrier2_rgr_noflag_F",
+			// Jets
+			"V_DeckCrew_yellow_F",
+			"V_DeckCrew_blue_F",
+			"V_DeckCrew_green_F",
+			"V_DeckCrew_red_F",
+			"V_DeckCrew_white_F",
+			"V_DeckCrew_brown_F",
+			"V_DeckCrew_violet_F"
 		};
 	};
 
@@ -396,6 +404,7 @@
 			"H_PilotHelmetHeli_B",
 			"H_PilotHelmetHeli_I",
 			"H_PilotHelmetHeli_O",
+
 			//Apex
 			"H_Helmet_Skate",
 			"H_HelmetB_TI_tna_F",
@@ -630,11 +639,11 @@ class Glasses
 			"Exile_Item_MetalPole",
 			"Exile_Item_SafeKit",
 			"Exile_Item_CamoTentKit",
-			"Exile_Item_CodeLock"
+			"Exile_Item_CodeLock",
+			"Exile_Item_MetalScrews"
 
 			/*
-			--Not for Sale--
-			"Exile_Item_MetalScrews",
+			--Not for Sale--							
 			"Exile_Item_MetalWire",
 			"Exile_Item_Laptop",
 			"Exile_Item_BaseCameraKit",
@@ -643,6 +652,11 @@ class Glasses
 			"Exile_Item_Sand",
 			"Exile_Item_MobilePhone",
 			--Unused--
+			"Exile_Item_SprayCan_Black",
+			"Exile_Item_SprayCan_Red",
+			"Exile_Item_SprayCan_Green",
+			"Exile_Item_SprayCan_White",
+			"Exile_Item_SprayCan_Blue",
 			"Exile_Item_CordlessScrewdriver",
 			"Exile_Item_FireExtinguisher",
 			"Exile_Item_OilCanister",
@@ -678,6 +692,65 @@ class Glasses
 			"Exile_Item_Raisins",
 			"Exile_Item_Moobar",
 			"Exile_Item_InstantCoffee"
+			
+			// Hunted Animals
+			// Note: Adding these to the trader will defeat the purpose of hunting!
+			/*
+			"Exile_Item_SheepSteak_Cooked",
+			"Exile_Item_AlsatianSteak_Cooked",
+			"Exile_Item_CatSharkFilet_Cooked",
+			"Exile_Item_FinSteak_Cooked",
+			"Exile_Item_GoatSteak_Cooked",
+			"Exile_Item_TurtleFilet_Cooked",
+			"Exile_Item_TunaFilet_Cooked",
+			"Exile_Item_RabbitSteak_Cooked",
+			"Exile_Item_ChickenFilet_Cooked",
+			"Exile_Item_RoosterFilet_Cooked",
+			"Exile_Item_MulletFilet_Cooked",
+			"Exile_Item_SalemaFilet_Cooked",
+			"Exile_Item_MackerelFilet_Cooked",
+			"Exile_Item_OrnateFilet_Cooked",
+			"Exile_Item_SnakeFilet_Cooked",
+			"Exile_Item_CatSharkFilet_Raw",
+			"Exile_Item_TunaFilet_Raw",
+			"Exile_Item_AlsatianSteak_Raw",
+			"Exile_Item_TurtleFilet_Raw",
+			"Exile_Item_SheepSteak_Raw",
+			"Exile_Item_FinSteak_Raw",
+			"Exile_Item_GoatSteak_Raw",
+			"Exile_Item_ChickenFilet_Raw",
+			"Exile_Item_RoosterFilet_Raw",
+			"Exile_Item_MackerelFilet_Raw",
+			"Exile_Item_MulletFilet_Raw",
+			"Exile_Item_OrnateFilet_Raw",
+			"Exile_Item_RabbitSteak_Raw",
+			"Exile_Item_SalemaFilet_Raw",
+			"Exile_Item_SnakeFilet_Raw"
+			*/
+		};
+	};
+	
+	class NonVeganFood
+	{
+		name = "Non-Vegan Food";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] =
+		{
+			"Exile_Item_CatSharkFilet_Raw",
+			"Exile_Item_TunaFilet_Raw",
+			"Exile_Item_AlsatianSteak_Raw",
+			"Exile_Item_TurtleFilet_Raw",
+			"Exile_Item_SheepSteak_Raw",
+			"Exile_Item_FinSteak_Raw",
+			"Exile_Item_GoatSteak_Raw",
+			"Exile_Item_ChickenFilet_Raw",
+			"Exile_Item_RoosterFilet_Raw",
+			"Exile_Item_MackerelFilet_Raw",
+			"Exile_Item_MulletFilet_Raw",
+			"Exile_Item_OrnateFilet_Raw",
+			"Exile_Item_RabbitSteak_Raw",
+			"Exile_Item_SalemaFilet_Raw",
+			"Exile_Item_SnakeFilet_Raw"
 		};
 	};
 
@@ -723,6 +796,10 @@ class Glasses
 			"Exile_Item_SleepingMat",
 			"Exile_Item_ToiletPaper",
 			"Exile_Item_ZipTie",
+			"Exile_Item_BurlapSack",
+			"Exile_Item_Bullets_556",
+			"Exile_Item_Bullets_762",
+			"Exile_Item_WeaponParts",
 			*/
 
 			"Binocular",
@@ -732,21 +809,12 @@ class Glasses
 			"Laserdesignator_02",
 			"Laserdesignator_03",
 			*/
-			"NVGoggles",
-			"NVGoggles_INDEP",
-			"NVGoggles_OPFOR",
 			"ItemGPS",
 			"ItemMap",
 			"ItemCompass",
 			"ItemRadio",
 			"ItemWatch",
-			"Exile_Item_XM8",
-
-			//Apex
-			"O_NVGoggles_hex_F",
-			"O_NVGoggles_urb_F",
-			"O_NVGoggles_ghex_F",
-			"NVGoggles_tna_F"
+			"Exile_Item_XM8"
 		};
 	};
 
@@ -780,7 +848,14 @@ class Glasses
 			"G_Diving",
 			"G_B_Diving",
 			"G_O_Diving",
-			"G_I_Diving"
+			"G_I_Diving",
+			"NVGoggles",
+			"NVGoggles_INDEP",
+			"NVGoggles_OPFOR",
+			"O_NVGoggles_hex_F",
+			"O_NVGoggles_urb_F",
+			"O_NVGoggles_ghex_F",
+			"NVGoggles_tna_F"
 		};
 	};
 
@@ -941,13 +1016,17 @@ class Glasses
 			"200Rnd_556x45_Box_Tracer_Red_F",
 			"10Rnd_9x21_Mag",
 			"Exile_Magazine_5Rnd_127x108_Bullet_Cam_Mag",
+			"Exile_Magazine_5Rnd_127x108_APDS_Bullet_Cam_Mag",
 			"Exile_Magazine_10Rnd_93x64_DMR_05_Bullet_Cam_Mag",
 			"Exile_Magazine_7Rnd_408_Bullet_Cam_Mag",
 			"Exile_Magazine_10Rnd_338_Bullet_Cam_Mag",
+			"Exile_Magazine_10Rnd_127x99_m107_Bullet_Cam_Mag",
+			"Exile_Magazine_5Rnd_127x108_KSVK_Bullet_Cam_Mag",
+			"Exile_Magazine_5Rnd_127x108_APDS_KSVK_Bullet_Cam_Mag",
 			"Exile_Magazine_10Rnd_765x17_SA61",
 			"Exile_Magazine_20Rnd_765x17_SA61",
 			"Exile_Magazine_10Rnd_127x99_m107",
-			"Exile_Magazine_5Rnd_127x108_ASPD_KSVK",
+			"Exile_Magazine_5Rnd_127x108_APDS_KSVK",
 			"Exile_Magazine_5Rnd_127x108_KSVK"
 		};
 	};
@@ -1384,4 +1463,3 @@ class Glasses
 			"U_B_Wetsuit"
 		};
 	};
-

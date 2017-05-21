@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_threadID","_result","_threadIndex"];
+private["_threadID", "_result", "_threadIndex"];
 _threadID = _this select 0;
 _result = false;
 _threadIndex = [ExileSystemSpawnThread, _threadID] call ExileClient_util_find;

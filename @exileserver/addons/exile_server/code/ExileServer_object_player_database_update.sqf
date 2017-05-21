@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_player","_playerID","_playerPos","_data","_extDB2Message"];
+private["_player", "_playerID", "_playerPos", "_data", "_extDB2Message"];
 _player = _this;
 _playerID = _player getVariable["ExileDatabaseID", -1];
 _playerPos = getPosATL _player;

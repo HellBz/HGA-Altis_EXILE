@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_recipient","_messageName","_messageParameters","_owner","_publicMessage"];
+private["_recipient", "_messageName", "_messageParameters", "_owner", "_publicMessage"];
 _recipient = _this select 0;
 _messageName = _this select 1;
 _messageParameters = _this select 2;

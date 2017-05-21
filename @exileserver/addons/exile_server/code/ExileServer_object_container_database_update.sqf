@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_containerObject","_containerID","_position","_vectorDirection","_vectorUp","_territoryFlag","_territoryID","_data","_extDB2Message"];
+private["_containerObject", "_containerID", "_position", "_vectorDirection", "_vectorUp", "_territoryFlag", "_territoryID", "_data", "_extDB2Message"];
 _containerObject= _this;
 _containerID = _containerObject getVariable ["ExileDatabaseID", -1];
 if (_containerID > -1) then

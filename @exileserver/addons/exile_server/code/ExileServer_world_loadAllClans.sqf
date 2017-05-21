@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_continueLoading","_page","_pageSize","_clanIDs","_numberOfClans","_i"];
+private["_continueLoading", "_page", "_pageSize", "_clanIDs", "_numberOfClans", "_i"];
 "Loading families from database..." call ExileServer_util_log;
 _continueLoading = true;
 _page = 0;

@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionId","_parameters","_treeNetId","_tree","_isTree","_player","_treeHeight","_newDamage","_treePosition","_spawnRadius","_weaponHolders","_weaponHolder","_weaponHolderPosition"];
+private["_sessionId", "_parameters", "_treeNetId", "_tree", "_isTree", "_player", "_treeHeight", "_newDamage", "_treePosition", "_spawnRadius", "_weaponHolders", "_weaponHolder", "_weaponHolderPosition"];
 _sessionId = _this select 0;
 _parameters = _this select 1;
 _treeNetId = _parameters select 0;

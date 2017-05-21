@@ -64,19 +64,22 @@
 2, hgun_ACPC2_F				// ACP-C2 .45
 2, hgun_P07_F				// P07 9 mm
 2, hgun_Rook40_F			// Rook-40 9 mm
+2, Exile_Weapon_SA61		// SA61
 
 > PistolAmmo
-1, 6Rnd_GreenSignal_F			// Starter Pistol
-1, 6Rnd_RedSignal_F				// Starter Pistol 
-1, 16Rnd_9x21_Mag				// PDW2000, P07, ROOK-40
-2, 6Rnd_45ACP_Cylinder			// Zubr
-4, 10Rnd_9x21_Mag				// PM 9 mm
-4, 11Rnd_45ACP_Mag				// 4-five
-4, 30Rnd_9x21_Mag				// Sting, PDW2000, P07, ROOK-40
-4, 9Rnd_45ACP_Mag				// ACP-C2
-4, Exile_Magazine_6Rnd_45ACP	// Taurus
-4, Exile_Magazine_7Rnd_45ACP	// Colt 1911
-4, Exile_Magazine_8Rnd_9x18		// Makarov
+1, 6Rnd_GreenSignal_F					// Starter Pistol
+1, 6Rnd_RedSignal_F						// Starter Pistol 
+1, 16Rnd_9x21_Mag						// PDW2000, P07, ROOK-40
+2, 6Rnd_45ACP_Cylinder					// Zubr
+4, 10Rnd_9x21_Mag						// PM 9 mm
+4, 11Rnd_45ACP_Mag						// 4-five
+4, 30Rnd_9x21_Mag						// Sting, PDW2000, P07, ROOK-40
+4, 9Rnd_45ACP_Mag						// ACP-C2
+4, Exile_Magazine_6Rnd_45ACP			// Taurus
+4, Exile_Magazine_7Rnd_45ACP			// Colt 1911
+4, Exile_Magazine_8Rnd_9x18				// Makarov
+4, Exile_Magazine_10Rnd_765x17_SA61		// SA61
+4, Exile_Magazine_20Rnd_765x17_SA61		// SA61
 
 > PistolAttachments
 1, optic_MRD
@@ -172,6 +175,9 @@
 3, Exile_Weapon_CZ550
 3, arifle_MX_khk_F   			// MX 6.5 mm (Khaki)
 3, arifle_MXC_khk_F  			// MXC 6.5 mm (Khaki)
+3, Exile_Weapon_M4				// M4
+3, Exile_Weapon_M16A4			// M16A4
+3, Exile_Weapon_M16A2			// M16A2
 10, Exile_Weapon_LeeEnfield
 
 > RifleAmmo
@@ -292,18 +298,27 @@
 1, srifle_DMR_07_blk_F     	// CMR-76 6.5 mm (Black)
 1, srifle_DMR_07_hex_F     	// CMR-76 6.5 mm (Hex)
 1, srifle_DMR_07_ghex_F    	// CMR-76 6.5 mm (Green Hex)
+1, Exile_Weapon_m107		// M107
+1, Exile_Weapon_ksvk		// KSVK
 
 > SniperAmmo
-2, Exile_Magazine_5Rnd_127x108_Bullet_Cam_Mag 			// GM6 Lynx 12.7 mm
-3, Exile_Magazine_7Rnd_408_Bullet_Cam_Mag 				// M320 LRR .408	
-5, Exile_Magazine_10Rnd_338_Bullet_Cam_Mag 				// MAR-10 .338	
-5, Exile_Magazine_10Rnd_93x64_DMR_05_Bullet_Cam_Mag 	// Cyrus 9.3mm	
-8, 5Rnd_127x108_APDS_Mag								// GM6 Lynx 
-10, 5Rnd_127x108_Mag									// GM6 Lynx
-10, 7Rnd_408_Mag										// M320 LRR
-17, 10Rnd_762x54_Mag									// Rahim
-19, 20Rnd_762x51_Mag									// Mk18 ABR
-21, 20Rnd_650x39_Cased_Mag_F							// CMR-76
+1, Exile_Magazine_5Rnd_127x108_APDS_Bullet_Cam_Mag 			// GM6 Lynx 12.7mm
+1, Exile_Magazine_5Rnd_127x108_APDS_KSVK_Bullet_Cam_Mag		// KSVK
+2, Exile_Magazine_5Rnd_127x108_KSVK_Bullet_Cam_Mag			// KSVK
+2, Exile_Magazine_5Rnd_127x108_Bullet_Cam_Mag 				// GM6 Lynx 12.7 mm
+3, Exile_Magazine_10Rnd_127x99_m107_Bullet_Cam_Mag			// M107
+3, Exile_Magazine_7Rnd_408_Bullet_Cam_Mag 					// M320 LRR .408	
+5, Exile_Magazine_10Rnd_338_Bullet_Cam_Mag 					// MAR-10 .338	
+5, Exile_Magazine_10Rnd_93x64_DMR_05_Bullet_Cam_Mag 		// Cyrus 9.3mm	
+8, Exile_Magazine_5Rnd_127x108_APDS_KSVK					// KSVK
+8, 5Rnd_127x108_APDS_Mag									// GM6 Lynx 
+10, 5Rnd_127x108_Mag										// GM6 Lynx
+10, Exile_Magazine_10Rnd_127x99_m107						// M107
+10, Exile_Magazine_5Rnd_127x108_KSVK 						// KSVK
+10, 7Rnd_408_Mag											// M320 LRR
+17, 10Rnd_762x54_Mag										// Rahim
+19, 20Rnd_762x51_Mag										// Mk18 ABR
+21, 20Rnd_650x39_Cased_Mag_F								// CMR-76
 
 > SniperAttachments
 1, muzzle_snds_B_khk_F

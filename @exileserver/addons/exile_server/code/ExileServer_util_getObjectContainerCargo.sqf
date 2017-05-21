@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_vehicle","_data","_allContainers","_containerType","_containerObject","_temp"];
+private["_vehicle", "_data", "_allContainers", "_containerType", "_containerObject", "_temp"];
 _vehicle = _this;
 _data = [];
 _allContainers = everyContainer _vehicle;

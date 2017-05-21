@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_payload","_sessionId","_messageName","_messageParameters","_playerBySessionId","_sessionID","_ExileSessionID","_config","_allowedParameters","_moduleName","_functionName","_functionCode"];
+private["_payload", "_sessionId", "_messageName", "_messageParameters", "_playerBySessionId", "_sessionID", "_ExileSessionID", "_config", "_allowedParameters", "_moduleName", "_functionName", "_functionCode"];
 _payload = _this;
 try 
 {

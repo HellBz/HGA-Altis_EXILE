@@ -11,13 +11,12 @@
  
 private["_log"];
 _log = format["ExileServer - %1", _this];
-if(isNil "MAR_fnc_log")then
+if (isNil "MAR_fnc_log") then
 {
 	diag_log _log;
 }
 else
 {
-	[_log,"info"] call MAR_fnc_log;
-		diag_log _log;
+	[_log, "info"] call MAR_fnc_log;
 };
 true

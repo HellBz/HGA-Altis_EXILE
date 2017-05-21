@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_containerObject","_containerID"];
+private["_containerObject", "_containerID"];
 _containerObject = _this;
 _containerID = _containerObject getVariable ["ExileDatabaseID", -1];
 if !(_containerID isEqualTo -1) then

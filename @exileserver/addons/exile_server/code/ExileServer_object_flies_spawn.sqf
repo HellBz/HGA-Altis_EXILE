@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_deadEntity","_fliesSound","_fliesParticles"];
+private["_deadEntity", "_fliesSound", "_fliesParticles"];
 _deadEntity = _this;
 _fliesSound = createSoundSource ["Exile_Sound_Flies", getPos _deadEntity, [], 0];
 _fliesSound attachTo [_deadEntity, [0, 0, 0]];

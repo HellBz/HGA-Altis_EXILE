@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_paramaters","_fromVehicleNetID","_toVehicleClassName","_objectProperties","_position","_vectorDirection","_vectorUp","_velocity","_fromVehicle","_flagTexture","_territoryName","_isContainer","_alphabet","_forbiddenCharacter","_toVehicle","_playerObject","_flag"];
+private["_sessionID", "_paramaters", "_fromVehicleNetID", "_toVehicleClassName", "_objectProperties", "_position", "_vectorDirection", "_vectorUp", "_velocity", "_fromVehicle", "_flagTexture", "_territoryName", "_isContainer", "_alphabet", "_forbiddenCharacter", "_toVehicle", "_playerObject", "_flag"];
 _sessionID = _this select 0;
 _paramaters = _this select 1;
 _fromVehicleNetID = _paramaters select 0;

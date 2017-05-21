@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_methodName","_recipients","_text","_allowedMethods","_escapedText","_message","_result"];
+private["_methodName", "_recipients", "_text", "_allowedMethods", "_escapedText", "_message", "_result"];
 _methodName = _this select 0;
 _recipients = _this select 1;
 _text = _this select 2;

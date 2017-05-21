@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_numberOfVehiclesToSpawn","_numberOfChunks","_chunksOnXAxis","_chunksOnYAxis","_chunkSizeX","_chunkSizeY","_chunkPositions","_y"];
+private["_numberOfVehiclesToSpawn", "_numberOfChunks", "_chunksOnXAxis", "_chunksOnYAxis", "_chunkSizeX", "_chunkSizeY", "_chunkPositions", "_y"];
 _numberOfVehiclesToSpawn = _this;
 _numberOfChunks = _numberOfVehiclesToSpawn ;
 _chunksOnXAxis = floor (sqrt _numberOfChunks);

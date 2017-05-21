@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_parameters","_itemClassName","_quantity","_containerType","_containerNetID","_playerObject","_vehicleObject","_salesPrice","_playerMoney","_playerRespect","_quality","_requiredRespect","_logging","_traderLog","_responseCode"];
+private["_sessionID", "_parameters", "_itemClassName", "_quantity", "_containerType", "_containerNetID", "_playerObject", "_vehicleObject", "_salesPrice", "_playerMoney", "_playerRespect", "_quality", "_requiredRespect", "_logging", "_traderLog", "_responseCode"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _itemClassName = _parameters select 0;

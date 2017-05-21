@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_buyInAmount"];
+private["_sessionID", "_buyInAmount"];
 _sessionID = _this select 0;
 _buyInAmount = getNumber (missionConfigFile >> "CfgExileRussianRoulette" >> "buyInAmount");
 if (serverTime > 1000000) then 

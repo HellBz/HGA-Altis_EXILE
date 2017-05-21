@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_paramaters","_objectClassName","_objectPosition","_flag","_territoryName","_alphabet","_forbiddenCharacter","_playerObject","_minimumDistanceToTraderZones","_minimumDistanceToSpawnZones","_maximumTerritoryRadius","_object"];
+private["_sessionID", "_paramaters", "_objectClassName", "_objectPosition", "_flag", "_territoryName", "_alphabet", "_forbiddenCharacter", "_playerObject", "_minimumDistanceToTraderZones", "_minimumDistanceToSpawnZones", "_maximumTerritoryRadius", "_object"];
 _sessionID = _this select 0;
 _paramaters = _this select 1;
 _objectClassName = _paramaters select 0;

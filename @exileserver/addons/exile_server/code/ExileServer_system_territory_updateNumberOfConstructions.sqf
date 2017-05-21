@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_flag","_territoryRange","_numberOfConstructions"];
+private["_flag", "_territoryRange", "_numberOfConstructions"];
 _flag = _this;
 _territoryRange = _flag getVariable ["ExileTerritorySize", 0];
 _numberOfConstructions = count (_flag nearObjects ["Exile_Construction_Abstract_Static", _territoryRange]);

@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_door","_databaseID","_lock"];
+private["_door", "_databaseID", "_lock"];
 _door = _this;
 _databaseID = _door getVariable ["ExileDatabaseID",0];
 _lock = _door getVariable ["ExileIsLocked",1];

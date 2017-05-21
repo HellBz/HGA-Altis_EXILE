@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_paramaters","_flagNetID","_moderatedPlayerUID","_mode","_flag","_territoryName","_requestingPlayer","_moderatedPlayer","_moderatedPlayerAccess","_requestingPlayerAccess","_newUserLevel"];
+private["_sessionID", "_paramaters", "_flagNetID", "_moderatedPlayerUID", "_mode", "_flag", "_territoryName", "_requestingPlayer", "_moderatedPlayer", "_moderatedPlayerAccess", "_requestingPlayerAccess", "_newUserLevel"];
 _sessionID = _this select 0;
 _paramaters = _this select 1;
 _flagNetID = _paramaters select 0;

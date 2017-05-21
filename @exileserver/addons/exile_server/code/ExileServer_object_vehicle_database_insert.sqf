@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_vehicleObject","_position","_vectorDirection","_vectorUp","_data","_extDB2Message","_vehicleID"];
+private["_vehicleObject", "_position", "_vectorDirection", "_vectorUp", "_data", "_extDB2Message", "_vehicleID"];
 _vehicleObject = _this;
 _position = getPosATL _vehicleObject;
 _vectorDirection = vectorDir _vehicleObject;

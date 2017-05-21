@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_constructionID","_data","_position","_vectorDirection","_vectorUp","_constructionObject","_damageLevel","_public","_pinCode"];
+private["_constructionID", "_data", "_position", "_vectorDirection", "_vectorUp", "_constructionObject", "_damageLevel", "_public", "_pinCode"];
 _constructionID = _this;
 _data = format ["loadConstruction:%1", _constructionID] call ExileServer_system_database_query_selectSingle;
 _position = [_data select 4, _data select 5, _data select 6];

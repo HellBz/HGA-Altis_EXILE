@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_paramaters","_object","_pincode","_state","_objectPinCode","_type","_accessDenied","_accessDenialExpiresAt","_numberOfFails"];
+private["_sessionID", "_paramaters", "_object", "_pincode", "_state", "_objectPinCode", "_type", "_accessDenied", "_accessDenialExpiresAt", "_numberOfFails"];
 _sessionID = _this select 0;
 _paramaters = _this select 1;
 _object = objectFromNetId (_paramaters select 0);

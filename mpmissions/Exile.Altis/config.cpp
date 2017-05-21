@@ -790,6 +790,22 @@ class CraftWoodDoorWay: Exile_AbstractCraftingRecipe
 		{6, "Exile_Item_WoodPlank"}
 	};
 };
+class CraftWoodDrawBridge: Exile_AbstractCraftingRecipe
+{
+	name = "Craft Wood Draw Bridge";
+	pictureItem = "Exile_Item_WoodDrawBridgeKit";
+	requiredInteractionModelGroup = "WorkBench";
+	returnedItems[] =
+	{
+		{1, "Exile_Item_WoodDrawBridgeKit"}
+	};
+	components[] =
+	{
+		{8, "Exile_Item_WoodPlank"},
+		{1, "Exile_Item_JunkMetal"},
+		{1, "Exile_Item_MetalScrews"}
+	};
+}; 
 class CraftWoodFloor: Exile_AbstractCraftingRecipe
 {
 	name = "Craft Wood Floor";
@@ -818,6 +834,20 @@ class CraftWoodFloorPort: Exile_AbstractCraftingRecipe
 		{6, "Exile_Item_WoodPlank"}
 	};
 };
+class CraftWoodFloorPortSmall: Exile_AbstractCraftingRecipe
+{
+	name = "Craft Wood Floor Port (Small)";
+	pictureItem = "Exile_Item_WoodFloorPortSmallKit";
+	requiredInteractionModelGroup = "WorkBench";
+	returnedItems[] =
+	{
+		{1, "Exile_Item_WoodFloorPortSmallKit"}
+	};
+	components[] =
+	{
+		{6, "Exile_Item_WoodPlank"}
+	};
+};
 class CraftWoodGate: Exile_AbstractCraftingRecipe
 {
 	name = "Craft Wood Gate";
@@ -832,6 +862,20 @@ class CraftWoodGate: Exile_AbstractCraftingRecipe
 		{8, "Exile_Item_WoodPlank"}
 	};
 };
+class CraftWoodLadder: Exile_AbstractCraftingRecipe
+{
+	name = "Craft Wood Ladder";
+	pictureItem = "Exile_Item_WoodLadderKit";
+	requiredInteractionModelGroup = "WorkBench";
+	returnedItems[] =
+	{
+		{1, "Exile_Item_WoodLadderKit"}
+	};
+	components[] =
+	{
+		{6, "Exile_Item_WoodPlank"}
+	};
+}; 
 class CraftWoodPlank: Exile_AbstractCraftingRecipe
 {
 	name = "Craft Wood Plank";
@@ -930,6 +974,319 @@ class CraftWorkBench: Exile_AbstractCraftingRecipe
 		{4, "Exile_Item_WoodLog"}
 	};
 };
+class CookAlsatianSteak: Exile_AbstractCraftingRecipe
+{
+	name = "Cook Alsatian Steak";
+	pictureItem = "Exile_Item_AlsatianSteak_Cooked";
+	requiresFire = 1;
+	returnedItems[] =
+	{
+		{1, "Exile_Item_AlsatianSteak_Cooked"}
+	};
+	tools[] =
+	{
+		"Exile_Item_CookingPot"
+	};
+	components[] = 
+	{
+		{1, "Exile_Item_AlsatianSteak_Raw"}
+	};
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+class CookCatSharkFilet: Exile_AbstractCraftingRecipe
+{
+	name = "Cook Cat Shark Filet";
+	pictureItem = "Exile_Item_CatSharkFilet_Cooked";
+	requiresFire = 1;
+	returnedItems[] =
+	{
+		{1, "Exile_Item_CatSharkFilet_Cooked"}
+	};
+	tools[] =
+	{
+		"Exile_Item_CookingPot"
+	};
+	components[] = 
+	{
+		{1, "Exile_Item_CatSharkFilet_Raw"}
+	};
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+class CookChickenFilet: Exile_AbstractCraftingRecipe
+{
+	name = "Cook Chicken Filet";
+	pictureItem = "Exile_Item_ChickenFilet_Cooked";
+	requiresFire = 1;
+	returnedItems[] =
+	{
+		{1, "Exile_Item_ChickenFilet_Cooked"}
+	};
+	tools[] =
+	{
+		"Exile_Item_CookingPot"
+	};
+	components[] = 
+	{
+		{1, "Exile_Item_ChickenFilet_Raw"}
+	};
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+class CookFinSteak: Exile_AbstractCraftingRecipe
+{
+	name = "Cook Fin Steak";
+	pictureItem = "Exile_Item_FinSteak_Cooked";
+	requiresFire = 1;
+	returnedItems[] =
+	{
+		{1, "Exile_Item_FinSteak_Cooked"}
+	};
+	tools[] =
+	{
+		"Exile_Item_CookingPot"
+	};
+	components[] = 
+	{
+		{1, "Exile_Item_FinSteak_Raw"}
+	};
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+class CookGoatSteak: Exile_AbstractCraftingRecipe
+{
+	name = "Cook Goat Steak";
+	pictureItem = "Exile_Item_GoatSteak_Cooked";
+	requiresFire = 1;
+	returnedItems[] =
+	{
+		{1, "Exile_Item_GoatSteak_Cooked"}
+	};
+	tools[] =
+	{
+		"Exile_Item_CookingPot"
+	};
+	components[] = 
+	{
+		{1, "Exile_Item_GoatSteak_Raw"}
+	};
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+class CookMackerelFilet: Exile_AbstractCraftingRecipe
+{
+	name = "Cook Mackerel Filet";
+	pictureItem = "Exile_Item_MackerelFilet_Cooked";
+	requiresFire = 1;
+	returnedItems[] =
+	{
+		{1, "Exile_Item_MackerelFilet_Cooked"}
+	};
+	tools[] =
+	{
+		"Exile_Item_CookingPot"
+	};
+	components[] = 
+	{
+		{1, "Exile_Item_MackerelFilet_Raw"}
+	};
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+class CookMulletFilet: Exile_AbstractCraftingRecipe
+{
+	name = "Cook Mullet Filet";
+	pictureItem = "Exile_Item_MulletFilet_Cooked";
+	requiresFire = 1;
+	returnedItems[] =
+	{
+		{1, "Exile_Item_MulletFilet_Cooked"}
+	};
+	tools[] =
+	{
+		"Exile_Item_CookingPot"
+	};
+	components[] = 
+	{
+		{1, "Exile_Item_MulletFilet_Raw"}
+	};
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+class CookOrnateFilet: Exile_AbstractCraftingRecipe
+{
+	name = "Cook Ornate Filet";
+	pictureItem = "Exile_Item_OrnateFilet_Cooked";
+	requiresFire = 1;
+	returnedItems[] =
+	{
+		{1, "Exile_Item_OrnateFilet_Cooked"}
+	};
+	tools[] =
+	{
+		"Exile_Item_CookingPot"
+	};
+	components[] = 
+	{
+		{1, "Exile_Item_OrnateFilet_Raw"}
+	};
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+class CookRabbitSteak: Exile_AbstractCraftingRecipe
+{
+	name = "Cook Rabbit Steak";
+	pictureItem = "Exile_Item_RabbitSteak_Cooked";
+	requiresFire = 1;
+	returnedItems[] =
+	{
+		{1, "Exile_Item_RabbitSteak_Cooked"}
+	};
+	tools[] =
+	{
+		"Exile_Item_CookingPot"
+	};
+	components[] = 
+	{
+		{1, "Exile_Item_RabbitSteak_Raw"}
+	};
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+class CookRoosterFilet: Exile_AbstractCraftingRecipe
+{
+	name = "Cook Rooster Filet";
+	pictureItem = "Exile_Item_RoosterFilet_Cooked";
+	requiresFire = 1;
+	returnedItems[] =
+	{
+		{1, "Exile_Item_RoosterFilet_Cooked"}
+	};
+	tools[] =
+	{
+		"Exile_Item_CookingPot"
+	};
+	components[] = 
+	{
+		{1, "Exile_Item_RoosterFilet_Raw"}
+	};
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+class CookSalemaFilet: Exile_AbstractCraftingRecipe
+{
+	name = "Cook Salema Filet";
+	pictureItem = "Exile_Item_SalemaFilet_Cooked";
+	requiresFire = 1;
+	returnedItems[] =
+	{
+		{1, "Exile_Item_SalemaFilet_Cooked"}
+	};
+	tools[] =
+	{
+		"Exile_Item_CookingPot"
+	};
+	components[] = 
+	{
+		{1, "Exile_Item_SalemaFilet_Raw"}
+	};
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+class CookSheepSteak: Exile_AbstractCraftingRecipe
+{
+	name = "Cook Sheep Steak";
+	pictureItem = "Exile_Item_SheepSteak_Cooked";
+	requiresFire = 1;
+	returnedItems[] =
+	{
+		{1, "Exile_Item_SheepSteak_Cooked"}
+	};
+	tools[] =
+	{
+		"Exile_Item_CookingPot"
+	};
+	components[] = 
+	{
+		{1, "Exile_Item_SheepSteak_Raw"}
+	};
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+class CookSnakeFilet: Exile_AbstractCraftingRecipe
+{
+	name = "Cook Snake Filet";
+	pictureItem = "Exile_Item_SnakeFilet_Cooked";
+	requiresFire = 1;
+	returnedItems[] =
+	{
+		{1, "Exile_Item_SnakeFilet_Cooked"}
+	};
+	tools[] =
+	{
+		"Exile_Item_CookingPot"
+	};
+	components[] = 
+	{
+		{1, "Exile_Item_SnakeFilet_Raw"}
+	};
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+class CookTunaFilet: Exile_AbstractCraftingRecipe
+{
+	name = "Cook Tuna Filet";
+	pictureItem = "Exile_Item_TunaFilet_Cooked";
+	requiresFire = 1;
+	returnedItems[] =
+	{
+		{1, "Exile_Item_TunaFilet_Cooked"}
+	};
+	tools[] =
+	{
+		"Exile_Item_CookingPot"
+	};
+	components[] = 
+	{
+		{1, "Exile_Item_TunaFilet_Raw"}
+	};
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+class CookTurtleFilet: Exile_AbstractCraftingRecipe
+{
+	name = "Cook Turtle Filet";
+	pictureItem = "Exile_Item_TurtleFilet_Cooked";
+	requiresFire = 1;
+	returnedItems[] =
+	{
+		{1, "Exile_Item_TurtleFilet_Cooked"}
+	};
+	tools[] =
+	{
+		"Exile_Item_CookingPot"
+	};
+	components[] = 
+	{
+		{1, "Exile_Item_TurtleFilet_Raw"}
+	};
+};
+
 class EmptyFuelCanister: Exile_AbstractCraftingRecipe
 {
 	name = "Empty Fuel Canister";
@@ -1118,6 +1475,23 @@ class UpgradeToWoodDoor: Exile_AbstractCraftingRecipe
 		{2, "Exile_Item_WoodPlank"}
 	};
 };
+class UpgradeToWoodDrawBridge: Exile_AbstractCraftingRecipe
+{
+	name = "Upgrade to Wood Draw Bridge";
+	pictureItem = "Exile_Item_WoodDrawBridgeKit";
+	requiredInteractionModelGroup = "WorkBench";
+	returnedItems[] =
+	{
+		{1, "Exile_Item_WoodDrawBridgeKit"}
+	};
+	components[] =
+	{
+		{1, "Exile_Item_WoodGateKit"},
+		{2, "Exile_Item_WoodPlank"},
+		{1, "Exile_Item_JunkMetal"},
+		{1, "Exile_Item_MetalScrews"}
+	};
+};
 class UpgradeToWoodFloorPort: Exile_AbstractCraftingRecipe
 {
 	name = "Upgrade to Wood Floor Port";
@@ -1178,7 +1552,79 @@ class UpgradeToWoodWindow: Exile_AbstractCraftingRecipe
 	};
 };
 };
+class CfgExileAnimals
+{
+	/**
+	 * Should animals spawn on your server? Y/N?
+	 */
+	enabled = 1;
 
+	/**
+	 * Should vanilla Arma animals (fish, rabbits, bees, etc.) be disabled?
+	 * We think it should, since it might confuse players if they cant eat them. *munches on bees*
+	 */
+	disableVanillaAnimals = 1;
+
+	/**
+	 * Which animals to spawn. 
+	 * Exile automatically spawns a color variation of that animal, if variations exist.
+	 * Each player (client) has a maximum of one animal at a time.
+	 * Exile checks which animal type can spawn in front of the player and then
+	 * picks a random one. 
+	 *
+	 * For now it is like this:
+	 * 
+	 * - Goats spawn on hill tops, but not in forests
+	 * - Sheep spawn on meadows, but not next to forests and not on hill tops
+	 * - Hens and roosters spawn next to buildings only
+	 *
+	 * => More animal types will follow in upcoming Exile versions, hopefully.
+	 */
+	animalTypes[] = 
+	{
+		"Exile_Animal_Rooster_Abstract",
+		"Exile_Animal_Hen_Abstract",
+		"Exile_Animal_Goat_Abstract",
+		"Exile_Animal_Sheep_Abstract"
+	};
+
+	/**
+	 * Animals are always spawned in front of the player, but
+	 * at least a certain distance away. The radius is applied on top.
+	 *
+	 * Example:
+	 * Distance = 150
+	 * Radius = 50
+	 *
+	 * => Minimum Distance from Player = 150 
+	 * => Maximum Distance from Player = 150 + 50 * 2
+	 */
+	spawnDistance = 150;
+	spawnRadius = 50;
+
+	/**
+	 * Specifies the minimum time in seconds between spawning animals.
+	 * When the animal diededed, this time has to pass before it spawns
+	 * a new one.
+	 *
+	 * It is a min/max setting, so the intervals will be uneven and a bit random.
+	 * By default it will take 5 to 10 minutes to respawn a new animal.
+	 */
+	minimumSpawnDelay = 5 * 60;
+	maximumSpawnDelay = 10 * 60;
+
+	/**
+	 * Clients will despawn animals if no player is in this radius around the animal
+	 * This check is ran every 1 minute, so it is pretty unprecise, but performance-friendly. 
+	 */
+	keepAliveRadius = 500;
+
+	/**
+	 * Defines the minimum lifetime of an animal in seconds. During this time, right after spawning,
+	 * it will not despawn. (+-0..1 minute delay)
+	 */
+	minimumLifetime = 5 * 60;
+}; 
 class CfgExileArsenal
 {
 	#include "custom\traders\CfgExileArsenal.hpp"
@@ -1202,10 +1648,6 @@ class CfgExileCustomCode
 		ExileClient_util_fusRoDah = "myaddon\myfunction.sqf";
 	*/
 	
-	ExileServer_object_construction_database_insert 							= "custom\extdb3_fix\ExileServer_object_construction_database_insert.sqf";
-	ExileServer_object_construction_database_load 								= "custom\extdb3_fix\ExileServer_object_construction_database_load.sqf";
-	ExileServer_object_container_database_insert 								= "custom\extdb3_fix\ExileServer_object_container_database_insert.sqf";
-	ExileServer_object_container_database_update								= "custom\extdb3_fix\ExileServer_object_container_database_update.sqf";
 	ExileServer_object_player_database_insert 									= "custom\extdb3_fix\ExileServer_object_player_database_insert.sqf";
 	ExileServer_object_player_event_onMpKilled 									= "custom\extdb3_fix\ExileServer_object_player_event_onMpKilled.sqf";
 	ExileServer_system_database_connect 										= "custom\extdb3_fix\ExileServer_system_database_connect.sqf";
@@ -1215,7 +1657,6 @@ class CfgExileCustomCode
 	ExileServer_system_database_query_selectFull 								= "custom\extdb3_fix\ExileServer_system_database_query_selectFull.sqf";
 	ExileServer_system_database_query_selectSingle 								= "custom\extdb3_fix\ExileServer_system_database_query_selectSingle.sqf";
 	ExileServer_system_database_query_selectSingleField 						= "custom\extdb3_fix\ExileServer_system_database_query_selectSingleField.sqf";
-	ExileServer_system_territory_database_insert 								= "custom\extdb3_fix\ExileServer_system_territory_database_insert.sqf";
 	ExileServer_system_territory_maintenance_recalculateDueDate 				= "custom\extdb3_fix\ExileServer_system_territory_maintenance_recalculateDueDate.sqf";
 	ExileServer_system_territory_network_flagStolenRequest 						= "custom\extdb3_fix\ExileServer_system_territory_network_flagStolenRequest.sqf";
 	ExileServer_system_territory_network_payFlagRansomRequest 					= "custom\extdb3_fix\ExileServer_system_territory_network_payFlagRansomRequest.sqf";
@@ -1256,11 +1697,7 @@ class CfgExileCustomCode
 	ExileClient_gui_xm8_show 													= "custom\plugin\ExAdClient\XM8\CustomCode\ExileClient_gui_xm8_show.sqf";
 	//Lottery
 	ExileClient_gui_xm8_slide_apps_onOpen										= "custom\overrides\ExileClient_gui_xm8_slide_apps_onOpen.sqf";
-	//1.0.3 Lootsystem
-	ExileServer_system_process_postInit											= "custom\overrides\ExileServer_system_process_postInit.sqf";
-	ExileServer_system_lootManager_initialize									= "custom\overrides\ExileServer_system_lootManager_initialize.sqf";
-	ExileServer_system_lootManager_dropItem										= "custom\overrides\ExileServer_system_lootManager_dropItem.sqf";
-
+	
 };
 class CfgExileEnvironment
 {
@@ -1509,7 +1946,7 @@ class CfgExileLootSettings
  	 * This results in 30 loot positions and that is too much. So we
  	 * cap this at 10
  	 */
-	maximumNumberOfLootSpotsPerBuilding = 3;
+	maximumNumberOfLootSpotsPerBuilding = 10;
 
 	/**
 	 * Exile spawns a random number of items per loot spot. This 
@@ -1993,7 +2430,29 @@ class CfgInteractionMenus
 			};
 		};
 	};
+	
+	class Drawbridge
+	{
+		targetType = 2;
+		target = "Exile_Construction_WoodDrawBridge_Abstract";
 
+		class Actions
+		{
+			class Lower: ExileAbstractAction
+			{
+				title = "Lower";
+				condition = "ExileClientInteractionObject call ExileClient_object_construction_openBridgeShow";
+				action = "ExileClientInteractionObject animateSource ['DrawBridge_Source', 0];";
+			};
+			
+			class Raise: ExileAbstractAction
+			{
+				title = "Raise";
+				condition = "((ExileClientInteractionObject animationSourcePhase 'DrawBridge_Source') < 0.5)";
+				action = "ExileClientInteractionObject animateSource ['DrawBridge_Source', 2]";
+			};
+		};
+	};
 	class Construction
 	{
 		targetType = 2;
@@ -2272,6 +2731,22 @@ class CfgInteractionMenus
 			};
 		};
 	};
+	
+	class Animal
+	{
+		targetType = 2;
+		target = "Exile_Animal_Abstract";
+
+		class Actions 
+		{			
+			class Gut: ExileAbstractAction
+			{
+				title = "Gut Animal";
+				condition = "!(alive ExileClientInteractionObject) && (ExileClientInteractionObject getVariable ['CanBeGutted', false])";
+				action = "['GutAnimal', ExileClientInteractionObject] call ExileClient_action_execute";
+			};
+		};
+	};  
 };
 /**
  * Classname is used for reference
@@ -2471,6 +2946,10 @@ class CfgPlayer
 	enableStamina = 0;
 
 	disableMapDrawing = 1;
+	
+	// Use the current gradient to affect the players movement when autorunning.
+	// 0 == default exile auto run
+	useGradientAffectedAutoRun = 0;							
 };
 class CfgSlothMachine
 {

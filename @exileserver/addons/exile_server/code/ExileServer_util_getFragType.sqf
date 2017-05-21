@@ -9,24 +9,29 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_victim","_killer","_killingPlayer","_type","_victimClanId","_killerClanId"];
+private["_victim", "_killer", "_killingPlayer", "_instigator", "_type", "_victimClanId", "_killerClanId"];
 _victim = _this select 0;
 _killer = _this select 1;
 _killingPlayer = _this select 2;
+_instigator = _this select 3;
 _type = 0;
 try 
 {
 	if (_victim getVariable ["IsPlayingRussianRoulette", false]) then 
 	{
-		throw 2;
+		throw 2; 
 	};
 	if (_victim isEqualTo _killer) then
 	{
-		throw 1;
+		throw 1; 
 	};
 	if ((vehicle _victim) isEqualTo _killer) then
 	{
-		throw 3;
+		throw 3; 
+	};
+	if (isNull _instigator) then
+	{
+		throw 0; 
 	};
 	if (isNull _killer) then
 	{
@@ -34,7 +39,7 @@ try
 	};
 	if (isNull _killingPlayer) then 
 	{
-		throw 4;
+		throw 4; 
 	};
 	if ((group _victim) isEqualTo (group _killingPlayer)) then 
 	{

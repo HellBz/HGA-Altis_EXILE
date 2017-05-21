@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_playerObject","_playerUID","_playerData"];
+private["_sessionID", "_playerObject", "_playerUID", "_playerData"];
 _sessionID = _this select 0;
 try 
 {

@@ -67,7 +67,8 @@
 		categories[] = 
 		{
 			"Food",
-			"Drinks"
+			"Drinks",
+			"NonVeganFood"		 
 		};
 	};
 

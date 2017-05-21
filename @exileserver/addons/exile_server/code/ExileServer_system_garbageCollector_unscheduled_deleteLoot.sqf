@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_lifeTime","_index","_building","_lootWeaponHolderNetIDs","_lootWeaponHolder"];
+private["_lifeTime", "_index", "_building", "_lootWeaponHolderNetIDs", "_lootWeaponHolder"];
 _lifeTime = 60 * getNumber (configFile >> "CfgSettings" >> "GarbageCollector" >> "Ingame" >> "Loot" >> "lifeTime");
 _index = -1;
 {

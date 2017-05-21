@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_flag","_territoryDatabaseID","_territoryRange","_containerDatabaseIDs","_containerDatabaseID"];
+private["_flag", "_territoryDatabaseID", "_territoryRange", "_containerDatabaseIDs", "_containerDatabaseID"];
 _flag = _this;
 _territoryDatabaseID = _flag getVariable ["ExileDatabaseID", 0];
 _territoryRange = _flag getVariable ["ExileTerritorySize", 0];
