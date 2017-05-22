@@ -2290,7 +2290,7 @@ class CfgBuildings
 	};
 };
 
-#include "CfgExileLoot.hpp"
+#include "CfgExileLootServer.hpp"
 
 class CfgSettings
 {
@@ -2842,7 +2842,7 @@ class CfgSettings
 			{"76561198048317094","[EXILE|DEV] HappyDayZ"},
 			{"76561198105900802","[EXILE|DEV] Psycho"},
 			{"76561198004111275","[EXILE|DEV] Maca134"},
-			{"76561198037177305","[EXILE|DEV] Wolfkill"}								   
+			{"76561198037177305","[EXILE|DEV] Wolfkill"}
 		};
 	};
 
