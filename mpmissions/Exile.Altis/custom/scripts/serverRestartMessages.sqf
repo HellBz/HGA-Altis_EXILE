@@ -84,10 +84,9 @@ _checkTimeRange = {
 		_hardSecondsTime = (_hardSecondsTime + (_hardServerTimeMin * 60));
 		_hardSecondsTime = (_hardSecondsTime + _hardServerTimeSec);
 
-		_currentTimestamp = call ExileServer_util_time_currentTime;
-		_nowServerTimeHour = _currentTimestamp select 3; 
-		_nowServerTimeMin  = _currentTimestamp select 4; 
-		_nowServerTimeSec  = _currentTimestamp select 5;
+		_nowServerTimeHour = ExileServerStartTime select 3; 
+		_nowServerTimeMin  = ExileServerStartTime select 4; 
+		_nowServerTimeSec  = ExileServerStartTime select 5;
 		
 		_nowSecondsTime = (_nowServerTimeHour * 3600);
 		_nowSecondsTime = (_nowSecondsTime + (_nowServerTimeMin * 60));
