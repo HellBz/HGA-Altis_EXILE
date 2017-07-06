@@ -137,6 +137,8 @@ class CfgRemoteExec
 class RscTitles
 {
 	#include "custom\plugin\ExAdClient\RscTitles.cpp"
+	#include "VEMFr_client\gui\RscDisplayVEMFrClient.hpp"
+	#include "VEMFr_client\gui\RscDisplayBaseAttack.hpp"
 };
 
 class CfgHints
