@@ -1648,6 +1648,12 @@ class CfgExileCustomCode
 		ExileClient_util_fusRoDah = "myaddon\myfunction.sqf";
 	*/
 	
+	ExileServer_object_construction_database_insert 							= "custom\extdb3_fix\ExileServer_object_construction_database_insert.sqf";
+	ExileServer_object_construction_database_load 								= "custom\extdb3_fix\ExileServer_object_construction_database_load.sqf";
+	ExileServer_object_container_createContainer 								= "custom\extdb3_fix\ExileServer_object_container_createContainer.sqf";
+	ExileServer_object_container_database_insert 								= "custom\extdb3_fix\ExileServer_object_container_database_insert.sqf";
+	ExileServer_object_container_database_load 									= "custom\extdb3_fix\ExileServer_object_container_database_load.sqf";
+	ExileServer_object_container_database_update 								= "custom\extdb3_fix\ExileServer_object_container_database_update.sqf";
 	ExileServer_object_player_database_insert 									= "custom\extdb3_fix\ExileServer_object_player_database_insert.sqf";
 	ExileServer_object_player_event_onMpKilled 									= "custom\extdb3_fix\ExileServer_object_player_event_onMpKilled.sqf";
 	ExileServer_system_database_connect 										= "custom\extdb3_fix\ExileServer_system_database_connect.sqf";
@@ -1657,6 +1663,7 @@ class CfgExileCustomCode
 	ExileServer_system_database_query_selectFull 								= "custom\extdb3_fix\ExileServer_system_database_query_selectFull.sqf";
 	ExileServer_system_database_query_selectSingle 								= "custom\extdb3_fix\ExileServer_system_database_query_selectSingle.sqf";
 	ExileServer_system_database_query_selectSingleField 						= "custom\extdb3_fix\ExileServer_system_database_query_selectSingleField.sqf";
+	ExileServer_system_territory_database_insert 								= "custom\extdb3_fix\ExileServer_system_territory_database_insert.sqf";
 	ExileServer_system_territory_maintenance_recalculateDueDate 				= "custom\extdb3_fix\ExileServer_system_territory_maintenance_recalculateDueDate.sqf";
 	ExileServer_system_territory_network_flagStolenRequest 						= "custom\extdb3_fix\ExileServer_system_territory_network_flagStolenRequest.sqf";
 	ExileServer_system_territory_network_payFlagRansomRequest 					= "custom\extdb3_fix\ExileServer_system_territory_network_payFlagRansomRequest.sqf";
@@ -1697,7 +1704,11 @@ class CfgExileCustomCode
 	ExileClient_gui_xm8_show 													= "custom\plugin\ExAdClient\XM8\CustomCode\ExileClient_gui_xm8_show.sqf";
 	//Lottery
 	ExileClient_gui_xm8_slide_apps_onOpen										= "custom\overrides\ExileClient_gui_xm8_slide_apps_onOpen.sqf";
-	
+	//DragBody Overide
+	//ExileServer_object_player_network_createPlayerRequest						= "custom\overrides\ExileServer_object_player_network_createPlayerRequest.sqf";
+	//ExileServer_object_player_database_load										= "custom\overrides\ExileServer_object_player_database_load.sqf";
+	ExileClient_util_world_canBuildHere											= "custom\overrides\ExileClient_util_world_canBuildHere.sqf";
+	ExileServer_object_supplyBox_network_installSupplyBoxRequest				= "custom\overrides\ExileServer_object_supplyBox_network_installSupplyBoxRequest.sqf";
 };
 class CfgExileEnvironment
 {
@@ -2428,6 +2439,14 @@ class CfgInteractionMenus
 				condition = "!(isNull (attachedTo ExileClientInteractionObject)) && ((ExileClientInteractionObject getvariable ['ExileOwnerUID',1]) isEqualTo 1)";
 				action = "_this call ExileClient_object_supplyBox_unmount";
 			};
+			 // Delete the SupplyBox.
+			class Delete: ExileAbstractAction
+			{
+				title = "Delete SupplyBox";
+				condition = "call ExileClient_util_world_isInOwnTerritory";
+				action = "_this spawn ExileClient_object_container_pack";
+			};
+
 		};
 	};
 	
@@ -2729,6 +2748,28 @@ class CfgInteractionMenus
 				condition = "!(alive ExileClientInteractionObject) && ('Exile_Melee_Shovel' isEqualTo (currentWeapon player))";
 				action = "['HideBody', (_this select 0)] call ExileClient_action_execute";
 			};
+			
+			class TeleporttoShore: ExileAbstractAction
+			{
+				title = "Teleport to Shore";
+				condition = "( !(alive ExileClientInteractionObject) && ( (getPosASL  ExileClientInteractionObject select 2) < -1.4 ) )";
+				action = "_this call HGA_fnc_TeleportShore";
+			};
+
+			class DragBody: ExileAbstractAction
+			{
+				title = "Drag Body";
+				condition = "( !(alive ExileClientInteractionObject) && (getPosASL  ExileClientInteractionObject select 2) >= 0 ) )";
+				action = "_this spawn H3_dragAction";
+			};	
+
+			class BuryBody: ExileAbstractAction
+			{
+				title = "Bury Body";
+				condition = "( !(alive ExileClientInteractionObject) && (getPosASL  ExileClientInteractionObject select 2) >= 0 ) )";
+				action = "_this spawn HellBz_BuryBody";
+			};		
+			
 		};
 	};
 	
@@ -3011,17 +3052,17 @@ class CfgTerritories
 	// Level 1 is allways for Pop Tabs, >= 2 for Respect
 	prices[] = 
 	{
-		// Purchase Price 		Radius 		Number of Objects
-		{5000,					15,			30 					}, // Level 1
-		{10000,					30,			60 					}, // Level 2 
-		{15000,					45,			90 					}, // Level 3
-		{20000,					60,			120					}, // Level 4
-		{25000,					75,			150					}, // Level 5
-		{30000,					90,			180					}, // Level 6
-		{35000,					105,		210					}, // Level 7
-		{40000,					120,		240					}, // Level 8
-		{45000,					135,		270					}, // Level 9
-		{50000,					150,		300					}  // Level 10
+		// Purchase Price 		Radius 		Number of Objects	Number of Safes		Number of Boxes
+		{5000,					15,			30, 				5,					1				}, // Level 1
+		{10000,					30,			60, 				7,					2				}, // Level 2 
+		{15000,					45,			90, 				9,					3				}, // Level 3
+		{20000,					60,			120,				12,					4				}, // Level 4
+		{25000,					75,			150,				14,					5				}, // Level 5
+		{30000,					90,			180,				16,					6				}, // Level 6
+		{35000,					105,		210,				18,					7				}, // Level 7
+		{40000,					120,		240,				20,					8				}, // Level 8
+		{45000,					135,		270,				22,					9				}, // Level 9
+		{50000,					150,		300,				24,					10				}  // Level 10
 	};
 
 	// A shortcut of the above maximum radius
