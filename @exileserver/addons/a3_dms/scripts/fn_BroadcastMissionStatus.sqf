@@ -63,6 +63,12 @@ private _status =
 
 		case "exiletoasts":
 		{
+		
+			switch (_status) do {
+			case "win":		{ "UAV_03" remoteExecCall ["playSound"]; };
+			case "lose": 	{ "UAV_04" remoteExecCall ["playSound"]; };
+			default 		{ "UAV_05" remoteExecCall ["playSound"]; }; };
+			
 			private _toast_type =
 				switch (_status) do
 				{
