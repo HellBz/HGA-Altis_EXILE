@@ -32,6 +32,15 @@ ExileServer_ClaimVehicles_network_saveVehicleRequest = compileFinal preprocessFi
 //------------------------- A3XAI -------------------------------------------------------------------//
 
 //------------------------- Get Time to Restart -----------------------------------------------------//
-ExileServer_Restart_network_timeToRestart = compileFinal preprocessFileLineNumbers "custom\scripts\ExileServer_Restart_network_timeToRestart.sqf"; 
+//ExileServer_Restart_network_timeToRestart = compileFinal preprocessFileLineNumbers "custom\scripts\ExileServer_Restart_network_timeToRestart.sqf"; 
 //------------------------- Get Time to Restart -----------------------------------------------------//
 
+
+[] execVM "custom\BuryBody\init.sqf";
+
+if hasInterface then
+{
+	[] ExecVM "VEMFr_client\sqf\initClient.sqf"; // Client-side part of VEMFr
+};
+
+null = allUnits execVM "custom\scripts\DragBody.sqf";
